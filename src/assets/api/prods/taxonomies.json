@@ -1,0 +1,63 @@
+{
+  "taxonomies": [
+    {
+      "id": 1,
+      "name": "wallets",
+      "root": {
+        "id": 2,
+        "name": "wallets",
+        "pretty_name": "wallets",
+        "permalink": "wallets",
+        "parent_id": 1,
+        "taxonomy_id": 1,
+        "meta_title": "wallets",
+        "meta_description": "wallets",
+        "taxons": [
+          {
+            "id": 1,
+            "name": "Hello Kitty Wallet",
+            "pretty_name": "Hello Kitty Wallet",
+            "permalink": "Hello Kitty Wallet",
+            "parent_id": 1,
+            "taxonomy_id": 1,
+            "meta_title": "Hello Kitty Wallet",
+            "meta_description": "Hello Kitty Wallet",
+            "taxons": [
+            ]
+          }
+        ]
+      }
+    },
+{
+      "id": 2,
+      "name": "Brand",
+      "root": {
+        "id": 2,
+        "name": "Ruby on Rails",
+        "pretty_name": "Ruby on Rails",
+        "permalink": "brands/ruby-on-rails",
+        "parent_id": 2,
+        "taxonomy_id": 2,
+        "meta_title": "Ruby on Rails",
+        "meta_description": "Ruby on Rails",
+        "taxons": [
+          {
+            "id": 6,
+            "name": "Other stuff",
+            "pretty_name": "Other stuff",
+            "permalink": "brands/t-shirts",
+            "parent_id": 2,
+            "taxonomy_id": 2,
+            "meta_title": "T-Shirts",
+            "meta_description": "T-Shirts",
+            "taxons": [
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "count": 5,
+  "current_page": 1,
+  "pages": 2
+}

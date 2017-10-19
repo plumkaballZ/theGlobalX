@@ -7,7 +7,7 @@ ul {
       left: 0;
       width: 101%;
       height: 100%;
-      background-color: #282c3f;
+      background-color: #F2F3F8;
       -webkit-transition: visibility 0s,opacity .5s linear;
       transition: visibility 0s,opacity .5s linear;
       visibility: hidden;
@@ -26,7 +26,7 @@ ul {
       a {
         text-decoration: none;
         background-color: transparent;
-        color: #282c3f;
+        color: #E0E2E9;
         .product-thumb {
           height: 240px;
           display: block;
@@ -38,7 +38,7 @@ ul {
         .product-productMetaInfo {
           position: relative;
           z-index: 2;
-          background: #fff;
+          background: #FFFFFF;
           height: 100%;
           padding: 0 5px;
           .product-brand, .product-product {
@@ -48,14 +48,14 @@ ul {
             font-size: 13px;
             font-weight: 500;
             line-height: 14px;
-            color: #282c3f;
+            color: #000000;
             text-transform: capitalize;
             margin-top: 10px;
           }
           .product-price {
-            font-size: 13px;
+            font-size: 16px;
             line-height: 15px;
-            color: #282c3f;
+            color: #000000;
             margin: 10px 0 0;
             white-space: nowrap;
             font-weight: 500;
@@ -63,7 +63,7 @@ ul {
           .product-sizes {
             font-size: 11px;
             display: none;
-            color: #3e4152;
+            color: #B6BCD6;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;

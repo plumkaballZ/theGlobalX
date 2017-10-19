@@ -22,6 +22,7 @@ export class CheckoutEffects {
     })
     .map((lineItem: LineItem) => this.actions.addToCartSuccess(lineItem));
   }
+
   // @Effect()
     // FetchCurrentOrder$ = this.actions$
     // .ofType(CartActions.FETCH_CURRENT_ORDER)
@@ -32,8 +33,7 @@ export class CheckoutEffects {
     //   return this.cartActions.fetchCurrentOrderSuccess(order);
     // });
 
-
-
+    
   // Use this effect once angular releases RC4
 
   // @Effect()

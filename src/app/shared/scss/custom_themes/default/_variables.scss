@@ -15,7 +15,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#20BD99, 6.5%) !default; // #337ab7
+$brand-primary:         darken(#23A383, 6.5%) !default; // #337ab7
 $brand-success:         #18D277 !default;
 $brand-info:            #4AD9D9 !default;
 $brand-warning:         #F5A503 !default;
@@ -27,7 +27,7 @@ $brand-danger:          #FF527B !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:              #f8f8f8 !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -112,7 +112,7 @@ $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
+$component-active-color:   #d3c2a8 !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
@@ -134,7 +134,7 @@ $table-condensed-cell-padding:  5px !default;
 //** Default background color used for all tables.
 $table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #f9f9f9 !default;
+$table-bg-accent:               #3c2420 !default;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                #f5f5f5 !default;
 $table-bg-active:               $table-bg-hover !default;
@@ -150,7 +150,7 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
+$btn-default-bg:                 #300909 !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
@@ -237,7 +237,7 @@ $cursor-disabled:                not-allowed !default;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    #fff !default;
+$dropdown-bg:                    #3c2420 !default;
 //** Dropdown menu `border-color`.
 $dropdown-border:                rgba(0,0,0,.15) !default;
 //** Dropdown menu `border-color` **for IE8**.
@@ -250,7 +250,7 @@ $dropdown-link-color:            $gray-dark !default;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
 //** Hover background for dropdown links.
-$dropdown-link-hover-bg:         #f5f5f5 !default;
+$dropdown-link-hover-bg:         #852A2A !default;
 
 //** Active dropdown menu item text color.
 $dropdown-link-active-color:     $component-active-color !default;
@@ -369,12 +369,12 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
+$navbar-default-color:               #d3c2a8 !default;
 $navbar-default-bg:                #f8f8f8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
+$navbar-default-link-color:                #d3c2a8 !default;
 $navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
@@ -401,7 +401,7 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !def
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-hover-color:           #d3c2a8 !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
@@ -527,7 +527,7 @@ $tooltip-max-width:           200px !default;
 //** Tooltip text color
 $tooltip-color:               #fff !default;
 //** Tooltip background color
-$tooltip-bg:                  #000 !default;
+$tooltip-bg:                  #A01818 !default;
 $tooltip-opacity:             .9 !default;
 
 //** Tooltip arrow width

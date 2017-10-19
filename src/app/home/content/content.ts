@@ -20,9 +20,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
   }
-
   toggleSize(layoutInfo) {
     this.toggleLayout = layoutInfo;
   }
-
 }

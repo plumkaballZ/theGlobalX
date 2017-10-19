@@ -16,6 +16,7 @@ export class OrderListItemComponent implements OnInit {
   }
 
   getProductImageUrl(url) {
+    console.log('order url');
     return environment.API_ENDPOINT + url;
   }
 

@@ -1,19 +1,16 @@
 .bread_crumb {
-  color: red;
   position: relative;
   margin: 25px 0;
   font-size: 13px;
-  background-color: white !important;
   li {
     font-size: 13px;
     display: inline-block;
     float: left;
     margin-right: 5px;
-    color: #696b79;
+    color: #d3c2a8;
     text-transform: capitalize;
     a {
       color: #696b79;
-      // text-decoration: none;
     }
   }
   li:after {

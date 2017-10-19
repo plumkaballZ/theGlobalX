@@ -51,7 +51,7 @@ export class UserService {
    */
   getUser(): Observable<User> {
     const user_id = JSON.parse(localStorage.getItem('user')).id;
-    return this.http.get(`spree/api/v1/users/${user_id}`)
+    return this.http.get(`/assets/api/users/users.json`)
       .map(res => res.json());
   }
 

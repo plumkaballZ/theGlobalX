@@ -1,8 +1,6 @@
 .content {
-  background-color: #fff;
   width: 759px;
   display: inline-block;
-  vertical-align: top;
   .queried-for {
     display: inline;
     overflow: hidden;
@@ -10,13 +8,11 @@
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
-    color: #282c3f;
-    width: 50%;
     .q {
       font-weight: 900;
       display: inline-block;
       text-overflow: ellipsis;
-      vertical-align: top;
+      color: #333333;
       overflow: hidden;
       white-space: nowrap;
       max-width: 67%;
@@ -32,7 +28,6 @@
 
   .options {
     position: relative;
-    float: right;
     text-align: right;
     margin: 12px 0 0 5px;
     display: inline-block;
@@ -40,7 +35,7 @@
       display: inline-block;
       margin-right: 10px;
       label {
-        color: #696b79;
+        color: #333333;
         font-weight: 400;
       }
       li {
@@ -71,13 +66,13 @@
     ul.sort {
       display: inline-block;
       position: relative;
-      color: #282c3f;
+      color : #333333;
       label {
         margin-left: 5px;
         font-weight: 400;
       }
       label:first-child {
-        color: #3e4152;
+        color: #333333;
       }
       li {
         display: inline-block;

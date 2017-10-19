@@ -12,14 +12,6 @@ import { HttpService } from './http';
 export class CheckoutService {
   private orderNumber: number;
 
-  /**
-   * Creates an instance of CheckoutService.
-   * @param {HttpService} http
-   * @param {CheckoutActions} actions
-   * @param {Store<AppState>} store
-   *
-   * @memberof CheckoutService
-   */
   constructor(
     private http: HttpService,
     private actions: CheckoutActions,
@@ -29,17 +21,6 @@ export class CheckoutService {
         .subscribe(number => this.orderNumber = number);
     }
 
-//  Change below methods once angular releases RC4, so that this methods can be called from effects
-//  Follow this linke to know more about this issue https://github.com/angular/angular/issues/12869
-
-  /**
-   *
-   *
-   * @param {number} variant_id
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   createNewLineItem(variant_id: number) {
     return this.http.post(
       `spree/api/v1/orders/${this.orderNumber}/line_items?order_token=${this.getOrderToken()}`,
@@ -55,18 +36,14 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   fetchCurrentOrder() {
     return this.http.get(
-      'spree/api/v1/orders/current'
+      '/assets/api/orders/current.json'
     ).map(res => {
       const order = res.json();
+
+      console.log(order);
+
       if (order) {
         const token = order.token;
         this.setOrderTokenInLocalStorage({order_token: token});
@@ -78,14 +55,6 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @param {any} orderNumber
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   getOrder(orderNumber) {
     return this.http.get(
       `spree/api/v1/orders/${orderNumber}.json`
@@ -95,15 +64,8 @@ export class CheckoutService {
     });
   }
 
-
-  /**
-   *
-   *
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   createEmptyOrder() {
+
     const user = JSON.parse(localStorage.getItem('user'));
     const headers = new Headers({
       'Content-Type': 'text/plain',
@@ -120,14 +82,6 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @param {LineItem} lineItem
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   deleteLineItem(lineItem: LineItem) {
     return this.http.delete(`spree/api/v1/orders/${this.orderNumber}/line_items/${lineItem.id}?order_token=${this.getOrderToken()}`)
       .map(() => {
@@ -135,13 +89,6 @@ export class CheckoutService {
       });
   }
 
-  /**
-   *
-   *
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   changeOrderState() {
     return this.http.put(
       `spree/api/v1/checkouts/${this.orderNumber}/next.json?order_token=${this.getOrderToken()}`,
@@ -152,14 +99,6 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @param {any} params
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   updateOrder(params) {
     return this.http.put(
       `spree/api/v1/checkouts/${this.orderNumber}.json?order_token=${this.getOrderToken()}`,
@@ -170,13 +109,6 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   availablePaymentMethods() {
     return this.http.get(
       `spree/api/v1/orders/${this.orderNumber}/payments/new?order_token=${this.getOrderToken()}`
@@ -186,15 +118,6 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @param {any} paymentModeId
-   * @param {any} paymentAmount
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   createNewPayment(paymentModeId, paymentAmount) {
     return this.http.post(
       `spree/api/v1/orders/${this.orderNumber}/payments?order_token=${this.getOrderToken()}`,
@@ -210,28 +133,12 @@ export class CheckoutService {
     });
   }
 
-  /**
-   *
-   *
-   * @private
-   * @returns
-   *
-   * @memberof CheckoutService
-   */
   private getOrderToken() {
     const order = JSON.parse(localStorage.getItem('order'));
     const token = order.order_token;
     return token;
   }
 
-  /**
-   *
-   *
-   * @private
-   * @param {any} token
-   *
-   * @memberof CheckoutService
-   */
   private setOrderTokenInLocalStorage(token): void {
     const jsonData = JSON.stringify(token);
     localStorage.setItem('order', jsonData);

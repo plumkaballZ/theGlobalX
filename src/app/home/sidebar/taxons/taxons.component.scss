@@ -2,12 +2,12 @@
   text-transform: uppercase;
   font-weight: 900;
   padding: 5px 22px 5px 2px;
-  color: #282c3f;
+  color: #000000;
 }
 .filter-box {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #e9e9ed;
+  border-right: 2px solid #030303;
   position: relative;
   ul.taxonomy {
     margin-left: -37px;
@@ -25,7 +25,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         min-height: 17px;
-        color: #282c3f;
+        color: #020101;
         position: relative;
         input {
           margin: 0 10px 0 0;
