@@ -502,23 +502,24 @@
       "has_variants": true
     },
     {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
+      "id": 4,
+      "name": "Dragon ball super poster",
+      "description": "dragon ball rocks",
       "price": "15.99",
       "display_price": "$15.99",
       "available_on": "2012-10-17T03:43:57Z",
-      "slug": "helloKittyProd",
+      "slug": "draonballSuperProd",
       "meta_description": null,
       "meta_keywords": null,
-      "shipping_category_id": 1,
+      "shipping_category_id": 4,
       "taxon_ids": [
-        1
+        4,
+        999
       ],
       "total_on_hand": 10,
       "master": {
         "id": 1,
-        "name": "Ruby on Rails Tote",
+        "name": "Dragon ball super poster",
         "sku": "ROR-00011",
         "price": "15.99",
         "weight": null,
@@ -526,8 +527,8 @@
         "width": null,
         "depth": null,
         "is_master": true,
-        "slug": "ruby-on-rails-tote",
-        "description": "A text description of the product.",
+        "slug": "Dragon ball super poster",
+        "description": "Dragon ball super poster",
         "track_inventory": true,
         "cost_price": null,
         "option_values": [
@@ -553,10 +554,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "mini_url": "/assets/api/prods/imgs/dbsPoster.png",
+            "small_url": "/assets/api/prods/imgs/dbsPoster.png",
+            "product_url": "/assets/api/prods/imgs/dbsPoster.png",
+            "large_url": "/assets/api/prods/imgs/dbsPoster.png"
           }
         ],
         "display_price": "$15.99",
@@ -669,18 +670,352 @@
       "has_variants": true
     },
     {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
+      "id": 5,
+      "name": "Batman Pants",
+      "description": "Im batman",
       "price": "15.99",
       "display_price": "$15.99",
       "available_on": "2012-10-17T03:43:57Z",
-      "slug": "helloKittyProd",
+      "slug": "batmanPants",
+      "meta_description": null,
+      "meta_keywords": null,
+      "shipping_category_id": 5,
+      "taxon_ids": [
+        999
+      ],
+      "total_on_hand": 10,
+      "master": {
+        "id": 5,
+        "name": "Batman Pants",
+        "sku": "ROR-00011",
+        "price": "15.99",
+        "weight": null,
+        "height": null,
+        "width": null,
+        "depth": null,
+        "is_master": true,
+        "slug": "ruby-on-rails-tote",
+        "description": "A text description of the product.",
+        "track_inventory": true,
+        "cost_price": null,
+        "option_values": [
+          {
+            "id": 1,
+            "name": "Small",
+            "presentation": "S",
+            "option_type_name": "tshirt-size",
+            "option_type_id": 5,
+            "option_type_presentation": "S"
+          }
+        ],
+        "images": [
+          {
+            "id": 5,
+            "position": 5,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "mini_url": "/assets/api/prods/imgs/batmanPants.png",
+            "small_url": "/assets/api/prods/imgs/batmanPants.png",
+            "product_url": "/assets/api/prods/imgs/batmanPants.png",
+            "large_url": "/assets/api/prods/imgs/batmanPants.png"
+          }
+        ],
+        "display_price": "$321.01",
+        "options_text": "(Size: small, Colour: red)",
+        "in_stock": true,
+        "is_backorderable": true,
+        "is_orderable": true,
+        "total_on_hand": 10,
+        "is_destroyed": false
+      },
+      "variants": [
+        {
+          "id": 1,
+          "name": "Ruby on Rails Tote",
+          "sku": "ROR-00011",
+          "price": "15.99",
+          "weight": null,
+          "height": null,
+          "width": null,
+          "depth": null,
+          "is_master": false,
+          "slug": "ruby-on-rails-tote",
+          "description": "A text description of the product.",
+          "track_inventory": true,
+          "cost_price": null,
+          "option_values": [
+            {
+              "id": 1,
+              "name": "Small",
+              "presentation": "S",
+              "option_type_name": "tshirt-size",
+              "option_type_id": 1,
+              "option_type_presentation": "S"
+            }
+          ],
+          "images": [
+            {
+              "id": 1,
+              "position": 1,
+              "attachment_content_type": "image/jpg",
+              "attachment_file_name": "ror_tote.jpeg",
+              "type": "Spree::Image",
+              "attachment_updated_at": null,
+              "attachment_width": 360,
+              "attachment_height": 360,
+              "alt": null,
+              "viewable_type": "Spree::Variant",
+              "viewable_id": 1,
+              "mini_url": "/spree/products/1/mini/file.png?1370533476",
+              "small_url": "/spree/products/1/small/file.png?1370533476",
+              "product_url": "/spree/products/1/product/file.png?1370533476",
+              "large_url": "/spree/products/1/large/file.png?1370533476"
+            }
+          ],
+          "display_price": "$15.99",
+          "options_text": "(Size: small, Colour: red)",
+          "in_stock": true,
+          "is_backorderable": true,
+          "is_orderable": true,
+          "total_on_hand": 10,
+          "is_destroyed": false
+        }
+      ],
+      "option_types": [
+        {
+          "id": 1,
+          "name": "tshirt-size",
+          "presentation": "Size",
+          "position": 1,
+          "option_values": [
+            {
+              "id": 1,
+              "name": "Small",
+              "presentation": "S",
+              "option_type_name": "tshirt-size",
+              "option_type_id": 1,
+              "option_type_presentation": "S"
+            }
+          ]
+        }
+      ],
+      "product_properties": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "property_id": 1,
+          "value": "Tote",
+          "property_name": "bag_type"
+        }
+      ],
+      "classifications": [
+        {
+          "taxon_id": 3,
+          "position": 1,
+          "taxon": {
+            "id": 2,
+            "name": "Ruby on Rails",
+            "pretty_name": "Ruby on Rails",
+            "permalink": "brands/ruby-on-rails",
+            "parent_id": 1,
+            "taxonomy_id": 1,
+            "meta_title": "Ruby on Rails",
+            "meta_description": "Ruby on Rails",
+            "taxons": [
+
+            ]
+          }
+        }
+      ],
+      "has_variants": true
+    },
+    {
+      "id": 8,
+      "name": "Samurai Sword",
+      "description": "sharp af",
+      "price": "15.99",
+      "display_price": "$15.99",
+      "available_on": "2012-10-17T03:43:57Z",
+      "slug": "sword",
       "meta_description": null,
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
-        1
+        999
+      ],
+      "total_on_hand": 10,
+      "master": {
+        "id": 1,
+        "name": "Samurai Sword",
+        "sku": "ROR-00011",
+        "price": "15.99",
+        "weight": null,
+        "height": null,
+        "width": null,
+        "depth": null,
+        "is_master": true,
+        "slug": "ruby-on-rails-tote",
+        "description": "Samurai Sword",
+        "track_inventory": true,
+        "cost_price": null,
+        "option_values": [
+          {
+            "id": 8,
+            "name": "Small",
+            "presentation": "S",
+            "option_type_name": "tshirt-size",
+            "option_type_id": 1,
+            "option_type_presentation": "S"
+          }
+        ],
+        "images": [
+          {
+            "id": 8,
+            "position": 8,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "mini_url": "/assets/api/prods/imgs/sword.png",
+            "small_url": "/assets/api/prods/imgs/sword.png",
+            "product_url": "/assets/api/prods/imgs/sword.png",
+            "large_url": "/assets/api/prods/imgs/sword.png"
+          }
+        ],
+        "display_price": "$301",
+        "options_text": "(Size: small, Colour: red)",
+        "in_stock": true,
+        "is_backorderable": true,
+        "is_orderable": true,
+        "total_on_hand": 10,
+        "is_destroyed": false
+      },
+      "variants": [
+        {
+          "id": 8,
+          "name": "Ruby on Rails Tote",
+          "sku": "ROR-00011",
+          "price": "15.99",
+          "weight": null,
+          "height": null,
+          "width": null,
+          "depth": null,
+          "is_master": false,
+          "slug": "ruby-on-rails-tote",
+          "description": "A text description of the product.",
+          "track_inventory": true,
+          "cost_price": null,
+          "option_values": [
+            {
+              "id": 1,
+              "name": "Small",
+              "presentation": "S",
+              "option_type_name": "tshirt-size",
+              "option_type_id": 1,
+              "option_type_presentation": "S"
+            }
+          ],
+          "images": [
+            {
+              "id": 1,
+              "position": 1,
+              "attachment_content_type": "image/jpg",
+              "attachment_file_name": "ror_tote.jpeg",
+              "type": "Spree::Image",
+              "attachment_updated_at": null,
+              "attachment_width": 360,
+              "attachment_height": 360,
+              "alt": null,
+              "viewable_type": "Spree::Variant",
+              "viewable_id": 1,
+              "mini_url": "/spree/products/1/mini/file.png?1370533476",
+              "small_url": "/spree/products/1/small/file.png?1370533476",
+              "product_url": "/spree/products/1/product/file.png?1370533476",
+              "large_url": "/spree/products/1/large/file.png?1370533476"
+            }
+          ],
+          "display_price": "$15.99",
+          "options_text": "(Size: small, Colour: red)",
+          "in_stock": true,
+          "is_backorderable": true,
+          "is_orderable": true,
+          "total_on_hand": 10,
+          "is_destroyed": false
+        }
+      ],
+      "option_types": [
+        {
+          "id": 1,
+          "name": "tshirt-size",
+          "presentation": "Size",
+          "position": 1,
+          "option_values": [
+            {
+              "id": 1,
+              "name": "Small",
+              "presentation": "S",
+              "option_type_name": "tshirt-size",
+              "option_type_id": 1,
+              "option_type_presentation": "S"
+            }
+          ]
+        }
+      ],
+      "product_properties": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "property_id": 1,
+          "value": "Tote",
+          "property_name": "bag_type"
+        }
+      ],
+      "classifications": [
+        {
+          "taxon_id": 3,
+          "position": 1,
+          "taxon": {
+            "id": 2,
+            "name": "Ruby on Rails",
+            "pretty_name": "Ruby on Rails",
+            "permalink": "brands/ruby-on-rails",
+            "parent_id": 1,
+            "taxonomy_id": 1,
+            "meta_title": "Ruby on Rails",
+            "meta_description": "Ruby on Rails",
+            "taxons": [
+
+            ]
+          }
+        }
+      ],
+      "has_variants": true
+    },
+    {
+      "id": 7,
+      "name": "Beer",
+      "description": "more Beer",
+      "price": "15.99",
+      "display_price": "$15.99",
+      "available_on": "2012-10-17T03:43:57Z",
+      "slug": "Beer",
+      "meta_description": null,
+      "meta_keywords": null,
+      "shipping_category_id": 1,
+      "taxon_ids": [
+        999
       ],
       "total_on_hand": 10,
       "master": {
@@ -693,8 +1028,8 @@
         "width": null,
         "depth": null,
         "is_master": true,
-        "slug": "ruby-on-rails-tote",
-        "description": "A text description of the product.",
+        "slug": "Beer",
+        "description": "Beer Beer Beer Beer",
         "track_inventory": true,
         "cost_price": null,
         "option_values": [
@@ -720,10 +1055,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "mini_url": "/assets/api/prods/imgs/beer.png",
+            "small_url": "/assets/api/prods/imgs/beer.png",
+            "product_url": "/assets/api/prods/imgs/beer.png",
+            "large_url": "/assets/api/prods/imgs/beer.png"
           }
         ],
         "display_price": "$15.99",
@@ -836,18 +1171,18 @@
       "has_variants": true
     },
     {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
+      "id": 9,
+      "name": "Darksouls 3",
+      "description": "best.game.ever",
       "price": "15.99",
       "display_price": "$15.99",
       "available_on": "2012-10-17T03:43:57Z",
-      "slug": "helloKittyProd",
+      "slug": "Darksouls3",
       "meta_description": null,
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
-        1
+        999
       ],
       "total_on_hand": 10,
       "master": {
@@ -887,344 +1222,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
-          }
-        ],
-        "display_price": "$15.99",
-        "options_text": "(Size: small, Colour: red)",
-        "in_stock": true,
-        "is_backorderable": true,
-        "is_orderable": true,
-        "total_on_hand": 10,
-        "is_destroyed": false
-      },
-      "variants": [
-        {
-          "id": 1,
-          "name": "Ruby on Rails Tote",
-          "sku": "ROR-00011",
-          "price": "15.99",
-          "weight": null,
-          "height": null,
-          "width": null,
-          "depth": null,
-          "is_master": false,
-          "slug": "ruby-on-rails-tote",
-          "description": "A text description of the product.",
-          "track_inventory": true,
-          "cost_price": null,
-          "option_values": [
-            {
-              "id": 1,
-              "name": "Small",
-              "presentation": "S",
-              "option_type_name": "tshirt-size",
-              "option_type_id": 1,
-              "option_type_presentation": "S"
-            }
-          ],
-          "images": [
-            {
-              "id": 1,
-              "position": 1,
-              "attachment_content_type": "image/jpg",
-              "attachment_file_name": "ror_tote.jpeg",
-              "type": "Spree::Image",
-              "attachment_updated_at": null,
-              "attachment_width": 360,
-              "attachment_height": 360,
-              "alt": null,
-              "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
-            }
-          ],
-          "display_price": "$15.99",
-          "options_text": "(Size: small, Colour: red)",
-          "in_stock": true,
-          "is_backorderable": true,
-          "is_orderable": true,
-          "total_on_hand": 10,
-          "is_destroyed": false
-        }
-      ],
-      "option_types": [
-        {
-          "id": 1,
-          "name": "tshirt-size",
-          "presentation": "Size",
-          "position": 1,
-          "option_values": [
-            {
-              "id": 1,
-              "name": "Small",
-              "presentation": "S",
-              "option_type_name": "tshirt-size",
-              "option_type_id": 1,
-              "option_type_presentation": "S"
-            }
-          ]
-        }
-      ],
-      "product_properties": [
-        {
-          "id": 1,
-          "product_id": 1,
-          "property_id": 1,
-          "value": "Tote",
-          "property_name": "bag_type"
-        }
-      ],
-      "classifications": [
-        {
-          "taxon_id": 3,
-          "position": 1,
-          "taxon": {
-            "id": 2,
-            "name": "Ruby on Rails",
-            "pretty_name": "Ruby on Rails",
-            "permalink": "brands/ruby-on-rails",
-            "parent_id": 1,
-            "taxonomy_id": 1,
-            "meta_title": "Ruby on Rails",
-            "meta_description": "Ruby on Rails",
-            "taxons": [
-
-            ]
-          }
-        }
-      ],
-      "has_variants": true
-    },
-    {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
-      "price": "15.99",
-      "display_price": "$15.99",
-      "available_on": "2012-10-17T03:43:57Z",
-      "slug": "helloKittyProd",
-      "meta_description": null,
-      "meta_keywords": null,
-      "shipping_category_id": 1,
-      "taxon_ids": [
-        1
-      ],
-      "total_on_hand": 10,
-      "master": {
-        "id": 1,
-        "name": "Ruby on Rails Tote",
-        "sku": "ROR-00011",
-        "price": "15.99",
-        "weight": null,
-        "height": null,
-        "width": null,
-        "depth": null,
-        "is_master": true,
-        "slug": "ruby-on-rails-tote",
-        "description": "A text description of the product.",
-        "track_inventory": true,
-        "cost_price": null,
-        "option_values": [
-          {
-            "id": 1,
-            "name": "Small",
-            "presentation": "S",
-            "option_type_name": "tshirt-size",
-            "option_type_id": 1,
-            "option_type_presentation": "S"
-          }
-        ],
-        "images": [
-          {
-            "id": 1,
-            "position": 1,
-            "attachment_content_type": "image/jpg",
-            "attachment_file_name": "ror_tote.jpeg",
-            "type": "Spree::Image",
-            "attachment_updated_at": null,
-            "attachment_width": 360,
-            "attachment_height": 360,
-            "alt": null,
-            "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
-          }
-        ],
-        "display_price": "$15.99",
-        "options_text": "(Size: small, Colour: red)",
-        "in_stock": true,
-        "is_backorderable": true,
-        "is_orderable": true,
-        "total_on_hand": 10,
-        "is_destroyed": false
-      },
-      "variants": [
-        {
-          "id": 1,
-          "name": "Ruby on Rails Tote",
-          "sku": "ROR-00011",
-          "price": "15.99",
-          "weight": null,
-          "height": null,
-          "width": null,
-          "depth": null,
-          "is_master": false,
-          "slug": "ruby-on-rails-tote",
-          "description": "A text description of the product.",
-          "track_inventory": true,
-          "cost_price": null,
-          "option_values": [
-            {
-              "id": 1,
-              "name": "Small",
-              "presentation": "S",
-              "option_type_name": "tshirt-size",
-              "option_type_id": 1,
-              "option_type_presentation": "S"
-            }
-          ],
-          "images": [
-            {
-              "id": 1,
-              "position": 1,
-              "attachment_content_type": "image/jpg",
-              "attachment_file_name": "ror_tote.jpeg",
-              "type": "Spree::Image",
-              "attachment_updated_at": null,
-              "attachment_width": 360,
-              "attachment_height": 360,
-              "alt": null,
-              "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
-            }
-          ],
-          "display_price": "$15.99",
-          "options_text": "(Size: small, Colour: red)",
-          "in_stock": true,
-          "is_backorderable": true,
-          "is_orderable": true,
-          "total_on_hand": 10,
-          "is_destroyed": false
-        }
-      ],
-      "option_types": [
-        {
-          "id": 1,
-          "name": "tshirt-size",
-          "presentation": "Size",
-          "position": 1,
-          "option_values": [
-            {
-              "id": 1,
-              "name": "Small",
-              "presentation": "S",
-              "option_type_name": "tshirt-size",
-              "option_type_id": 1,
-              "option_type_presentation": "S"
-            }
-          ]
-        }
-      ],
-      "product_properties": [
-        {
-          "id": 1,
-          "product_id": 1,
-          "property_id": 1,
-          "value": "Tote",
-          "property_name": "bag_type"
-        }
-      ],
-      "classifications": [
-        {
-          "taxon_id": 3,
-          "position": 1,
-          "taxon": {
-            "id": 2,
-            "name": "Ruby on Rails",
-            "pretty_name": "Ruby on Rails",
-            "permalink": "brands/ruby-on-rails",
-            "parent_id": 1,
-            "taxonomy_id": 1,
-            "meta_title": "Ruby on Rails",
-            "meta_description": "Ruby on Rails",
-            "taxons": [
-
-            ]
-          }
-        }
-      ],
-      "has_variants": true
-    },
-    {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
-      "price": "15.99",
-      "display_price": "$15.99",
-      "available_on": "2012-10-17T03:43:57Z",
-      "slug": "helloKittyProd",
-      "meta_description": null,
-      "meta_keywords": null,
-      "shipping_category_id": 1,
-      "taxon_ids": [
-        1
-      ],
-      "total_on_hand": 10,
-      "master": {
-        "id": 1,
-        "name": "Ruby on Rails Tote",
-        "sku": "ROR-00011",
-        "price": "15.99",
-        "weight": null,
-        "height": null,
-        "width": null,
-        "depth": null,
-        "is_master": true,
-        "slug": "ruby-on-rails-tote",
-        "description": "A text description of the product.",
-        "track_inventory": true,
-        "cost_price": null,
-        "option_values": [
-          {
-            "id": 1,
-            "name": "Small",
-            "presentation": "S",
-            "option_type_name": "tshirt-size",
-            "option_type_id": 1,
-            "option_type_presentation": "S"
-          }
-        ],
-        "images": [
-          {
-            "id": 1,
-            "position": 1,
-            "attachment_content_type": "image/jpg",
-            "attachment_file_name": "ror_tote.jpeg",
-            "type": "Spree::Image",
-            "attachment_updated_at": null,
-            "attachment_width": 360,
-            "attachment_height": 360,
-            "alt": null,
-            "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "mini_url": "/assets/api/prods/imgs/darksouls.png",
+            "small_url": "/assets/api/prods/imgs/darksouls.png",
+            "product_url": "/assets/api/prods/imgs/darksouls.png",
+            "large_url": "/assets/api/prods/imgs/darksouls.png"
           }
         ],
         "display_price": "$15.99",

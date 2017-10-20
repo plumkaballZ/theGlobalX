@@ -1,8 +1,3 @@
-/**
- * Http Intercepter Service
- * TODO: Add Loader and Toasty Service currently using console log 
- * for showing errors and response and request completion;
- */
 import { Injectable } from '@angular/core';
 import {
   Http,
@@ -27,23 +22,11 @@ export class HttpService extends Http {
   ) {
     super(backend, defaultOptions);
   }
-
-  /**
-   * Performs any type of http request.
-   * @param url
-   * @param options
-   * @returns {Observable<Response>}
-   */
+  
   request(url: string | Request, options?: RequestOptionsArgs): Observable<Response> {
     return super.request(url, options);
   }
 
-  /**
-   * Performs a request with `get` http method.
-   * @param url
-   * @param options
-   * @returns {Observable<>}
-   */
   get(url: string, options?: RequestOptionsArgs): Observable<any> {
     this.requestInterceptor();
     return super.get(this.getFullUrl(url), this.requestOptions(options))
@@ -62,13 +45,6 @@ export class HttpService extends Http {
     return super.get(url, options);
   }
 
-  /**
-   * Performs a request with `post` http method.
-   * @param url
-   * @param body
-   * @param options
-   * @returns {Observable<>}
-   */
   post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
     this.requestInterceptor();
     return super.post(this.getFullUrl(url), body, this.requestOptions(options))
@@ -83,13 +59,6 @@ export class HttpService extends Http {
       });
   }
 
-  /**
-   * Performs a request with `put` http method.
-   * @param url
-   * @param body
-   * @param options
-   * @returns {Observable<>}
-   */
   put(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
     this.requestInterceptor();
     return super.put(this.getFullUrl(url), body, this.requestOptions(options))
@@ -103,13 +72,6 @@ export class HttpService extends Http {
         this.onFinally();
       });
   }
-
-  /**
-   * Performs a request with `delete` http method.
-   * @param url
-   * @param options
-   * @returns {Observable<>}
-   */
   delete(url: string, options?: RequestOptionsArgs): Observable<any> {
     this.requestInterceptor();
     return super.delete(this.getFullUrl(url), this.requestOptions(options))
@@ -124,12 +86,6 @@ export class HttpService extends Http {
       });
   }
 
-
-  /**
-   * Request options.
-   * @param options
-   * @returns {RequestOptionsArgs}
-   */
   private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
     if (options == null) {
       options = new RequestOptions();
@@ -144,19 +100,10 @@ export class HttpService extends Http {
     }
     return options;
   }
-
-  /**
-   * Build API url.
-   * @param url
-   * @returns {string}
-   */
   private getFullUrl(url: string): string {
     return environment.API_ENDPOINT + url;
   }
 
-  /**
-   * Request interceptor.
-   */
   private requestInterceptor(): void {
     console.log('Sending Request');
     // this.loaderService.showPreloader();
@@ -165,40 +112,23 @@ export class HttpService extends Http {
     });
   }
 
-  /**
-   * Response interceptor.
-   */
   private responseInterceptor(): void {
     console.log('Request Complete');
     // this.loaderService.hidePreloader();
   }
 
-  /**
-   * Error handler.
-   * @param error
-   * @param caught
-   * @returns {ErrorObservable}
-   */
   private onCatch(error: any, caught: Observable<any>): Observable<any> {
     console.log('Something went terrible wrong and error is', error);
     // this.loaderService.popError();
     return Observable.of(error);
   }
 
-  /**
-   * onSubscribeSuccess
-   * @param res
-   */
   private onSubscribeSuccess(res: Response): void {
     this.loading.next({
       loading: false, hasError: false, hasMsg: ''
     });
   }
 
-  /**
-   * onSubscribeError
-   * @param error
-   */
   private onSubscribeError(error: any): void {
     console.log('Something Went wrong while subscribing', error);
     // this.loaderService.popError();
@@ -207,9 +137,6 @@ export class HttpService extends Http {
     });
   }
 
-  /**
-   * onFinally
-   */
   private onFinally(): void {
     this.responseInterceptor();
   }

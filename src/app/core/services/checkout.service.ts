@@ -21,16 +21,8 @@ export class CheckoutService {
         .subscribe(number => this.orderNumber = number);
     }
 
-  createNewLineItem(variant_id: number) {
-    return this.http.post(
-      `spree/api/v1/orders/${this.orderNumber}/line_items?order_token=${this.getOrderToken()}`,
-      {
-        line_item: {
-          variant_id: variant_id,
-          quantity: 1
-        }
-      }
-    ).map(res => {
+  createNewLineItem(variant_id: number) {    
+    return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem =  res.json();
       return lineItem;
     });
@@ -41,9 +33,6 @@ export class CheckoutService {
       '/assets/api/orders/current.json'
     ).map(res => {
       const order = res.json();
-
-      console.log(order);
-
       if (order) {
         const token = order.token;
         this.setOrderTokenInLocalStorage({order_token: token});
@@ -65,7 +54,7 @@ export class CheckoutService {
   }
 
   createEmptyOrder() {
-
+    
     const user = JSON.parse(localStorage.getItem('user'));
     const headers = new Headers({
       'Content-Type': 'text/plain',
@@ -143,4 +132,5 @@ export class CheckoutService {
     const jsonData = JSON.stringify(token);
     localStorage.setItem('order', jsonData);
   }
+
 }

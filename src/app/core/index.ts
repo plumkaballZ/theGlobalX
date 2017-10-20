@@ -58,7 +58,6 @@ export function httpInterceptor(
       deps: [ XHRBackend, RequestOptions]
     },
     CheckoutService,
-    // ProductDummyService,
     ProductService,
     AuthActions,
     CheckoutActions,

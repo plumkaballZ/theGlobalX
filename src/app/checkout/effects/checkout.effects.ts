@@ -20,7 +20,10 @@ export class CheckoutEffects {
     .switchMap((action: Action) => {
       return this.checkoutService.createNewLineItem(action.payload);
     })
-    .map((lineItem: LineItem) => this.actions.addToCartSuccess(lineItem));
+    .map((lineItem: LineItem) => {
+      console.log(this.actions.addToCartSuccess(lineItem));
+      this.actions.addToCartSuccess(lineItem)}
+  );
   }
 
   // @Effect()
