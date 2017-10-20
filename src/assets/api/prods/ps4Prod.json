@@ -1,23 +1,21 @@
 {
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
-      "price": "15.99",
-      "display_price": "$15.99",
+      "id": 3,
+      "name": "PS4",
+      "description": "DarkSouls3 ftw!",
+      "price": "1.99",
+      "display_price": "$1.99",
       "available_on": "2012-10-17T03:43:57Z",
-      "slug": "123",
+      "slug": "ps4Prod",
       "meta_description": null,
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
-        1,
-        2,
-        3
+        999
       ],
       "total_on_hand": 10,
       "master": {
         "id": 1,
-        "name": "Ruby on Rails Tote",
+        "name": "PS4",
         "sku": "ROR-00011",
         "price": "15.99",
         "weight": null,
@@ -52,10 +50,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "mini_url": "/assets/api/prods/imgs/ps4.png",
+            "small_url": "/assets/api/prods/imgs/ps4.png",
+            "product_url": "/assets/api/prods/imgs/ps4.png",
+            "large_url": "/assets/api/prods/imgs/ps4.png"
           }
         ],
         "display_price": "$15.99",

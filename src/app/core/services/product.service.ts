@@ -8,7 +8,11 @@ export class ProductService {
   constructor(private http: HttpService) { }
 
   getProduct(id: string): Observable<any> {
-    return this.http.get(`/assets/api/prods/helloKittyProd.json`)
+    
+    console.log('get prod');
+    console.log('/assets/api/prods/' + id.toString() +'.json');
+
+    return this.http.get('/assets/api/prods/' + id.toString() +'.json')
     .map(res => res.json());
   }
 

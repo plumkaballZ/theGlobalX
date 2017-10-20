@@ -12,6 +12,7 @@ import { Product } from '../core/models/product';
 @Component({
   selector: 'app-home',
   template: `
+    <app-breadcrumb [taxonomies]="taxonomies$ | async"></app-breadcrumb>
     <div class="col-xs-12" style="margin-top: 23px;">
       <div class="col-xs-3">
         <app-taxons [taxonomies]="taxonomies$ | async"></app-taxons>
@@ -39,6 +40,6 @@ export class HomeComponent implements OnInit {
     this.taxonomies$ = this.store.select(getTaxonomies);
     this.selectedTaxonIds$ = this.store.select(getSelectedTaxonIds);
   }
-
+  
   ngOnInit() { }
 }

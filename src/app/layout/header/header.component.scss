@@ -1,10 +1,10 @@
 .navbar {
   height: 78px;
-  border-bottom: 1px solid #f5f5f6;
+  background-color: #FFFFFF;
 }
 
 .navbar-brand {
-  margin-top: -8%;
+  margin-top: 4px;
   img {
     height: 46px;
   }
@@ -28,7 +28,7 @@
 
   &:focus {
     background-color: #fff;
-    border-color: #14cda8;
+    border-color: #beaf99;
     box-shadow: none;
   }
 }
@@ -38,7 +38,7 @@
 }
 
 .desktop-query {
-  width: 300px;
+  width: 510px;
   float: right;
   line-height: 0;
   margin: 4px 10px 20px 0;
@@ -61,7 +61,7 @@
     background: #f5f5f6;
     &:focus, &:focus+a.desktop-submit {
       background-color: #fff;
-      border-color: #14cda8;
+      border-color: #beaf99;
     }
   }
   

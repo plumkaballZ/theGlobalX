@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     },
     {
     "id": 2,
-    "name": "Our Story", 
+    "name": "About Us", 
     "link": 'story'
     },
     {

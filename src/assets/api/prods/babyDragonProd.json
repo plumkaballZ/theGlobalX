@@ -1,18 +1,16 @@
-{
-      "id": 1,
-      "name": "Hello kitty wallet",
-      "description": "this is just an example prod :P",
-      "price": "15.99",
-      "display_price": "$15.99",
+ {
+      "id": 2,
+      "name": "Baby dragon custome",
+      "description": "yep :D",
+      "price": "300.31",
+      "display_price": "300.31 dkk",
       "available_on": "2012-10-17T03:43:57Z",
-      "slug": "123",
+      "slug": "helloKittyProd",
       "meta_description": null,
       "meta_keywords": null,
-      "shipping_category_id": 1,
+      "shipping_category_id": 2,
       "taxon_ids": [
-        1,
-        2,
-        3
+        2
       ],
       "total_on_hand": 10,
       "master": {
@@ -52,10 +50,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "mini_url": "/assets/api/prods/imgs/babydragon.png",
+            "small_url": "/assets/api/prods/imgs/babydragon.png",
+            "product_url": "/assets/api/prods/imgs/babydragon.png",
+            "large_url": "/assets/api/prods/imgs/babydragon.png"
           }
         ],
         "display_price": "$15.99",
