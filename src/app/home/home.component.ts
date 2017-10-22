@@ -13,7 +13,7 @@ import { Product } from '../core/models/product';
   selector: 'app-home',
   template: `
     <app-breadcrumb [taxonomies]="taxonomies$ | async"></app-breadcrumb>
-    <div class="col-xs-12" style="margin-top: 23px;">
+    <div class="col-xs-12">
       <div class="col-xs-3">
         <app-taxons [taxonomies]="taxonomies$ | async"></app-taxons>
       </div>
