@@ -9,12 +9,12 @@ import { Product } from '../../core/models/product';
   })
 
   export class SingleProdComp implements OnInit {
-    
     constructor() {
         console.log('singleProd ctor');
     }
-
     ngOnInit() {
         console.log('singeProd on init');
     }
+    getProductImageUrl(url) {
+      }
   }

@@ -12,6 +12,7 @@ import { VariantParserService } from './../../../../core/services/variant-parser
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss']
 })
+
 export class ProductDetailsComponent implements OnInit {
   @Input() product: Product;
   customOptionTypesHash: any;
@@ -38,11 +39,6 @@ export class ProductDetailsComponent implements OnInit {
     this.correspondingOptions = this.mainOptions;
   }
 
-  /**
-   * @param: option: { key: "small",
-   *                   value: {optionValue: {etc etc},
-   *                   variantIds: [1,2,3] }}
-   */
   onOptionClick(option) {
     const result = new VariantRetriverService()
                     .getVariant(this.currentSelectedOptions,
@@ -58,7 +54,6 @@ export class ProductDetailsComponent implements OnInit {
     this.description = newVariant.description;
     this.images = newVariant.images;
   }
-
   makeGlobalOptinTypesHash(customOptionTypes) {
     const temp = {};
     for (const key in customOptionTypes) {
@@ -68,7 +63,6 @@ export class ProductDetailsComponent implements OnInit {
     };
     return temp;
   }
-
   createNewCorrespondingOptions(newOptions, optionKey) {
     for (const key in this.correspondingOptions) {
       if (this.correspondingOptions.hasOwnProperty(key) && key !== optionKey) {
@@ -76,7 +70,6 @@ export class ProductDetailsComponent implements OnInit {
       }
     }
   }
-
   addToCart(product: Product) {
     this.store.dispatch(this.checkoutActions.addToCart(this.variantId));
   }
