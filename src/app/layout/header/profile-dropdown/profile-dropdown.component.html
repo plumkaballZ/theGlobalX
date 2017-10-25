@@ -1,5 +1,13 @@
-<ul class="nav navbar-nav navbar-right">
-  <li class="dropdown" dropdown *ngIf="!isAuthenticated">
+
+<ul style="padding-left: 40px;" class="nav navbar-nav navbar-right">
+
+    <li class="cart" [routerLink]="['checkout','cart']">
+        <a>
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
+          <span class="badge badge-danger">{{totalCartItems}}</span></a>
+      </li>
+
+  <li style="padding-left: 30px;" class="dropdown" dropdown *ngIf="!isAuthenticated">
     <a href="#" class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
@@ -12,7 +20,7 @@
     </ul>
   </li>
 
-  <li class="dropdown" dropdown *ngIf="isAuthenticated">
+  <li style="padding-left: 30px;" class="dropdown" dropdown *ngIf="isAuthenticated">
     <a href="#" class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
@@ -28,9 +36,5 @@
     </ul>
   </li>
 
-  <li class="cart" [routerLink]="['checkout','cart']">
-    <a>
-      <i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
-      <span class="badge badge-danger">{{totalCartItems}}</span></a>
-  </li>
+  
 </ul>

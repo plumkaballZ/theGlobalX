@@ -12,6 +12,7 @@ import { BreadcrumbComponent } from './breadcrumb/components/breadcrumb/breadcru
 // Content components
 import { ProductListComponent } from './content/product-list/product-list.component';
 import { ProductListItemComponent } from './content/product-list/product-list-item/product-list-item.component';
+import {SingleProdComp} from './../comps/singleProd/singleProdComp'
 import { FilterSummaryComponent } from './content/filter-summary/filter-summary.component';
 import { CustomizeComponent } from './content/customize/customize.component';
 import { ContentHeaderComponent } from './content/content-header/content-header.component';
@@ -30,6 +31,7 @@ import { FilterPipe } from './content/product-list/product-filter.pipe';
     HomeComponent,
     ProductListComponent,
     ProductListItemComponent,
+    SingleProdComp,
     TaxonsComponent,
     FilterComponent,
     BreadcrumbComponent,

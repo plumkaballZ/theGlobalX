@@ -1,9 +1,10 @@
-
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
+     
     <a href="https://github.com/aviabird/angularspree">
     </a>
+
+    <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="Angular Spree"></a>
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -15,34 +16,25 @@
       </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">  
-      <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+      <div style="float: right;padding-top: 12px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">  
+        
+        <ul style="padding-right:20px;" class="nav navbar-nav">
+          <li *ngFor="let taxon of taxonList" class="">
+            <a style="font-family: Bookmania,Helvetica,sans-serif; font-weight: bold; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
 
-      <div class="desktop-query centered">
-        <input placeholder="Search" class="desktop-searchBar">
-        <a class="desktop-submit">
-          <span class="web-sprite desktop-iconSearch sprites-search"></span>
-        </a>
-      </div>
-    </div>
-    
-  </div>
-</nav>
+        <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
 
-<nav class="navbar navbar-default navbar-fixed-top2" style="top:65px; background-color: #000000;">
-
-  <div class="container">
-      <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="Angular Spree"></a>
-    <div class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li *ngFor="let taxon of taxonList" class="">
-          <a style="padding-top: 28px; color: #e5d4bb;" (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
-            <span class="sr-only">(current)</span>
+        <div style="padding-top:5px;" class="desktop-query centered">
+          <a class="desktop-submit">
+            <span class="web-sprite desktop-iconSearch sprites-search"></span>
           </a>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </div>
+
    
   </div>
- 
 </nav>

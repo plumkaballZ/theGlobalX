@@ -43,10 +43,10 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Whitney, Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  Bookmania,Helvetica,sans-serif !default;
+$font-family-serif:       Bookmania, Helvetica, sans-serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace:   Bookmania, Helvetica, sans-serif !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
@@ -369,12 +369,12 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       200px !default;
 
-$navbar-default-color:               #b1a38d !default;
+$navbar-default-color:               #0A0908 !default;
 $navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-border:             #d3c2a8 !default;
 
 // Navbar links
-$navbar-default-link-color:                #938775 !default;
+$navbar-default-link-color:                #030303 !default;
 $navbar-default-link-hover-color:          #333 !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
