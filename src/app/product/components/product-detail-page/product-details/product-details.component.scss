@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 1200px) {
   .h01{
-    font-size: 45px;
+    font-size: 47px;
   }
 }
 
@@ -54,9 +54,14 @@
   line-height: 1;
 }
 
-  @media screen and (min-width: 1000px)
+  @media screen and (min-width: 1200px)
   {
     .col-md-4 {
-      width: 30.333333%;
+      width: 42.333333%;
     }
+}
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  .col-md-4 {
+    width: 30%;
+  }
 }
