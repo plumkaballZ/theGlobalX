@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   isAuthenticated: Observable<boolean>;
   totalCartItems: Observable<number>;
   taxonomies$: Observable<any>;
-  
+
   taxonList = [
     {
     "id": 1,
@@ -30,11 +30,16 @@ export class HeaderComponent implements OnInit {
     },
     {
     "id": 2,
-    "name": "About Us", 
-    "link": 'story'
+    "name": "Facts", 
+    "link": 'facts'
     },
     {
-    "id": 3,
+      "id": 3,
+      "name": "About Us", 
+      "link": 'aboutUs'
+    },
+    {
+    "id": 4,
     "name": "Contact",
     "link": 'contact'
     }
@@ -50,6 +55,15 @@ export class HeaderComponent implements OnInit {
   {
     this.taxonomies$ = this.store.select(getTaxonomies);
   }
+  
+  sTbState: string = 'invisible';
+  
+  toggleSearchBar(e, el) {
+  this.sTbState = (this.sTbState === 'invisible' ? 'visible' : 'invisible');
+  if (this.sTbState === 'visible') {
+    el.focus();
+  }
+}
 
   ngOnInit() {
     this.store.dispatch(this.authActions.authorize());

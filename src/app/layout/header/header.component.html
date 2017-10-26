@@ -17,7 +17,7 @@
       </button>
     </div>
 
-      <div style="float: right;padding-top: 12px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">  
+      <div style="float: right;padding-top: 30px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">  
         
         <ul style="padding-right:20px;" class="nav navbar-nav">
           <li *ngFor="let taxon of taxonList" class="">
@@ -29,13 +29,12 @@
 
         <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
 
-        <div style="padding-top:5px;" class="desktop-query centered">
-          <a class="desktop-submit">
-            <span class="web-sprite desktop-iconSearch sprites-search"></span>
+        <div id="demo-2" style="padding-top:5px;" class="desktop-query centered">
+          <input #toFocus placeholder="Search" class="desktop-searchBar">
+          <a class="desktop-submit" (click)="toggleSearchBar($event, toFocus)">
+            <span  class="web-sprite desktop-iconSearch sprites-search"></span>
           </a>
         </div>
       </div>
-
-   
   </div>
 </nav>
