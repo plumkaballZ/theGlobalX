@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+
+<nav style="border-color:white" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
      
     <a href="https://github.com/aviabird/angularspree">
@@ -20,7 +21,7 @@
         
         <ul style="padding-right:20px;" class="nav navbar-nav">
           <li *ngFor="let taxon of taxonList" class="">
-            <a style="font-family: Bookmania,Helvetica,sans-serif; font-weight: bold; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
+            <a style="font-family: Bookmania,Helvetica,sans-serif; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
               <span class="sr-only">(current)</span>
             </a>
           </li>

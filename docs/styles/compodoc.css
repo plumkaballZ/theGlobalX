@@ -231,18 +231,15 @@ h4, h5 {
 .panel-body table tr td {
     padding-left: 15px
 }
-
 .panel-body .table {
     margin-bottom: 0px;
 }
-
 .panel-group .panel:first-child {
     border-top: 0;
 }
-
 .menu {
     background: #fafafa;
-    border-right: 1px solid #e7e7e7;
+
     height: 100%;
     padding: 0;
     width: 300px;

@@ -21,9 +21,12 @@ export class ProductListComponent implements OnInit {
   constructor(
     private checkoutService: CheckoutService,
     private store: Store<AppState>,
-    private checkoutActions: CheckoutActions) { }
+    private checkoutActions: CheckoutActions) {
+      
+     }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   getProductImageUrl(url) {
     return environment.API_ENDPOINT + url;
@@ -35,5 +38,4 @@ export class ProductListComponent implements OnInit {
   getMargin() {
     return this.toggleLayout.size === 'COZY' ? '0 15px 20px 0' : '0 80px 20px 0';
   }
-
 }

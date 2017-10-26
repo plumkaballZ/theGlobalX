@@ -10,6 +10,7 @@ import { ProductService } from './../../../core/services/product.service';
   templateUrl: './product-detail-page.component.html',
   styleUrls: ['./product-detail-page.component.css']
 })
+
 export class ProductDetailPageComponent implements OnInit {
   actionsSubscription: Subscription;
   product$: Product = null;
@@ -21,7 +22,7 @@ export class ProductDetailPageComponent implements OnInit {
                 
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
-        this.productId = params['id'];
+        this.productId = 'prod_01';
         this.productService
           .getProduct(this.productId)
           .subscribe(response => this.product$ = response);

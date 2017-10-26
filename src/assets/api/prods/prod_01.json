@@ -1,0 +1,134 @@
+    {
+      "id": 4,
+      "name": "CardHolder X",
+      "description": "Stylish card holder in leather",
+      "price": "299,99",
+      "display_price": "299,99 DKK",
+      "available_on": "2012-10-17T03:43:57Z",
+      "slug": "prod_01",
+      "meta_description": null,
+      "meta_keywords": null,
+      "shipping_category_id": 1,
+      "taxon_ids": [
+        1
+      ],
+      "total_on_hand": 300,
+      "master": {
+        "id": 1,
+        "name": "CardHolderX",
+        "sku": "ROR-00011",
+        "price": "299,99",
+        "weight": null,
+        "height": null,
+        "width": null,
+        "depth": null,
+        "is_master": true,
+        "slug": "CardHolderX",
+        "description": "CardHolderX",
+        "track_inventory": true,
+        "cost_price": null,
+        "option_values": [
+          {
+            "id": 1,
+            "name": "Small",
+            "presentation": "S",
+            "option_type_name": "tshirt-size",
+            "option_type_id": 1,
+            "option_type_presentation": "S"
+          }
+        ],
+        "images": [
+          {
+            "id": 1,
+            "position": 1,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "mini_url": "/assets/api/prods/imgs/prod_01.png",
+            "small_url": "/assets/api/prods/imgs/prod_01_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_01.png",
+            "large_url": "/assets/api/prods/imgs/prod_01.png"
+          },
+          {
+            "id": 2,
+            "position": 2,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "mini_url": "/assets/api/prods/imgs/prod_02.png",
+            "small_url": "/assets/api/prods/imgs/prod_02_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_02.png",
+            "large_url": "/assets/api/prods/imgs/prod_02.png"
+          },
+          {
+            "id": 3,
+            "position": 3,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "mini_url": "/assets/api/prods/imgs/prod_03.png",
+            "small_url": "/assets/api/prods/imgs/prod_03_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_03.png",
+            "large_url": "/assets/api/prods/imgs/prod_03.png"
+          }
+        ],
+        "display_price": "$15.99",
+        "options_text": "(Size: small, Colour: red)",
+        "in_stock": true,
+        "is_backorderable": true,
+        "is_orderable": true,
+        "total_on_hand": 10,
+        "is_destroyed": false
+      },
+      "variants": [],
+      "option_types": [
+
+      ],
+      "product_properties": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "property_id": 1,
+          "value": "porp1",
+          "property_name": "bag_type"
+        }
+      ],
+      "classifications": [
+        {
+          "taxon_id": 1,
+          "position": 1,
+          "taxon": {
+            "id": 1,
+            "name": "prod_01",
+            "pretty_name": "CardHolder",
+            "permalink": "what",
+            "parent_id": 1,
+            "taxonomy_id": 1,
+            "meta_title": "CardHolder",
+            "meta_description": "CardHolder",
+            "taxons": [
+
+            ]
+          }
+        }
+      ],
+      "has_variants": false
+    }

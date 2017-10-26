@@ -1,33 +1,39 @@
-<div itemscope itemtype="https://schema.org/Product" *ngIf="product != null" class="row padding-top">
 
-
-  <!-- <app-image-container 
+<div itemscope itemtype="https://schema.org/Product" style="padding-top: 60px;" *ngIf="product != null" class="">
+  
+  <app-image-container 
     [images]="images" 
     [selectedImage]="images[0]"
-    class="col-md-6">
-  </app-image-container> -->
+    style="float:left; margin-right:30px;">
+  </app-image-container> 
 
-  <!-- <div class="col-md-6">
+  <div class="prodInfo">
+      <h1 class="h01" style="color:#6b5154"><span>Sustainable Card Holder X</span></h1>
+      
+        <ul class="ul01 centered">
+            <li>100% MONEY-BACK GUARANTEE</li>
+            <li>FREE DOMESTIC SHIPPING OVER $50</li>
+          </ul>
+      
+        <div class="prodInfo_001 col-md-4" style="padding: 30px 30px; background-color:#f2f2f2">
 
-    <app-product-price-info [product]="product" class="row">
-    </app-product-price-info>
-
-    <app-product-variants
-      [customOptionTypesHash]="customOptionTypesHash"
-      [currentSelectedOptions]="currentSelectedOptions" 
-      (onOptionClickEvent)="onOptionClick($event)"
-      [correspondingOptions]="correspondingOptions"
-      [mainOptions]="mainOptions"
-      class="row"></app-product-variants>  
-
-    <div>
-      <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">ADD TO BAG</button>
-    </div>
-
-    <app-product-description 
-      [description]="product.description" 
-      class="row">
-    </app-product-description>  
-  </div> -->
-
+          <app-product-price-info [product]="product" class="row"></app-product-price-info>
+          <app-product-description [description]="product.description" class="row"></app-product-description>  
+          <div><button (click)="addToCart()" class="pdp-add-to-bag pdp-button">BUY NOW</button></div>
+        </div>
+        
+        <div class="col-md-4" style="visibility: visible; animation-name: fadeIn;">
+            <div class="grid">
+              <div class="grid__item large--seven-twelfths">
+                  <h2 style="color:#000000">
+                    <strong>SUSTAINABILITY</strong><br>
+                    <span style="color:#6b5154">
+                        Our products provide enviromental, socal and economical benefits while protecting the enviroment
+                    </span>
+                  </h2>
+              </div>
+            </div>
+          </div>
+  </div>
 </div>
+

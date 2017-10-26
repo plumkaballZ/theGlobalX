@@ -4,7 +4,7 @@
     list-style: none;
     float: right;
     width: 100%;
-    margin: 0;
+    margin: 15px;
 }
 
 .navbar-brand {
@@ -85,12 +85,10 @@
     .sprites-search {
       width: 21px;
       height: 21px;
-      // background-position: -284px -160px;
     }
     .web-sprite {
       background: url(../../../assets/search-sprite.d5ab50f1b815dfaf3976c6ce2e19d24670e5ba0b.png);
       background-position: -209px -148px;
-      // background-size: 1404px 105px;
       display: inline-block;
     }
 

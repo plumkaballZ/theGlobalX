@@ -6,4 +6,3 @@ export const ProductRoutes: Routes = [
   { path: '', component: ProductComponent, pathMatch: 'full' },
   { path: ':id', component: ProductDetailPageComponent }
 ];
-

@@ -112,7 +112,7 @@ $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:   #d3c2a8 !default;
+$component-active-color:   #6e5559 !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       $brand-primary !default;
 
@@ -364,14 +364,12 @@ $container-lg:                 $container-large-desktop !default;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       200px !default;
 
 $navbar-default-color:               #0A0908 !default;
 $navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:             #d3c2a8 !default;
 
 // Navbar links
 $navbar-default-link-color:                #030303 !default;
@@ -390,7 +388,6 @@ $navbar-default-brand-hover-bg:            transparent !default;
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd !default;
 $navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
 
 
 //=== Inverted navbar
@@ -401,7 +398,7 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !def
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           #d3c2a8 !default;
+$navbar-inverse-link-hover-color:           #6e5559 !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;

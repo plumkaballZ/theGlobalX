@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from './../shared/index';
 
 import { RouterModule } from '@angular/router';
-
-// For Temp Puropose
-// TODO: Remove this from here
 import { ProductService } from './../core/services/product.service';
 
 // Components

@@ -290,9 +290,7 @@ button, input, select, textarea {
 }
 
 .register-error-icon {
-  border: 2px solid#d3c2a8;
   padding: 0 7px;
-  color: #d3c2a8;
   display: inline-block;
   position: absolute;
   top: 12px;
@@ -304,7 +302,6 @@ button, input, select, textarea {
 .register-error-message {
   font-size: 11px;
   margin-left: 15px;
-  color: #d3c2a8;
   text-align: left;
   margin-top: -9px;
   max-height: 500px;
