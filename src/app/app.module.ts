@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 // Components
+import { FactComp } from './comps/fact/factComp';
+import { StoryComp } from './comps/story/storyComp';
+import { ContactUsComp } from './comps/contactUs/contactUsComp';
+
 import { AppComponent } from './app.component';
 // Routes
 import { routes } from './app.routes';
@@ -19,6 +23,7 @@ import { reducer } from './app.reducers';
 import { CheckoutHeaderComponent } from './layout/checkout-header/checkout-header.component';
 import { CheckoutFooterComponent } from './layout/checkout-footer/checkout-footer.component';
 
+
 // adding rx operators
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
@@ -32,7 +37,10 @@ import 'rxjs/add/observable/of';
   declarations: [
     AppComponent,
     CheckoutHeaderComponent,
-    CheckoutFooterComponent
+    CheckoutFooterComponent,
+    FactComp,
+    StoryComp,
+    ContactUsComp
   ],
   imports: [
     RouterModule.forRoot(routes),

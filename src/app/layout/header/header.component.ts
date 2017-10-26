@@ -31,12 +31,12 @@ export class HeaderComponent implements OnInit {
     {
     "id": 2,
     "name": "Facts", 
-    "link": 'facts'
+    "link": 'fact'
     },
     {
       "id": 3,
       "name": "About Us", 
-      "link": 'aboutUs'
+      "link": 'story'
     },
     {
     "id": 4,
