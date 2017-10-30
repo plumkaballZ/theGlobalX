@@ -1,7 +1,6 @@
-
 <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-     
+
     <a href="https://github.com/aviabird/angularspree">
     </a>
 
@@ -17,24 +16,25 @@
       </button>
     </div>
 
-      <div style="float: right;padding-top: 30px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">  
-        
-        <ul style="padding-right:20px;" class="nav navbar-nav">
-          <li *ngFor="let taxon of taxonList" class="">
-            <a style="font-family: Bookmania,Helvetica,sans-serif; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)" href="javascript:void(0)">{{taxon.name}}
+    <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">
+
+      <ul style="padding-right:20px;" class="nav navbar-nav">
+        <li *ngFor="let taxon of taxonList" class="">
+          <a style="font-family: Bookmania,Helvetica,sans-serif; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)"
+            href="javascript:void(0)">{{taxon.name}}
               <span class="sr-only">(current)</span>
             </a>
-          </li>
-        </ul>
+        </li>
+      </ul>
 
-        <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+      <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
 
-        <div id="demo-2" style="padding-top:5px;" class="desktop-query centered">
-          <input #toFocus placeholder="Search" class="desktop-searchBar">
-          <a class="desktop-submit" (click)="toggleSearchBar($event, toFocus)">
+      <div id="demo-2" style="padding-top:5px;" class="desktop-query centered">
+        <input #toFocus placeholder="Search" class="desktop-searchBar">
+        <a class="desktop-submit" (click)="toggleSearchBar($event, toFocus)">
             <span  class="web-sprite desktop-iconSearch sprites-search"></span>
           </a>
-        </div>
       </div>
+    </div>
   </div>
 </nav>

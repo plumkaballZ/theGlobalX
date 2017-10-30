@@ -1,19 +1,18 @@
 .navbar {
   height: 78px;
-  background-color: transparent;
+  background-color: #f2f2f2;
     list-style: none;
     float: right;
     width: 100%;
-    margin: 15px;
 }
 .navbar-brand {
   float: left;
   display: block;
-  width: 20%;
   padding: 0;
   text-align: center;
+  margin-left: 0px !important;
   img {
-    height: 84px;
+    height: 78px;
   }
 }
 
