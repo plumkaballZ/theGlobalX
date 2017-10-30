@@ -2,12 +2,18 @@
   display: inline-block;
 
   .thumbnails-selected-image {
-    height: 520px;
+    height: 705px;
     min-height: 300px;
     width: 620px;
     background: rgb(245, 245, 246) none repeat scroll 0% 0% / auto padding-box border-box;
     }
 
+    @media screen and (max-device-width: 1366px) {
+      .thumbnails-selected-image {
+        height: 440px;
+      }
+    }
+    
   .thumbnails-vertical-container {
       width: 60px;
       float: left;
