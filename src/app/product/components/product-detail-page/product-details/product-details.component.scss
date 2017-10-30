@@ -99,6 +99,7 @@
      width: 42.333333%;
     }
   }
+
 // @media screen and (min-width: 991px) and (max-width: 1200px) {
 //   .col-md-4 {
 //     width: 30%;
@@ -106,56 +107,26 @@
 // }
 
 
-@media screen and (min-width: 400px)  {
-
+@media only screen and (min-width:960px){
+  /* styles for browsers larger than 960px; */
 }
-@media screen and (min-width: 600px)  {
-
+@media only screen and (min-width:1440px){
+  /* styles for browsers larger than 1440px; */
 }
-@media screen and (min-width: 1000px) {
-
+@media only screen and (min-width:2000px){
+  /* for sumo sized (mac) screens */
 }
-@media screen and (min-width: 1400px) {
- 
+@media only screen and (max-device-width:480px){
+ /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device-width:768px){
+ /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+/* For portrait layouts only */
 }
 
-
-// .container:before,
-// .container:after {
-//   content: "";
-//   display: table;
-// }
-// .container:after {
-//   clear: both;
-// }
-// .container {
-//   margin-bottom: 24px;
-//   *zoom: 1;
-//   padding-top: 30px;
-// }
-// .container-75 {
-//   width: 75%;
-// }
-// .container-50 {
-//   margin-bottom: 0;
-//   width: 50%;
-// }
-// .container,
-// section,
-// aside {
-//   border-radius: 6px;
-// }
-// section,
-// aside {
-//   margin: 1.858736059%;
-//   padding: 20px 0;
-//   text-align: center;
-// }
-// section {
-//   float: left;
-//   width: 63.197026%;
-// }
-// aside {
-//   float: right;
-//   width: 29.3680297%;
-// }
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+/* For landscape layouts only */
+}
