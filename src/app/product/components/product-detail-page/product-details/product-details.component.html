@@ -1,5 +1,4 @@
-
-<div itemscope itemtype="https://schema.org/Product" style="padding-top: 30px;" *ngIf="product != null" class="">
+<div itemscope itemtype="https://schema.org/Product" *ngIf="product != null" class="div_001">
   
   <app-image-container 
     [images]="images" 
@@ -7,11 +6,11 @@
     style="float:left; margin-right:30px">
   </app-image-container> 
 
-  <div style="margin-top:-21px;">
-      
-    <h1 class="h01" style="color:#6b5154"><span>Sustainable Card Holder X</span></h1>
+  <div class="div_002">
 
-        <ul class="ul01 centered">
+    <h1 class="h_001"><span>Sustainable Card Holder X</span></h1>
+
+        <ul class="ulz_001 centered">
             <li>100% MONEY-BACK GUARANTEE</li>
             <li>FREE DOMESTIC SHIPPING OVER $50</li>
           </ul>
@@ -21,21 +20,30 @@
           <app-product-description [description]="product.description" class="row"></app-product-description>  
           <div><button (click)="addToCart()" class="pdp-add-to-bag pdp-button">BUY NOW</button></div>
         </div>
-
-        <div class="prodInfo_02 col-md-4">
+        
+        <div class="prodInfo_002 col-md-4">
             <div class="grid">
               <div class="grid__item large--seven-twelfths">
-                  <h2 class="h02">
-                    <strong>SUSTAINABILITY</strong><br>
-                    <span style="color:#6b5154">
+                  <h2 class="h_002">
+                    <strong class="centered">SUSTAINABILITY</strong>
+                  </h2>
+                  <br>
+                  <span class="span_001">
                       <br>
                       Our products provide environmental, social and economic benefits while protecting public health
                       and environment, throughout their life cycle, form exctraction of raw materials until final disposal
                     </span>
-                  </h2>
+                 
               </div>
             </div>
           </div>
   </div>
 </div>
 
+<!-- <h1>100% Wide Container</h1>
+
+<div class="container">
+  <section>sec1</section>
+  <aside>sec2</aside>
+</div>
+ -->
