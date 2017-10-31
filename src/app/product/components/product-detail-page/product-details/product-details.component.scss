@@ -1,23 +1,3 @@
-.div_001{
-  padding-top: 30px;
-}
-.div_002{
-  margin-top:-21px;
-}
-
-.h_001{
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: 55px;
-  color:#6b5154
-}
-    // @media screen and (max-device-height: 960px) {
-    //   .h_001 {
-    //     font-size: 35px;
-    //   }
-    // }
-
-
 .ulz_001{
   list-style: none;
   margin: 0 0 10px 0;
@@ -31,28 +11,6 @@
     line-height: 1;
   }
 }
-
-.prodInfo_001{
-  padding: 30px 30px; 
-  background-color:#f2f2f2  
-}
-    // @media screen and (max-device-height: 960px) {
-    //   .prodInfo_001 {
-    //     padding: 10px 10px;
-    //   }
-    // }
-
-.prodInfo_002{
-  height: 306px; 
-  background-color:#f2f2f2;
-  visibility: visible; 
-  animation-name: fadeIn;
-}
-    // @media screen and (max-device-height: 960px) {
-    //   .prodInfo_002 {
-    //     height: 200px; 
-    //   }}
-
     
 .pdp-add-to-bag {
   width: 99%;
@@ -77,11 +35,6 @@
   font-size: 30px;
   text-align: center;
 }
-    // @media screen and (max-device-height: 960px) {
-    //   .h_002 {
-    //     font-size: 23px;
-    //   }
-    // }
 
 .span_001{
   font-family: "Montserrat","HelveticaNeue","Helvetica Neue",sans-serif;
@@ -92,20 +45,6 @@
   line-height: 1;
   color:#6b5154
 }
-
- @media screen and (min-width: 1200px)
- {
-   .col-md-4 {
-     width: 42.333333%;
-    }
-  }
-
-// @media screen and (min-width: 991px) and (max-width: 1200px) {
-//   .col-md-4 {
-//     width: 30%;
-//   }
-// }
-
 
 @media only screen and (min-width:960px){
   /* styles for browsers larger than 960px; */
@@ -130,3 +69,60 @@
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
 /* For landscape layouts only */
 }
+
+.rowZ {
+	clear: both;
+	padding: 0px;
+  margin: 0px;
+
+  padding-top: 30px;
+}
+.colZ {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+
+.colZ:first-child { margin-left: 0; }
+.grpZ:before,
+.grpZ:after { content:""; display:table; }
+.grpZ:after { clear:both;}
+.grpZ { zoom:1;}
+
+.colZ_001 {
+	width: 58%;
+}
+
+.colZ_002 {
+  width: 42%;
+  margin-top:-21px;
+}
+
+.hZ_001{
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 55px;
+  color:#6b5154
+}
+
+.prodInfo_002{
+  height: 300px; 
+  background-color:#f2f2f2;
+  visibility: visible; 
+  animation-name: fadeIn;
+  padding: 30px 30px;
+}
+.prodInfo_001{
+  padding: 30px 30px; 
+  background-color:#f2f2f2  
+}
+
+// @media only screen and (max-width: 480px) {
+// 	.colZ { 
+// 		margin: 1% 0 1% 0%;
+// 	}
+// }
+
+// @media only screen and (max-width: 480px) {
+// 	.colZ_002, .colZ_001 { width: 100%; }
+// }
