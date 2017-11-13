@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComp implements OnInit {
   
   constructor() { }
-  
+
   ngOnInit() {
   }
 }
