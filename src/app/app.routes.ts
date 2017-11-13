@@ -3,7 +3,7 @@ import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
 
 import { FactComp } from './comps/fact/factComp';
 import { StoryComp } from './comps/story/storyComp';
-import { ContactUsComp } from './comps/contactUs/contactUsComp';
+import { ContactComp } from './comps/contact/contactComp';
 
 export const routes: Routes = [
   {
@@ -27,5 +27,5 @@ export const routes: Routes = [
   },
   {path: 'fact', component: FactComp},
   {path: 'story', component: StoryComp},
-  {path: 'contact', component: ContactUsComp}
+  {path: 'contact', component: ContactComp}
 ];

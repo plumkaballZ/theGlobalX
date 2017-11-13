@@ -51,11 +51,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "small_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "product_url": "/assets/api/prods/imgs/hellowKittyWallatet.png",
-            "large_url": "/assets/api/prods/imgs/hellowKittyWallatet.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -103,11 +99,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -218,11 +210,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/babydragon.png",
-            "small_url": "/assets/api/prods/imgs/babydragon.png",
-            "product_url": "/assets/api/prods/imgs/babydragon.png",
-            "large_url": "/assets/api/prods/imgs/babydragon.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -270,11 +258,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -385,11 +369,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/ps4.png",
-            "small_url": "/assets/api/prods/imgs/ps4.png",
-            "product_url": "/assets/api/prods/imgs/ps4.png",
-            "large_url": "/assets/api/prods/imgs/ps4.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -437,11 +417,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -553,11 +529,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/dbsPoster.png",
-            "small_url": "/assets/api/prods/imgs/dbsPoster.png",
-            "product_url": "/assets/api/prods/imgs/dbsPoster.png",
-            "large_url": "/assets/api/prods/imgs/dbsPoster.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -605,11 +577,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -720,11 +688,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/batmanPants.png",
-            "small_url": "/assets/api/prods/imgs/batmanPants.png",
-            "product_url": "/assets/api/prods/imgs/batmanPants.png",
-            "large_url": "/assets/api/prods/imgs/batmanPants.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$321.01",
@@ -772,11 +736,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -887,11 +847,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/sword.png",
-            "small_url": "/assets/api/prods/imgs/sword.png",
-            "product_url": "/assets/api/prods/imgs/sword.png",
-            "large_url": "/assets/api/prods/imgs/sword.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$301",
@@ -939,11 +895,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -1054,11 +1006,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/beer.png",
-            "small_url": "/assets/api/prods/imgs/beer.png",
-            "product_url": "/assets/api/prods/imgs/beer.png",
-            "large_url": "/assets/api/prods/imgs/beer.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -1106,11 +1054,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",
@@ -1221,11 +1165,7 @@
             "attachment_height": 360,
             "alt": null,
             "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/darksouls.png",
-            "small_url": "/assets/api/prods/imgs/darksouls.png",
-            "product_url": "/assets/api/prods/imgs/darksouls.png",
-            "large_url": "/assets/api/prods/imgs/darksouls.png"
+            "viewable_id": 1
           }
         ],
         "display_price": "$15.99",
@@ -1273,11 +1213,7 @@
               "attachment_height": 360,
               "alt": null,
               "viewable_type": "Spree::Variant",
-              "viewable_id": 1,
-              "mini_url": "/spree/products/1/mini/file.png?1370533476",
-              "small_url": "/spree/products/1/small/file.png?1370533476",
-              "product_url": "/spree/products/1/product/file.png?1370533476",
-              "large_url": "/spree/products/1/large/file.png?1370533476"
+              "viewable_id": 1
             }
           ],
           "display_price": "$15.99",

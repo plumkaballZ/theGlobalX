@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 // Components
 import { FactComp } from './comps/fact/factComp';
 import { StoryComp } from './comps/story/storyComp';
-import { ContactUsComp } from './comps/contactUs/contactUsComp';
+import { ContactComp } from './comps/contact/contactComp';
 
 import { AppComponent } from './app.component';
 // Routes
@@ -40,7 +40,7 @@ import 'rxjs/add/observable/of';
     CheckoutFooterComponent,
     FactComp,
     StoryComp,
-    ContactUsComp
+    ContactComp
   ],
   imports: [
     RouterModule.forRoot(routes),

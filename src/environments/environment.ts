@@ -5,7 +5,6 @@
 
 export const environment = {
   production: false,
-   API_ENDPOINT: 'http://localhost:4200/',
-  // API_ENDPOINT: 'https://angularspree-new.herokuapp.com/',
+  API_ENDPOINT: 'http://localhost:4200/',
   AppName: 'TheGlobalX'
 };
