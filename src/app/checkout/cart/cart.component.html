@@ -1,5 +1,6 @@
 <div class="cart-section">
   <div *ngIf="(totalCartItems$ | async) > 0 else emptyCart">
+
     <div class="left">
       <div class="checkout-header-container">
         <div class="checkout-header">
@@ -15,11 +16,15 @@
         </a>
       </div>
     </div>
+
     <div class="right">
       <app-order-total-summary [totalCartValue]="totalCartValue$ | async"></app-order-total-summary>
     </div>
+
   </div>
   <ng-template #emptyCart>
     <app-empty-cart></app-empty-cart>
   </ng-template>
 </div>
+
+
