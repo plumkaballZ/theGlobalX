@@ -1,20 +1,12 @@
 .image-container {
   display: inline-block;
-  
   .thumbnails-selected-image {
     height: 659px;
     min-height: 300px;
     width: 620px;
     background: rgb(245, 245, 246) none repeat scroll 0% 0% / auto padding-box border-box;
-    }
-
-        // @media screen and (max-device-height: 960px) {
-        //   .thumbnails-selected-image {
-        //     height: 440px;
-        //   }
-        // }
-    
-  .thumbnails-vertical-container {
+}
+.thumbnails-vertical-container {
       width: 60px;
       float: left;
       margin-bottom: 10px;
@@ -31,6 +23,27 @@
   }
 }
 
-
-
-
+@media only screen and (min-width:300px){  
+    .image-container{
+        .thumbnails-selected-image {
+            height: 0px;  
+            width: 342px;
+        }
+    }
+    .thumbnails-vertical-container{
+        display: none;
+    }
+  }
+  
+  @media only screen and (min-width:600px){  
+    .image-container{
+        .thumbnails-selected-image {
+            height: 659px;
+            width: 620px;
+        }
+    }
+    .thumbnails-vertical-container{
+        display:flex;
+    }
+  }
+  

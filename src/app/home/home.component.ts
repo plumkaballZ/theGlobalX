@@ -15,8 +15,7 @@ import { Product } from '../core/models/product';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent implements OnInit {
-   
+export class HomeComponent implements OnInit {   
   products$: Observable<any>;
   product$:  Observable<Product>;
   taxonomies$: Observable<any>;
