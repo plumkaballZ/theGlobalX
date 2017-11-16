@@ -46,33 +46,6 @@
   color:#6b5154
 }
 
-
-
-
-@media only screen and (min-width:960px){
-  /* styles for browsers larger than 960px; */
-}
-@media only screen and (min-width:1440px){
-  /* styles for browsers larger than 1440px; */
-}
-@media only screen and (min-width:2000px){
-  /* for sumo sized (mac) screens */
-}
-@media only screen and (max-device-width:480px){
- /* styles for mobile browsers smaller than 480px; (iPhone) */
-}
-@media only screen and (device-width:768px){
- /* default iPad screens */
-}
-/* different techniques for iPad screening */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-/* For portrait layouts only */
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-/* For landscape layouts only */
-}
-
 .rowZ {
 	clear: both;
 	padding: 0px;
@@ -121,10 +94,28 @@
 
 @media only screen and (min-width:300px){
   .rowZ{
-    padding-top: 10px; 
+    padding-top: 45px; 
   }
   .colZ_002{
     width: 100%;
+    margin-top: 6px;
+  }
+  .hZ_001{
+    font-size: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 62px;
+  }
+  .ulz_001{
+    position: absolute;
+    top: 82px;
+    margin: 26px 0 10px 0;
+    > li{
+      font-size: 14px;
+    }
+  }
+  .prodInfo_001{
+    padding: 0px 30px;
   }
 }
 
@@ -134,5 +125,25 @@
   }
   .colZ_002{
     width: 42%;
+    margin-top: -21px;
+  }
+  .hZ_001{
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 55px;
+    color:#6b5154;
+    position: relative;
+    top:0px;
+  }
+  .ulz_001{
+    margin: 0px 0 10px 0;
+    position: relative;
+    top: 0px;
+    > li{
+      font-size: 16px;
+    }
+  }
+  .prodInfo_001{
+    padding: 30px 30px;
   }
 }
