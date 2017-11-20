@@ -23,27 +23,3 @@
   }
 }
 
-@media only screen and (min-width:300px){  
-    .image-container{
-        .thumbnails-selected-image {
-            height: 0px;  
-            width: 342px;
-        }
-    }
-    .thumbnails-vertical-container{
-        display: none;
-    }
-  }
-  
-  @media only screen and (min-width:600px){  
-    .image-container{
-        .thumbnails-selected-image {
-            height: 659px;
-            width: 620px;
-        }
-    }
-    .thumbnails-vertical-container{
-        display:flex;
-    }
-  }
-  

@@ -10,7 +10,7 @@ import { VariantParserService } from './../../../../core/services/variant-parser
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  styleUrls: ['./product-details.component.scss', './prodDetailResMaster.scss']
 })
 
 export class ProductDetailsComponent implements OnInit {

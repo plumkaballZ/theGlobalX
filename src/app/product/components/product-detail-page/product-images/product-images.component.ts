@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-image-container',
   templateUrl: './product-images.component.html',
-  styleUrls: ['./product-images.component.scss']
+  styleUrls: ['./product-images.component.scss', './prodImgRezMaster.scss']
 })
 export class ProductImagesComponent implements OnInit {
   @Input() images: Image[] = null;
