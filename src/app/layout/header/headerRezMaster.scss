@@ -8,46 +8,11 @@
       margin-top: 15px;
     }
   }
-@media only screen and (min-width:360px){  
-    .navbar-brand {
-      img {
-        height: 70px;
-      }
+    
+  @media only screen and (min-width:1200px){
+     .navbar-brand {
+       img {
+         height: 78px;
+       }
+     }
     }
-    .navbar-toggle{
-      margin-top: 15px;
-    }
-  }
-  
-@media only screen and (min-width:412px){  
-    .navbar-brand {
-      img {
-        height: 74px;
-      }
-    }
-    .navbar-toggle{
-      margin-top: 15px;
-    }
-  }
-
-  @media only screen and (min-width:768px){
-    .navbar-brand {
-      img {
-        height: 78px;
-      }
-    }
-    .navbar-toggle{
-      margin-top: 8px;
-    }
-  }
-  
-  @media only screen and (min-width:1024px){
-    .navbar-brand {
-      img {
-        height: 78px;
-      }
-    }
-    .navbar-toggle{
-      margin-top: 8px;
-    }
-  }
