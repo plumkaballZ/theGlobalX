@@ -13,7 +13,7 @@ import { AuthActions } from '../../auth/actions/auth.actions';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss', './headerRezMaster.scss'],
+  styleUrls: ['./header.component.scss', './rez_Master.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 

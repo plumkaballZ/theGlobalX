@@ -1,7 +1,7 @@
 @media only screen and (min-width:320px){  
     .image-container{
         .thumbnails-selected-image {
-            height: 0px;  
+            height: 330px;  
             width: 290px;
             display: inline-block;
         }
@@ -13,15 +13,15 @@
  @media only screen and (min-width:360px){  
      .image-container{
          .thumbnails-selected-image {
-             height: 0px;  
-             width: 329px;
+             height: 370px;  
+             width: 330px;
             }
         }
     }
     @media only screen and (min-width:375px){  
         .image-container{
             .thumbnails-selected-image {
-                height: 0px;  
+                height: 385px;  
                 width: 345px;
                }
            }
@@ -29,7 +29,7 @@
        @media only screen and (min-width:412px){  
         .image-container{
             .thumbnails-selected-image {
-                height: 0px;  
+                height: 420px;  
                 width: 380px;
                }
            }
@@ -37,66 +37,53 @@
        @media only screen and (min-width:414px){  
         .image-container{
             .thumbnails-selected-image {
-                height: 0px;  
+                height: 423px;  
                 width: 383px;
                }
            }
        }
-       
+
        @media only screen and (min-width:768px){
+        .image-container{
+            .thumbnails-selected-image {
+                height: 460px;
+                width: 420px;
+               }
+           }
            .thumbnails-vertical-container{
-               display: table-footer-group;
+               display: block;
+               margin-top: 15px;
+            }
+            .thumbnails-thumbnail{
+                height: 65px;
             }
         }
+        
+        @media only screen and (min-width:1024px){
+            .image-container{
+                .thumbnails-selected-image {
+                    height: 580px;
+                    width: 540px;
+                   }
+               }
+               .thumbnails-vertical-container{
+                   margin-top: 20px;
+                }
+                .thumbnails-thumbnail{
+                    height: 100%;
+                }
+            }
 
-// @media only screen and (min-width:412px){  
-//     .image-container{
-//         .thumbnails-selected-image {
-//             height: 0px;  
-//             width: 380px;
-//         }
-//     }
-//     .thumbnails-vertical-container{
-//         display: none;
-//     }
-//   }
-  
-//   @media only screen and (min-width:868px){  
-//     .image-container{
-//         .thumbnails-selected-image {
-//             height: 623px;
-//             width: 400px;
-//         }
-//     }
-//     .thumbnails-vertical-container{
-//         display:flex;
-//     }
-//   }
-  
-//   @media only screen and (min-width:1000px){  
-//     .image-container{
-//         .thumbnails-selected-image {
-//             height: 559px;
-//             width: 520px;
-//         }
-//     }
-//     .thumbnails-vertical-container{
-//         display:flex;
-//         width: 50px;
-//     }
-//   }
-
-  @media only screen and (min-width:1200px){  
-    .image-container{
-        .thumbnails-selected-image {
-            height: 659px;
+    @media only screen and (min-width:1200px){  
+        .image-container{
+            .thumbnails-selected-image {
+            height: 660px;
             width: 620px;
         }
     }
     .thumbnails-vertical-container{
         display:flex;
         width: 60px;
+        margin-top: 20px;
     }
   }
-  
-  

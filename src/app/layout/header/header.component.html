@@ -20,7 +20,7 @@
 
       <ul style="padding-right:20px;" class="nav navbar-nav">
         <li *ngFor="let taxon of taxonList" class="">
-          <a style="font-family: Bookmania,Helvetica,sans-serif; padding-right: 30px; color: #050504;" (click)="selectTaxon(taxon)"
+          <a class="az_001" (click)="selectTaxon(taxon)"
             href="javascript:void(0)">{{taxon.name}}
               <span class="sr-only">(current)</span>
             </a>

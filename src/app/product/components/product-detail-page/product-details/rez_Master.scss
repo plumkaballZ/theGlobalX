@@ -58,7 +58,7 @@
  @media only screen and (min-width:768px){
   .hZ_001{
     position: initial;
-    font-size: 41px;
+    font-size: 36px;
   }
   .ulz_001{
     position: initial;
@@ -68,14 +68,15 @@
     }
   }
   .colZ_002{
-    width: 42%;
-     margin-top: -21px;
+    width: 40%;
+    margin-top: -21px;
+    margin-left: 2%;
   }
   .rowZ {
     padding-top: 30px;
   }
   .prodInfo_001{
-    padding: 30px 30px;
+    padding: 0px 30px;
   }
  }
  
@@ -85,12 +86,10 @@
       margin-top: -21px;
     }
     .hZ_001{
-      text-transform: uppercase;
-      line-height: 1;
       font-size: 55px;
-      color:#6b5154;
       position: relative;
       top:0px;
+      font-weight:100
     }
     .ulz_001{
       margin: 0px 0 10px 0;
@@ -106,6 +105,9 @@
     }
     .prodInfo_002{
       padding: 30px 30px;
-      font: 16px;
+      font-size: 16px;
+    }
+    .colZ {
+      margin: 1% 0px 0% 0%;
     }
   }

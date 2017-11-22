@@ -1,0 +1,38 @@
+@media only screen and (min-width:320px){  
+    .navbar-brand {
+      img {
+        height: 60px;
+      }
+    }
+    .navbar-toggle{
+      margin-top: 15px;
+    }
+  }
+  
+  @media only screen and (min-width:768px){
+    .az_001{
+      padding-right: 0px;
+    }
+   }
+
+   @media only screen and (min-width:1024px){
+    .az_001{
+      padding-right: 30px;
+    }
+    .navbar-brand {
+      img {
+        height: 67px;
+      }
+    }
+   }
+
+  @media only screen and (min-width:1200px){
+     .navbar-brand {
+       img {
+         height: 78px;
+       }
+     }
+     .az_001{
+       padding-right: 30px;
+      }
+    }
