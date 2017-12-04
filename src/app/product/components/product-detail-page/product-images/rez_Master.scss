@@ -59,6 +59,24 @@
             }
         }
         
+    
+        @media only screen and (min-width:800px){
+            .image-container{
+                .thumbnails-selected-image {
+                    height: 580px;
+                    width: 540px;
+                   }
+               }
+               .thumbnails-vertical-container{
+                   margin-top: 20px;
+                }
+                .thumbnails-thumbnail{
+                    height: 110px;
+                }
+            }
+
+
+           
         @media only screen and (min-width:1024px){
             .image-container{
                 .thumbnails-selected-image {
