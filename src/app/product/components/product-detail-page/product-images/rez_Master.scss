@@ -51,7 +51,7 @@
                }
            }
            .thumbnails-vertical-container{
-               display: block;
+               display: -webkit-box;
                margin-top: 15px;
             }
             .thumbnails-thumbnail{
@@ -82,8 +82,7 @@
         }
     }
     .thumbnails-vertical-container{
-        display:flex;
-        width: 60px;
+        display: -webkit-box;
         margin-top: 20px;
     }
   }
