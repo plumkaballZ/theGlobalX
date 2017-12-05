@@ -1,20 +1,21 @@
-// .navbar {
-//   height: 78px;
-//   background-color: #f2f2f2;
-//     list-style: none;
-//     float: right;
-//     width: 100%;
-// }
-// .navbar-brand {
-//   float: left;
-//   display: block;
-//   padding: 0;
-//   text-align: center;
-//   margin-left: 0px !important;
-//   img {
-//     height: 78px;
-//   }
-// }
+ .navbar {
+   height: 78px;
+   background-color: #f2f2f2;
+     list-style: none;
+     float: right;
+     width: 100%;
+ }
+ .navbar-brand {
+   float: left;
+   display: block;
+   padding: 0;
+   text-align: center;
+   margin-left: 0px !important;
+
+   img {
+     width: 100%;
+   }
+ }
 
 // #navbar-search-input {
 //   display: inline-block;
