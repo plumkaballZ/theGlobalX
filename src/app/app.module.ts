@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 // Components
 import { FactComp } from './comps/fact/factComp';
-import { StoryComp } from './comps/story/storyComp';
+import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
 
 import { AppComponent } from './app.component';
@@ -39,7 +39,7 @@ import 'rxjs/add/observable/of';
     CheckoutHeaderComponent,
     CheckoutFooterComponent,
     FactComp,
-    StoryComp,
+    AboutComp,
     ContactComp
   ],
   imports: [

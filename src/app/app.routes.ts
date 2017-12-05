@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
 
 import { FactComp } from './comps/fact/factComp';
-import { StoryComp } from './comps/story/storyComp';
+import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
 
 export const routes: Routes = [
@@ -26,6 +26,6 @@ export const routes: Routes = [
     loadChildren: './auth/auth.module#AuthModule'
   },
   {path: 'fact', component: FactComp},
-  {path: 'story', component: StoryComp},
+  {path: 'story', component: AboutComp},
   {path: 'contact', component: ContactComp}
 ];

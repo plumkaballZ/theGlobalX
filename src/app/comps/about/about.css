@@ -1,0 +1,65 @@
+
+
+  
+    #team ul{padding:0; list-style:none;}
+
+    /* #team ul li figure img{padding:36px; border:1px solid #CCCCCC;} */
+    /* #team ul li figure figcaption .team_name{font-weight:bold;} */
+    /* #team ul li figure figcaption .team_title{margin:0; font-size:11px; line-height:normal;} */
+
+    #team ul li figure figcaption .team_description{padding-top:15px; width: 50%; line-height:1.4em; border-top:1px solid #CCCCCC;}
+    #team ul li figure figcaption ul li{display:inline;}
+    /* #team ul li figure figcaption ul li:first-child{margin-left:0;} */
+
+
+.rowZ {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 30px;
+}
+.colZ {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+.colZZ {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+.colZ:first-child { margin-left: 0; }
+.grpZ:before,
+.grpZ:after { content:""; display:table; }
+.grpZ:after { clear:both;}
+.grpZ { zoom:1;}
+
+.colZ_001 {
+	width: 42%;
+}
+
+.colZ_002 {
+  width: 42%;
+  margin-top:-21px;
+}
+
+.colZ_003 {
+  margin-top:-21px;
+}
+
+@media only screen and (min-width:300px){
+  .rowZ{
+    padding-top: 10px; 
+  }
+  .colZ_002{
+    width: 100%;
+  }
+}
+@media only screen and (min-width:600px){
+  .rowZ{
+    padding-top: 30px;
+  }
+  .colZ_002{
+    width: 42%;
+  }
+}
