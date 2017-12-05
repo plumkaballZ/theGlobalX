@@ -1,15 +1,14 @@
-<div itemscope itemtype="https://schema.org/Product" *ngIf="product != null" class="rowZ grpZ">
+
+<div itemscope  *ngIf="product != null" class="rowZ grpZ">
 
   <div class="colZ colZ_001">
-      <app-image-container 
-      [images]="images" 
-      [selectedImage]="images[0]"
-      style="margin-right:30px">
+      <app-image-container [images]="images" [selectedImage]="images[0]">
     </app-image-container> 
   </div>
 
-	<div class="colZ colZ_002">
-      <h1 class="hZ_001"><span>Sustainable Card Holder X</span></h1>
+	<!-- <div class="colZ colZ_002">
+      
+    <h1 class="hZ_001"><span>Sustainable Card Holder X</span></h1>
 
                 <ul class="ulz_001 centered">
                   <li>100% MONEY-BACK GUARANTEE</li>
@@ -37,5 +36,5 @@
                     </div>
                   </div>
                 </div>
-	</div>
+	</div> -->
 </div>

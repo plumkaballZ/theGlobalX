@@ -3,14 +3,14 @@
   <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
        [alt]="selectedImage.alt"
        class="thumbnails-selected-image" />
-</div>
+  </div>
 
 <div class="thumbnails-vertical-container" style="margin-top: 20px;margin-bottom: 20px;">
-    
-  <button class="thumbnails-thumbnail-button" *ngFor="let image of images">
-        <img class="thumbnails-thumbnail" 
-           [src]="getProductImageUrl(image.small_url)"
-           [alt]="image.alt"
-           (mouseover)="onMouseOver(image)">
-          </button>
-        </div>
+  <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
+    <img class="thumbnails-thumbnail" 
+    [src]="getProductImageUrl(image.small_url)"
+    [alt]="image.alt"
+    (mouseover)="onMouseOver(image)">
+  </div>
+  
+</div>

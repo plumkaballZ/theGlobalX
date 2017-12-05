@@ -50,10 +50,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_01.png",
-            "small_url": "/assets/api/prods/imgs/prod_01_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_01.png",
-            "large_url": "/assets/api/prods/imgs/prod_01.png"
+            "mini_url": "/assets/api/prods/imgs/prod_10.png",
+            "small_url": "/assets/api/prods/imgs/prod_10_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_10.png",
+            "large_url": "/assets/api/prods/imgs/prod_10.png"
           },
           {
             "id": 2,
@@ -67,10 +67,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_02.png",
-            "small_url": "/assets/api/prods/imgs/prod_02_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_02.png",
-            "large_url": "/assets/api/prods/imgs/prod_02.png"
+            "mini_url": "/assets/api/prods/imgs/prod_20.png",
+            "small_url": "/assets/api/prods/imgs/prod_20_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_20.png",
+            "large_url": "/assets/api/prods/imgs/prod_20.png"
           },
           {
             "id": 3,
@@ -84,10 +84,10 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_03.png",
-            "small_url": "/assets/api/prods/imgs/prod_03_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_03.png",
-            "large_url": "/assets/api/prods/imgs/prod_03.png"
+            "mini_url": "/assets/api/prods/imgs/prod_30.png",
+            "small_url": "/assets/api/prods/imgs/prod_30_small.png",
+            "product_url": "/assets/api/prods/imgs/prod_30.png",
+            "large_url": "/assets/api/prods/imgs/prod_30.png"
           }
         ],
         "display_price": "$15.99",
