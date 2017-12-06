@@ -7,14 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from './../../../../core/models/product';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 
+
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss', './rez_Master.scss']
 })
 
+
 export class ProductDetailsComponent implements OnInit {
   @Input() product: Product;
+
   customOptionTypesHash: any;
   currentSelectedOptions = {};
   description: any;
@@ -22,6 +25,7 @@ export class ProductDetailsComponent implements OnInit {
   mainOptions: any;
   correspondingOptions: any;
   variantId: any;
+
 
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,

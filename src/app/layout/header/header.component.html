@@ -13,26 +13,26 @@
         <span class="icon-bar"></span>
       </button>
     </div> -->
-
-    <!-- <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">
-
-      <ul style="padding-right:20px;" class="nav navbar-nav">
-        <li *ngFor="let taxon of taxonList" class="">
-          <a class="az_001" (click)="selectTaxon(taxon)"
-            href="javascript:void(0)">{{taxon.name}}
-              <span class="sr-only">(current)</span>
-            </a>
-        </li>
+    
+  <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" id="bs-example-n#777avbar-collapse-1">
+    <ul style="padding-right:20px;" class="nav navbar-nav">
+      <li *ngFor="let taxon of taxonList" class="">
+        <a class="az_001" (click)="selectTaxon(taxon)"href="javascript:void(0)">{{taxon.name}}
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
       </ul>
+
+      <!-- <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async">
+      </app-profile-dropdown> -->
       
-      <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
-      
-      <div id="demo-2" style="padding-top:5px;" class="desktop-query centered">
+      <!-- <div id="demo-2" style="padding-top:5px;" class="desktop-query centered">
         <input #toFocus placeholder="Search" class="desktop-searchBar">
         <a class="desktop-submit" (click)="toggleSearchBar($event, toFocus)">
             <span  class="web-sprite desktop-iconSearch sprites-search"></span>
           </a>
-      </div>
-    </div> -->
+      </div> -->
+
+    </div>
   </div>
 </nav>
