@@ -20,18 +20,24 @@
 }
 .colZ_002 {
    width: 42%;
-   margin: 7% 0px 0% 0%;
+   margin: 3% 0px 0% 0%;
  }
- .hZ_001{   
-     font-weight: bold;
-     //  color: #6b5154;
-    //  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-    //  font-size: 61px;
-     font-family: "Fredericka the Great", "cursive;";
-     font-size: 61px;
-     margin: 0% 0% 1% 0%;
+ @media screen and (min-width: 1200px) {
+    .colZ_002 {
+        margin: 7% 0px 0% 0%;
+    }
+  }
+ .hZ_001{
+     color: #6b5154;
+     font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+     font-size: 4.5vw;
+     margin: 0% 0% 1% 0%;  
  }
-
+ @media screen and (min-width: 1200px) {
+    .hZ_001 {
+        font-size: 61px;
+    }
+  }
  .ulz_001{
      list-style: none;
       margin: 0% 0% 4% 0%;
@@ -56,11 +62,16 @@
  .h_002{
    color:#000000; 
    font-family: "Fredericka the Great", "cursive;";
-   font-size: 37px;
+   font-size: 2.5vw;
    margin: 10% 0% 5% 0%;
  }
+ @media screen and (min-width: 1200px) {
+    .h_002 {
+        font-size: 37px;
+    }
+  }
  .pdp-button {
-    padding: 10px 30px;
+    padding: 1% 1% 1% 0%;
     font-size: 18px;
     width: 50%;
     border: 1px solid #1d886d;
