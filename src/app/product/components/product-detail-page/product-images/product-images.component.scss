@@ -25,13 +25,24 @@
 
 .image-container {
     .thumbnails-selected-image {
-        width:97%;
+        width: 82%;
+        height: 69vh;
    }
 }
+@media screen and (min-height: 730px) {
+    .image-container {
+        .thumbnails-selected-image {
+            height: 100%;
+            width:97%;
+       }
+    }
+  }
  .thumbnails-vertical-container {
      float: left;
-     width: 98.8%;
+     width: 83.3%;
      display: -webkit-box;
+     margin-top: 5px;
+     margin-bottom: 5px;
 
        .thumbnails-thumbnail-button {
            cursor: pointer;
@@ -41,3 +52,10 @@
             width: 98%;
         }
  }
+ @media screen and (min-height: 730px) {
+    .thumbnails-vertical-container {
+        width: 98.8%;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+  }
