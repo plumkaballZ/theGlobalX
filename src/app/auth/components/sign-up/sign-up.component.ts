@@ -33,9 +33,11 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
+    
     const values = this.signUpForm.value;
     const keys = Object.keys(values);
     this.formSubmit = true;
+    console.log(this.signUpForm.valid);
 
     if (this.signUpForm.valid) {
       this.registerSubs = this.authService.register(values).subscribe(data => {
@@ -72,8 +74,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
 	  'email': [email, Validators.compose([Validators.required, Validators.email]) ],
       'password': [password, Validators.compose([Validators.required, Validators.minLength(6)]) ],
       'password_confirmation': [password_confirmation, Validators.compose([Validators.required, Validators.minLength(6)]) ],
-      'mobile': [mobile, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(10),Validators.pattern('[0-9]{10}')]) ],    
-      'gender': [gender, Validators.required]
     },{validator: this.matchingPasswords('password', 'password_confirmation')}
 	);
   }
@@ -102,7 +102,5 @@ export class SignUpComponent implements OnInit, OnDestroy {
     }
   }
 }
-
-  
   
 }

@@ -23,7 +23,7 @@ export class AuthService {
     private actions: AuthActions,
     private store: Store<AppState>
   ) {
-
+    http.options
   }
 
   /**
@@ -41,7 +41,6 @@ export class AuthService {
     ).map((res: Response) => {
       data = res.json();
       if (!data.error) {
-        // Setting token after login
         this.setTokenInLocalStorage(data);
         this.store.dispatch(this.actions.loginSuccess());
       } else {
@@ -53,28 +52,23 @@ export class AuthService {
       }
       return data;
     });
-    // catch should be handled here with the http observable
-    // so that only the inner obs dies and not the effect Observable
-    // otherwise no further login requests will be fired
-    // MORE INFO https://youtu.be/3LKMwkuK0ZE?t=24m29s
   }
 
   /**
-   *
-   *
+   
    * @param {any} data
    * @returns {Observable<any>}
    *
    * @memberof AuthService
    */
   register(data): Observable<any> {
-    return this.http.post(
-      'api/account',
-      { spree_user: data }
-    ).map((res: Response) => {
+    return this.http.post_Web('api/values', JSON.stringify({ "glxUser": data })).map((res: Response) => {
+      
+      console.log('Response');
       data = res.json();
+      console.log(data);
+
       if (!data.errors) {
-        // Setting token after login
         this.setTokenInLocalStorage(res.json());
         this.store.dispatch(this.actions.loginSuccess());
       } else {
@@ -86,10 +80,7 @@ export class AuthService {
       }
       return res.json();
     });
-    // catch should be handled here with the http observable
-    // so that only the inner obs dies and not the effect Observable
-    // otherwise no further login requests will be fired
-    // MORE INFO https://youtu.be/3LKMwkuK0ZE?t=24m29s
+
   }
 
   /**
@@ -103,10 +94,7 @@ export class AuthService {
     return this.http
       .get('/assets/api/users/users.json')
       .map((res: Response) => res.json());
-    // catch should be handled here with the http observable
-    // so that only the inner obs dies and not the effect Observable
-    // otherwise no further login requests will be fired
-    // MORE INFO https://youtu.be/3LKMwkuK0ZE?t=24m29s
+
   }
 
   /**
@@ -119,7 +107,6 @@ export class AuthService {
   logout() {
     return this.http.get('spree/logout.json')
       .map((res: Response) => {
-        // Setting token after login
         localStorage.removeItem('user');
         this.store.dispatch(this.actions.logoutSuccess());
         return res.json();
@@ -135,6 +122,7 @@ export class AuthService {
    * @memberof AuthService
    */
   private setTokenInLocalStorage(user_data): void {
+    
     const jsonData = JSON.stringify(user_data);
     localStorage.setItem('user', jsonData);
   }
