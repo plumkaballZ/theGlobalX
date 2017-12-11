@@ -45,9 +45,29 @@ export class HttpService extends Http {
     return super.get(url, options);
   }
 
-  post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
+   post_Web(url: string, body: any, options?: RequestOptionsArgs, useWebUrl?:boolean): Observable<any> {
+    
     this.requestInterceptor();
-    return super.post(this.getFullUrl(url), body, this.requestOptions(options))
+
+    return super.post(this.getFullUrl_Web(url), body, this.requestOptions(options))
+      .catch(this.onCatch.bind(this))
+      .do((res: Response) => {
+        this.onSubscribeSuccess(res);
+      }, (error: any) => {
+        this.onSubscribeError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
+  }
+  post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
+    
+    this.requestInterceptor();
+
+
+    var _url = this.getFullUrl(url);
+
+    return super.post(_url, body, this.requestOptions(options))
       .catch(this.onCatch.bind(this))
       .do((res: Response) => {
         this.onSubscribeSuccess(res);
@@ -103,7 +123,9 @@ export class HttpService extends Http {
   private getFullUrl(url: string): string {
     return environment.API_ENDPOINT + url;
   }
-
+   private getFullUrl_Web(url: string): string {
+    return environment.WEB_ENDPOINT + url;
+  }
   private requestInterceptor(): void {
     console.log('Sending Request');
     // this.loaderService.showPreloader();

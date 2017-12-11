@@ -1,8 +1,3 @@
-/**
- * User model
- * Basically mimics the UserSerializer in the API.
- */
-
 import { Address } from './address';
 
 export class User {
