@@ -62,7 +62,7 @@ export class AuthService {
    * @memberof AuthService
    */
   register(data): Observable<any> {
-    return this.http.post_Web('api/values', JSON.stringify({ "glxUser": data })).map((res: Response) => {
+    return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
       
       console.log('Response');
       data = res.json();

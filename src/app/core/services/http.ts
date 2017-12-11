@@ -40,6 +40,21 @@ export class HttpService extends Http {
         this.onFinally();
       });
   }
+  get_Web(url: string, options?: RequestOptionsArgs): Observable<any> {
+    
+    this.requestInterceptor();
+
+    return super.get(this.getFullUrl_Web(url), this.requestOptions(options))
+      .catch(this.onCatch.bind(this))
+      .do((res: Response) => {
+        this.onSubscribeSuccess(res);
+      }, (error: any) => {
+        this.onSubscribeError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
+  }
 
   getLocal(url: string, options?: RequestOptionsArgs): Observable<any> {
     return super.get(url, options);

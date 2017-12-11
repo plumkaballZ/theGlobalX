@@ -25,7 +25,7 @@ export class UserService {
    * @memberof UserService
    */
   getOrders(): Observable<Order[]> {
-    return this.http.get('api/orders')
+    return this.http.get_Web('api/xOrder')
       .map((res: Response) => res.json());
   }
 

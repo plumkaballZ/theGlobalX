@@ -33,11 +33,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    
+
     const values = this.signUpForm.value;
     const keys = Object.keys(values);
     this.formSubmit = true;
-    console.log(this.signUpForm.valid);
 
     if (this.signUpForm.valid) {
       this.registerSubs = this.authService.register(values).subscribe(data => {
@@ -71,13 +70,12 @@ export class SignUpComponent implements OnInit, OnDestroy {
     const gender = '';
 
     this.signUpForm = this.fb.group({  
-	  'email': [email, Validators.compose([Validators.required, Validators.email]) ],
+      'email': [email, Validators.compose([Validators.required, Validators.email]) ],
       'password': [password, Validators.compose([Validators.required, Validators.minLength(6)]) ],
       'password_confirmation': [password_confirmation, Validators.compose([Validators.required, Validators.minLength(6)]) ],
     },{validator: this.matchingPasswords('password', 'password_confirmation')}
 	);
   }
-
   redirectIfUserLoggedIn() {
     this.store.select(getAuthStatus).subscribe(
       data => {
@@ -85,11 +83,9 @@ export class SignUpComponent implements OnInit, OnDestroy {
       }
     );
   }
-
   ngOnDestroy() {
     if (this.registerSubs) { this.registerSubs.unsubscribe(); }
   }
-  
   matchingPasswords(passwordKey: string, confirmPasswordKey: string) {
   return (group: FormGroup): {[key: string]: any} => {
     let password = group.controls[passwordKey];
