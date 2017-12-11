@@ -6,7 +6,7 @@ export class User {
   created_at: string;
   updated_at: string;
   bill_address_id: string;
-  ship_address_id: string;
+  c: string;
   payment_sources: [any];
   bill_address: [Address];
   ship_address: [Address];
