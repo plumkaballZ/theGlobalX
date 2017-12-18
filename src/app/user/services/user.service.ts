@@ -41,7 +41,7 @@ export class UserService {
     return this.http.get(`spree/api/v1/orders/${orderNumber}`)
       .map((res: Response) => res.json());
   }
-
+  
   /**
    *
    *
