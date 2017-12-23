@@ -55,11 +55,11 @@
 
               <div class="register-input-item">
                 <input type="number" class="register-user-input-mobile register-user-input" name="mobile"
-                 placeholder="Mobile Number (For order status updates)">
-                <!-- <div *ngIf="signUpForm.get('mobile').errors && signUpForm.get('mobile').touched">
+                  formControlName="mobile" placeholder="Mobile Number (For order status updates)">
+                <div *ngIf="signUpForm.get('mobile').errors && signUpForm.get('mobile').touched">
                   <span class="register-error-icon">!</span>
-                  <p class="register-error-message">{{signUpForm.get('mobile').errors.msg || 'Please enter a valid mobile number (10 digits)'}}</p>
-                </div> -->
+                  <p class="register-error-message">{{signUpForm.get('mobile').errors.msg || 'Please enter a valid mobile number atleast (8 digits)'}}</p>
+                </div>
               </div>
 
               <!-- <fieldset data-type="horizontal" class="register-gender">

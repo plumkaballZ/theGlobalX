@@ -39,8 +39,19 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.formSubmit = true;
 
     if (this.signUpForm.valid) {
+
+      console.log('values');
+      console.log(values);
+
       this.registerSubs = this.authService.register(values).subscribe(data => {
+        
+        console.log('return data');
+        console.log(data);
+
         const errors = data.errors;
+
+        console.log('errors');
+
         if (errors) {
           keys.forEach(val => {
             if (errors[val]) { this.pushErrorFor(val, errors[val][0]); };
@@ -71,10 +82,12 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
     this.signUpForm = this.fb.group({  
       'email': [email, Validators.compose([Validators.required, Validators.email]) ],
-      'password': [password, Validators.compose([Validators.required, Validators.minLength(6)]) ],
-      'password_confirmation': [password_confirmation, Validators.compose([Validators.required, Validators.minLength(6)]) ],
-    },{validator: this.matchingPasswords('password', 'password_confirmation')}
-	);
+        'password': [password, Validators.compose([Validators.required, Validators.minLength(6)]) ],
+        'password_confirmation': [password_confirmation, Validators.compose([Validators.required, Validators.minLength(6)]) ],
+        'mobile': [mobile, Validators.compose([Validators.required,Validators.pattern('[0-9]{8,}')]) ]
+      },{validator: this.matchingPasswords('password', 'password_confirmation')}
+    );
+
   }
   redirectIfUserLoggedIn() {
     this.store.select(getAuthStatus).subscribe(
