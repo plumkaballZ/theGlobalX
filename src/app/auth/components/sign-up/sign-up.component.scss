@@ -1,31 +1,26 @@
 @import "../../../shared/scss/_themes.scss";
 
+.register-container {
+  text-align: center;
+}
+
 .panel {
   position: absolute;
   top:80px;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
-
-  margin-bottom: 20px;
-  background-color: #fff;
   border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 15px rgba(0,0,0,.1);
+
   .panel-heading {
     padding: 0px 0 0;
     border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
     text-align: center;
     background-color: transparent;
     .panel-title {
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 28px;
       color: #666;
-      font-weight: 400;
+      font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
     }
   }
 }
@@ -44,17 +39,21 @@
 }
 
 .register-register-button {
-  font-size: 13px;
-  font-weight: 500;
   letter-spacing: 2px;
   padding: 15px;
-  display: block;
   width: 100%;
-  border: 0;
-  text-transform: uppercase;
-  border-radius: 3px;
+  font-size: 18px;
+  border: 1px solid #1d886d;
+  background-color: #1d886d;
+  color: #f2f2f2;
 }
 
+.register-register-button:hover {
+  background-color:#104739;
+}
+.register-input-container:hover{
+  border: 1px solid #1d886d;
+}
 .register-input-item {
   position: relative;
 }
@@ -96,6 +95,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 
 .register-gender {
   position: relative;
@@ -144,18 +144,18 @@ legend {
 }
 
 fieldset {
-  display: block;
-  -webkit-margin-start: 2px;
-  -webkit-margin-end: 2px;
-  -webkit-padding-before: 0.35em;
-  -webkit-padding-start: 0.75em;
-  -webkit-padding-end: 0.75em;
-  -webkit-padding-after: 0.625em;
-  min-width: -webkit-min-content;
-  border-width: 2px;
-  border-style: groove;
-  border-color: threedface;
-  border-image: initial;
+  // display: block;
+  // -webkit-margin-start: 2px;
+  // -webkit-margin-end: 2px;
+  // -webkit-padding-before: 0.35em;
+  // -webkit-padding-start: 0.75em;
+  // -webkit-padding-end: 0.75em;
+  // -webkit-padding-after: 0.625em;
+  // min-width: -webkit-min-content;
+  // border-width: 2px;
+  // border-style: groove;
+  // border-color: threedface;
+  // border-image: initial;
 }
 
 .register-link-container {
@@ -255,16 +255,7 @@ button, input, select, textarea {
   }
 }
 
-.register-container {
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
-  padding-bottom: 40px;
 
-
-
-
-}
 
 .register-sprite {
   background: url(http://res.cloudinary.com/mally/image/upload/v1489480940/148948096411965_w5wbjb.png) no-repeat 0 0;
@@ -332,11 +323,4 @@ button, input, select, textarea {
   margin-left: 0;
   margin-top: 10px;
   margin-bottom: 0;
-}
-
-.register-input-container {
-  &:hover {
-    border: 1px solid $brand-danger;
-    box-shadow: 0 2px 5px $brand-danger + 100;
-  }
 }

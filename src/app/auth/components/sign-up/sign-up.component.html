@@ -22,8 +22,11 @@
                 </button>
             </div>
           </div>
+          
           <p class="register-button-info-text register-info-text">- OR USING EMAIL -</p>
+
           <form class="register-register-form" novalidate="" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            
             <fieldset class="register-input-container">
 
               <div class="register-input-item">
@@ -43,7 +46,7 @@
                   <p class="register-error-message">{{signUpForm.get('password').errors.msg || 'Password must be at least 6 characters'}}</p>
                 </div>
               </div>
-
+              
               <div class="register-input-item">
                 <input type="password" class="register-user-input-password register-user-input" name="password_confirmation" formControlName="password_confirmation"
                   placeholder="Confirm Password" autocomplete="off">
@@ -62,25 +65,10 @@
                 </div>
               </div>
 
-              <!-- <fieldset data-type="horizontal" class="register-gender">
-                <legend class="register-gender-title">I'm a</legend>
-
-                <input type="radio" class="register-gender-radio" id="male" name="gender" value="M" formControlName="gender">
-                <label class="register-gender-label" for="male">Male</label>
-
-                <input type="radio" class="register-gender-radio" id="female" name="gender" value="F" formControlName="gender">
-                <label class="register-gender-label" for="female">Female</label>
-
-                <div *ngIf="signUpForm.get('gender').errors && signUpForm.get('gender').touched">
-                  <span class="register-gender-error-icon register-error-icon">!</span>
-                  <p class="register-gender-error-message register-error-message">{{signUpForm.get('gender').errors.msg || 'Please select your gender'}}</p>
-                </div>
-
-              </fieldset> -->
             </fieldset>
 
             <fieldset class="register-register-button-container">
-              <button class="btn btn-danger register-register-button">REGISTER</button>
+              <button class="btn register-register-button">REGISTER</button>
             </fieldset>
           </form>
 
@@ -92,6 +80,7 @@
               </div>
             </small>
           </div>
+
         </div>
       </div>
     </div>
