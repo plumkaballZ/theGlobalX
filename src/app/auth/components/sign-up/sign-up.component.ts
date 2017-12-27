@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs/Subscription';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
+
 export class SignUpComponent implements OnInit, OnDestroy {
   signUpForm: FormGroup;
   formSubmit = false;
@@ -64,6 +65,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   initForm() {
+
     const email = '';
     const password = '';
     const password_confirmation = '';
@@ -79,12 +81,20 @@ export class SignUpComponent implements OnInit, OnDestroy {
     );
 
   }
+
   redirectIfUserLoggedIn() {
+
+    console.log('redirect if logged in');
+
     this.store.select(getAuthStatus).subscribe(
+
       data => {
-        if (data === true) { this.router.navigateByUrl('/'); }
-      }
+        console.log(data);
+        if (data === true) { 
+        this.router.navigateByUrl('/'); 
+      }}
     );
+
   }
   ngOnDestroy() {
     if (this.registerSubs) { this.registerSubs.unsubscribe(); }

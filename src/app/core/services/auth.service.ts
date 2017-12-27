@@ -35,14 +35,18 @@ export class AuthService {
    * @memberof AuthService
    */
   login(data): Observable<any> {
-    return this.http.post(
-      'spree/login.json',
-      { spree_user: data }
+
+    console.log(data);
+    
+    return this.http.get_Web(
+      'api/xUser',  JSON.stringify({ 'email': 'asdf', 'password':'asdf' })
     ).map((res: Response) => {
       data = res.json();
       if (!data.error) {
+        
         this.setTokenInLocalStorage(data);
         this.store.dispatch(this.actions.loginSuccess());
+
       } else {
         this.http.loading.next({
           loading: false,
@@ -62,11 +66,13 @@ export class AuthService {
    * @memberof AuthService
    */
   register(data): Observable<any> {
+    
     return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
-      
-      console.log('Response');
+
       data = res.json();
-      console.log(data);
+
+      console.log('res:');
+      console.log(res.json());
 
       if (!data.errors) {
         this.setTokenInLocalStorage(res.json());
@@ -93,8 +99,7 @@ export class AuthService {
   authorized(): Observable<any> {
     return this.http
       .get('/assets/api/users/users.json')
-      .map((res: Response) => res.json());
-
+      .map((res: Response) => {console.log('res'); console.log(res.json()); return res.json()});
   }
 
   /**
@@ -122,7 +127,7 @@ export class AuthService {
    * @memberof AuthService
    */
   private setTokenInLocalStorage(user_data): void {
-    
+    console.log('setTokenInStorage');
     const jsonData = JSON.stringify(user_data);
     localStorage.setItem('user', jsonData);
   }
