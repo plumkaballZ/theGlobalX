@@ -31,14 +31,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.initForm();
-    // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   onSubmit() {
     const values = this.signInForm.value;
     const keys = Object.keys(values);
-
+    
     if (this.signInForm.valid) {
       this.loginSubs = this.authService.login(values).subscribe(data => {
         const error = data.error;

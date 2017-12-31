@@ -25,10 +25,9 @@ export class UserService {
    * @memberof UserService
    */
   getOrders(): Observable<Order[]> {
-    return this.http.get_Web('api/xOrder')
+    return this.http.get_Web('api/xOrders', {params: {email: 'asdf'}})
       .map((res: Response) => res.json());
   }
-
   /**
    *
    *
@@ -41,7 +40,6 @@ export class UserService {
     return this.http.get(`spree/api/v1/orders/${orderNumber}`)
       .map((res: Response) => res.json());
   }
-  
   /**
    *
    *
@@ -54,5 +52,4 @@ export class UserService {
     return this.http.get(`/assets/api/users/users.json`)
       .map(res => res.json());
   }
-
 }

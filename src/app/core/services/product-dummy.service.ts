@@ -235,7 +235,7 @@
 //   }
 
 //   getProducts(): any {
-//     console.log('in dummy service.');
+//    
 
 //     const data = {
 //       'products': [

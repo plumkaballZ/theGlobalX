@@ -36,14 +36,13 @@ export class AuthService {
    */
   login(data): Observable<any> {
 
-    console.log(data);
-    
     return this.http.get_Web(
-      'api/xUser',  JSON.stringify({ 'email': 'asdf', 'password':'asdf' })
+      'api/xUser', { params: data }
     ).map((res: Response) => {
+
       data = res.json();
+
       if (!data.error) {
-        
         this.setTokenInLocalStorage(data);
         this.store.dispatch(this.actions.loginSuccess());
 
@@ -51,7 +50,7 @@ export class AuthService {
         this.http.loading.next({
           loading: false,
           hasError: true,
-          hasMsg: 'Please enter valid Credentials'
+          hasMsg: data.msg
         });
       }
       return data;
@@ -66,25 +65,22 @@ export class AuthService {
    * @memberof AuthService
    */
   register(data): Observable<any> {
-    
     return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
 
-      data = res.json();
+      var resReq = res.json();
 
-      console.log('res:');
-      console.log(res.json());
-
-      if (!data.errors) {
-        this.setTokenInLocalStorage(res.json());
+      if (!resReq.error) {
+        this.setTokenInLocalStorage(resReq);
         this.store.dispatch(this.actions.loginSuccess());
       } else {
         this.http.loading.next({
           loading: false,
           hasError: true,
-          hasMsg: 'Please enter valid Credentials'
+          hasMsg: resReq.mgs
         });
       }
-      return res.json();
+
+      return resReq;
     });
 
   }
@@ -97,9 +93,18 @@ export class AuthService {
    * @memberof AuthService
    */
   authorized(): Observable<any> {
+
+    var localUser = JSON.parse(localStorage.getItem('user'));
+
     return this.http
-      .get('/assets/api/users/users.json')
-      .map((res: Response) => {console.log('res'); console.log(res.json()); return res.json()});
+      .get_Web(
+        'api/xUser', { params: { email:'zinr0ck@gmail.com', password:'123123' } }
+      ).map((res: Response) => 
+      {
+        var resReq = res.json();
+        if(!resReq.error) this.store.dispatch(this.actions.loginSuccess());
+        return false;
+      });
   }
 
   /**
@@ -127,7 +132,6 @@ export class AuthService {
    * @memberof AuthService
    */
   private setTokenInLocalStorage(user_data): void {
-    console.log('setTokenInStorage');
     const jsonData = JSON.stringify(user_data);
     localStorage.setItem('user', jsonData);
   }

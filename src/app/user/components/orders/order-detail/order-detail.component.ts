@@ -41,8 +41,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
 
   getProductImageUrl(line_item: LineItem) {
     const image_url = line_item.variant.images[0].small_url;
-    console.log('image ulr?');
-    console.log(image_url)
+
     return environment.API_ENDPOINT + image_url;
   }
 

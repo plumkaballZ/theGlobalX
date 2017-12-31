@@ -23,7 +23,7 @@ export class ProductImagesComponent implements OnInit {
   }
 
   onMouseOver(image: Image) {
-    console.log(image);
+ 
     this.selectedImage = image;
   }
 }

@@ -34,20 +34,16 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-
+    
     const values = this.signUpForm.value;
     const keys = Object.keys(values);
     this.formSubmit = true;
 
     if (this.signUpForm.valid) {
       this.registerSubs = this.authService.register(values).subscribe(data => {
-        const errors = data.errors;
 
-        if (errors) {
-          keys.forEach(val => {
-            if (errors[val]) { this.pushErrorFor(val, errors[val][0]); };
-          });
-        }
+        if(data.error) this.pushErrorFor("email", data.msg);
+
       });
     } else {
       keys.forEach(val => {
@@ -59,7 +55,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
       });
     }
   }
-
+  
   private pushErrorFor(ctrl_name: string, msg: string) {
     this.signUpForm.controls[ctrl_name].setErrors({'msg': msg});
   }
@@ -83,23 +79,20 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   redirectIfUserLoggedIn() {
-
-    console.log('redirect if logged in');
-
     this.store.select(getAuthStatus).subscribe(
-
       data => {
-        console.log(data);
         if (data === true) { 
         this.router.navigateByUrl('/'); 
       }}
     );
-
   }
+
   ngOnDestroy() {
     if (this.registerSubs) { this.registerSubs.unsubscribe(); }
   }
+
   matchingPasswords(passwordKey: string, confirmPasswordKey: string) {
+    
   return (group: FormGroup): {[key: string]: any} => {
     let password = group.controls[passwordKey];
     let confirmPassword = group.controls[confirmPasswordKey];

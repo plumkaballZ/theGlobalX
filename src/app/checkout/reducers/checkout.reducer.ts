@@ -8,6 +8,7 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
+  
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
         _totalCartItems = 0, _totalCartValue,
@@ -16,9 +17,12 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
     switch (type) {
 
       case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
+      
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
+
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
+
         _totalCartItems = payload.total_quantity;
         _totalCartValue = parseFloat(payload.total);
         _ship_address = payload.ship_address;

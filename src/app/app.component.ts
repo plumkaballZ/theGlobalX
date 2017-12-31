@@ -33,10 +33,11 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    
     this.store.select(getAuthStatus).
+
       subscribe(() => {
-        this.orderSub$ = this.checkoutService.fetchCurrentOrder()
-          .subscribe();
+        this.orderSub$ = this.checkoutService.fetchCurrentOrder().subscribe();
       });
   }
 

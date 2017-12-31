@@ -16,10 +16,16 @@
     border-bottom: 1px solid transparent;
     background-color: transparent;
     .panel-title {
-      font-size: 28px;
+     
       color: #666;
       font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .panel-title {
+    font-size: 28px;
   }
 }
 

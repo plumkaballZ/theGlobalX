@@ -29,21 +29,43 @@ export class CheckoutService {
   }
 
   fetchCurrentOrder() {
-    return this.http.get(
-      '/assets/api/orders/current.json'
+    return this.http.get_Web(
+      'api/xOrder', { params:{email:'zinr0ck@gmail.com'} }
     ).map(res => {
+      
       const order = res.json();
-      if (order) {
-        const token = order.token;
-        this.setOrderTokenInLocalStorage({order_token: token});
-        return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
-      } else {
-        this.createEmptyOrder()
-          .subscribe();
-      }
+
+      if (order.id != 1) {
+         const token = order.token;
+         this.setOrderTokenInLocalStorage({order_token: token});
+         return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
+       } else {
+         this.createEmptyOrder()
+         .subscribe();
+          }
     });
   }
 
+  createEmptyOrder() {  
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    var data ={
+      email : 'zinr0ck@gmail.com',
+      mobile: '',
+      password : '',
+      password_confirmation : ''
+    }
+
+    return this.http.post_Web(
+      'api/xOrder', JSON.stringify({ "glxUser": data })
+    ).map((res: Response) => {
+      const order = res.json();
+      const token = order;
+      this.setOrderTokenInLocalStorage({order_token: token});
+      return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
+    });
+  }
+  
   getOrder(orderNumber) {
     return this.http.get(
       `spree/api/v1/orders/${orderNumber}.json`
@@ -53,23 +75,7 @@ export class CheckoutService {
     });
   }
 
-  createEmptyOrder() {
-    
-    const user = JSON.parse(localStorage.getItem('user'));
-    const headers = new Headers({
-      'Content-Type': 'text/plain',
-      'X-Spree-Token': user && user.spree_api_key
-    });
 
-    return this.http.post(
-      'spree/api/v1/orders.json', {}, { headers: headers }
-    ).map(res => {
-      const order = res.json();
-      const token = order.token;
-      this.setOrderTokenInLocalStorage({order_token: token});
-      return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
-    });
-  }
 
   deleteLineItem(lineItem: LineItem) {
     return this.http.delete(`spree/api/v1/orders/${this.orderNumber}/line_items/${lineItem.id}?order_token=${this.getOrderToken()}`)

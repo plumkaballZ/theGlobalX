@@ -16,9 +16,6 @@ export class PayPalComp implements OnInit {
     }
 
     ngAfterViewInit(): void {
-
-      console.log('ngAfterViewInit');
-
         this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
             paypal.Button.render({
                 env: 'sandbox',

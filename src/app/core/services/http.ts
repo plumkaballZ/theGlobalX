@@ -40,6 +40,8 @@ export class HttpService extends Http {
         this.onFinally();
       });
   }
+
+
   get_Web(url: string, options?: RequestOptionsArgs): Observable<any> {
     
     this.requestInterceptor();
@@ -78,7 +80,6 @@ export class HttpService extends Http {
   post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
     
     this.requestInterceptor();
-
 
     var _url = this.getFullUrl(url);
 
@@ -125,9 +126,9 @@ export class HttpService extends Http {
     if (options == null) {
       options = new RequestOptions();
     }
-
     if (options.headers == null) {
       const user = localStorage.getItem('user') != "undefined" ? JSON.parse(localStorage.getItem('user')) : null;
+      
       options.headers = new Headers({
         'Content-Type': 'application/json',
         'X-Spree-Token': user && user.spree_api_key
@@ -142,7 +143,7 @@ export class HttpService extends Http {
     return environment.WEB_ENDPOINT + url;
   }
   private requestInterceptor(): void {
-    console.log('Sending Request');
+
     // this.loaderService.showPreloader();
     this.loading.next({
       loading: true, hasError: false, hasMsg: ''
@@ -150,12 +151,12 @@ export class HttpService extends Http {
   }
 
   private responseInterceptor(): void {
-    console.log('Request Complete');
+
     // this.loaderService.hidePreloader();
   }
 
   private onCatch(error: any, caught: Observable<any>): Observable<any> {
-    console.log('Something went terrible wrong and error is', error);
+  
     // this.loaderService.popError();
     return Observable.of(error);
   }
@@ -167,7 +168,7 @@ export class HttpService extends Http {
   }
 
   private onSubscribeError(error: any): void {
-    console.log('Something Went wrong while subscribing', error);
+  
     // this.loaderService.popError();
     this.loading.next({
       loading: false, hasError: true, hasMsg: 'Something went wrong'

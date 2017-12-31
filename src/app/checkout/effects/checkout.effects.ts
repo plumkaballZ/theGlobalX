@@ -21,7 +21,6 @@ export class CheckoutEffects {
       return this.checkoutService.createNewLineItem(action.payload);
     })
     .map((lineItem: LineItem) => {
-      console.log(this.actions.addToCartSuccess(lineItem));
       this.actions.addToCartSuccess(lineItem)}
   );
   }
