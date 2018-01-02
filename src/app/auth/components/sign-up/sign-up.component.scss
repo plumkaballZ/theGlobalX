@@ -98,8 +98,10 @@ a {
   background-color: transparent;
 }
 
-.register-third-party-register {
-  margin-top: 30px;
+@media (min-height: 900px) {
+  .register-third-party-register {
+    top:30px;
+  }
 }
 
 .register-button-info-text {
@@ -108,7 +110,13 @@ a {
 }
 
 .register-button-container {
-  margin-bottom: 40px;
+   margin-bottom: 20px;
+   }
+
+@media (min-height: 800px) {
+  .register-button-container {
+    margin-bottom: 40px;
+  }
 }
 
 .register-button {
