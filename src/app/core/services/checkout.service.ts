@@ -29,20 +29,26 @@ export class CheckoutService {
   }
 
   fetchCurrentOrder() {
+    var localUser = JSON.parse(localStorage.getItem('user'));
     return this.http.get_Web(
-      'api/xOrder', { params:{email:'zinr0ck@gmail.com'} }
+      'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
-      
+
       const order = res.json();
 
-      if (order.id != 1) {
-         const token = order.token;
-         this.setOrderTokenInLocalStorage({order_token: token});
-         return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
-       } else {
-         this.createEmptyOrder()
-         .subscribe();
-          }
+      if(order.nope){
+        this.createEmptyOrder().subscribe();
+      }
+      else{
+        console.log('else');
+        const token = order;
+
+        console.log(order);
+        this.setOrderTokenInLocalStorage({order_token: token});
+
+        return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
+      }
+
     });
   }
 
@@ -50,17 +56,19 @@ export class CheckoutService {
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
-      email : 'zinr0ck@gmail.com',
+      email : user.email,
       mobile: '',
-      password : '',
+      password : user.password,
       password_confirmation : ''
     }
 
     return this.http.post_Web(
       'api/xOrder', JSON.stringify({ "glxUser": data })
     ).map((res: Response) => {
+
       const order = res.json();
       const token = order;
+
       this.setOrderTokenInLocalStorage({order_token: token});
       return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
     });

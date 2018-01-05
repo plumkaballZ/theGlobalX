@@ -35,12 +35,12 @@ export class AuthService {
    * @memberof AuthService
    */
   login(data): Observable<any> {
-
     return this.http.get_Web(
       'api/xUser', { params: data }
     ).map((res: Response) => {
-
+      var pw = data.password;
       data = res.json();
+      data.password = pw;
 
       if (!data.error) {
         this.setTokenInLocalStorage(data);
@@ -66,8 +66,9 @@ export class AuthService {
    */
   register(data): Observable<any> {
     return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
-
+      var pw = data.password;
       var resReq = res.json();
+      resReq.password = pw;
 
       if (!resReq.error) {
         this.setTokenInLocalStorage(resReq);
@@ -93,12 +94,10 @@ export class AuthService {
    * @memberof AuthService
    */
   authorized(): Observable<any> {
-
     var localUser = JSON.parse(localStorage.getItem('user'));
-
     return this.http
       .get_Web(
-        'api/xUser', { params: { email:'zinr0ck@gmail.com', password:'123123' } }
+        'api/xUser', { params: { email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }
       ).map((res: Response) => 
       {
         var resReq = res.json();
@@ -132,6 +131,8 @@ export class AuthService {
    * @memberof AuthService
    */
   private setTokenInLocalStorage(user_data): void {
+    console.log('setTokenInLocal');
+    console.log(user_data);
     const jsonData = JSON.stringify(user_data);
     localStorage.setItem('user', jsonData);
   }
