@@ -38,6 +38,7 @@ export class AuthService {
     return this.http.get_Web(
       'api/xUser', { params: data }
     ).map((res: Response) => {
+
       var pw = data.password;
       data = res.json();
       data.password = pw;
@@ -95,6 +96,7 @@ export class AuthService {
    */
   authorized(): Observable<any> {
     var localUser = JSON.parse(localStorage.getItem('user'));
+
     return this.http
       .get_Web(
         'api/xUser', { params: { email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }
@@ -131,8 +133,6 @@ export class AuthService {
    * @memberof AuthService
    */
   private setTokenInLocalStorage(user_data): void {
-    console.log('setTokenInLocal');
-    console.log(user_data);
     const jsonData = JSON.stringify(user_data);
     localStorage.setItem('user', jsonData);
   }

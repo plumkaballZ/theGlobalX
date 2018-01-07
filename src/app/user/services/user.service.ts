@@ -25,8 +25,12 @@ export class UserService {
    * @memberof UserService
    */
   getOrders(): Observable<Order[]> {
-    return this.http.get_Web('api/xOrders', {params: {email: 'asdf'}})
-      .map((res: Response) => res.json());
+    var localUser = JSON.parse(localStorage.getItem('user'));
+    return this.http.get_Web('api/xOrders', {params: {email: (localUser== null ? '': localUser.email)}})
+      .map((res: Response) =>  {
+        console.log(res.json());
+        return res.json();
+      });
   }
   /**
    *
@@ -37,8 +41,13 @@ export class UserService {
    * @memberof UserService
    */
   getOrderDetail(orderNumber): Observable<Order> {
-    return this.http.get(`spree/api/v1/orders/${orderNumber}`)
-      .map((res: Response) => res.json());
+    var localUser = JSON.parse(localStorage.getItem('user'));
+    return this.http.get_Web('api/xOrders/GetOrderDetail', 
+    {params: {email: (localUser== null ? '': localUser.email), orderNumber: orderNumber}})
+      .map((res: Response) =>  {
+        console.log(res.json());
+        return res.json();
+      });
   }
   /**
    *
@@ -51,5 +60,14 @@ export class UserService {
     const user_id = JSON.parse(localStorage.getItem('user')).id;
     return this.http.get(`/assets/api/users/users.json`)
       .map(res => res.json());
+  }
+
+  getAddrs()
+  {
+    var localUser = JSON.parse(localStorage.getItem('user'));
+    return this.http.get_Web('api/xAddrs', {params: {email: (localUser== null ? '': localUser.email)}})
+      .map((res: Response) =>  {
+        return res.json();
+      });
   }
 }

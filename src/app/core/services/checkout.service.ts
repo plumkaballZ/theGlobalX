@@ -40,10 +40,7 @@ export class CheckoutService {
         this.createEmptyOrder().subscribe();
       }
       else{
-        console.log('else');
         const token = order;
-
-        console.log(order);
         this.setOrderTokenInLocalStorage({order_token: token});
 
         return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
@@ -54,11 +51,11 @@ export class CheckoutService {
 
   createEmptyOrder() {  
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
     var data ={
-      email : user.email,
+      email : (user != null ? user.email : ''),
       mobile: '',
-      password : user.password,
+      password : (user != null ? user.password : ''),
       password_confirmation : ''
     }
 

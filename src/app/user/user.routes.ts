@@ -14,7 +14,7 @@ export const UserRoutes = [
       { path: 'overview', component: OverviewComponent, redirectTo: 'orders' },
       { path: 'orders', component: OrdersComponent },
       { path: 'orders/detail/:number', component: OrderDetailComponent },
-      { path: 'addresses', component: AddressesComponent, redirectTo: 'orders' }
+      { path: 'addresses', component: AddressesComponent }
     ]
   },
 ];
