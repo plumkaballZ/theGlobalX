@@ -23,27 +23,34 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     private checkoutService: CheckoutService,
     private addrService: AddressService,
     private store: Store<AppState>) {
+      
       this.addressForm = addrService.initAddressForm();
       this.emailForm = addrService.initEmailForm();
       this.store.select(getAuthStatus).subscribe((auth) => {
         this.isAuthenticated = auth;
-      });
+      });   
   }
 
   ngOnInit() {
   }
 
   onSubmit() {
+
+    console.log('submit');
+
     const address = this.addressForm.value;
+
     let addressAttributes;
+
     if (this.isAuthenticated) {
+      console.log('isAuthenticated');
       addressAttributes = this.addrService.createAddresAttributes(address);
     } else {
+      console.log('isNotAuthenticated');
       const email = this.getEmailFromUser();
       addressAttributes = this.addrService.createGuestAddressAttributes(address, email);
     }
-    this.checkoutService.updateOrder(addressAttributes)
-      .subscribe();
+    this.checkoutService.updateOrder(addressAttributes).subscribe();
   }
 
   private getEmailFromUser() {

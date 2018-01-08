@@ -28,7 +28,6 @@ export class UserService {
     var localUser = JSON.parse(localStorage.getItem('user'));
     return this.http.get_Web('api/xOrders', {params: {email: (localUser== null ? '': localUser.email)}})
       .map((res: Response) =>  {
-        console.log(res.json());
         return res.json();
       });
   }
@@ -45,7 +44,6 @@ export class UserService {
     return this.http.get_Web('api/xOrders/GetOrderDetail', 
     {params: {email: (localUser== null ? '': localUser.email), orderNumber: orderNumber}})
       .map((res: Response) =>  {
-        console.log(res.json());
         return res.json();
       });
   }
@@ -61,7 +59,6 @@ export class UserService {
     return this.http.get(`/assets/api/users/users.json`)
       .map(res => res.json());
   }
-
   getAddrs()
   {
     var localUser = JSON.parse(localStorage.getItem('user'));
@@ -69,5 +66,12 @@ export class UserService {
       .map((res: Response) =>  {
         return res.json();
       });
+  }
+  getAddr(adrId)
+  {
+    return this.http.get_Web('api/xAdr', {params: {id: adrId}}).map((res: Response) =>  
+    {
+      return res.json();
+    });
   }
 }

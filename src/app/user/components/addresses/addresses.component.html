@@ -1,13 +1,5 @@
-<p>
-  addresses works!
-</p>
-
-
-
+<div>
   <div *ngFor="let addr of addrs$">
-    <div>
-      asdf
-      <div>
-        <div>
-
+      <addrLineComp [address]="addr"></addrLineComp>
+  </div>
 </div>

@@ -35,7 +35,7 @@ export class CheckoutActions {
     };
   }
 
-  addToCartSuccess(lineItem: LineItem): Action {
+  addToCartSuccess(lineItem: any): Action {
     return {
       type: CheckoutActions.ADD_TO_CART_SUCCESS,
       payload: lineItem

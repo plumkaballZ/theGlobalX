@@ -15,14 +15,15 @@ export class CheckoutEffects {
 
   // tslint:disable-next-line:member-ordering
   @Effect()
-    AddToCart$ = this.actions$
+    
+  AddToCart$ = this.actions$
+
+
     .ofType(CheckoutActions.ADD_TO_CART)
     .switchMap((action: Action) => {
       return this.checkoutService.createNewLineItem(action.payload);
-    })
-    .map((lineItem: LineItem) => {
-      this.actions.addToCartSuccess(lineItem)}
-  );
+    }).map((data: any) => this.actions.addToCartSuccess({lineItem: data}));
+  
   }
 
   // @Effect()

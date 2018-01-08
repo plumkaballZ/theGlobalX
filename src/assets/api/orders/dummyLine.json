@@ -1,64 +1,10 @@
-{
+{ 
       "id": 1,
-      "quantity": 1,
-      "price": "19.99",
+      "quantity" : 1,
+      "price"  : 1,
+      "single_display_amount": 1,
+      "total": 1,
+      "display_amount": 1,
       "variant_id": 1,
-      "variant": {
-        "product_id": 1,
-        "id": 1,
-        "name": "Ruby on Rails Tote",
-        "sku": "ROR-00011",
-        "price": "15.99",
-        "weight": null,
-        "height": null,
-        "width": null,
-        "depth": null,
-        "is_master": true,
-        "slug": "ruby-on-rails-tote",
-        "description": "A text description of the product.",
-        "track_inventory": true,
-        "cost_price": null,
-        "option_values": [
-          {
-            "id": 1,
-            "name": "Small",
-            "presentation": "S",
-            "option_type_name": "tshirt-size",
-            "option_type_id": 1,
-            "option_type_presentation": "S"
-          }
-        ],
-        "images": [
-          {
-            "id": 1,
-            "position": 1,
-            "attachment_content_type": "image/jpg",
-            "attachment_file_name": "ror_tote.jpeg",
-            "type": "Spree::Image",
-            "attachment_updated_at": null,
-            "attachment_width": 360,
-            "attachment_height": 360,
-            "alt": null,
-            "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-            "mini_url": "/spree/products/1/mini/file.png?1370533476",
-            "small_url": "/spree/products/1/small/file.png?1370533476",
-            "product_url": "/spree/products/1/product/file.png?1370533476",
-            "large_url": "/spree/products/1/large/file.png?1370533476"
-          }
-        ],
-        "display_price": "$15.99",
-        "options_text": "(Size: small, Colour: red)",
-        "in_stock": true,
-        "is_backorderable": true,
-        "is_orderable": true,
-        "total_on_hand": 10,
-        "is_destroyed": false
-      },
-      "adjustments": [
-
-      ],
-      "single_display_amount": "$19.99",
-      "display_total": "$39.99",
-      "total": "39.99"
+      "variant": 1
     }

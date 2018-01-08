@@ -1,10 +1,15 @@
 import { AppState } from './../../../../interfaces';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+
+import { CheckoutService } from './../../../../core/services/checkout.service';
 import { CheckoutActions } from './../../../../checkout/actions/checkout.actions';
+
 import { Variant } from './../../../../core/models/variant';
 import { VariantRetriverService } from './../../../../core/services/variant-retriver.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from './../../../../core/models/product';
+import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 
 
@@ -29,6 +34,7 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,
+              private checkoutService: CheckoutService,
               private checkoutActions: CheckoutActions,
               private store: Store<AppState>) {
   }
@@ -74,7 +80,8 @@ export class ProductDetailsComponent implements OnInit {
       }
     }
   }
-  addToCart(product: Product) {
-    this.store.dispatch(this.checkoutActions.addToCart(this.variantId));
+  
+  addToCart() {
+    this.store.dispatch(this.checkoutActions.addToCart(1));
   }
 }

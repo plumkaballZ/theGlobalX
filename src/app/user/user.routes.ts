@@ -3,6 +3,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { UserComponent } from './user.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AddressesComponent } from './components/addresses/addresses.component';
+import { AdrLineEditComp } from './components/addresses/adrLine_Edit/adrLineEditComp';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
 
 export const UserRoutes = [
@@ -14,7 +15,8 @@ export const UserRoutes = [
       { path: 'overview', component: OverviewComponent, redirectTo: 'orders' },
       { path: 'orders', component: OrdersComponent },
       { path: 'orders/detail/:number', component: OrderDetailComponent },
-      { path: 'addresses', component: AddressesComponent }
+      { path: 'addresses', component: AddressesComponent },
+      { path: 'addresses/edit/:id', component: AdrLineEditComp }
     ]
   },
 ];

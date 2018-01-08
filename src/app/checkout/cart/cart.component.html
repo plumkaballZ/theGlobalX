@@ -2,12 +2,14 @@
   <div *ngIf="(totalCartItems$ | async) > 0 else emptyCart">
 
     <div class="left">
+      
       <div class="checkout-header-container">
         <div class="checkout-header">
           <span class="text">My Shopping Bag ({{totalCartItems$ | async}})</span>
         </div>
         <div class="total-price">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>
       </div>
+
       <div class="prod-set">
         <app-line-item-list></app-line-item-list>
         <a class="wishlist-link">

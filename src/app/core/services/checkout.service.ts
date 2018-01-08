@@ -21,7 +21,7 @@ export class CheckoutService {
         .subscribe(number => this.orderNumber = number);
     }
 
-  createNewLineItem(variant_id: number) {    
+  createNewLineItem(variant_id: number) {  
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem =  res.json();
       return lineItem;
@@ -30,6 +30,7 @@ export class CheckoutService {
 
   fetchCurrentOrder() {
     var localUser = JSON.parse(localStorage.getItem('user'));
+
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
@@ -100,13 +101,35 @@ export class CheckoutService {
   }
 
   updateOrder(params) {
-    return this.http.put(
-      `spree/api/v1/checkouts/${this.orderNumber}.json?order_token=${this.getOrderToken()}`,
-      params
-    ).map((res) => {
-      const order = res.json();
-      this.store.dispatch(this.actions.updateOrderSuccess(order));
-    });
+    
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    var data ={
+      email : (user != null ? user.email : ''),
+      mobile: '',
+      password : (user != null ? user.password : ''),
+      password_confirmation : ''
+    }
+
+    return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify
+    ({
+      "order" : params.order,
+      "glxUser" : data,
+      "bill_address_attributes": params.order.bill_address_attributes,
+      "ship_address_attributes": params.order.ship_address_attributes
+    }))
+      .map((res: Response) =>  {
+        const order = res.json();
+        this.store.dispatch(this.actions.updateOrderSuccess(order));
+      });
+
+    // return this.http.post_Web(
+    //   `api/xOrder/updateOrder`,
+    //   params
+    // ).map((res) => {
+    //   const order = res.json();
+    //   this.store.dispatch(this.actions.updateOrderSuccess(order));
+    // });
   }
 
   availablePaymentMethods() {

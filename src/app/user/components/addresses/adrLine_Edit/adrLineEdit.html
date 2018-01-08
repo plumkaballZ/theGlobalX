@@ -1,0 +1,80 @@
+
+<div *ngIf="adr">
+    <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="active col-md-6">
+                <div class="row">
+      
+                  <div class="col-md-4">
+                      <small>{{adr.firstname}}</small>
+                      <small>{{adr.lastname}}</small>
+                      <h5>
+
+                    </h5>
+                  </div>
+    
+                </div>
+                </div>
+            </div>
+            <hr>
+
+            
+            
+          </div>
+        </div>
+      
+        <br>
+
+        <h5>SHIPPING DETAILS</h5>
+
+        <div class="panel panel-default">
+          <div class="row panel-body">
+            <div class="col-md-12">
+              <h5>Order No: {{adr.id}}</h5>
+            </div>
+            
+            <!-- <div class="col-md-12">
+              <address>
+                <strong>{{order.ship_address.full_name}}.</strong><br>
+                {{order.ship_address.address1}}<br>
+                {{order.ship_address.address2}}<br>
+                {{order.ship_address.city}}, {{order.ship_address.zipcode}}<br>
+                <abbr title="Phone">P:</abbr> {{order.ship_address.phone}}
+              </address>
+            </div> -->
+<!--       
+            <dl class="col-md-12">
+              <dt>
+                Total Amount:
+                <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
+                {{order.total}}
+              </dt>
+              
+              <dd>
+                MRP: 
+                <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
+                {{order.item_total}}
+              </dd>
+      
+              <dd>
+                Shipping: 
+                <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
+                {{order.ship_total}}
+              </dd>
+              
+              <dd>
+                Adjustment: 
+                <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
+                {{order.adjustment_total}}
+              </dd>
+            </dl> -->
+      
+            <!-- <dl class="col-md-12">
+              <dt>
+                Payment: {{order.payment_state | humanize | uppercase}}
+              </dt>
+            </dl> -->
+          </div>
+        </div>
+      </div>

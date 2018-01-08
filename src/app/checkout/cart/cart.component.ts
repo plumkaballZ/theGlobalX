@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
   }
-
+  
   ngOnInit() {
   }
 

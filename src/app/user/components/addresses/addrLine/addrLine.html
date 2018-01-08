@@ -1,0 +1,28 @@
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h5 class="active">{{address.address1}}</h5>
+          <small>
+            {{address.firstname}} / {{address.lastname}} 
+          </small>
+          <br>
+          <small>
+            {{address.city}} / {{address.zipcode}} 
+          </small>
+          <h5 class="strong">
+            
+            <!-- Shipment: {{order.line_items.length}} items | 
+            {{order.shipment_state | uppercase}} on {{order.updated_at | date:'fullDate'}} -->
+            
+            <div class="pull-right">
+              <a [routerLink]="['edit', address.id]" class="view-details-link strong">Edit</a>
+            </div>
+
+          </h5>
+          
+          <!-- <div *ngFor="let line_item of order.line_items">
+            <img class="line_item_image" [src]="getProductImageUrl(line_item.image_url)" alt="Line Item">
+          </div> -->
+      
+        </div>
+      </div>

@@ -20,10 +20,13 @@ export class PaymentComponent implements OnInit {
   orderNumber$: Observable<number>;
 
   constructor(private store: Store<AppState>) {
-      this.totalCartValue$ = this.store.select(getTotalCartValue);
-      this.totalCartItems$ = this.store.select(getTotalCartItems);
+      
+    this.totalCartValue$ = this.store.select(getTotalCartValue);
+    this.totalCartItems$ = this.store.select(getTotalCartItems);
+    
       this.address$ = this.store.select(getShipAddress);
       this.orderNumber$ = this.store.select(getOrderNumber);
+
   }
 
   ngOnInit() {

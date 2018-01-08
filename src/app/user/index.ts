@@ -14,6 +14,8 @@ import { UserComponent } from './user.component';
 // import { UserService } from './services/user.service';
 
 import { UserRoutes as routes } from './user.routes';
+import {AddrLineComp} from './components/addresses/addrLine/addrLineComp';
+import {AdrLineEditComp} from './components/addresses/adrLine_Edit/adrLineEditComp';
 import { AddressesComponent } from './components/addresses/addresses.component';
 import { SharedModule } from '../shared/index';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
@@ -27,6 +29,8 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     ReturnsComponent,
     ReturnListItemComponent,
     UserComponent,
+    AddrLineComp,
+    AdrLineEditComp,
     AddressesComponent,
     OrderDetailComponent
     // pipes

@@ -9,21 +9,25 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
   
+
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
         _totalCartItems = 0, _totalCartValue,
         _ship_address, _bill_address,
         _orderState;
-    switch (type) {
-
-      case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
+              
+        switch (type) {
+          case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
       
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
 
-        _lineItemIds = _lineItems.map(lineItem => lineItem.id);
+   
 
+        _lineItemIds = _lineItems.map(lineItem => lineItem.id);
         _totalCartItems = payload.total_quantity;
+        
+
         _totalCartValue = parseFloat(payload.total);
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
@@ -47,8 +51,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
-        _lineItem = payload;
-        _lineItemId = _lineItem.id;
+
+      _lineItem = payload.lineItem;
+      _lineItemId = _lineItem.id;
 
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
@@ -57,9 +62,11 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
+
         _lineItemEntity = { [_lineItemId]: _lineItem };
         _lineItemIds = state.lineItemIds.push(_lineItemId);
 
+        
         return state.merge({
           lineItemIds: _lineItemIds,
           lineItemEntities: state.lineItemEntities.merge(_lineItemEntity),
@@ -105,6 +112,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
+      console.log('orderupdate');
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
 
