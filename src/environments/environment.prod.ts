@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  API_ENDPOINT: 'https://www.theglobalx.com/',
+  API_ENDPOINT: 'https://shevlin.co/',
   WEB_ENDPOINT: 'http://localhost:65252/',
-  AppName: 'AngularSpree'
+  AppName: 'Shevlin.co'
 };
