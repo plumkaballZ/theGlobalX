@@ -59,6 +59,7 @@ export class UserService {
     return this.http.get(`/assets/api/users/users.json`)
       .map(res => res.json());
   }
+
   getAddrs()
   {
     var localUser = JSON.parse(localStorage.getItem('user'));
@@ -67,11 +68,15 @@ export class UserService {
         return res.json();
       });
   }
+
   getAddr(adrId)
   {
-    return this.http.get_Web('api/xAdr', {params: {id: adrId}}).map((res: Response) =>  
-    {
-      return res.json();
-    });
+    return this.http.get_Web('api/xAdr', {params: {id: adrId}}).map((res: Response) =>  {return res.json();});
+  }
+
+  updateUser(userData) 
+  {
+    console.log('update user');
+    return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({"glxUser" : userData})).map((res: Response) =>  { return true;});
   }
 }

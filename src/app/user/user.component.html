@@ -1,6 +1,16 @@
 <div class="container-fluid">
   <div class="col-md-12">
-    <h4> My Account</h4>
+  
+    
+    <div *ngIf="User.id;else other_content">
+        <h4>Hello {{User.id}}, welcome!</h4>
+    </div>
+
+    <ng-template #other_content>
+        <h4>Hello and welcome!, what is your
+          <input [(ngModel)]="userId" class="userInputId" placeholder="name?" autocomplete="off" (keyup.enter)="updateId($event)">
+        </h4>
+    </ng-template>
     <hr>
   </div>
 

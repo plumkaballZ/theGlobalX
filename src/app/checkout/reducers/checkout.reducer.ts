@@ -112,7 +112,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
+      
       console.log('orderupdate');
+
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
 
