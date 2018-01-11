@@ -15,10 +15,7 @@ export class CheckoutEffects {
 
   // tslint:disable-next-line:member-ordering
   @Effect()
-    
-  AddToCart$ = this.actions$
-
-
+    AddToCart$ = this.actions$
     .ofType(CheckoutActions.ADD_TO_CART)
     .switchMap((action: Action) => {
       return this.checkoutService.createNewLineItem(action.payload);

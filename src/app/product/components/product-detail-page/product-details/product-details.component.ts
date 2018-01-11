@@ -83,5 +83,6 @@ export class ProductDetailsComponent implements OnInit {
   
   addToCart() {
     this.store.dispatch(this.checkoutActions.addToCart(1));
+    
   }
 }

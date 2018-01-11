@@ -1,6 +1,7 @@
 import { CheckoutState } from './checkout.state';
 import { AppState } from './../../interfaces';
 import { createSelector } from 'reselect';
+import { Address } from './../../core/models/address';
 import { Map, Record, List, fromJS } from 'immutable';
 
 // Base Cart State function
@@ -12,10 +13,6 @@ export function getCheckoutState(state: AppState): CheckoutState {
 export function fetchLineItems(state: CheckoutState) {
   const ids = state.lineItemIds.toJS();
   const lineItemEntitites = state.lineItemEntities.toJS();
-
-  console.log('lineItemEntitites');
-  console.log(lineItemEntitites);
-
   return ids.map(id => lineItemEntitites[id]);
 }
 

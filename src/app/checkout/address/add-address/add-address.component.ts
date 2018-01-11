@@ -36,21 +36,17 @@ export class AddAddressComponent implements OnInit, OnDestroy {
 
   onSubmit() {
 
-    console.log('submit');
-
     const address = this.addressForm.value;
-
     let addressAttributes;
 
     if (this.isAuthenticated) {
-      console.log('isAuthenticated');
       addressAttributes = this.addrService.createAddresAttributes(address);
     } else {
-      console.log('isNotAuthenticated');
       const email = this.getEmailFromUser();
       addressAttributes = this.addrService.createGuestAddressAttributes(address, email);
     }
-    this.checkoutService.updateOrder(addressAttributes).subscribe();
+    
+    this.addrService.createAddress(addressAttributes).subscribe();
   }
 
   private getEmailFromUser() {

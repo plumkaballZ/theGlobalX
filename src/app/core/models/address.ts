@@ -19,4 +19,6 @@ export class Address {
   state_id: string;
   state_name: string;
   state_text: string;
+
+  public v_selected : boolean;
 }

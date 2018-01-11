@@ -1,9 +1,19 @@
 import { FormBuilder, Validators } from '@angular/forms';
 import { Injectable } from '@angular/core';
+import { Response, Headers } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { HttpService } from './../../../core/services/http';
+import { CheckoutActions } from './../../../checkout/actions/checkout.actions';
+import { AppState } from './../../../interfaces';
+import { Store } from '@ngrx/store';
 
 @Injectable()
 export class AddressService {
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private http: HttpService, 
+    private actions: CheckoutActions,
+    private store: Store<AppState>,
+    private fb: FormBuilder) {}
 
   initAddressForm() {
     return this.fb.group({
@@ -43,5 +53,37 @@ export class AddressService {
       }
     };
   }
+
+  createAddress(params) {
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    var data ={
+      email : (user != null ? user.email : ''),
+      mobile: '',
+      password : (user != null ? user.password : ''),
+      password_confirmation : ''
+    }
+
+    return this.http.post_Web('api/xAddress', JSON.stringify
+    ({
+      "order" : params.order,
+      "glxUser" : data,
+      "bill_address_attributes": params.order.bill_address_attributes,
+      "ship_address_attributes": params.order.ship_address_attributes
+    }))
+      .map((res: Response) =>  {
+        const order = res.json();
+        this.store.dispatch(this.actions.updateOrderSuccess(order));
+      });
+
+    // return this.http.post_Web(
+    //   `api/xOrder/updateOrder`,
+    //   params
+    // ).map((res) => {
+    //   const order = res.json();
+    //   this.store.dispatch(this.actions.updateOrderSuccess(order));
+    // });
+  }
+
 
 }

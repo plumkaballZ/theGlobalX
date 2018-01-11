@@ -23,7 +23,7 @@
               <app-product-description [description]="product.description" class="row"></app-product-description>  
               
               <div>
-                <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">BUY NOW</button>
+                <button [routerLink]="['checkout','cart']" (click)="addToCart()" class="pdp-add-to-bag pdp-button">BUY NOW</button>
               </div>
               
             </div>

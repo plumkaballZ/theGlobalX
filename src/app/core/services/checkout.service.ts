@@ -43,7 +43,6 @@ export class CheckoutService {
       else{
         const token = order;
         this.setOrderTokenInLocalStorage({order_token: token});
-
         return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
       }
 
@@ -73,6 +72,9 @@ export class CheckoutService {
   }
   
   getOrder(orderNumber) {
+
+    console.log('getOrder');
+
     return this.http.get(
       `spree/api/v1/orders/${orderNumber}.json`
     ).map(res => {
@@ -101,7 +103,6 @@ export class CheckoutService {
   }
 
   updateOrder(params) {
-    
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
@@ -133,11 +134,15 @@ export class CheckoutService {
   }
 
   availablePaymentMethods() {
-    return this.http.get(
-      `spree/api/v1/orders/${this.orderNumber}/payments/new?order_token=${this.getOrderToken()}`
+
+
+    return this.http.get_Web(
+      `api/xPaymentMode`
     ).map((res) => {
+      console.log(res.json());
       const payments = res.json();
       return payments;
+
     });
   }
 

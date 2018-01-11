@@ -13,9 +13,8 @@ export class CashOnDeliveryComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   onPay() {
     this.payOnDelivery.emit(true);
   }
-
 }

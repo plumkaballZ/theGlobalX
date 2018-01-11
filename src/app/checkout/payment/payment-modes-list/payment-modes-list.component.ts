@@ -43,17 +43,31 @@ export class PaymentModesListComponent implements OnInit {
     this.checkoutService.availablePaymentMethods()
       .subscribe((payment) => {
         this.paymentModes = payment.payment_methods;
+        console.log(this.paymentModes);
         this.selectedMode = this.paymentService.setCODAsSelectedMode(this.paymentModes);
       });
   }
 
   makePayment() {
+
+    console.log('makePayment');
+
     const paymentModeId = this.selectedMode.id;
+
+    console.log(paymentModeId);
+
     this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)
       .do(() => {
+
+        console.log(paymentModeId);
+        console.log(this.paymentAmount);
+
         this.store.dispatch(this.checkoutActions.orderCompleteSuccess());
+
         this.redirectToNewPage();
+
         this.checkoutService.createEmptyOrder()
+
           .subscribe();
       })
       .subscribe();
@@ -66,5 +80,4 @@ export class PaymentModesListComponent implements OnInit {
       this.router.navigate(['/']);
     }
   }
-
 }

@@ -41,13 +41,11 @@ export class PayPalComp implements OnInit {
       }, '#paypalBtn');
     })
   }
-  private loadExternalScript(scriptUrl: string) 
-  {
+  
+  private loadExternalScript(scriptUrl: string) {
     return new Promise((resolve, reject) => {
       const scriptElement = document.createElement('script')
       scriptElement.src = scriptUrl
       scriptElement.onload = resolve
-      document.body.appendChild(scriptElement)
-          });
-        }
-      }
+      document.body.appendChild(scriptElement)});
+    }}
