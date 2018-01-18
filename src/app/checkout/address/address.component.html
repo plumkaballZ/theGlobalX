@@ -1,6 +1,6 @@
 <div class="address-section">
 
-	<div *ngIf="addrs$?.length > 0">
+	<div *ngIf="showAdrs$">
 
 		<div class="left">
 
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	
-	<div *ngIf="addrs$?.length < 1">
+	<div *ngIf="!showAdrs$">
 		<div class="left">
 			<div class="add-address">
 				<span class="add-label">

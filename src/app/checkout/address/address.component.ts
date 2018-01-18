@@ -23,7 +23,10 @@ export class AddressComponent implements OnInit, OnDestroy {
   shipAddress$: Observable<Address>;
   
   actionsSubscription: Subscription;
-  addrs$: Observable<Address[]>;
+  addrs$: Observable<any[]>;
+
+  showAdrs$ : boolean;
+
 
   constructor(
     private store: Store<AppState>,
@@ -32,6 +35,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     private router: Router,
     private route: ActivatedRoute
   ) {
+    this.showAdrs$ = false;
 
       this.orderNumber$ = this.store.select(getOrderNumber);
       this.shipAddress$ = this.store.select(getShipAddress);
@@ -41,7 +45,15 @@ export class AddressComponent implements OnInit, OnDestroy {
         this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
             this.userService.getAddrs(
-              JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(response => this.addrs$ = response);
+              JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+                response => {
+                  
+                  if(response.length > 0) this.showAdrs$ = true;
+                  else this.showAdrs$ = false;
+
+                  this.addrs$ = response
+                } 
+              );
           }
         );
   }
