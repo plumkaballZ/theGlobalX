@@ -19,5 +19,4 @@ export class PaymentModeComponent implements OnInit {
   onSelectPaymentMode() {
     this.changePaymentMode.emit(this.paymentMode);
   }
-
 }

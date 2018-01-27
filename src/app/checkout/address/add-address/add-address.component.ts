@@ -5,14 +5,15 @@ import { AuthActions } from './../../../auth/actions/auth.actions';
 import { AddressService } from './../services/address.service';
 import { CheckoutService } from './../../../core/services/checkout.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit, OnDestroy } from '@angular/core';
-
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 @Component({
   selector: 'app-add-address',
   templateUrl: './add-address.component.html',
   styleUrls: ['./add-address.component.scss']
 })
 export class AddAddressComponent implements OnInit, OnDestroy {
+
+  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
   addressForm: FormGroup;
   emailForm: FormGroup;
@@ -35,7 +36,6 @@ export class AddAddressComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-
     const address = this.addressForm.value;
     let addressAttributes;
 
@@ -47,6 +47,7 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     }
     
     this.addrService.createAddress(addressAttributes).subscribe();
+    this.notify.emit("1");
   }
 
   private getEmailFromUser() {

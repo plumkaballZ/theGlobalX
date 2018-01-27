@@ -3,7 +3,7 @@
 	<div *ngIf="showAdrs$">
 
 		<div class="left">
-
+			
 			<div class="edit-address">
 				<span class="edit-label">
 					Select Delivery Address
@@ -17,7 +17,7 @@
 			<button (click)="checkoutToPayment()" class="pay-btn">CONTINUE TO PAYMENT</button>
 		</div>
 	</div>
-	
+
 	<div *ngIf="!showAdrs$">
 		<div class="left">
 			<div class="add-address">
@@ -25,9 +25,7 @@
 					ADD NEW ADDRESS
 				</span>
 			</div>
-			
-			<app-add-address></app-add-address>
-
+			<app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
 		</div>
 	</div>
 </div>

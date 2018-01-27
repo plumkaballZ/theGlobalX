@@ -23,6 +23,45 @@
   }
 }
 
+.register-gender {
+  position: relative;
+  border: 0;
+  font-size: 13px;
+  color: #696e79;
+  text-align: left;
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #d5d6d9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.register-gender {
+  position: relative;
+  border: 0;
+  font-size: 13px;
+  color: #696e79;
+  text-align: left;
+  padding: 15px;
+  margin: 0;
+  border-top: 1px solid #d5d6d9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.register-gender-title {
+  display: inline;
+  font-weight: 500;
+}
+.register-gender-label {
+  cursor: pointer;
+  font-weight: 500;
+}
+.register-gender-radio {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
 @media (min-width: 600px) {
   .panel-title {
     font-size: 28px;
@@ -39,6 +78,19 @@
   border: 1px solid #bfc0c6;
   border-radius: 5px;
   padding: 0;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+  margin-bottom: 0;
+  font-size: inherit;
+  width: auto;
+  border: none;
 }
 
 .register-register-button-container {

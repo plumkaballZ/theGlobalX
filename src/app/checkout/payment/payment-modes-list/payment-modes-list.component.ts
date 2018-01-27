@@ -49,25 +49,12 @@ export class PaymentModesListComponent implements OnInit {
   }
 
   makePayment() {
-
-    console.log('makePayment');
-
     const paymentModeId = this.selectedMode.id;
-
-    console.log(paymentModeId);
-
     this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)
       .do(() => {
-
-        console.log(paymentModeId);
-        console.log(this.paymentAmount);
-
         this.store.dispatch(this.checkoutActions.orderCompleteSuccess());
-
         this.redirectToNewPage();
-
         this.checkoutService.createEmptyOrder()
-
           .subscribe();
       })
       .subscribe();
