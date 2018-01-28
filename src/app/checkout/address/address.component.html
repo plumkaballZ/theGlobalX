@@ -1,17 +1,18 @@
 <div class="address-section">
 
-	<div *ngIf="showAdrs$">
 
+	<button (click)="AddNewAddr()" class="addAddrBtn">Add new address</button>
+	
+	<div *ngIf="showAdrs$">
 		<div class="left">
-			
 			<div class="edit-address">
 				<span class="edit-label">
 					Select Delivery Address
 				</span>
 			</div>
+
 			<app-delivery-address [addrs]="addrs$"></app-delivery-address>
 		</div>
-
 		<div class="right">
 			<app-delivery-options [orderNumber]="orderNumber$ | async"></app-delivery-options>
 			<button (click)="checkoutToPayment()" class="pay-btn">CONTINUE TO PAYMENT</button>
