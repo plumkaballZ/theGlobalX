@@ -24,7 +24,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
         _totalCartItems = payload.total_quantity;
         
-        _totalCartValue = parseFloat(payload.total);
+        console.log("FETCH_CURRENT_ORDER_SUCCESS");
+
+        _totalCartValue = 10;
         
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
@@ -58,8 +60,10 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           return state;
         }
 
+        console.log('ADD_TO_CART_SUCCESS');
+
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
-        _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
+        _totalCartValue = 300;
 
         _lineItemEntity = { [_lineItemId]: _lineItem };
         _lineItemIds = state.lineItemIds.push(_lineItemId);
@@ -80,9 +84,11 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           _lineItemIds = state.lineItemIds.splice(index, 1);
           _lineItemEntities = state.lineItemEntities.delete(_lineItemId);
           _totalCartItems = state.totalCartItems - _lineItem.quantity;
-          _totalCartValue = state.totalCartValue - parseFloat(_lineItem.total);
+          _totalCartValue = 10;
         }
 
+        console.log('REMOVE_LINE_ITEM_SUCCESS');
+        
         return state.merge({
           lineItemIds: _lineItemIds,
           lineItemEntities: _lineItemEntities,

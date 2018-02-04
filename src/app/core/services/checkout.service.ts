@@ -30,7 +30,6 @@ export class CheckoutService {
 
   fetchCurrentOrder() {
     var localUser = JSON.parse(localStorage.getItem('user'));
-
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
@@ -45,7 +44,6 @@ export class CheckoutService {
         this.setOrderTokenInLocalStorage({order_token: token});
         return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
       }
-
     });
   }
 
@@ -72,9 +70,6 @@ export class CheckoutService {
   }
   
   getOrder(orderNumber) {
-
-    console.log('getOrder');
-
     return this.http.get(
       `spree/api/v1/orders/${orderNumber}.json`
     ).map(res => {
@@ -134,15 +129,11 @@ export class CheckoutService {
   }
 
   availablePaymentMethods() {
-
-
     return this.http.get_Web(
       `api/xPaymentMode`
     ).map((res) => {
-      console.log(res.json());
       const payments = res.json();
       return payments;
-
     });
   }
 
@@ -160,16 +151,13 @@ export class CheckoutService {
         .subscribe();
     });
   }
-
   private getOrderToken() {
     const order = JSON.parse(localStorage.getItem('order'));
     const token = order.order_token;
     return token;
   }
-
   private setOrderTokenInLocalStorage(token): void {
     const jsonData = JSON.stringify(token);
     localStorage.setItem('order', jsonData);
   }
-
 }

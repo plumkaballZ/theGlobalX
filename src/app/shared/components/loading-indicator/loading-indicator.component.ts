@@ -12,6 +12,7 @@ export class LoadingIndicatorComponent implements OnInit {
   loading$: Subject<{loading: boolean, hasError: boolean, hasMsg: string}>;
 
   constructor(private httpInterceptor: HttpService) {
+    console.log('loading');
     this.loading$ = this.httpInterceptor.loading;
   }
 
