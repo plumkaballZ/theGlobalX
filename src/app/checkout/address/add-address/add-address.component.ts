@@ -46,8 +46,12 @@ export class AddAddressComponent implements OnInit, OnDestroy {
       addressAttributes = this.addrService.createGuestAddressAttributes(address, email);
     }
     
-    this.addrService.createAddress(addressAttributes).subscribe();
-    this.notify.emit("1");
+    this.addrService.createAddress(addressAttributes).subscribe(
+      response => {
+        this.notify.emit("1");
+      }
+    );
+ 
   }
 
   private getEmailFromUser() {

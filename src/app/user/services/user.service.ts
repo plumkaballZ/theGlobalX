@@ -63,7 +63,6 @@ export class UserService {
   {
     return this.http.get_Web('api/xAddresses', {params: {email: email}})
       .map((res: Response) =>  {
-        console.log(res.json());
         return res.json();
       });
   }

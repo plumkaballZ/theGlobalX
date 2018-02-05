@@ -25,6 +25,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _totalCartItems = payload.total_quantity;
         
         console.log("FETCH_CURRENT_ORDER_SUCCESS");
+        console.log('state');
+        console.log(state);
 
         _totalCartValue = 10;
         
@@ -87,8 +89,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           _totalCartValue = 10;
         }
 
-        console.log('REMOVE_LINE_ITEM_SUCCESS');
-        
         return state.merge({
           lineItemIds: _lineItemIds,
           lineItemEntities: _lineItemEntities,
@@ -117,8 +117,13 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
 
+      console.log('UPDATE_ORDER_SUCCESS');
+      console.log('state');
+      console.log(state);
+      
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
+
 
         return state.merge({
           shipAddress: _ship_address,

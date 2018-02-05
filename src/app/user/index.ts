@@ -20,6 +20,8 @@ import { AddressesComponent } from './components/addresses/addresses.component';
 import { SharedModule } from '../shared/index';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
 
+import { AddressService } from './../checkout/address/services/address.service';
+
 @NgModule({
   declarations: [
     // components
@@ -33,7 +35,7 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     AdrLineEditComp,
     AddressesComponent,
     OrderDetailComponent
-    // pipes
+    // pipes,
 
   ],
   exports: [
@@ -46,6 +48,7 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
 
   ],
   providers: [
+    AddressService
   ],
   imports: [
     RouterModule.forChild(routes),

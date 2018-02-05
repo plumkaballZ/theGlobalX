@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { HttpService } from './../../../core/services/http';
 import { CheckoutActions } from './../../../checkout/actions/checkout.actions';
 import { AppState } from './../../../interfaces';
+import { Address } from '../../../core/models/address';
 import { Store } from '@ngrx/store';
 
 @Injectable()
@@ -26,6 +27,20 @@ export class AddressService {
       'zipcode': [10001, Validators.required],
       'state_id': [3561, Validators.required],
       'country_id': [232, Validators.required]
+    });
+  }
+  initAddressFrom_EDIT(adr : Address)
+  {
+    return this.fb.group({
+      'firstname': [adr.firstname, Validators.required],
+      'lastname': [adr.lastname, Validators.required],
+      'address1': [adr.address1, Validators.required],
+      'address2': [adr.address2, Validators.required],
+      'city': [adr.city, Validators.required],
+      'phone': [adr.phone, Validators.required],
+      'zipcode': [adr.zipcode, Validators.required],
+      'state_id': [adr.state_id, Validators.required],
+      'country_id': [adr.country_id, Validators.required]
     });
   }
 
@@ -73,7 +88,7 @@ export class AddressService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
-        this.store.dispatch(this.actions.updateOrderSuccess(order));
+        this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
       });
 
     // return this.http.post_Web(

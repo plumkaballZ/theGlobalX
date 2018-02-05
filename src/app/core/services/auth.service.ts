@@ -25,7 +25,6 @@ export class AuthService {
   ) {
     http.options
   }
-
   /**
    *
    *
@@ -66,7 +65,6 @@ export class AuthService {
    * @memberof AuthService
    */
   register(data): Observable<any> {
-
     return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
       var pw = data.password;
       var resReq = res.json();
@@ -97,13 +95,11 @@ export class AuthService {
    */
   authorized(): Observable<any> {
     var localUser = JSON.parse(localStorage.getItem('user'));
-
-
     //'midgard/glbx'
 
     return this.http
       .get_Web(
-        'api/xUser', { params: { email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }
+        'api/xUser', { params: { json: 'asdf', email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }
       ).map((res: Response) => 
       {
         var resReq = res.json();

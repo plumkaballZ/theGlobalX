@@ -48,7 +48,6 @@ export class AddressComponent implements OnInit, OnDestroy {
             this.userService.getAddrs(
               JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
-                  
                   if(response.length > 0) this.showAdrs$ = true;
                   else this.showAdrs$ = false;
 
@@ -82,6 +81,19 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
   c01_onSubmit(message:string){
     this.showAdrs$ = true;
+    this.actionsSubscription = this.route.params.subscribe(
+      (params: any) => {
+        this.userService.getAddrs(
+          JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+            response => {
+              if(response.length > 0) this.showAdrs$ = true;
+              else this.showAdrs$ = false;
+
+              this.addrs$ = response
+            } 
+          );
+      }
+    );
   }
   AddNewAddr(){
     this.showAdrs$ = false;
