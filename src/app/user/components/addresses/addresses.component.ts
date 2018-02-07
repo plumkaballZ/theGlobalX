@@ -17,6 +17,7 @@ export class AddressesComponent implements OnInit {
   
   actionsSubscription: Subscription;
   addrs$: Observable<Address[]>;
+  showAdrs$ : boolean;
 
   constructor(
     private store: Store<AppState>, 
@@ -33,7 +34,30 @@ export class AddressesComponent implements OnInit {
         }
 
     );
+
+  this.showAdrs$ = true;
   }
+
   ngOnInit() {
+  }
+
+  c01_onSubmit(message:string){
+    this.showAdrs$ = true;
+    this.actionsSubscription = this.route.params.subscribe(
+      (params: any) => {
+        this.userService.getAddrs(
+          JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+            response => {
+              if(response.length > 0) this.showAdrs$ = true;
+              else this.showAdrs$ = false;
+              this.addrs$ = response
+            } 
+          );
+      }
+    );
+  }
+  
+  AddNewAddr(){
+    this.showAdrs$ = false;
   }
 }

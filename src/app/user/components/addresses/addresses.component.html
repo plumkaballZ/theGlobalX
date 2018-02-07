@@ -1,5 +1,22 @@
-<div>
+
+
+
+
+<div *ngIf="showAdrs$">
+  <button (click)="AddNewAddr()" class="addAddrBtn">Add new address</button>
+
   <div *ngFor="let addr of addrs$">
       <addrLineComp [address]="addr"></addrLineComp>
+  </div>
+</div>
+
+<div *ngIf="!showAdrs$">
+  <div class="left">
+    <div class="add-address">
+      <span class="add-label">
+        ADD NEW ADDRESS
+      </span>
+    </div>
+    <app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
   </div>
 </div>

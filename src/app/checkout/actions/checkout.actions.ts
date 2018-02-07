@@ -78,7 +78,7 @@ export class CheckoutActions {
     };
   }
 
-  updateOrder(): Action {
+  updateOrder(param): Action {
     return { type: CheckoutActions.UPDATE_ORDER };
   }
 

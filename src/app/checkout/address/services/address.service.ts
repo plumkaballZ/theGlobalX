@@ -29,21 +29,6 @@ export class AddressService {
       'country_id': [232, Validators.required]
     });
   }
-  initAddressFrom_EDIT(adr : Address)
-  {
-    return this.fb.group({
-      'firstname': [adr.firstname, Validators.required],
-      'lastname': [adr.lastname, Validators.required],
-      'address1': [adr.address1, Validators.required],
-      'address2': [adr.address2, Validators.required],
-      'city': [adr.city, Validators.required],
-      'phone': [adr.phone, Validators.required],
-      'zipcode': [adr.zipcode, Validators.required],
-      'state_id': [adr.state_id, Validators.required],
-      'country_id': [adr.country_id, Validators.required]
-    });
-  }
-
   initEmailForm() {
     return this.fb.group({
       'email': ['', Validators.required]

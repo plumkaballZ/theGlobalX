@@ -23,11 +23,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _lineItems = payload.line_items;
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
         _totalCartItems = payload.total_quantity;
-        
-        console.log("FETCH_CURRENT_ORDER_SUCCESS");
-        console.log('state');
-        console.log(state);
-
         _totalCartValue = 10;
         
         _ship_address = payload.ship_address;
@@ -61,9 +56,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         if (state.lineItemIds.includes(_lineItemId)) {
           return state;
         }
-
-        console.log('ADD_TO_CART_SUCCESS');
-
+        
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = 300;
 
@@ -116,15 +109,15 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
-
-      console.log('UPDATE_ORDER_SUCCESS');
-      console.log('state');
-      console.log(state);
       
+
+      if(payload == null) 
+      {
+        return state;
+      }
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
-
-
+            
         return state.merge({
           shipAddress: _ship_address,
           billAddress: _bill_address

@@ -6,12 +6,24 @@ import { Variant } from './variant';
  */
 
 export class LineItem {
-  id: number;
-  quantity: number;
-  price: number;
-  single_display_amount: number;
-  total: number;
-  display_amount: number;
-  variant_id: number;
-  variant: Variant;
+  public id: number;
+  public quantity: number;
+  public price: number;
+  public single_display_amount: number;
+  public total: number;
+  public display_amount: number;
+  public variant_id: number;
+  public variant: Variant;
+  /**
+   * 
+   */
+  public CardHolderX () {
+    this.id = 1;
+    this.quantity = 1;
+    this.price = 300;
+    this.single_display_amount = 300;
+    this.total = 300;
+    this.display_amount = 299;
+    this.variant_id = 777;
+  }
 }

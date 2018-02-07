@@ -1,9 +1,9 @@
-import { getAuthStatus } from './../../../auth/reducers/selectors';
-import { AppState } from './../../../interfaces';
+import { getAuthStatus } from './../../../../auth/reducers/selectors';
+import { AppState } from './../../../../interfaces';
 import { Store } from '@ngrx/store';
-import { AuthActions } from './../../../auth/actions/auth.actions';
-import { AddressService } from './../services/address.service';
-import { CheckoutService } from './../../../core/services/checkout.service';
+import { AuthActions } from './../../../../auth/actions/auth.actions';
+import { AddressService } from './../../../../checkout/address/services/address.service';
+import { CheckoutService } from './../../../../core/services/checkout.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 @Component({

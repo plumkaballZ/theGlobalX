@@ -31,12 +31,14 @@ export class ProductDetailsComponent implements OnInit {
   correspondingOptions: any;
   variantId: any;
 
+  _checkoutService : CheckoutService;
 
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,
               private checkoutService: CheckoutService,
               private checkoutActions: CheckoutActions,
               private store: Store<AppState>) {
+                this._checkoutService = checkoutService;
   }
 
   ngOnInit() {
@@ -82,7 +84,7 @@ export class ProductDetailsComponent implements OnInit {
   }
   
   addToCart() {
-    this.store.dispatch(this.checkoutActions.addToCart(1));
-    
+    this.store.dispatch(this.checkoutActions.addToCart(1)); 
+    this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
   }
 }

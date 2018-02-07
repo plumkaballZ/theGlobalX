@@ -11,6 +11,8 @@ import { Observable } from 'rxjs/Observable';
 import { UserService } from './../../user/services/user.service'
 import { empty } from 'rxjs/Observer';
 
+import { CheckoutActions } from './../../checkout/actions/checkout.actions';
+
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
@@ -33,6 +35,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     private store: Store<AppState>,
     private userService: UserService,
     private checkoutService: CheckoutService,
+    private checkoutActions: CheckoutActions,
     private router: Router,
     private route: ActivatedRoute
   ) {
@@ -40,7 +43,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
       this.orderNumber$ = this.store.select(getOrderNumber);
       this.shipAddress$ = this.store.select(getShipAddress);
-      
+
       this.stateSub$ = this.store.select(getOrderState).subscribe(state => this.orderState = state);
 
         this.actionsSubscription = this.route.params.subscribe(
@@ -59,19 +62,21 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
   ngOnInit() {
   }
-
-
-
   checkoutToPayment() {
+
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
-        .do(() => { this.router.navigate(['/checkout', 'payment']);
+        .do(() => { 
+          this.router.navigate(['/checkout', 'payment']);
+
+    
         })
         .subscribe();
     } else {
       this.router.navigate(['/checkout', 'payment']);
     }
   }
+
   ngOnDestroy() {
     if (this.orderState === 'delivery') {
       this.checkoutService.changeOrderState()
@@ -88,7 +93,6 @@ export class AddressComponent implements OnInit, OnDestroy {
             response => {
               if(response.length > 0) this.showAdrs$ = true;
               else this.showAdrs$ = false;
-
               this.addrs$ = response
             } 
           );

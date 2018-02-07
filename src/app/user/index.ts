@@ -9,6 +9,7 @@ import { OrderListItemComponent } from './components/orders/order-list-item/orde
 import { ReturnsComponent } from './components/returns/returns.component';
 import { ReturnListItemComponent } from './components/returns/return-list-item/return-list-item.component';
 import { UserComponent } from './user.component';
+import { AddAddressComponent } from './components/addresses/add-address/add-address.component';
 
 // services
 // import { UserService } from './services/user.service';
@@ -22,6 +23,8 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
 
 import { AddressService } from './../checkout/address/services/address.service';
 
+
+
 @NgModule({
   declarations: [
     // components
@@ -34,7 +37,8 @@ import { AddressService } from './../checkout/address/services/address.service';
     AddrLineComp,
     AdrLineEditComp,
     AddressesComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    AddAddressComponent
     // pipes,
 
   ],

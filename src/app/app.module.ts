@@ -9,6 +9,8 @@ import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
 
+
+
 import { AppComponent } from './app.component';
 // Routes
 import { routes } from './app.routes';
