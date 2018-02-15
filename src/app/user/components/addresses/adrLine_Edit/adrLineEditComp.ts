@@ -14,7 +14,7 @@ import { AddressService } from './../../../../checkout/address/services/address.
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'adrLineEditComp',
+  selector: 'isAuthenticated',
   templateUrl: './adrLineEdit.html',
   styleUrls: ['./adrLineEdit.scss']
 })
@@ -26,6 +26,8 @@ export class AdrLineEditComp implements OnInit, OnDestroy {
   adrId: String;
   adr: Address;
   adrUid: string;
+
+  isAuthenticated: boolean;
 
   addressForm: FormGroup;
   emailForm: FormGroup;
