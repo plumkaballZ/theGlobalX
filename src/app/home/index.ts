@@ -37,6 +37,10 @@ import { HomeRoutes as routes } from './home.routes';
 import { FilterPipe } from './content/product-list/product-filter.pipe';
 
 
+
+import {InlineEditorModule} from 'ng2-inline-editor';
+
+
 @NgModule({
   declarations: [
     ProductDetailPageComponent,
@@ -64,6 +68,7 @@ import { FilterPipe } from './content/product-list/product-filter.pipe';
   imports: [
     RouterModule.forChild(routes),
     SharedModule,
+    InlineEditorModule
   ],
   providers: [
     ProductActions,

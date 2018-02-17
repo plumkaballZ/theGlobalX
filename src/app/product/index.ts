@@ -44,7 +44,7 @@ import { ProductEffects } from './effects/product.effects';
   ],
   imports: [
     SharedModule,
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes)
   ],
   providers: [
   ]

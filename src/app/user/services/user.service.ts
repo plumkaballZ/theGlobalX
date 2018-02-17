@@ -25,7 +25,9 @@ export class UserService {
    * @memberof UserService
    */
   getOrders(): Observable<Order[]> {
+    
     var localUser = JSON.parse(localStorage.getItem('user'));
+
     return this.http.get_Web('api/xOrders', {params: {email: (localUser== null ? '': localUser.email)}})
       .map((res: Response) =>  {
         return res.json();

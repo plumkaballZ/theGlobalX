@@ -12,6 +12,8 @@ import { Product } from './../../../../core/models/product';
 import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 
+import {InlineEditorComponent} from 'ng2-inline-editor';
+
 
 @Component({
   selector: 'app-product-details',
@@ -86,5 +88,12 @@ export class ProductDetailsComponent implements OnInit {
   addToCart() {
     this.store.dispatch(this.checkoutActions.addToCart(1)); 
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
+  }
+
+  h002 = "SUSTAINABILITY";
+  editableTextArea = 'Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal';
+
+  saveEditable(value) {
+    console.log('http.service: ' + value);
   }
 }

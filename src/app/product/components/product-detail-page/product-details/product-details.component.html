@@ -1,6 +1,5 @@
 
 <div itemscope  *ngIf="product != null" class="rowZ grpZ">
-
   <div class="colz">
     <div class="colZ colZ_001">
       <app-image-container [images]="images" [selectedImage]="images[0]">
@@ -20,30 +19,34 @@
       <div class="pi_box">
           <div class="pi2">  
               <app-product-price-info [product]="product" class="row"></app-product-price-info>
+              
               <app-product-description [description]="product.description" class="row"></app-product-description>  
-              
+
               <div>
-                <button [routerLink]="['checkout','cart']" (click)="addToCart()" class="pdp-add-to-bag pdp-button">BUY NOW</button>
+                <button [routerLink]="['checkout','cart']" (click)="addToCart()" class="pdp-add-to-bag pdp-button">
+                  BUY NOW
+                </button>
               </div>
-              
+
             </div>
             <div class="pi3">
               <div class="grid">
                 <div class="grid__item large--seven-twelfths">
 
                   <h2 class="h_002">
-                    <strong class="centered">SUSTAINABILITY</strong>
+                    <strong class="centered">  
+                      <inline-editor type="text" [(ngModel)]="h002" (onSave)="saveEditable($event)"> </inline-editor>
+                    </strong>
                   </h2>
-                  
+
                   <span class="span_001">
-                    Our products provide environmental, social and economic benefits while protecting public health
-                    and environment, throughout their life cycle, from exctraction of raw materials until final disposal
+                    <inline-editor type="textarea" [(ngModel)]="editableTextArea" (onSave)="saveEditable($event)"> </inline-editor>
                   </span>
+
                 </div>
               </div>
             </div>
       </div>
 	</div>
   </div>
-	
 </div>

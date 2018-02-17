@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+
+
+
 // Components
 import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
@@ -34,6 +37,9 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
+
+
+
 
 @NgModule({
   declarations: [
