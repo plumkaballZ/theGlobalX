@@ -87,7 +87,6 @@
    }
 
  .h_002{
-   color:#000000; 
    font-family: "Fredericka the Great", "cursive;";
    font-size: calc(12px + 1.5vw);
    margin: 10% 0% 5% 0%;
@@ -102,6 +101,11 @@
         font-size:calc(0px + 2.5vw);
     }
 }
+:host ::ng-deep .h_002 a { 
+    color:#030303; 
+    text-decoration: none;
+  }
+
  .pdp-button {
     padding: 1% 1% 1% 0%;
     font-size: 18px;
@@ -118,3 +122,10 @@
 	font-size: 14px;
 	line-height: 20px;
  }
+ :host ::ng-deep .span_001 a { 
+    color:#030303; 
+    text-decoration: none;
+  }
+
+
+

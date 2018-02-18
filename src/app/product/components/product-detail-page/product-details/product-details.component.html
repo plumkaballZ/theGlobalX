@@ -35,14 +35,20 @@
 
                   <h2 class="h_002">
                     <strong class="centered">  
-                      <inline-editor type="text" [(ngModel)]="h002" (onSave)="saveEditable($event)"> </inline-editor>
+                      <inline-editor
+                      type="text" 
+                      [(ngModel)]="h002" 
+                      (onSave)="saveEditable($event)"></inline-editor>
                     </strong>
                   </h2>
 
                   <span class="span_001">
-                    <inline-editor type="textarea" [(ngModel)]="editableTextArea" (onSave)="saveEditable($event)"> </inline-editor>
+                    <inline-editor id="span01"
+                    type="textarea" 
+                    [(ngModel)]="editableTextArea" 
+                    (onSave)="saveEditable($event)"></inline-editor>
                   </span>
-
+                  
                 </div>
               </div>
             </div>

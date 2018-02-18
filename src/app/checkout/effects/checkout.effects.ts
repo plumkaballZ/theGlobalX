@@ -31,6 +31,16 @@ export class CheckoutEffects {
     .map((data: any) => {
       return this.actions.updateOrderSuccess(data);
     });
+
+    @Effect()
+    txtGet$ = this.actions$
+    .ofType(CheckoutActions.txtGET)
+    .switchMap((action: Action) => {
+      return this.checkoutService.getTxt();
+    })
+    .map((data: any) => {
+      return this.actions.txtGot(data);
+    });
   }
 
 

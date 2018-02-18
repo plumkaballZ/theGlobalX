@@ -12,6 +12,8 @@ import { Product } from './../../../../core/models/product';
 import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 
+
+import { UserService } from './../../../../user/services/user.service';
 import {InlineEditorComponent} from 'ng2-inline-editor';
 
 
@@ -24,7 +26,7 @@ import {InlineEditorComponent} from 'ng2-inline-editor';
 
 export class ProductDetailsComponent implements OnInit {
   @Input() product: Product;
-
+  
   customOptionTypesHash: any;
   currentSelectedOptions = {};
   description: any;
@@ -39,7 +41,8 @@ export class ProductDetailsComponent implements OnInit {
               private variantRetriver: VariantRetriverService,
               private checkoutService: CheckoutService,
               private checkoutActions: CheckoutActions,
-              private store: Store<AppState>) {
+              private store: Store<AppState>,
+              private userService: UserService) {
                 this._checkoutService = checkoutService;
   }
 
@@ -94,6 +97,8 @@ export class ProductDetailsComponent implements OnInit {
   editableTextArea = 'Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal';
 
   saveEditable(value) {
-    console.log('http.service: ' + value);
+    this.userService.getTxt().subscribe(response => {
+      console.log(response);
+    });
   }
 }

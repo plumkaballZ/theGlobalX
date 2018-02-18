@@ -50,11 +50,9 @@
     animation-name: notify-bounce-in-down;
   }
 }
-
 .notify-error {
   background-color: #ff5722;
 }
-
 .notify-content {
   max-width: 380px;
   width: 80%;
@@ -63,13 +61,11 @@
   box-shadow: 0 2px 10px rgba(40,44,64,.2);
   margin: 0 auto;
 }
-
 .notify-error-message {
   font-size: 16px;
   font-weight: 500;
   position: relative;
 }
-
 .notify-icon {
   border: 2px solid #fff;
   padding: 0 7px;
@@ -80,7 +76,6 @@
   margin-top: -10px;
   width: 27px;
 }
-
 .notify-icon-text {
   margin-left: 40px;
   margin-top: 10px;

@@ -126,6 +126,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       case CheckoutActions.ORDER_COMPLETE_SUCCESS:
         return initialState;
 
+      case CheckoutActions.txtGET:
+      case CheckoutActions.txtGOT:
+      
       default:
         return state;
     }

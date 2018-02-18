@@ -116,6 +116,16 @@ export class CheckoutService {
     });
   }
 
+  getTxt(){
+    return this.http.get_Web(`api/xTxt`).map((res) => {
+      var txtRes = res.json();
+      return txtRes;
+    });
+  }
+  
+  postTxt(){
+  }
+
   updateOrder(params) {
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -141,14 +151,6 @@ export class CheckoutService {
         const order = res.json();
         return this.store.dispatch(this.actions.updateOrderSuccess(order));
       });
-
-    // return this.http.post_Web(
-    //   `api/xOrder/updateOrder`,
-    //   params
-    // ).map((res) => {
-    //   const order = res.json();
-    //   this.store.dispatch(this.actions.updateOrderSuccess(order));
-    // });
   }
 
   availablePaymentMethods() {

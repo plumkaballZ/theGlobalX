@@ -76,4 +76,14 @@ export class UserService {
   {
     return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({"glxUser" : userData})).map((res: Response) =>  { return true;});
   }
+
+  getTxt(){
+    return this.http.get_Web(`api/xTxt`).map((res) => {
+      var txtRes = res.json();
+      return txtRes;
+    });
+  }
+  
+  postTxt(){
+  }
 }
