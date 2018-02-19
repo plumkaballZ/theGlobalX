@@ -37,6 +37,10 @@ export class ProductDetailsComponent implements OnInit {
 
   _checkoutService : CheckoutService;
 
+
+  h002 :String = "";
+  span001 :String = '';
+
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,
               private checkoutService: CheckoutService,
@@ -54,6 +58,23 @@ export class ProductDetailsComponent implements OnInit {
       .getOptionsToDisplay(this.product.variants, this.product.option_types);
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
+
+    console.log(this.h002);
+
+    this.userService.getTxt('prodDetails.txt').subscribe(response => {
+      for (var i = 0; i < response.length; i++) {
+
+        var rawText = response[i];
+
+        var key =  rawText.substring(rawText.lastIndexOf("[") + 1, rawText.lastIndexOf(":"));
+        var line = rawText.substring(rawText.lastIndexOf(":") + 1, rawText.lastIndexOf("]"));
+
+ 
+        if(key == 'span001') this.span001 = line;
+        if(key == 'h002') this.h002 = line;
+      }
+    });
+
   }
 
   onOptionClick(option) {
@@ -93,12 +114,22 @@ export class ProductDetailsComponent implements OnInit {
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
   }
 
-  h002 = "SUSTAINABILITY";
-  editableTextArea = 'Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal';
-
-  saveEditable(value) {
-    this.userService.getTxt().subscribe(response => {
-      console.log(response);
+  saveEditable_h002(value) {
+    var jsonStr = `
+    {
+      "fileName" : "prodDetails.txt", 
+      "rawStr" : "[h002:` + value + `]"
+    }`;
+    this.userService.postTxt(jsonStr).subscribe(response => {
+    });
+  }
+  saveEditable_span001(value) {
+    var jsonStr = `
+    {
+      "fileName" : "prodDetails.txt", 
+      "rawStr" : "[span001:` + value + `]"
+    }`;
+    this.userService.postTxt(jsonStr).subscribe(response => {
     });
   }
 }

@@ -77,13 +77,13 @@ export class UserService {
     return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({"glxUser" : userData})).map((res: Response) =>  { return true;});
   }
 
-  getTxt(){
-    return this.http.get_Web(`api/xTxt`).map((res) => {
+  getTxt(fileName: string){
+    return this.http.get_Web('api/xTxt', {params: {fileName: fileName}}).map((res: Response) =>  {
       var txtRes = res.json();
       return txtRes;
     });
   }
-  
-  postTxt(){
+  postTxt(jsonStr : string){
+    return this.http.post_Web('api/xTxt', JSON.stringify({"jsonStr" : jsonStr})).map((res: Response) =>  { return true;});
   }
 }
