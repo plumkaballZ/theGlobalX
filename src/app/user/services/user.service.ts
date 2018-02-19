@@ -84,6 +84,6 @@ export class UserService {
     });
   }
   postTxt(jsonStr : string){
-    return this.http.post_Web('api/xTxt', JSON.stringify({"jsonStr" : jsonStr})).map((res: Response) =>  { return true;});
+    return this.http.post_Web('api/xTxt', JSON.stringify({"jsonStr" : jsonStr})).map((res: Response) =>  { console.log(res); return true;});
   }
 }
