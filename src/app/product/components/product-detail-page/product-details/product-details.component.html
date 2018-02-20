@@ -7,20 +7,27 @@
   </div>
   <div class="colZ colZ_002">
     
-    <h1 class="hZ_001"><span>Sustainable Card Holder X</span></h1>
+    <h1 class="hZ_001">
+      <span>
+        <inline-editor (click)="onClick('hz001')" type="text" [(ngModel)]="hz001" (onSave)="saveEditable($event)"></inline-editor>
+      </span>
+    </h1>
 
       <div class="pi1">
         <ul class="ulz_001 centered">
           <li>
-            100% MONEY-BACK GUARANTEE</li>
-          <li>FREE DOMESTIC SHIPPING OVER $50</li>
+            <inline-editor (click)="onClick('ulz001')" type="text" [(ngModel)]="ulz001" (onSave)="saveEditable($event)"></inline-editor>
+          </li>
+          <li>
+            <inline-editor (click)="onClick('ulz002')" type="text" [(ngModel)]="ulz002" (onSave)="saveEditable($event)"></inline-editor>
+          </li>
         </ul>
       </div>
       
       <div class="pi_box">
           <div class="pi2">  
+
               <app-product-price-info [product]="product" class="row"></app-product-price-info>
-              
               <app-product-description [description]="product.description" class="row"></app-product-description>  
 
               <div>
@@ -37,20 +44,14 @@
 
                   <h2 class="h_002">
                     <strong class="centered">  
-                      <inline-editor
-                      type="text" 
-                      [(ngModel)]="h002" 
-                      (onSave)="saveEditable_h002($event)"></inline-editor>
+                      <inline-editor (click)="onClick('h002')" type="text" [(ngModel)]="h002" (onSave)="saveEditable($event)"></inline-editor>
                     </strong>
                   </h2>
-
-                  <span class="span_001">
-                    <inline-editor id="span01"
-                    type="textarea" 
-                    [(ngModel)]="span001" 
-                    (onSave)="saveEditable_span001($event)"></inline-editor>
-                  </span>
                   
+                  <span class="span_001">
+                    <inline-editor (click)="onClick('span001')" type="textarea" [(ngModel)]="span001" (onSave)="saveEditable($event)"></inline-editor>
+                  </span>
+
                 </div>
               </div>
             </div>

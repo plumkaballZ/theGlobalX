@@ -38,8 +38,13 @@ export class ProductDetailsComponent implements OnInit {
   _checkoutService : CheckoutService;
 
 
-  h002 :String = "";
-  span001 :String = '';
+  currKey: String;
+
+  h002 :String = 'SUSTAINABILITY';
+  span001 :String = 'Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal';
+  hz001 :String = 'Sustainable Card Holder X';
+  ulz001: String = '100% MONEY-BACK GUARANTEE';
+  ulz002: String = 'FREE DOMESTIC SHIPPING OVER $50';
 
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,
@@ -69,9 +74,12 @@ export class ProductDetailsComponent implements OnInit {
         var key =  rawText.substring(rawText.lastIndexOf("[") + 1, rawText.lastIndexOf(":"));
         var line = rawText.substring(rawText.lastIndexOf(":") + 1, rawText.lastIndexOf("]"));
 
- 
         if(key == 'span001') this.span001 = line;
         if(key == 'h002') this.h002 = line;
+        if(key == 'hz001') this.hz001 = line;
+
+        if(key == 'ulz001') this.ulz001 = line;
+        if(key == 'ulz002') this.ulz002 = line;
       }
     });
 
@@ -108,27 +116,20 @@ export class ProductDetailsComponent implements OnInit {
       }
     }
   }
-  
   addToCart() {
     this.store.dispatch(this.checkoutActions.addToCart(1)); 
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
   }
-
-  saveEditable_h002(value) {
-    var jsonStr = `
-    {
-      "fileName" : "prodDetails.txt", 
-      "rawStr" : "[h002:` + value + `]"
-    }`;
-    this.userService.postTxt(jsonStr).subscribe(response => {
-    });
+  onClick(someValue){
+    this.currKey = someValue;
   }
-  saveEditable_span001(value) {
+  saveEditable(value) {
     var jsonStr = `
     {
       "fileName" : "prodDetails.txt", 
-      "rawStr" : "[span001:` + value + `]"
+      "rawStr" : "[`+ this.currKey +`:` + value + `]"
     }`;
+
     this.userService.postTxt(jsonStr).subscribe(response => {
     });
   }
