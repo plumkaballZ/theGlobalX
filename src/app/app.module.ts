@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 
-
-
 // Components
 import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
@@ -28,7 +26,6 @@ import { reducer } from './app.reducers';
 import { CheckoutHeaderComponent } from './layout/checkout-header/checkout-header.component';
 import { CheckoutFooterComponent } from './layout/checkout-footer/checkout-footer.component';
 
-
 // adding rx operators
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
@@ -38,8 +35,15 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
 
+//langLoader :D
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {CustomTranslateLoader} from './_custom/CustomTranslateLoader'
 
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -51,6 +55,12 @@ import 'rxjs/add/observable/of';
     ContactComp
   ],
   imports: [
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useClass: CustomTranslateLoader
+      }
+  }),
     RouterModule.forRoot(routes),
     StoreModule.provideStore(reducer),
     BrowserModule,
@@ -59,7 +69,7 @@ import 'rxjs/add/observable/of';
     HomeModule,
     LayoutModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,8 +36,8 @@ import { HomeRoutes as routes } from './home.routes';
 
 import { FilterPipe } from './content/product-list/product-filter.pipe';
 
-
-
+//lang stuff yay :D
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {InlineEditorModule} from 'ng2-inline-editor';
 
 
@@ -66,6 +66,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
   exports: [
   ],
   imports: [
+    HttpClientModule,
     RouterModule.forChild(routes),
     SharedModule,
     InlineEditorModule

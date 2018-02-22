@@ -1,4 +1,6 @@
 
 <div style="color:#6b5154;" itemprop="description">
-  <i>{{description}}</i>
+  <i>
+    <inline-editor (click)="onClick('desc')" type="text" [(ngModel)]="desc" (onSave)="saveEditable($event)"></inline-editor>
+  </i>
 </div>

@@ -13,9 +13,10 @@ import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 
 
-import { UserService } from './../../../../user/services/user.service';
+import {UserService } from './../../../../user/services/user.service';
 import {InlineEditorComponent} from 'ng2-inline-editor';
 
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-details',
@@ -40,19 +41,47 @@ export class ProductDetailsComponent implements OnInit {
 
   currKey: String;
 
-  h002 :String = 'SUSTAINABILITY';
-  span001 :String = 'Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal';
-  hz001 :String = 'Sustainable Card Holder X';
-  ulz001: String = '100% MONEY-BACK GUARANTEE';
-  ulz002: String = 'FREE DOMESTIC SHIPPING OVER $50';
+  h002 :string;
+  span001 :string;
+  hz001 :string;
+  ulz001: string;
+  ulz002: String;
 
   constructor(private variantParser: VariantParserService,
               private variantRetriver: VariantRetriverService,
               private checkoutService: CheckoutService,
               private checkoutActions: CheckoutActions,
               private store: Store<AppState>,
-              private userService: UserService) {
+              private userService: UserService,
+              private translate: TranslateService) {
                 this._checkoutService = checkoutService;
+                this.loadTxt();  
+
+                
+  }
+
+  loadTxt()
+  {
+    this.translate.get('prodDetails.h002').subscribe((res: string) => {
+      this.h002 = res;
+    });
+    this.translate.get('prodDetails.span001').subscribe((res: string) => {
+      this.span001 = res;
+    });
+    this.translate.get('prodDetails.hz001').subscribe((res: string) => {
+      this.hz001 = res;
+    });
+    this.translate.get('prodDetails.ulz001').subscribe((res: string) => {
+      this.ulz001 = res;
+    });
+    this.translate.get('prodDetails.ulz002').subscribe((res: string) => {
+      this.ulz002 = res;
+    });
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang);
+
   }
 
   ngOnInit() {
@@ -63,26 +92,6 @@ export class ProductDetailsComponent implements OnInit {
       .getOptionsToDisplay(this.product.variants, this.product.option_types);
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
-
-    console.log(this.h002);
-
-    this.userService.getTxt('prodDetails.txt').subscribe(response => {
-      for (var i = 0; i < response.length; i++) {
-
-        var rawText = response[i];
-
-        var key =  rawText.substring(rawText.lastIndexOf("[") + 1, rawText.lastIndexOf(":"));
-        var line = rawText.substring(rawText.lastIndexOf(":") + 1, rawText.lastIndexOf("]"));
-
-        if(key == 'span001') this.span001 = line;
-        if(key == 'h002') this.h002 = line;
-        if(key == 'hz001') this.hz001 = line;
-
-        if(key == 'ulz001') this.ulz001 = line;
-        if(key == 'ulz002') this.ulz002 = line;
-      }
-    });
-
   }
 
   onOptionClick(option) {
@@ -120,17 +129,20 @@ export class ProductDetailsComponent implements OnInit {
     this.store.dispatch(this.checkoutActions.addToCart(1)); 
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
   }
+
+
   onClick(someValue){
     this.currKey = someValue;
   }
   saveEditable(value) {
-    var jsonStr = `
-    {
-      "fileName" : "prodDetails.txt", 
-      "rawStr" : "[`+ this.currKey +`:` + value + `]"
-    }`;
+     var jsonStr = `
+     {
+       "page" : "prodDetails",
+       "fileName" : "` + this.translate.store.currentLang + `.json", 
+       "key" : "` + this.currKey +`",
+       "line": "` + value + `"
+     }`;
 
-    this.userService.postTxt(jsonStr).subscribe(response => {
-    });
+    this.userService.postTxt(jsonStr).subscribe(response => { });
   }
 }

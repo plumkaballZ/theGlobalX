@@ -1,7 +1,17 @@
 <div>
-  <h1 itemprop="name" class="title">{{product.name}}</h1>
+  <h1 itemprop="name" class="title">
+    <!-- {{product.name}} -->
+    <inline-editor (click)="onClick('prodName')" type="text" [(ngModel)]="prodName" (onSave)="saveEditable($event)"></inline-editor>
+  </h1>
   <p itemprop="price" class="selling-price">
-    <strong>{{product.display_price}}</strong>
+    <strong>
+      <!-- {{product.display_price}} -->
+      <inline-editor (click)="onClick('pprice')" type="text" [(ngModel)]="pprice" (onSave)="saveEditable($event)"></inline-editor>
+    </strong>
+
   </p>
-  <p class="vatInfo">Additional VAT may apply; charged at checkout</p>
+  <p class="vatInfo">
+    <!-- Additional VAT may apply; charged at checkout -->
+    <inline-editor (click)="onClick('prodVat')" type="text" [(ngModel)]="prodVat" (onSave)="saveEditable($event)"></inline-editor>
+  </p>
 </div>
