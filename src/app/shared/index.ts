@@ -7,16 +7,21 @@ import { HumanizePipe } from '../core/pipes/humanize.pipe';
 
 // components
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
+import {inlineTranslatorComp} from './../_custom/inlineTranslatorComp';
 // imports
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationComponent } from './components/notification/notification.component';
+import {InlineEditorModule} from 'ng2-inline-editor';
+
+
 
 @NgModule({
   declarations: [
     // components
     LoadingIndicatorComponent,
     NotificationComponent,
+    inlineTranslatorComp,
     // pipes
     KeysPipe,
     HumanizePipe
@@ -25,6 +30,7 @@ import { NotificationComponent } from './components/notification/notification.co
     // components
     LoadingIndicatorComponent,
     NotificationComponent,
+    inlineTranslatorComp,
     // modules
     CommonModule,
     BsDropdownModule,
@@ -38,7 +44,8 @@ import { NotificationComponent } from './components/notification/notification.co
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    InlineEditorModule
   ]
 })
 export class SharedModule {}

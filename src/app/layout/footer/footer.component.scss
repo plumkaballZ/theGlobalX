@@ -33,6 +33,7 @@
 
             margin: 0;
         }
+    
         
         .footer-distributed h3 span{
             color:  #1d886d;
@@ -127,7 +128,9 @@
             margin-bottom: 20px;
             font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
         }
-        
+        :host ::ng-deep  .footer-company-about { 
+            color:  #ffffff;
+          }
         .footer-distributed .footer-icons{
             margin-top: 25px;
         }

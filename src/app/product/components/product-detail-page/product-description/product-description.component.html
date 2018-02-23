@@ -1,6 +1,6 @@
 
 <div style="color:#6b5154;" itemprop="description">
   <i>
-    <inline-editor (click)="onClick('desc')" type="text" [(ngModel)]="desc" (onSave)="saveEditable($event)"></inline-editor>
+    <inline-translator [page]="'prodDesc'" [key]="'desc'" [elementType]="'text'"></inline-translator>
   </i>
 </div>

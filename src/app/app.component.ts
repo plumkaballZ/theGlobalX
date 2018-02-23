@@ -35,10 +35,13 @@ export class AppComponent implements OnInit, OnDestroy {
         window.scrollTo(0, 0);
       });
       
-      console.log('appCtor');
       translate.addLangs(['en', 'hy']);
       translate.setDefaultLang('en');
-      translate.use('en');
+      
+      var lang = localStorage.getItem('localLang');
+
+      if(lang != null) translate.use(lang);
+      else translate.use('en');
   }
 
   ngOnInit() {

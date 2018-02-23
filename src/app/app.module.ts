@@ -41,6 +41,8 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {CustomTranslateLoader} from './_custom/CustomTranslateLoader'
 
+import {inlineTranslatorComp} from './_custom/inlineTranslatorComp';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

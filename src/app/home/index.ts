@@ -38,7 +38,6 @@ import { FilterPipe } from './content/product-list/product-filter.pipe';
 
 //lang stuff yay :D
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-import {InlineEditorModule} from 'ng2-inline-editor';
 
 
 @NgModule({
@@ -50,7 +49,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
     ProductPriceInfoComponent,
     ProductVariantsComponent,
     ProductComponent,
-
+    
     // components
     HomeComponent,
     TaxonsComponent,
@@ -68,8 +67,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
   imports: [
     HttpClientModule,
     RouterModule.forChild(routes),
-    SharedModule,
-    InlineEditorModule
+    SharedModule
   ],
   providers: [
     ProductActions,

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../../../core/services/auth.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile-dropdown',
@@ -11,9 +12,9 @@ export class ProfileDropdownComponent implements OnInit {
   @Input() totalCartItems: number;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService, private translate: TranslateService
   ) { }
-
+  
   ngOnInit() {
   }
 
@@ -22,5 +23,9 @@ export class ProfileDropdownComponent implements OnInit {
       data => console.log(data)
     );
   }
-
+  changeLang()
+  {
+    localStorage.setItem('localLang', 'en');
+    location.reload();
+  }
 }
