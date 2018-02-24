@@ -43,6 +43,7 @@ export class AuthService {
       data.password = pw;
 
       if (!data.error) {
+        
         this.setTokenInLocalStorage(data);
         this.store.dispatch(this.actions.loginSuccess());
 
@@ -95,15 +96,18 @@ export class AuthService {
    */
   authorized(): Observable<any> {
     var localUser = JSON.parse(localStorage.getItem('user'));
-    //'midgard/glbx'
-
+    
     return this.http
       .get_Web(
         'api/xUser', { params: { json: 'asdf', email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }
       ).map((res: Response) => 
       {
         var resReq = res.json();
-        if(!resReq.error) this.store.dispatch(this.actions.loginSuccess());
+        if(!resReq.error){
+          resReq.password = localUser.password;
+          this.setTokenInLocalStorage(resReq);
+          this.store.dispatch(this.actions.loginSuccess());
+          }
         return false;
       });
   }

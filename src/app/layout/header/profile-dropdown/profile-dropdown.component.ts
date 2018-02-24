@@ -11,16 +11,15 @@ export class ProfileDropdownComponent implements OnInit {
   @Input() isAuthenticated: boolean;
   @Input() totalCartItems: number;
 
-
-  public da_selected: boolean;
-  public en_selected: boolean;
+  public langZ: string;
 
   constructor(
     private authService: AuthService, private translate: TranslateService
-  ) {    
-   }
+  ) { }
 
   ngOnInit() {
+    this.langZ = localStorage.getItem('localLang');
+    if(this.langZ == null) this.langZ = 'en';
   }
 
   logout() {
@@ -30,15 +29,6 @@ export class ProfileDropdownComponent implements OnInit {
   }
   changeLang(lang: string)
   {
-    if(lang == 'en') {
-      this.en_selected = true;
-      this.da_selected = false;
-    }
-    else{
-      this.da_selected = true;
-      this.en_selected = false;
-    }
-
     localStorage.setItem('localLang', lang);
     location.reload();
   }

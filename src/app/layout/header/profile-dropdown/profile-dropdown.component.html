@@ -39,8 +39,8 @@
       <li class="dropdown-submenu">
           <a href="#"><i class="fa fa-flag fa-fw fa-lg"></i> Vælg Sprog<b class="caret"></b></a>
           <ul class="dropdown-menu" id="topMenuLang">
-            <li (click)="changeLang('en')" data-selected="true"><a href="#">English<i class="glyphicon glyphicon-ok" style="float: right;"></i></a></li>
-            <li (click)="changeLang('da')" data-selected="false"><a href="#">Danish<i class="glyphicon glyphicon-ok" style="float: right;"></i></a></li>
+            <li (click)="changeLang('en')" data-selected="true"><a href="#">English<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='en'}" style="float: right;"></i></a></li>
+            <li (click)="changeLang('da')" data-selected="false"><a href="#">Danish<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='da'}" style="float: right;"></i></a></li>
           </ul>
       </li>
     </ul>
