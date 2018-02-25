@@ -122,19 +122,22 @@
         
         .footer-distributed .footer-company-about span{
             display: block;
-            color:  #ffffff;
             font-size: 14px;
             font-weight: bold;
             margin-bottom: 20px;
             font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
         }
-        :host ::ng-deep  .footer-company-about { 
+          :host ::ng-deep .footer-company-about #inlineEditWrapper a { 
             color:  #ffffff;
+            text-decoration: none;
+          }
+          :host ::ng-deep .footer-center #inlineEditWrapper a { 
+            color:  #1d886d;
+            text-decoration: none;
           }
         .footer-distributed .footer-icons{
             margin-top: 25px;
         }
-        
         .footer-distributed .footer-icons a{
             display: inline-block;
             width: 35px;
@@ -172,4 +175,3 @@
             }
         
         }
-        

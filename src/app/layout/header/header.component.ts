@@ -57,14 +57,13 @@ export class HeaderComponent implements OnInit {
   }
   
   sTbState: string = 'invisible';
-  
+
   toggleSearchBar(e, el) {
   this.sTbState = (this.sTbState === 'invisible' ? 'visible' : 'invisible');
   if (this.sTbState === 'visible') {
     el.focus();
   }
 }
-
   ngOnInit() {
     this.store.dispatch(this.authActions.authorize());
     this.isAuthenticated = this.store.select(getAuthStatus);
@@ -74,4 +73,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl(taxon.link);
   }
 
+  isIn = false;
+  
+  toggleState() { // click handler
+    let bool = this.isIn;
+    this.isIn = bool === false ? true : false; 
+}
 }

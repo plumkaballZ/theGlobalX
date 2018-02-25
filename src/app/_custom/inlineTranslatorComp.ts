@@ -12,12 +12,12 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class inlineTranslatorComp implements OnInit {
 
-    private editorDisabled: boolean = true;
+    public editorDisabled: boolean = true;
     @Input() page: string;
     @Input() key: string;
     @Input() elementType: string;
 
-    private line: string;
+    public line: string;
     
     constructor(private userService: UserService, private translate: TranslateService) {  
     }
