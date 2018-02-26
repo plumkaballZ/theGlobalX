@@ -1,28 +1,3 @@
-// .image-container {
-//   display: inline-block;
-//   .thumbnails-selected-image {
-//     height: 660px;
-//     min-height: 300px;
-//     width: 620px;
-//     background: rgb(245, 245, 246) none repeat scroll 0% 0% / auto padding-box border-box;
-// }
-// .thumbnails-vertical-container {
-//       width: 60px;
-//       float: left;
-//       margin-bottom: 10px;
-//       background: white;
-//       border-color: white;
-//       .thumbnails-thumbnail-button {
-//           background-color: #fff;
-//           border: 0;
-//           padding: 0;
-//           position: relative;
-//           cursor: pointer;
-//       }
-      
-//   }
-// }
-
 .image-container {
     .thumbnails-selected-image {
         width: 82%;
@@ -57,5 +32,20 @@
         width: 98.8%;
         margin-top: 20px;
         margin-bottom: 20px
+    }
+  }
+
+  @media screen and (max-height: 670px) {
+    .image-container {
+        .thumbnails-selected-image {
+            width: 100%;
+            height: 56vh;
+       }
+    }
+  }
+
+  @media screen and (max-height: 670px) {
+    .thumbnails-vertical-container {
+        width: 101.3%;
     }
   }

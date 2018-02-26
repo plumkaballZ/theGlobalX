@@ -13,6 +13,11 @@ export class ProfileDropdownComponent implements OnInit {
 
   public langZ: string;
 
+  public bag: string;
+  public chooseLang: string;
+  public english:string;
+  public danish: string;
+
   constructor(
     private authService: AuthService, private translate: TranslateService
   ) { }
@@ -20,6 +25,22 @@ export class ProfileDropdownComponent implements OnInit {
   ngOnInit() {
     this.langZ = localStorage.getItem('localLang');
     if(this.langZ == null) this.langZ = 'en';
+
+    this.translate.get('profile.bag').subscribe((res: string) => {
+      this.bag = res;
+    });
+
+    this.translate.get('profile.chooseLang').subscribe((res: string) => {
+      this.chooseLang = res;
+    });
+
+    this.translate.get('profile.english').subscribe((res: string) => {
+      this.english = res;
+    });
+
+    this.translate.get('profile.danish').subscribe((res: string) => {
+      this.danish = res;
+    });
   }
 
   logout() {

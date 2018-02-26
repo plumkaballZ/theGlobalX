@@ -9,6 +9,7 @@ import { getAuthStatus } from '../../auth/reducers/selectors';
 import { Observable } from 'rxjs/Observable';
 import { AuthService } from '../../core/services/auth.service';
 import { AuthActions } from '../../auth/actions/auth.actions';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -50,7 +51,8 @@ export class HeaderComponent implements OnInit {
     private authService: AuthService,
     private authActions: AuthActions,
     private searchActions: SearchActions,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) 
   {
     this.taxonomies$ = this.store.select(getTaxonomies);
@@ -68,6 +70,19 @@ export class HeaderComponent implements OnInit {
     this.store.dispatch(this.authActions.authorize());
     this.isAuthenticated = this.store.select(getAuthStatus);
     this.totalCartItems = this.store.select(getTotalCartItems);
+    
+    this.translate.get('header.home').subscribe((res: string) => {
+      this.taxonList[0].name = res;
+    });
+    this.translate.get('header.facts').subscribe((res: string) => {
+      this.taxonList[1].name = res;
+    });
+    this.translate.get('header.about').subscribe((res: string) => {
+      this.taxonList[2].name = res;
+    });
+    this.translate.get('header.contact').subscribe((res: string) => {
+      this.taxonList[3].name = res;
+    });
   }
   selectTaxon(taxon) {
     this.router.navigateByUrl(taxon.link);

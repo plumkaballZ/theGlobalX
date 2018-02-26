@@ -30,7 +30,7 @@
               <app-product-description [description]="product.description" class="row"></app-product-description>  
               <div>
                 <button [routerLink]="['checkout','cart']" (click)="addToCart()" class="pdp-add-to-bag pdp-button">
-                  BUY NOW
+                    <inline-translator [page]="'prodDetails'" [key]="'btnTxt'" [elementType]="'text'"></inline-translator>
                 </button>
               </div>
             </div>
