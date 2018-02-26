@@ -15,16 +15,20 @@
       </div>
 
       <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
-      <ul class="nav navbar-nav" style="display: -webkit-inline-box;">
-        <li *ngFor="let taxon of taxonList" class="">
-          <a class="az_001" (click)="selectTaxon(taxon)"href="javascript:void(0)">{{taxon.name}}
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        </ul>
+        <div class="bla1">
+            <ul class="nav navbar-nav" style="display: -webkit-inline-box;">
+                <li *ngFor="let taxon of taxonList" class="">
+                  <a class="az_001" (click)="selectTaxon(taxon)"href="javascript:void(0)">{{taxon.name}}
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                </ul>
+                <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async">
+                  </app-profile-dropdown>
+        </div>
+     
 
-        <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async">
-        </app-profile-dropdown>
+        
       </div>
     </div>
   </nav>

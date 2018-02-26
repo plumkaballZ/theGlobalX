@@ -9,6 +9,15 @@
      width: 100%;
    }
  }
+ .nav navbar-nav{
+  top: 0;
+  right: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px 6px;
+  border-radius: 0 6px 6px 6px;
+ }
  .az_001
  {
     color: #050504;
@@ -19,10 +28,34 @@
       padding-right: 30px;
     }
   }
+  @media screen and (max-width: 768px) {
+    collapse navbar-collapse {
+      float: right;
+    }
+  }
   .navbar-toggle{
     margin-right: 4px;
     margin-top: 22px;
   }
   .navbar-fixed-top, .navbar-fixed-bottom {
     position: relative; /* this can also be static */
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+   border-color: transparent; 
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .bla1 {
+      float: left;
+      margin: -2px 0 0;
+      list-style: none;
+      font-size: 14px;
+      text-align: left;
+      background-color: #FFFFFF;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      background-clip: padding-box;
+    }
   }
