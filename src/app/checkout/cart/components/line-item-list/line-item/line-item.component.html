@@ -6,21 +6,25 @@
   <div class="col2">
     <div class="prod-name">
       <a class="c-gray">
-        {{name}}
+          <inline-translator [page]="'lineItem'" [key]="'item1'" [elementType]="'text'"></inline-translator>
       </a>
     </div>
     <div class="prod-amount">
-      {{amount}}
+        <inline-translator [page]="'lineItem'" [key]="'item2'" [elementType]="'text'"></inline-translator>
     </div>
     <div class="size-qty-wrap">
       <div class="size-qty">
         <span class="size"> 
-          <span class="gray">Size:</span>
+          <span class="gray"> 
+            <inline-translator [page]="'lineItem'" [key]="'size'" [elementType]="'text'"></inline-translator>
+          </span>
           <span class="value">L</span>
           <span class="icon"></span>
         </span>
         <span class="qty">
-          <span class="gray">Qty:</span>
+          <span class="gray">
+              <inline-translator [page]="'lineItem'" [key]="'quant'" [elementType]="'text'"></inline-translator>
+          </span>
           <span class="value">1</span>
           <span class="icon"></span>
         </span>

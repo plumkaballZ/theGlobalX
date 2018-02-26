@@ -5,19 +5,24 @@
     <div class="left">
       <div class="checkout-header-container">
         <div class="checkout-header">
-          <span class="text">My Shopping Bag ({{totalCartItems$ | async}})</span>
+          <span class="text">
+            <inline-translator [page]="'cart'" [key]="'myBag'" [elementType]="'text'"></inline-translator>
+            ({{totalCartItems$ | async}})
+          </span>
         </div>
-        <div class="total-price">Total: ${{totalCartValue$ | async | number:'1.2-2'}}</div>
+        
+        <div class="total-price">
+            <inline-translator [page]="'cart'" [key]="'total'" [elementType]="'text'"></inline-translator>
+        </div>
       </div>
-
       <div class="prod-set">
         
         <app-line-item-list></app-line-item-list>
 
-        <a class="wishlist-link">
+        <!-- <a class="wishlist-link">
           <span class="icon"></span>
           <span class="coming-soon">Add more from wishlist</span>
-        </a>
+        </a> -->
       </div>
     </div>
 

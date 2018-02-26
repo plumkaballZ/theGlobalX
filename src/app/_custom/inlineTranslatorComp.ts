@@ -12,10 +12,11 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class inlineTranslatorComp implements OnInit {
 
-    public editorDisabled: boolean = false;
+    public editorDisabled: boolean = true;
     @Input() page: string;
     @Input() key: string;
     @Input() elementType: string;
+    @Input() extValue: string;
 
     public line: string;
     
@@ -34,7 +35,8 @@ export class inlineTranslatorComp implements OnInit {
           var searchStr = this.page + '.' + this.key;
           
           this.translate.get(searchStr).subscribe((res: string) => {
-             this.line = res;
+            if(this.extValue != null) this.line = res + this.extValue;
+            else this.line = res;
          });
     }
   saveEditable(value) {

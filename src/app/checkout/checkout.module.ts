@@ -8,12 +8,13 @@ import { CartModule } from './cart/cart.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { SharedModule } from './../shared/index';
 
 import { CheckoutRoutes as routes } from './checkout.routes';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     RouterModule.forChild(routes),
     EffectsModule.run(CheckoutEffects),

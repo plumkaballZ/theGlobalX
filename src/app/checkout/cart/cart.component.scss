@@ -64,3 +64,15 @@
     padding-left: 35px;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.cart-section {
+		.left	{
+			width: 103%;
+		}
+		.right{
+			width: 90%;
+		}
+	}
+}
+  

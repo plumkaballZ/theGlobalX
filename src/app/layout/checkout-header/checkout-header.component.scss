@@ -1,3 +1,6 @@
+
+
+
 .checkout-header {
 	padding: 20px 0;
   height: 78px;
@@ -180,4 +183,17 @@
   }
   #demo-2 input::-webkit-input-placeholder {
 	  color: transparent;
-  }
+	}
+	
+
+	@media screen and (max-width: 768px) {
+		.checkout-header {
+	.full-container{
+		.checkout-steps {
+		margin-left: 0;
+		margin-top: -22px;
+		}
+	}
+		}
+	}
+		

@@ -14,7 +14,10 @@
     </a>
 
     <ul class="dropdown-menu" *dropdownMenu>
-      <li><a [routerLink]="['/auth']"><inline-translator [page]="'profile'" [key]="'ourFriend'" [elementType]="'text'"></inline-translator></a></li>
+      <li><a [routerLink]="['/auth']">
+        <inline-translator [page]="'profile'" [key]="'ourFriend'" [elementType]="'text'"></inline-translator>
+      </a>
+      </li>
       <li role="separator" class="divider"></li>
       <li><a [routerLink]="['/auth', 'login']"><inline-translator [page]="'profile'" [key]="'login'" [elementType]="'text'"></inline-translator></a></li>
     </ul>
