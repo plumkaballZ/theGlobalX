@@ -38,7 +38,7 @@
     margin-top: 22px;
   }
   .navbar-fixed-top, .navbar-fixed-bottom {
-    position: relative; /* this can also be static */
+    position: sticky; /* this can also be static */
   }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form{
    border-color: transparent; 
@@ -53,6 +53,10 @@
       font-size: 14px;
       text-align: left;
       background-color: #FFFFFF;
-
+    }
+    .az_001{
+      min-height: 30px;
+      font-size: 14px;
+      margin-left: -4px;
     }
   }

@@ -1,10 +1,10 @@
 
 
 
-<nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top checkout-header">
-
+<!-- <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top checkout-header">
+  <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="Angular Spree"></a>
     <div class="container full-container">
-        <a class="navbar-brand" routerLink="/"><img src="assets/logo.png" alt="Angular Spree"></a>
+
         
         <ol class="checkout-steps">
           <li class="step step1">
@@ -20,4 +20,49 @@
           </li>
         </ol>
       </div>
+</nav> -->
+
+
+<nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" routerLink="/"><img src="assets/logo.png"></a>
+
+    <ol class="checkout-steps">
+      <li class="step step1">
+        <a [ngClass]="{'can-click': checkIfClickable('cart'), 'active': isActiveRoute('cart')}" [routerLink]="getRouterLink('cart')"><inline-translator [page]="'checkoutHeader'" [key]="'bag'" [elementType]="'text'"></inline-translator></a>
+      </li>
+      <li class="divider"></li>
+      <li class="step step2">
+        <a [ngClass]="{'can-click': checkIfClickable('address'), 'active': isActiveRoute('address')}" [routerLink]="getRouterLink('address')"><inline-translator [page]="'checkoutHeader'" [key]="'delivery'" [elementType]="'text'"></inline-translator></a>
+      </li>
+      <li class="divider"></li>
+      <li class="step step3">
+        <a [ngClass]="{'can-click': checkIfClickable('payment'), 'active': isActiveRoute('payment')}" [routerLink]="getRouterLink('payment')"><inline-translator [page]="'checkoutHeader'" [key]="'payment'" [elementType]="'text'"></inline-translator></a>
+      </li>
+    </ol>
+    
+    <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="toggleState()"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+      <div class="bla1">
+          <ul class="nav navbar-nav" style="display: -webkit-inline-box;">
+              <li *ngFor="let taxon of taxonList" class="">
+                <a class="az_001" (click)="selectTaxon(taxon)"href="javascript:void(0)">{{taxon.name}}
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              </ul>
+      </div>
+    </div> -->
+
+  </div>
 </nav>

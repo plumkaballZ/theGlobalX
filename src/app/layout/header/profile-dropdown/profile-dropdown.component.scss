@@ -58,11 +58,19 @@
       border: none;
       background: #ffffff;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-      left: 61%;
-      top: 179%;
+      left: 57%;
+      top: 250%;
+    }
+    #profDown {
+      display: -webkit-inline-box;
+      margin-left: 175px;
     }
     #topMenuLang{
-      left: -86%;
-      top: -72%;
+      left: -100%;
+      top: -100%;
     }
+    .navbar-nav{
+      margin: 0px -15px;
+    }
+    
   }
