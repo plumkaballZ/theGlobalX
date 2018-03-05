@@ -21,4 +21,13 @@ export class UserEffects {
     .switchMap(() => this.userService.getOrders())
     .filter((orders) => orders.length > 0)
     .map((orders) => this.userActions.getUserOrdersSuccess(orders));
+
+    @Effect()
+    FetchCurrentOrder$ = this.actions$
+    .ofType(UserActions.UPDATE_USER)
+    .switchMap((action: Action) => {
+      return this.userService.updateUser(action.payload);
+    })
+    .map((data: any) => {
+    });
 }

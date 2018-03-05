@@ -30,7 +30,7 @@ export class inlineTranslatorComp implements OnInit {
         var localUser = JSON.parse(localStorage.getItem('user'));
 
         if(localUser != null) 
-          if(localUser.lvl == 99)this.editorDisabled = false;
+          if(localUser.lvl == 99) this.editorDisabled = false;
 
           var searchStr = this.page + '.' + this.key;
           

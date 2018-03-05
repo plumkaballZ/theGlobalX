@@ -115,20 +115,17 @@ export class CheckoutService {
       this.store.dispatch(this.actions.changeOrderStateSuccess(order));
     });
   }
-
   getTxt(){
     return this.http.get_Web(`api/xTxt`).map((res) => {
       var txtRes = res.json();
       return txtRes;
     });
   }
-  
   postTxt(){
   }
-
   updateOrder(params) {
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',

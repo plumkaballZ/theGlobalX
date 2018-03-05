@@ -154,7 +154,16 @@
             margin-right: 3px;
             margin-bottom: 5px;
         }
-        
+
+        :host ::ng-deep .footer-left #inlineEditWrapper a { 
+            color:  #ffffff;
+          }
+
+          :host ::ng-deep .footer-distributed h3 span #inlineEditWrapper a { 
+            color:  #1d886d;
+          }
+
+
         @media (max-width: 880px) {
         
             .footer-distributed{
@@ -170,6 +179,8 @@
                 text-align: center;
             }
         
+            
+
             .footer-distributed .footer-center i{
                 margin-left: 0;
             }

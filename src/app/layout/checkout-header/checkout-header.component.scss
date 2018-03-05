@@ -1,3 +1,5 @@
+
+
 .checkout-steps {
 			.step {
 				display: inline-block;
@@ -40,21 +42,20 @@
 				padding: 0!important;
 			}
 		}
-
 		:host ::ng-deep .active #inlineEditWrapper { 
 			color: #20bd99;
 			border-bottom: 2px solid #20bd99;
 			padding-bottom: 5px;
 		}
-		
 
 		.navbar {
 			background-color: #f2f2f2;
 			list-style: none;
 		}
 		.navbar-brand {
-			padding: 0;
-			margin-bottom: 20px;
+			font-family: 'Poiret One';
+			font-size: 62px;
+			 padding-top: 25px;
 			img {
 				width: 100%;
 			}
@@ -73,11 +74,23 @@
 			 color: #050504;
 			 font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 		 }
+
+		 .checkout-steps ul, ol {
+				padding-left:34%;
+				margin-top: 20px;
+			}
+		 @media screen and (max-width: 768px) {
+			.checkout-steps ul, ol {
+				margin-top: 70px;
+				padding-left: 0%;
+			}
+		}
 		 @media screen and (min-width: 768px) {
 			 .az_001 {
 				 padding-right: 30px;
 			 }
 		 }
+
 		 @media screen and (max-width: 768px) {
 			 collapse navbar-collapse {
 				 float: right;
@@ -93,6 +106,3 @@
 		 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 			border-color: transparent; 
 		 }
-	 
-
-		 

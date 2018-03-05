@@ -11,6 +11,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class UserService {
 
+  public _user : User;
+
   constructor(
     private http: HttpService,
     private actions: UserActions,
@@ -72,11 +74,13 @@ export class UserService {
   {
     return this.http.get_Web('api/xAddress', {params: {id: adrId}}).map((res: Response) =>  {return res.json();});
   }
-  updateUser(userData) 
-  {
-    return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({"glxUser" : userData})).map((res: Response) =>  { return true;});
+  updateUser(params) {
+    return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({
+      "xUser" : this._user, 
+    })).map((res: Response) =>  {
+      const order = res.json();
+    });
   }
-
   getTxt(fileName: string){
     return this.http.get_Web('api/xTxt', {params: {fileName: fileName}}).map((res: Response) =>  {
       var txtRes = res.json();
