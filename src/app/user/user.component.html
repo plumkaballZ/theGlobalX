@@ -15,9 +15,14 @@
   </div>
 
   <div class="sidebar col-md-3">
-    <p><a routerLink="/user/orders" routerLinkActive="active">My Orders</a></p>
+    <p>
+      <a routerLink="/user/orders" routerLinkActive="active">
+        <inline-translator [page]="'user'" [key]="'activeOrders'" [elementType]="'text'"></inline-translator>
+      
+      </a></p>
     <hr>
-    <p><a routerLink="/user/addresses" routerLinkActive="active">My Addresses</a></p>
+    <p><a routerLink="/user/addresses" routerLinkActive="active">
+      <inline-translator [page]="'user'" [key]="'myAddresses'" [elementType]="'text'"></inline-translator></a></p>
     
   </div>
 

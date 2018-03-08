@@ -30,8 +30,13 @@ export class UserService {
     
     var localUser = JSON.parse(localStorage.getItem('user'));
 
-    return this.http.get_Web('api/xOrders', {params: {email: (localUser== null ? '': localUser.email)}})
+    var orderUrl = 'api/xOrders';
+
+    if(localUser.lvl == 99) orderUrl = 'api/xOrders/GetOrdersLvl99'
+
+    return this.http.get_Web(orderUrl, {params: {email: (localUser== null ? '': localUser.email)}})
       .map((res: Response) =>  {
+        console.log(res.json());
         return res.json();
       });
   }
