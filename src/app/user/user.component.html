@@ -11,6 +11,7 @@
           <input [(ngModel)]="userId" class="userInputId" placeholder="name?" autocomplete="off" (keyup.enter)="updateId($event)">
         </h4>
     </ng-template>
+
     <hr>
   </div>
 
@@ -18,12 +19,14 @@
     <p>
       <a routerLink="/user/orders" routerLinkActive="active">
         <inline-translator [page]="'user'" [key]="'activeOrders'" [elementType]="'text'"></inline-translator>
-      
-      </a></p>
+      </a>
+    </p>
     <hr>
-    <p><a routerLink="/user/addresses" routerLinkActive="active">
-      <inline-translator [page]="'user'" [key]="'myAddresses'" [elementType]="'text'"></inline-translator></a></p>
-    
+    <p>
+      <a routerLink="/user/addresses" routerLinkActive="active">
+        <inline-translator [page]="'user'" [key]="'myAddresses'" [elementType]="'text'"></inline-translator>
+    </a>
+    </p>
   </div>
 
   <div class="col-md-9">
