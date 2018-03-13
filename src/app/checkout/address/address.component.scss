@@ -53,6 +53,22 @@
 	}
 }
 
+:host ::ng-deep .pay-btn #inlineEditWrapper a { 
+	color: #f2f2f2;
+	border: none;
+	border-radius: 3px;
+	height: 45px;
+	background-color: #2cd2b1!important;
+	font-weight: 600!important;
+	box-shadow: none;
+	width: 100%;
+	color: #fff;
+	font-family: "Whitney-semi-bold";
+	font-size: 14px;
+	margin: 10px auto;
+ 
+  }
+
 .addAddrBtn {
     padding: 1% 1% 1% 0%;
     font-size: 18px;
@@ -60,6 +76,16 @@
     border: 1px solid #1d886d;
     background-color: #1d886d;
     color: #f2f2f2
+  }
+  :host ::ng-deep .addAddrBtn #inlineEditWrapper a { 
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  :host ::ng-deep .edit-label #inlineEditWrapper a { 
+	font-size: 17px;
+	color: #596062;
+	font-weight: 600;
+	font-family: "Whitney-semi-bold";
   }
   .addAddrBtn:hover {
     background-color:#104739;
