@@ -1,8 +1,8 @@
 <div class="order-total-summary">
-  <div class="coupon-section">
-    <span class="text-label">Coupons</span>
+  <!-- <div class="coupon-section">
+    <span class="text-label">{{cupon001}}</span>
     <a class="apply-coupon coming-soon"></a>
-  </div>
+  </div> -->
   <!-- <div class="gift-wrap-order">
     <span class="gift-wrap-checkbox coming-soon"></span>
     <a href="" class="gift-card-lbl">
@@ -12,24 +12,28 @@
   </div> -->
   <div class="order-summary-span">
     <div class="bag-total">
-      <span>Bag Total</span>
-      <span class="value">${{totalCartValue | number:'1.2-2'}}</span>
+      <span>
+        {{bag001}}
+      </span>
+      <span class="value">{{total001}}</span>
     </div>
-    <div class="coupon">
+    <!-- <div class="coupon">
       <span>Coupon Discount</span>
       <span class="apply-coupon c-blue coming-soon">Apply Coupon</span>
-    </div>
+    </div> -->
     <div class="shipping">
-      <span>Delivery</span>
-      <span class="shipping-fee c-green">FREE</span>
+      <span>{{delivery001}}</span>
+      <span class="shipping-fee c-green">{{delivery002}}</span>
     </div>
   </div>
   <div class="order-total footer">
     <div class="place-order">
-      <button (click)="placeOrder()" class="order-btn">PLACE ORDER</button>
+      <button (click)="placeOrder()" class="order-btn">{{order001}}</button>
     </div>
     <div class="total-amount">
-      <span class="total-rupees">${{totalCartValue | number:'1.2-2'}}</span>
+      <span class="total-rupees">
+        {{total001}}
+      </span>
     </div>
   </div>
 </div>
