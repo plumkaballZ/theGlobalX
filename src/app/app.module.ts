@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // Components
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComp
   ],
   imports: [
+    NgbModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
