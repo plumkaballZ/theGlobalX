@@ -50,10 +50,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_10.png",
-            "small_url": "/assets/api/prods/imgs/prod_10_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_10.png",
-            "large_url": "/assets/api/prods/imgs/prod_10.png"
+            "small_url": "/assets/api/prods/imgs/dark_front.jpg",
+            "large_url": "/assets/api/prods/imgs/dark_front.jpg"
           },
           {
             "id": 2,
@@ -67,10 +65,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_20.png",
-            "small_url": "/assets/api/prods/imgs/prod_20_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_20.png",
-            "large_url": "/assets/api/prods/imgs/prod_20.png"
+		"small_url": "/assets/api/prods/imgs/dark_side.jpg",
+            	"large_url": "/assets/api/prods/imgs/dark_side.jpg"
           },
           {
             "id": 3,
@@ -84,10 +80,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "mini_url": "/assets/api/prods/imgs/prod_30.png",
-            "small_url": "/assets/api/prods/imgs/prod_30_small.png",
-            "product_url": "/assets/api/prods/imgs/prod_30.png",
-            "large_url": "/assets/api/prods/imgs/prod_30.png"
+           	"small_url": "/assets/api/prods/imgs/both.jpg",
+            	"large_url": "/assets/api/prods/imgs/both.jpg"
           }
         ],
         "display_price": "$15.99",

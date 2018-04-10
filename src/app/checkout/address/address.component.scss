@@ -6,7 +6,6 @@
 		position: relative;
 		display: inline-block;
 		border-right: 1px solid #f5f5f6;
-		width: 70%;
 		vertical-align: top;
 		min-height: 521px;
 		.add-address {
@@ -33,10 +32,10 @@
 		}
 	}
 	.right {
-		display: inline-block;
-    width: 29%;
-    vertical-align: top;
-    padding-left: 35px;
+		// display: inline-block;
+    // width: 29%;
+    // vertical-align: top;
+    // padding-left: 35px;
 		.pay-btn {
 			border: none;
 			border-radius: 3px;

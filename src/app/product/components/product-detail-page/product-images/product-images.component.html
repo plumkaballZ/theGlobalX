@@ -1,4 +1,4 @@
-<div class="image-container" *ngIf="images">
+<!-- <div class="image-container" *ngIf="images">
   
   <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
        [alt]="selectedImage.alt"
@@ -12,4 +12,30 @@
     [alt]="image.alt"
     (mouseover)="onMouseOver(image)">
   </div>
-</div>
+</div> -->
+
+
+
+<section class="cards">
+
+    <div class="image-container" *ngIf="images">
+        
+        <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
+             [alt]="selectedImage.alt"
+             class="thumbnails-selected-image article-img" />
+        </div>
+  </section>
+
+      <div class="thumbnails-vertical-container">
+          <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
+              <section class="cards">
+              
+                <article>
+                  <img class="thumbnails-thumbnail article-img2 zoom" 
+                  [src]="getProductImageUrl(image.small_url)"
+                  [alt]="image.alt"
+                  (mouseover)="onMouseOver(image)">
+              </article>
+            </section>
+          </div>
+        </div>

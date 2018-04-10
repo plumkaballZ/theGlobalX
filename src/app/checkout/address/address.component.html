@@ -8,31 +8,41 @@
 
 	
 	<div *ngIf="showAdrs$">
-		<div class="left">
-			<div class="edit-address">
-				<span class="edit-label">
-					<inline-translator [page]="'addrs'" [key]="'selectAddr'" [elementType]="'text'"></inline-translator>
-				</span>
-			</div>
+			<div class="col-xs-12 col-sm-8">
+					<div class="left">
+							<div class="edit-address">
+								<span class="edit-label">
+									<inline-translator [page]="'addrs'" [key]="'selectAddr'" [elementType]="'text'"></inline-translator>
+								</span>
+							</div>
+				
+							<app-delivery-address [addrs]="addrs$"></app-delivery-address>
+						</div>
+				</div>		
 
-			<app-delivery-address [addrs]="addrs$"></app-delivery-address>
-		</div>
-		<div class="right">
-			<app-delivery-options [orderNumber]="orderNumber$ | async"></app-delivery-options>
-			<button (click)="checkoutToPayment()" class="pay-btn">
-				<inline-translator [page]="'addrs'" [key]="'continue'" [elementType]="'text'"></inline-translator>
-			</button>
-		</div>
+				<div class="col-xs-12 col-sm-4">
+						<div class="right">
+								<app-delivery-options [orderNumber]="orderNumber$ | async"></app-delivery-options>
+								<button (click)="checkoutToPayment()" class="pay-btn">
+									<inline-translator [page]="'addrs'" [key]="'continue'" [elementType]="'text'"></inline-translator>
+								</button>
+							</div>
+					</div>
+	
 	</div>
 
 	<div *ngIf="!showAdrs$">
-		<div class="left">
-			<div class="add-address">
-				<span class="add-label">
-					<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
-				</span>
+		<div class="col-xs-12 col-sm-8">
+			<div class="left">
+				<div class="add-address">
+					<span class="add-label">
+						<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
+					</span>
+				</div>
+					<app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
 			</div>
-			<app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
-		</div>
+		</div>	
 	</div>
 </div>
+
+

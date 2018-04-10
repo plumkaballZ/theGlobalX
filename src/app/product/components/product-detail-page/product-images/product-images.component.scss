@@ -1,51 +1,159 @@
-.image-container {
-    .thumbnails-selected-image {
-        width: 82%;
-        height: 69vh;
-   }
+// .image-container {
+//     .thumbnails-selected-image {
+//         height:58vh;
+//    }
+// }
+// @media screen and (min-height: 801px) {
+//     .image-container {
+//         .thumbnails-selected-image {
+//             width:100%;
+//        }
+//     }
+//   }
+//  .thumbnails-vertical-container {
+//      float: left;
+//      width: 101.9%;
+//      display: -webkit-box;
+//      margin-top: 5px;
+//      margin-bottom: 5px;
+
+//        .thumbnails-thumbnail-button {
+//            cursor: pointer;
+//            width: 33%;
+//         }
+//         .thumbnails-thumbnail{
+//             width: 98%;
+//         }
+//  }
+//  @media screen and (min-height: 801px) {
+//     .thumbnails-vertical-container {
+//         // width: 100%;
+//         margin-bottom: 20px
+//     }
+//   }
+
+//   @media screen and (max-height: 670px) {
+//     .image-container {
+//         .thumbnails-selected-image {
+//             // width: 100%;
+//             height: 56vh;
+//        }
+//     }
+//   }
+
+//   @media screen and (max-height: 670px) {
+//     .thumbnails-vertical-container {
+//         width: 101.3%;
+//     }
+//   }
+
+
+/* Flex styles -------------------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (min-width: 700px) {
+   .leading {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  
+  /* Grid styles -------------------------------------------------*/
+  .cards {
+    display: -webkit-inline-flex;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  .cards2 {
+    float: left;
+    width: 101.9%;
+    display: -webkit-box;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  
+  /* Generic styles ----------------------------------------------*/
+  body {
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  header {
+    padding: 10px;
+    font-size: 2em;
+    color: white;
+    background-color: #333;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .leading {
+    height: 240px;
+    margin-bottom: 30px;
+    padding: 30px;
+    color: white;
+    background-size: cover;
+    color: white;
+    text-shadow: 0px 0px 5px #000;
+  }
+  
+  .leading-bigtext {
+    margin-right: 60px;
+    font-weight: bold;
+    font-size: 24vw;
+  }
+  
+  @media (min-width: 700px) {
+    .leading-bigtext {
+      font-size: 140px;
+    }
+  }
+  
+  .leading-text {
+    max-width: 900px;
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+  
+  .cards {
+    max-width: 960px;
+    margin: 0 auto 10px;
+  }
+  
+  article {
+    position: relative;
+  }
+  
+  .article-img {
+    height: 66vh;
+    width: 101%;
+    object-fit: cover;
+    
+  }
+  .article-img2{
+      widows: 100%;
+      height:6vh;
+  }
+  
+  .article-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .zoom {
 }
-@media screen and (min-height: 801px) {
-    .image-container {
-        .thumbnails-selected-image {
-            height: 100%;
-            width:97%;
-       }
-    }
-  }
- .thumbnails-vertical-container {
-     float: left;
-     width: 83.3%;
-     display: -webkit-box;
-     margin-top: 5px;
-     margin-bottom: 5px;
 
-       .thumbnails-thumbnail-button {
-           cursor: pointer;
-           width: 33%;
-        }
-        .thumbnails-thumbnail{
-            width: 98%;
-        }
- }
- @media screen and (min-height: 801px) {
-    .thumbnails-vertical-container {
-        width: 98.8%;
-        margin-top: 20px;
-        margin-bottom: 20px
-    }
-  }
-
-  @media screen and (max-height: 670px) {
-    .image-container {
-        .thumbnails-selected-image {
-            width: 100%;
-            height: 56vh;
-       }
-    }
-  }
-
-  @media screen and (max-height: 670px) {
-    .thumbnails-vertical-container {
-        width: 101.3%;
-    }
-  }
+.zoom:hover {
+    // -webkit-transform: scale(1.1);
+    // transform: scale(1.1);
+}

@@ -1,40 +1,48 @@
 
-<div class="cart-section">
-  <div *ngIf="(totalCartItems$ | async) > 0 else emptyCart">
-    
-    <div class="left">
-      <div class="checkout-header-container">
-        <div class="checkout-header">
-          <span class="text">
-            <inline-translator [page]="'cart'" [key]="'myBag'" [elementType]="'text'"></inline-translator>
-            <!-- ({{totalCartItems$ | async}}) -->
-          </span>
+<div class="row">
+    <div class="cart-section">
+
+        <div *ngIf="(totalCartItems$ | async) > 0 else emptyCart">
+          
+            <div class="col-xs-12 col-sm-8">
+                <div class="left">
+                    <div class="checkout-header-container">
+                      <div class="checkout-header">
+                        <span class="text">
+                          <inline-translator [page]="'cart'" [key]="'myBag'" [elementType]="'text'"></inline-translator>
+                          <!-- ({{totalCartItems$ | async}}) -->
+                        </span>
+                      </div>
+                      
+                      <div class="total-price">
+                          <inline-translator [page]="'cart'" [key]="'total'" [elementType]="'text'"></inline-translator>
+                      </div>
+                    </div>
+                    <div class="prod-set">
+                      
+                      <app-line-item-list></app-line-item-list>
+              
+                      <!-- <a class="wishlist-link">
+                        <span class="icon"></span>
+                        <span class="coming-soon">Add more from wishlist</span>
+                      </a> -->
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-4">
+                <div class="right">
+                    <app-order-total-summary [totalCartValue]="totalCartValue$ | async"></app-order-total-summary>
+                  </div>
+            </div>
+
         </div>
-        
-        <div class="total-price">
-            <inline-translator [page]="'cart'" [key]="'total'" [elementType]="'text'"></inline-translator>
-        </div>
+      
+        <ng-template #emptyCart>
+          <app-empty-cart></app-empty-cart>
+        </ng-template>
       </div>
-      <div class="prod-set">
-        
-        <app-line-item-list></app-line-item-list>
-
-        <!-- <a class="wishlist-link">
-          <span class="icon"></span>
-          <span class="coming-soon">Add more from wishlist</span>
-        </a> -->
-      </div>
-    </div>
-
-    <div class="right">
-      <app-order-total-summary [totalCartValue]="totalCartValue$ | async"></app-order-total-summary>
-    </div>
-
-  </div>
-
-  <ng-template #emptyCart>
-    <app-empty-cart></app-empty-cart>
-  </ng-template>
+      
 </div>
 
 
