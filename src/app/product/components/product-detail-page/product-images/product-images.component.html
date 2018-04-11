@@ -14,28 +14,45 @@
   </div>
 </div> -->
 
-
-
-<section class="cards">
-
+<!-- <section class="cards" *ngIf="toggle"(mouseleave)="toggle=false;">
+  <article>
     <div class="image-container" *ngIf="images">
-        
-        <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
-             [alt]="selectedImage.alt"
-             class="thumbnails-selected-image article-img" />
-        </div>
-  </section>
+      <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
+          [alt]="selectedImage.alt"
+            class="thumbnails-selected-image article-img2" />
+    </div>
+  </article>
 
-      <div class="thumbnails-vertical-container">
+</section>
+
+    <section class="cards img002" *ngIf="!toggle">
+      <article>
           <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
-              <section class="cards">
-              
-                <article>
-                  <img class="thumbnails-thumbnail article-img2 zoom" 
-                  [src]="getProductImageUrl(image.small_url)"
-                  [alt]="image.alt"
-                  (mouseover)="onMouseOver(image)">
-              </article>
-            </section>
-          </div>
-        </div>
+            <img class="thumbnails-thumbnail article-img" 
+              [src]="getProductImageUrl(image.small_url)"
+              [alt]="image.alt"
+              (mouseover)="onMouseOver(image)">
+            </div>
+      </article>
+    </section> -->
+
+    
+<section class="cards">
+    <article>
+      <div class="image-container" *ngIf="images">
+        <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
+            [alt]="selectedImage.alt"
+              class="thumbnails-selected-image article-img2" />
+      </div>
+    </article>
+  </section>
+      <section class="cards img002">
+        <article>
+            <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
+              <img class="thumbnails-thumbnail article-img" 
+                [src]="getProductImageUrl(image.small_url)"
+                [alt]="image.alt"
+                (mouseover)="onMouseOver(image)">
+              </div>
+        </article>
+      </section>

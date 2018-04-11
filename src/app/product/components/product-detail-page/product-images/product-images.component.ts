@@ -12,7 +12,10 @@ export class ProductImagesComponent implements OnInit {
   @Input() images: Image[] = null;
   @Input() selectedImage: Image = null;
   
+  toggle : boolean;
+
   constructor() {
+    this.toggle = false;
    }
 
   ngOnInit() {
@@ -24,5 +27,6 @@ export class ProductImagesComponent implements OnInit {
 
   onMouseOver(image: Image) {
     this.selectedImage = image;
+    this.toggle = true;
   }
 }
