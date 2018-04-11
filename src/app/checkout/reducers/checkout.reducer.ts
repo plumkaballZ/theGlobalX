@@ -9,6 +9,7 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
   
+    console.log(type);
 
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
@@ -49,6 +50,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
 
+      console.log('ADD_TO_CART_SUCCESS');
+      console.log(payload);
+
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
 
@@ -88,19 +92,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           totalCartItems: _totalCartItems,
           totalCartValue: _totalCartValue
         }) as CheckoutState;
-
-      // case CheckoutActions.CHANGE_LINE_ITEM_QUANTITY:
-      //   const quantity = payload.quantity;
-      //   lineItemId = payload.lineItemId;
-      //   _lineItemEntities = state.lineItemEntities;
-      //   _lineItemEntities[lineItemId][quantity] = quantity;
-
-      //   return state.merge({
-      //     lineItemEntities: _lineItemEntities
-      //   }) as CheckoutState;
-
-      // case CheckoutActions.CHANGE_ORDER_STATE:
-
+        
       case CheckoutActions.CHANGE_ORDER_STATE_SUCCESS:
         _orderState = payload.state;
 
@@ -128,6 +120,10 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       case CheckoutActions.txtGET:
       case CheckoutActions.txtGOT:
+
+      case CheckoutActions.ADD_TO_CART:
+      console.log('ADD_TO_CART');
+      console.log(payload);
       
       default:
         return state;

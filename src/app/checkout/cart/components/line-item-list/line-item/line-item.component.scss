@@ -110,6 +110,27 @@
 			}
 		}
 	}
-	
 }
+
+.cards {
+	display: -webkit-box;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 30px;
+	max-width: 960px;
+  }
+  article {
+	position: relative;
+  }
+  .article-img {
+	height: 55px;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	margin-top: 10px;
+  }
+  .article-img2 {
+	height: 65vh;
+	width: 100%;
+	object-fit: cover;
+  }
   

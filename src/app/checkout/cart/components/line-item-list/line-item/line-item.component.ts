@@ -16,25 +16,22 @@ export class LineItemComponent implements OnInit {
   image: string;
   name: string;
   quantity: number;
-  amount: number;
+  amount: string;
 
   @Input() lineItem: LineItem;
 
-  constructor(private store: Store<AppState>, private actions: CheckoutActions, private checkoutService: CheckoutService) { }
-
+  constructor(private store: Store<AppState>, private actions: CheckoutActions, private checkoutService: CheckoutService) {
+   }
+   
   ngOnInit() {
-    // this.image = environment.API_ENDPOINT + this.lineItem.variant.images[0].product_url;
-    this.name = this.lineItem.variant.name;
+    this.image = this.lineItem.prod.master.images[0].small_url;
+    this.name = this.lineItem.prod.name;
     this.quantity = this.lineItem.quantity;
-    this.amount = this.lineItem.display_amount;
+    this.amount = this.lineItem.prod.price;
   }
 
-  // Change this method once angular releases RC4
-  // Follow this linke to know more about this issue https://github.com/angular/angular/issues/12869
   removeLineItem() {
-    // this.store.dispatch(this.actions.removeLineItem(this.lineItem.id));
     this.checkoutService.deleteLineItem(this.lineItem)
       .subscribe();
   }
-
 }

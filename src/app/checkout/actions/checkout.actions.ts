@@ -1,6 +1,7 @@
 import { LineItem } from './../../core/models/line_item';
 import { Order } from './../../core/models/order';
 import { Action } from '@ngrx/store';
+import { Product } from './../../core/models/product';
 
 export class CheckoutActions {
   static FETCH_CURRENT_ORDER = 'FETCH_CURRENT_ORDER';
@@ -34,10 +35,10 @@ export class CheckoutActions {
     };
   }
 
-  addToCart(variant_id: number): Action {
+  addToCart(prod: Product): Action {
     return {
       type: CheckoutActions.ADD_TO_CART,
-      payload: variant_id
+      payload: prod
     };
   }
 

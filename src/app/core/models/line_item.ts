@@ -1,4 +1,5 @@
 import { Variant } from './variant';
+import { Product } from './../../core/models/product';
 /*
  * LineItem model
  * Detailed info http://guides.spreecommerce.org/developer/orders.html#line-items
@@ -8,22 +9,23 @@ import { Variant } from './variant';
 export class LineItem {
   public id: number;
   public quantity: number;
-  public price: number;
+  public price: string;
   public single_display_amount: number;
   public total: number;
   public display_amount: number;
   public variant_id: number;
   public variant: Variant;
+  public prod: Product;
   /**
    * 
    */
   public CardHolderX () {
     this.id = 1;
     this.quantity = 1;
-    this.price = 300;
+    this.price = '300';
     this.single_display_amount = 300;
     this.total = 300;
     this.display_amount = 299;
     this.variant_id = 777;
-  }
+  } 
 }

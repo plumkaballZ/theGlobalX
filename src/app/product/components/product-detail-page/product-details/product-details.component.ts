@@ -17,7 +17,7 @@ import {inlineTranslatorComp} from './../../../../_custom/inlineTranslatorComp';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss', './rez_Master.scss']
+  styleUrls: ['./product-details.component.scss']
 })
 
 export class ProductDetailsComponent implements OnInit {
@@ -50,6 +50,7 @@ export class ProductDetailsComponent implements OnInit {
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
   }
+  
   onOptionClick(option) {
     const result = new VariantRetriverService()
                     .getVariant(this.currentSelectedOptions,
@@ -65,6 +66,7 @@ export class ProductDetailsComponent implements OnInit {
     this.description = newVariant.description;
     this.images = newVariant.images;
   }
+
   makeGlobalOptinTypesHash(customOptionTypes) {
     const temp = {};
     for (const key in customOptionTypes) {
@@ -82,7 +84,7 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   addToCart() {
-    this.store.dispatch(this.checkoutActions.addToCart(1)); 
+    this.store.dispatch(this.checkoutActions.addToCart(this.product)); 
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
   }
 }

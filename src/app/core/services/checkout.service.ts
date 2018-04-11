@@ -8,6 +8,7 @@ import { AppState } from './../../interfaces';
 import { Store } from '@ngrx/store';
 import {Order} from './../../core/models/order';
 import {Address} from './../../core/models/address';
+import { Product } from './../../core/models/product';
 
 import { HttpService } from './http';
 
@@ -25,9 +26,10 @@ export class CheckoutService {
         .subscribe(number => this.orderNumber = number);
     }
 
-  createNewLineItem(variant_id: number) {  
+  createNewLineItem(prod: Product) {  
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem = res.json();
+      lineItem.prod = prod;
       return lineItem;
     });
   }

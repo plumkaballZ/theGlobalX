@@ -18,9 +18,8 @@ export class ProductImagesComponent implements OnInit {
     this.toggle = false;
    }
 
-  ngOnInit() {
-   }
-
+  ngOnInit() {}
+  
   getProductImageUrl(url) {
     return environment.API_ENDPOINT + url;
   }

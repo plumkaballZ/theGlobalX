@@ -1,8 +1,10 @@
 <div class="prod-item">
-  <div class="col1">
-    <img [src]="'/assets/api/prods/imgs/prod_10_small.png'">
-    <!-- <img [src]="image" alt=""> -->
-  </div>
+
+    <section class="cards">
+        <article>
+            <img class="article-img" [src]="image" alt="">
+        </article>
+      </section>
   <div class="col2">
     <div class="prod-name">
       <a class="c-gray">
@@ -33,7 +35,6 @@
     <div class="edit-move-delete">
       <div class="actions">
         <span (click)="removeLineItem()" class="delete-item">REMOVE</span>
-        <!-- <span class="move-item coming-soon">MOVE TO WISHLIST</span> -->
       </div>
     </div>
   </div>
