@@ -12,8 +12,7 @@ export class flagSelectComp implements OnInit {
     public _localFlag: string;
     public _flagsArray: any;
 
-    constructor() {
-    }
+    constructor() { }
 
     ngOnInit() {
         this._localFlag = 'dk';

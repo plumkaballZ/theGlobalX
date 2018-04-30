@@ -1,0 +1,64 @@
+{
+    "prodDetails": {
+      "h002": "SUSTAINABILITY",
+      "span001": "Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal",
+      "hz001": "The Global X by Shevlin",
+      "ulz001": "Eco-friendly cardholder",
+      "ulz002": "100% satisfaction",
+      "btnTxt": "Buy now"
+    },
+    "prodPrice": {
+      "prodName": "TGX Cardholder by Shevlin",
+      "pprice": "299,99 DKK",
+      "prodVat": "Additional VAT may apply; charged at checkout"
+    },
+    "prodDesc": {
+      "desc": "Handcrafted leather cardholder."
+    },
+    "footer": {
+      "mailTxt": "anthony@shevlin.co",
+      "about001": "About the company",
+      "about002": "Our company has been created with sustainability in mind. We care about the enviroment and we produce our products in the most responsible ways possible. Our mission is to make quality products without compromise"
+    },
+    "header": {
+      "home": "Home",
+      "facts": "Facts",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "profile": {
+      "bag": "Bag",
+      "ourFriend": "Become our friend",
+      "login": "Login",
+      "myProfile": "My Profile",
+      "myOrders": "My Orders",
+      "myAddrs": "MyAddresses",
+      "editProfile": "Edit Profile",
+      "logout": "Logout",
+      "chooseLang": "Choose language",
+      "english": "English",
+      "danish": "Danish"
+    },
+    "login": {
+      "forgotPassword": "Forgot your password?",
+      "easilyUsing": "EASILY USING",
+      "orEmail": "- OR USING EMAIL -",
+      "recoverPassword": "Recover password",
+      "newTo": "New to Shevlin.co?",
+      "loginTo": "Login to Shevlin.co",
+      "createAccount": "Create Account"
+    },
+    "signUp": {
+      "becomeFriend": "Become our friend",
+      "easilyUsing": "EASILY USING",
+      "orUsing": "- OR USING EMAIL -",
+      "wishNotif": " Do you wish email notifications?",
+      "register": "REGISTER",
+      "login": "Login!",
+      "haveAccount": "Already have an account?"
+    },
+    "user": {
+      "activeOrders": "My orders",
+      "myAddresses": "My addresses"
+    }
+  }

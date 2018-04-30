@@ -11,46 +11,49 @@
      width: 100%;
    }
  }
- .nav navbar-nav{
+ .nav navbar-nav {
   top: 0;
   right: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
   -webkit-border-radius: 0 6px 6px 6px;
   -moz-border-radius: 0 6px 6px 6px;
   border-radius: 0 6px 6px 6px;
- }
- .az_001
- {
-    color: #050504;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+ .az_001 {
+   color: #050504;
+   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
   }
+
   @media screen and (min-width: 768px) {
     .az_001 {
       padding-right: 30px;
     }
   }
+
   @media screen and (max-width: 768px) {
     collapse navbar-collapse {
       float: right;
     }
+    padding-left: 35px;
   }
-  .navbar-toggle{
-    margin-right: 4px;
+
+  .navbar-toggle {
+    margin-right: 20px;
     margin-top: 22px;
   }
+
   .navbar-fixed-top, .navbar-fixed-bottom {
-    position: sticky; /* this can also be static */
+    position: sticky;
   }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
    border-color: transparent; 
   }
-
-
+  
   @media screen and (max-width: 768px) {
     .bla1 {
       float: left;
-      margin: -2px 0 0;
+      margin: -2px 14px 0;
       list-style: none;
       font-size: 14px;
       text-align: left;
@@ -62,7 +65,11 @@
       margin-left: -4px;
     }
   }
-
-  .flagSelect{
+  
+  .flagSelect {
     padding-right: 24px;
+  }
+
+  #navz {
+    margin: 5px 0px;
   }

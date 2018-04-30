@@ -1,0 +1,63 @@
+{
+    "prodDetails": {
+      "h002": "Bæredygtighed",
+      "span001": "\nVores produkter leverer miljømæssige, sociale og økonomiske fordele, samtidig med at man beskytter folkesundheden og miljøet gennem hele deres livscyklus fra ekspansion af råvarer indtil endelig bortskaffelse",
+      "hz001": "The Global X by Shevlin",
+      "ulz001": "Eco-friendly",
+      "ulz002": "Responsible",
+      "btnTxt": "Køb nu"
+    },
+    "prodPrice": {
+      "prodName": "KortHolder ",
+      "pprice": "399,99 DKK",
+      "prodVat": "eksl. moms (25%)"
+    },
+    "prodDesc": {
+      "desc": "Kortholder i vegetabislk garvet læder."
+    },
+    "footer": {
+      "mailTxt": "anthony@shevlin.co",
+      "about001": "Omkring virksomheden",
+      "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis. "
+    },
+    "header": {
+      "home": "Hjem",
+      "facts": "Info",
+      "about": "Om os",
+      "contact": "Kontakt os"
+    },
+    "profile": {
+      "bag": "Taske",
+      "ourFriend": "Bliv vores ven",
+      "login": "Log på",
+      "myProfile": "Min Profil",
+      "myOrders": "Mine Ordere",
+      "myAddrs": "Mine Addresser",
+      "editProfile": "Redigere Profil",
+      "logout": "Log af",
+      "chooseLang": "Vælg sporg",
+      "english": "Engelsk",
+      "danish": "Dansk"
+    },
+    "login": {
+      "easilyUsing": "Log på nemt med:",
+      "orEmail": "- Eller via Email -",
+      "forgotPassword": "Glemt din adgangskode?",
+      "recoverPassword": "Gendan adgangskode",
+      "newTo": "Er du ny her?",
+      "createAccount": "Opret konto",
+      "loginTo": "Log på Shevlin.co"
+    },
+    "signUp": {
+      "becomeFriend": "Bliv vores ven",
+      "easilyUsing": "Log på nemt med:",
+      "orUsing": "- Eller via Email -",
+      "haveAccount": "Har du allerede en konto?",
+      "login": "Log på here!"
+    },
+    "user": {
+      "hello": "Hello {{User.id}}, welcome!",
+      "activeOrders": "Mine ordere",
+      "myAddresses": "Mine addresser"
+    }
+  }

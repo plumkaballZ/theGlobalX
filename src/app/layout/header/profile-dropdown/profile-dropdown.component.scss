@@ -28,10 +28,6 @@
     display: block;
 }
 
-// .dropdown-submenu:hover > .dropdown-menu {
-//   display: block;
-// }
-
 .dropdown-submenu > a:after {
   display: block;
   content: " ";
@@ -71,7 +67,6 @@
 
     #profDown {
       display: -webkit-inline-box;
-      margin-left: 53px;
     }
     
     #topMenuLang{

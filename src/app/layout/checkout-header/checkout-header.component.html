@@ -1,31 +1,19 @@
-
-
-
-
-
 <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-
-    <a class="navbar-brand" routerLink="/">Shevlin.co</a>
-
+    <a class="navbar-brand" routerLink="/">Shevlin</a>
     <ol class="checkout-steps">
-
       <li class="step step1">
         <a [ngClass]="{'can-click': checkIfClickable('cart'), 'active': isActiveRoute('cart')}" [routerLink]="getRouterLink('cart')"><inline-translator [page]="'checkoutHeader'" [key]="'bag'" [elementType]="'text'"></inline-translator></a>
       </li>
       <li class="divider"></li>
-
       <li class="step step2">
         <a [ngClass]="{'can-click': checkIfClickable('address'), 'active': isActiveRoute('address')}" [routerLink]="getRouterLink('address')"><inline-translator [page]="'checkoutHeader'" [key]="'delivery'" [elementType]="'text'"></inline-translator></a>
       </li>
-
       <li class="divider"></li>
-
       <li class="step step3">
         <a [ngClass]="{'can-click': checkIfClickable('payment'), 'active': isActiveRoute('payment')}" [routerLink]="getRouterLink('payment')"><inline-translator [page]="'checkoutHeader'" [key]="'payment'" [elementType]="'text'"></inline-translator></a>
       </li>
     </ol>
-
   </div>
 </nav>
 

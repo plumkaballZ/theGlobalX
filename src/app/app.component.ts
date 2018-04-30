@@ -34,20 +34,15 @@ export class AppComponent implements OnInit, OnDestroy {
         this.findCurrentStep(this.currentUrl);
         window.scrollTo(0, 0);
       });
-      
-      translate.addLangs(['en', 'hy']);
-      translate.setDefaultLang('en');
-      
-      var lang = localStorage.getItem('localLang');
 
-      if(lang != null) translate.use(lang);
-      else translate.use('en');
+      var localFlag = localStorage.getItem('localFlag');
+      if(localFlag) translate.use(localFlag)
+      else translate.use('dk')
   }
 
   ngOnInit() {
-    
-    this.store.select(getAuthStatus).
 
+    this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder().subscribe();
       });
