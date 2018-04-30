@@ -7,6 +7,7 @@
       </li> 
 
   <li class="dropdown" dropdown *ngIf="!isAuthenticated">
+    
     <a class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
@@ -19,20 +20,11 @@
       </li>
       <li role="separator" class="divider"></li>
       <li><a [routerLink]="['/auth', 'login']"><inline-translator [page]="'profile'" [key]="'login'" [elementType]="'text'"></inline-translator></a></li>
-      <li role="separator" class="divider"></li>
-      <li class="dropdown-submenu">
-        <a href="#"><i class="fa fa-flag fa-fw fa-lg"></i>{{chooseLang}}<b class="caret"></b></a>
-        <ul class="dropdown-menu" id="topMenuLang">
-          <li (click)="changeLang('en')" data-selected="true"><a href="#">{{english}}<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='en'}" style="float: right;"></i></a></li>
-          <li (click)="changeLang('da')" data-selected="false"><a href="#">{{danish}}<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='da'}" style="float: right;"></i></a></li>
-        </ul>
-    </li>
-
     </ul>
     
   </li>
   
-  <li  class="dropdown" dropdown *ngIf="isAuthenticated">
+  <li class="dropdown" dropdown *ngIf="isAuthenticated">
     <a class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
@@ -40,21 +32,11 @@
 
     <ul class="dropdown-menu" *dropdownMenu>
       <li><a routerLink="/user"><inline-translator [page]="'profile'" [key]="'myProfile'" [elementType]="'text'"></inline-translator></a></li>
-      <!-- <li><a routerLink="/user/orders"><inline-translator [page]="'profile'" [key]="'myOrders'" [elementType]="'text'"></inline-translator></a></li> -->
-      <!-- <li role="separator" class="divider"></li>
-      <li><a routerLink="/user/addresses"><inline-translator [page]="'profile'" [key]="'myAddrs'" [elementType]="'text'"></inline-translator></a></li> -->
       <li role="separator" class="divider"></li>
-      <!-- <li><a href="#"><inline-translator [page]="'profile'" [key]="'editProfile'" [elementType]="'text'"></inline-translator></a></li> -->
       <li><a (click)="logout()"><inline-translator [page]="'profile'" [key]="'logout'" [elementType]="'text'"></inline-translator></a></li>
       <li role="separator" class="divider"></li>
-
-      <li class="dropdown-submenu">
-          <a href="#"><i class="fa fa-flag fa-fw fa-lg"></i>{{chooseLang}}<b class="caret"></b></a>
-          <ul class="dropdown-menu" id="topMenuLang">
-            <li (click)="changeLang('en')" data-selected="true"><a href="#">{{english}}<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='en'}" style="float: right;"></i></a></li>
-            <li (click)="changeLang('da')" data-selected="false"><a href="#">{{danish}}<i [ngClass]="{'glyphicon glyphicon-ok': langZ=='da'}" style="float: right;"></i></a></li>
-          </ul>
-      </li>
     </ul>
+
   </li>
+
 </ul>

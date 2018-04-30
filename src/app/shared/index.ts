@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotificationComponent } from './components/notification/notification.component';
 import {InlineEditorModule} from 'ng2-inline-editor';
 
+import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
     LoadingIndicatorComponent,
     NotificationComponent,
     inlineTranslatorComp,
+    flagSelectComp,
     // pipes
     KeysPipe,
     HumanizePipe
@@ -31,6 +34,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
     LoadingIndicatorComponent,
     NotificationComponent,
     inlineTranslatorComp,
+    flagSelectComp,
     // modules
     CommonModule,
     BsDropdownModule,

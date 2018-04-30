@@ -1,6 +1,8 @@
 
 <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    
+  
+  <div class="container">
 
       <a class="navbar-brand" routerLink="/">
         Shevlin.co
@@ -26,14 +28,16 @@
                     <span class="sr-only">(current)</span>
                   </a>
                 </li>
-                
                 </ul>
-                <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async">
-                  </app-profile-dropdown>
-        </div>
-     
 
-        
+                <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+                
+                <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"> 
+                </app-profile-dropdown>
+
+              
+        </div>
+   
       </div>
     </div>
   </nav>
