@@ -1,64 +1,128 @@
 {
-    "prodDetails": {
-      "h002": "SUSTAINABILITY",
-      "span001": "Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal",
-      "hz001": "The Global X by Shevlin",
-      "ulz001": "Eco-friendly cardholder",
-      "ulz002": "100% satisfaction",
-      "btnTxt": "Buy now"
-    },
-    "prodPrice": {
-      "prodName": "TGX Cardholder by Shevlin",
-      "pprice": "299,99 DKK",
-      "prodVat": "Additional VAT may apply; charged at checkout"
-    },
-    "prodDesc": {
-      "desc": "Handcrafted leather cardholder."
-    },
-    "footer": {
-      "mailTxt": "anthony@shevlin.co",
-      "about001": "About the company",
-      "about002": "Our company has been created with sustainability in mind. We care about the enviroment and we produce our products in the most responsible ways possible. Our mission is to make quality products without compromise"
-    },
-    "header": {
-      "home": "Home",
-      "facts": "Facts",
-      "about": "About",
-      "contact": "Contact"
-    },
-    "profile": {
-      "bag": "Bag",
-      "ourFriend": "Become our friend",
-      "login": "Login",
-      "myProfile": "My Profile",
-      "myOrders": "My Orders",
-      "myAddrs": "MyAddresses",
-      "editProfile": "Edit Profile",
-      "logout": "Logout",
-      "chooseLang": "Choose language",
-      "english": "English",
-      "danish": "Danish"
-    },
-    "login": {
-      "forgotPassword": "Forgot your password?",
-      "easilyUsing": "EASILY USING",
-      "orEmail": "- OR USING EMAIL -",
-      "recoverPassword": "Recover password",
-      "newTo": "New to Shevlin.co?",
-      "loginTo": "Login to Shevlin.co",
-      "createAccount": "Create Account"
-    },
-    "signUp": {
-      "becomeFriend": "Become our friend",
-      "easilyUsing": "EASILY USING",
-      "orUsing": "- OR USING EMAIL -",
-      "wishNotif": " Do you wish email notifications?",
-      "register": "REGISTER",
-      "login": "Login!",
-      "haveAccount": "Already have an account?"
-    },
-    "user": {
-      "activeOrders": "My orders",
-      "myAddresses": "My addresses"
-    }
+  "prodDetails": {
+    "h002": "SUSTAINABILITY",
+    "span001": "Our products provide environmental, social and economic benefits while protecting public health and environment, throughout their life cycle, from exctraction of raw materials until final disposal",
+    "hz001": "The Global X by Shevlin",
+    "ulz001": "Eco-friendly cardholder",
+    "ulz002": "100% satisfaction",
+    "btnTxt": "Buy now"
+  },
+  "prodPrice": {
+    "prodName": "TGX Cardholder by Shevlin",
+    "pprice": "49,95 €",
+    "prodVat": "Additional VAT may apply; charged at checkout"
+  },
+  "prodDesc": {
+    "desc": "Handcrafted leather cardholder."
+  },
+  "footer": {
+    "mailTxt": "info@shevlin.co",
+    "about001": "About the company",
+    "about002": "Our company has been created with sustainability in mind. We care about the enviroment and we produce our products in the most responsible ways possible. Our mission is to make quality products without compromise"
+  },
+  "header": {
+    "home": "Home",
+    "facts": "Facts",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "profile": {
+    "bag": "Bag",
+    "ourFriend": "Become our friend",
+    "login": "Login",
+    "myProfile": "My Profile",
+    "myOrders": "My Orders",
+    "myAddrs": "MyAddresses",
+    "editProfile": "Edit Profile",
+    "logout": "Logout",
+    "chooseLang": "Choose language",
+    "english": "English",
+    "danish": "Danish"
+  },
+  "login": {
+    "forgotPassword": "Forgot your password?",
+    "easilyUsing": "EASILY USING",
+    "orEmail": "- OR USING EMAIL -",
+    "recoverPassword": "Recover password",
+    "newTo": "New to Shevlin.co?",
+    "loginTo": "Login to Shevlin.co",
+    "createAccount": "Create Account"
+  },
+  "signUp": {
+    "becomeFriend": "Become our friend",
+    "easilyUsing": "EASILY USING",
+    "orUsing": "- OR USING EMAIL -",
+    "wishNotif": " Do you wish email notifications?",
+    "register": "REGISTER",
+    "login": "Login!",
+    "haveAccount": "Already have an account?"
+  },
+  "user": {
+    "activeOrders": "My orders",
+    "myAddresses": "My addresses"
+  },
+  "checkoutHeader": {
+    "bag": "BAG",
+    "delivery": "DELIVERY",
+    "payment": "PAYMENT"
+  },
+  "emptyBag": {
+    "quant": "Your Shopping Bag is empty"
+  },
+  "contact": {
+    "title001": "Contact us here on site or:",
+    "submitReq": "Got a question or a request? Contact us! ",
+    "span001": "We're always here to help",
+    "ulz001": "Instagram: Shevlin.co",
+    "ulz003": "Facebook: Shevlin.co",
+    "ulz002": "-",
+    "ulz004": "-",
+    "ulz005": "-",
+    "ulz006": "-",
+    "ulz007": "-",
+    "ulz008": "-",
+    "yName": "Name",
+    "yEmail": "Email",
+    "ySubject": "Subject",
+    "yDesc": "Description",
+    "submitBtn": "Submit"
+  },
+  "fact": {
+    "h001": "This page is comming soon :)"
+  },
+  "aboutUs": {
+    "h001": "This page is comming soon :)"
+  },
+  "cart": {
+    "myBag": "Bag",
+    "total": "49,95 €"
+  },
+  "orderTotal": {
+    "delivery002": "FREE",
+    "total001": "49,95 €",
+    "order001": "Place order",
+    "bag001": "Total in bag",
+    "delivery001": "Delivery"
+  },
+  "lineItem": {
+    "item1": "The Global X by Shevlin.co",
+    "item2": "(1)",
+    "size": "Size",
+    "quant": "Quantity"
+  },
+  "del": {
+    "delSpeed": "DELIVERY SPEED",
+    "stdDel": "Standard delivery",
+    "freeDel": "Free delivery",
+    "totalItems": "1 ITEMS",
+    "orderTotal001": "Order Total",
+    "orderTotal002": "49,95 €",
+    "del001": "Delivery",
+    "del002": "Delivery FREE",
+    "totalPay": "Total Payable"
+  },
+  "addrs": {
+    "addNew": "Create new address",
+    "continue": "CONTINUE TO PAYMENT"
   }
+}

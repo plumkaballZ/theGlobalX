@@ -1,63 +1,124 @@
 {
-    "prodDetails": {
-      "h002": "Bæredygtighed",
-      "span001": "\nVores produkter leverer miljømæssige, sociale og økonomiske fordele, samtidig med at man beskytter folkesundheden og miljøet gennem hele deres livscyklus fra ekspansion af råvarer indtil endelig bortskaffelse",
-      "hz001": "The Global X by Shevlin",
-      "ulz001": "Eco-friendly",
-      "ulz002": "Responsible",
-      "btnTxt": "Køb nu"
-    },
-    "prodPrice": {
-      "prodName": "KortHolder ",
-      "pprice": "399,99 DKK",
-      "prodVat": "eksl. moms (25%)"
-    },
-    "prodDesc": {
-      "desc": "Kortholder i vegetabislk garvet læder."
-    },
-    "footer": {
-      "mailTxt": "anthony@shevlin.co",
-      "about001": "Omkring virksomheden",
-      "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis. "
-    },
-    "header": {
-      "home": "Hjem",
-      "facts": "Info",
-      "about": "Om os",
-      "contact": "Kontakt os"
-    },
-    "profile": {
-      "bag": "Taske",
-      "ourFriend": "Bliv vores ven",
-      "login": "Log på",
-      "myProfile": "Min Profil",
-      "myOrders": "Mine Ordere",
-      "myAddrs": "Mine Addresser",
-      "editProfile": "Redigere Profil",
-      "logout": "Log af",
-      "chooseLang": "Vælg sporg",
-      "english": "Engelsk",
-      "danish": "Dansk"
-    },
-    "login": {
-      "easilyUsing": "Log på nemt med:",
-      "orEmail": "- Eller via Email -",
-      "forgotPassword": "Glemt din adgangskode?",
-      "recoverPassword": "Gendan adgangskode",
-      "newTo": "Er du ny her?",
-      "createAccount": "Opret konto",
-      "loginTo": "Log på Shevlin.co"
-    },
-    "signUp": {
-      "becomeFriend": "Bliv vores ven",
-      "easilyUsing": "Log på nemt med:",
-      "orUsing": "- Eller via Email -",
-      "haveAccount": "Har du allerede en konto?",
-      "login": "Log på here!"
-    },
-    "user": {
-      "hello": "Hello {{User.id}}, welcome!",
-      "activeOrders": "Mine ordere",
-      "myAddresses": "Mine addresser"
-    }
+  "prodDetails": {
+    "h002": "Bæredygtighed",
+    "span001": "\nVores unikke kortholder sikrer miljømæssige, sociale og økonomiske fordele, gennem hele deres livscyklus fra ekspansion af råvarer indtil endelig bortskaffelse",
+    "hz001": "The Global X by Shevlin",
+    "ulz001": "Eco-friendly",
+    "ulz002": "Responsible",
+    "btnTxt": "Køb nu"
+  },
+  "prodPrice": {
+    "prodName": "KortHolder ",
+    "pprice": "399,99 DKK",
+    "prodVat": "eksl. moms (25%)"
+  },
+  "prodDesc": {
+    "desc": "Kortholder i vegetabislk garvet læder."
+  },
+  "footer": {
+    "mailTxt": "info@shevlin.co",
+    "about001": "Omkring virksomheden",
+    "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis. "
+  },
+  "header": {
+    "home": "Hjem",
+    "facts": "Info",
+    "about": "Om os",
+    "contact": "Kontakt os"
+  },
+  "profile": {
+    "bag": "Taske",
+    "ourFriend": "Bliv vores ven",
+    "login": "Log på",
+    "myProfile": "Min Profil",
+    "myOrders": "Mine Ordere",
+    "myAddrs": "Mine Addresser",
+    "editProfile": "Redigere Profil",
+    "logout": "Log af",
+    "chooseLang": "Vælg sporg",
+    "english": "Engelsk",
+    "danish": "Dansk"
+  },
+  "login": {
+    "easilyUsing": "Log på nemt med:",
+    "orEmail": "- Eller via Email -",
+    "forgotPassword": "Glemt din adgangskode?",
+    "recoverPassword": "Gendan adgangskode",
+    "newTo": "Er du ny her?",
+    "createAccount": "Opret konto",
+    "loginTo": "Log på Shevlin.co"
+  },
+  "signUp": {
+    "becomeFriend": "Bliv vores ven",
+    "easilyUsing": "Log på nemt med:",
+    "orUsing": "- Eller via Email -",
+    "haveAccount": "Har du allerede en konto?",
+    "login": "Log på here!"
+  },
+  "user": {
+    "hello": "Hello {{User.id}}, welcome!",
+    "activeOrders": "Mine ordere",
+    "myAddresses": "Mine addresser"
+  },
+  "checkoutHeader": {
+    "bag": "TASKE",
+    "delivery": "LEVERING",
+    "payment": "BETALING"
+  },
+  "emptyBag": {
+    "quant": "Din takse er tom"
+  },
+  "cart": {
+    "myBag": "Min taske",
+    "total": "399,99 DKK"
+  },
+  "aboutUs": {
+    "h001": "Denne side kommer snart :)"
+  },
+  "fact": {
+    "h001": "Denne side kommer snart :)"
+  },
+  "contact": {
+    "title001": "Kontakt os her på siden eller:",
+    "submitReq": "Har du brug for hjælp, eller et spørgsmål? ",
+    "span001": "Så kontakt os, vi er altid klar til at hjælpe",
+    "yName": "Navn",
+    "yEmail": "Email",
+    "ySubject": "Emne",
+    "yDesc": "Beskrivelse",
+    "submitBtn": "Send"
+  },
+  "lineItem": {
+    "item1": "The Global X by Shevlin.co",
+    "item2": "(1)",
+    "size": "Størrelse",
+    "quant": "Antal"
+  },
+  "orderTotal": {
+    "bagTotal": "Total på order",
+    "total001": "399,99 DKK",
+    "bag001": "Pris",
+    "cupon001": "Kuponer",
+    "cupon002": "Tilføj kupon",
+    "cupon003": "Kupon rabat",
+    "delivery001": "Levering",
+    "delivery002": "FRI",
+    "order001": "Bestil"
+  },
+  "addrs": {
+    "addNew": "Tilføj ny en adresse",
+    "selectAddr": "Vælg en leveringsadresse",
+    "continue": "TIL BETALING"
+  },
+  "del": {
+    "delSpeed": "Leveringstid",
+    "stdDel": "Standart levering",
+    "freeDel": "Gratis levering",
+    "totalItems": "1 vare",
+    "orderTotal001": "Ordre Total",
+    "orderTotal002": "399,99 DKK",
+    "del001": "Levering",
+    "del002": "Gratis",
+    "totalPay": "399,99 DKK"
   }
+}
