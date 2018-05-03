@@ -86,7 +86,9 @@
     "yEmail": "Email",
     "ySubject": "Emne",
     "yDesc": "Beskrivelse",
-    "submitBtn": "Send"
+    "submitBtn": "Send",
+    "ulz001": "Instagram: Shevlin.co",
+    "ulz003": "Facebook: Shevlin.co"
   },
   "lineItem": {
     "item1": "The Global X by Shevlin.co",

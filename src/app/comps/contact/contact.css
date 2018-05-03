@@ -1,28 +1,10 @@
-.rowZ {
-	clear: both;
-  padding: 0px;  
-  
+.secDiv{
+  text-align: center;
 }
-.colZ {
-	display: block;
-	float:left;
-	margin: 0% 0 0% 14%;
+.icnz{
+  font-size: 50px;
 }
-.colZ:first-child { margin-left: 0; }
-.grpZ:before,
-.grpZ:after { content:""; display:table; }
-.grpZ:after { clear:both;}
-.grpZ { zoom:1;}
 
-.colZ_001 {
-  margin:0 auto;
-  margin-top: 40px;
-}
-.colZ_002 {
-  margin-top: 30px;
-  padding-top: 60px;
-  margin-top:-21px;
-}
 .ulz_001{
   list-style: none;
   margin: 0 0 10px 0;
@@ -43,10 +25,6 @@
   font-weight: 700;
   margin-top: 0;
 }
-.sec_001{
-  padding: 30px 16px;
-}
-
 .title_001{
   margin-bottom: 45px;
 }
