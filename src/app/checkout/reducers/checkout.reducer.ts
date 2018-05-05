@@ -8,7 +8,7 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
-  
+
 
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
@@ -119,6 +119,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
+
+      console.log(state);
 
         return state.merge({
           shipAddress: _ship_address,

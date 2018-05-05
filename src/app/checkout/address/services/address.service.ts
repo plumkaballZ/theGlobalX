@@ -73,6 +73,10 @@ export class AddressService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
+
+        console.log('createAddress');
+        console.log(order)
+
         this.store.dispatch(this.actions.updateOrderSuccess(order));
       });
 

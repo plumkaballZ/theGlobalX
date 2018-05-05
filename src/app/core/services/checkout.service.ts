@@ -33,8 +33,11 @@ export class CheckoutService {
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
-
+      
       const order = res.json();
+
+      console.log('fetchCurrentOrder');
+      console.log(order);
 
       if(order.nope){
         this.createEmptyOrder().subscribe();
