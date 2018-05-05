@@ -9,6 +9,7 @@ import { OrderListItemComponent } from './components/orders/order-list-item/orde
 import { ReturnsComponent } from './components/returns/returns.component';
 import { ReturnListItemComponent } from './components/returns/return-list-item/return-list-item.component';
 import { UserComponent } from './user.component';
+import { AddAddressComponent } from './components/addresses/add-address/add-address.component';
 
 // services
 // import { UserService } from './services/user.service';
@@ -19,6 +20,10 @@ import {AdrLineEditComp} from './components/addresses/adrLine_Edit/adrLineEditCo
 import { AddressesComponent } from './components/addresses/addresses.component';
 import { SharedModule } from '../shared/index';
 import { OrderDetailComponent } from './components/orders/order-detail/order-detail.component';
+
+import { AddressService } from './../checkout/address/services/address.service';
+
+
 
 @NgModule({
   declarations: [
@@ -32,8 +37,9 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
     AddrLineComp,
     AdrLineEditComp,
     AddressesComponent,
-    OrderDetailComponent
-    // pipes
+    OrderDetailComponent,
+    AddAddressComponent
+    // pipes,
 
   ],
   exports: [
@@ -46,6 +52,7 @@ import { OrderDetailComponent } from './components/orders/order-detail/order-det
 
   ],
   providers: [
+    AddressService
   ],
   imports: [
     RouterModule.forChild(routes),

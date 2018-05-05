@@ -1,40 +1,42 @@
-
-<ul class="nav navbar-nav navbar-right">
+<ul id="profDown" style="display: -webkit-inline-box;" class="nav navbar-nav navbar-right">
 
     <li class="cart" [routerLink]="['checkout','cart']">
         <a>
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
           <span class="badge badge-danger">{{totalCartItems}}</span></a>
       </li> 
 
   <li class="dropdown" dropdown *ngIf="!isAuthenticated">
+    
     <a class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
     </a>
 
     <ul class="dropdown-menu" *dropdownMenu>
-      <li><a [routerLink]="['/auth']">Become our friend</a></li>
+      <li><a [routerLink]="['/auth']">
+        <inline-translator [page]="'profile'" [key]="'ourFriend'" [elementType]="'text'"></inline-translator>
+      </a>
+      </li>
       <li role="separator" class="divider"></li>
-      <li><a [routerLink]="['/auth', 'login']">Login</a></li>
+      <li><a [routerLink]="['/auth', 'login']"><inline-translator [page]="'profile'" [key]="'login'" [elementType]="'text'"></inline-translator></a></li>
     </ul>
+    
   </li>
   
-  <li  class="dropdown" dropdown *ngIf="isAuthenticated">
+  <li class="dropdown" dropdown *ngIf="isAuthenticated">
     <a class="dropdown-toggle" dropdownToggle>
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
     </a>
+
     <ul class="dropdown-menu" *dropdownMenu>
-      <li><a routerLink="/user">My Profile</a></li>
-      <li><a routerLink="/user/orders">My Orders</a></li>
+      <li><a routerLink="/user"><inline-translator [page]="'profile'" [key]="'myProfile'" [elementType]="'text'"></inline-translator></a></li>
       <li role="separator" class="divider"></li>
-      <li><a routerLink="/user/addresses">Saved Addresses</a></li>
+      <li><a (click)="logout()"><inline-translator [page]="'profile'" [key]="'logout'" [elementType]="'text'"></inline-translator></a></li>
       <li role="separator" class="divider"></li>
-      <li><a href="#">Edit Profile</a></li>
-      <li><a (click)="logout()">Logout</a></li>
     </ul>
+
   </li>
 
-  
 </ul>

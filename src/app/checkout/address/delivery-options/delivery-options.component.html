@@ -1,28 +1,42 @@
 <div class="del-lbl">
-  DELIVERY SPEED
+{{delSpeed}}
 </div>
 <div class="del-options">
   <div class="option">
     <div class="option-name">
-      Standard delivery
+        {{stdDel}}
     </div>
     <div class="option-rate">
-      Free delivery
+        {{freeDel}}
     </div>
   </div>
 </div>
 <div class="mini-bag-summary">
-  <div class="items">{{totalCartItems$ | async}} ITEMS</div>
+  <div class="items">
+      {{totalItems}}
+  </div>
   <div class="order-total">
-    <span>Order Total</span>
-    <span class="value">${{totalCartValue$ | async | number:'1.2-2'}}</span>
+    <span>{{orderTotal001}}</span>
+    <span class="value">
+        {{orderTotal002}}
+      </span>
   </div>
   <div class="shipping">
-    <span>Delivery</span>
-    <span class="shipping-fee c-green">FREE</span>
+    <span>{{del001}}</span>
+    <span class="shipping-fee c-green">{{del002}}</span>
   </div>
 </div>
 <div class="pay-lbl-total">
-  <span class="pay-lbl">Total Payable</span>
-  <span class="pay-total">${{totalCartValue$ | async | number:'1.2-2'}}</span>
+  <span class="pay-lbl">{{totalPay}}</span>
+  <span class="pay-total">{{orderTotal002}}</span>
 </div>
+
+<!-- <inline-translator [page]="'del'" [key]="'delSpeed'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'stdDel'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'freeDel'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'totalItems'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'orderTotal001'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'orderTotal002'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'del001'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'del002'" [elementType]="'text'"></inline-translator>
+<inline-translator [page]="'del'" [key]="'totalPay'" [elementType]="'text'"></inline-translator> -->

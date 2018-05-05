@@ -1,7 +1,13 @@
 <div>
-  <h1 itemprop="name" class="title">{{product.name}}</h1>
+  <h1 itemprop="name" class="title">
+    <inline-translator [page]="'prodPrice'" [key]="'prodName'" [elementType]="'text'"></inline-translator>
+  </h1>
   <p itemprop="price" class="selling-price">
-    <strong>{{product.display_price}}</strong>
+    <strong>
+      <inline-translator [page]="'prodPrice'" [key]="'pprice'" [elementType]="'text'"></inline-translator>
+    </strong>
   </p>
-  <p class="vatInfo">Additional VAT may apply; charged at checkout</p>
+  <p class="vatInfo">
+    <inline-translator [page]="'prodPrice'" [key]="'prodVat'" [elementType]="'text'"></inline-translator>
+  </p>
 </div>

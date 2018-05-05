@@ -12,18 +12,20 @@ export class ProductImagesComponent implements OnInit {
   @Input() images: Image[] = null;
   @Input() selectedImage: Image = null;
   
+  toggle : boolean;
+
   constructor() {
+    this.toggle = false;
    }
 
-  ngOnInit() {
-   }
-
+  ngOnInit() {}
+  
   getProductImageUrl(url) {
     return environment.API_ENDPOINT + url;
   }
 
   onMouseOver(image: Image) {
- 
     this.selectedImage = image;
+    this.toggle = true;
   }
 }

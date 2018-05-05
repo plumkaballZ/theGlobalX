@@ -1,15 +1,20 @@
-<div class="image-container" *ngIf="images">
-  
-  <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
-       [alt]="selectedImage.alt"
-       class="thumbnails-selected-image" />
-  </div>
+<section class="cards">
+    <article>
+      <div class="image-container" *ngIf="images">
+        <img itemprop="image" [src]="getProductImageUrl(selectedImage.large_url)" 
+            [alt]="selectedImage.alt"
+              class="thumbnails-selected-image article-img2" />
+      </div>
+    </article>
+  </section>
 
-<div class="thumbnails-vertical-container">
-  <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
-    <img class="thumbnails-thumbnail" 
-    [src]="getProductImageUrl(image.small_url)"
-    [alt]="image.alt"
-    (mouseover)="onMouseOver(image)">
-  </div>
-</div>
+  <section class="cards img002">
+        <article>
+            <div class="thumbnails-thumbnail-button" *ngFor="let image of images">
+              <img class="thumbnails-thumbnail article-img" 
+                [src]="getProductImageUrl(image.small_url)"
+                [alt]="image.alt"
+                (mouseover)="onMouseOver(image)">
+              </div>
+        </article>
+      </section>

@@ -11,6 +11,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class UserService {
 
+  public _user : User;
+
   constructor(
     private http: HttpService,
     private actions: UserActions,
@@ -25,9 +27,16 @@ export class UserService {
    * @memberof UserService
    */
   getOrders(): Observable<Order[]> {
+    
     var localUser = JSON.parse(localStorage.getItem('user'));
-    return this.http.get_Web('api/xOrders', {params: {email: (localUser== null ? '': localUser.email)}})
+
+    var orderUrl = 'api/xOrders';
+
+    if(localUser.lvl == 99) orderUrl = 'api/xOrders/GetOrdersLvl99'
+
+    return this.http.get_Web(orderUrl, {params: {email: (localUser== null ? '': localUser.email)}})
       .map((res: Response) =>  {
+        console.log(res.json());
         return res.json();
       });
   }
@@ -63,7 +72,6 @@ export class UserService {
   {
     return this.http.get_Web('api/xAddresses', {params: {email: email}})
       .map((res: Response) =>  {
-        console.log(res.json());
         return res.json();
       });
   }
@@ -71,8 +79,20 @@ export class UserService {
   {
     return this.http.get_Web('api/xAddress', {params: {id: adrId}}).map((res: Response) =>  {return res.json();});
   }
-  updateUser(userData) 
-  {
-    return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({"glxUser" : userData})).map((res: Response) =>  { return true;});
+  updateUser(params) {
+    return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({
+      "xUser" : this._user, 
+    })).map((res: Response) =>  {
+      const order = res.json();
+    });
+  }
+  getTxt(fileName: string){
+    return this.http.get_Web('api/xTxt', {params: {fileName: fileName}}).map((res: Response) =>  {
+      var txtRes = res.json();
+      return txtRes;
+    });
+  }
+  postTxt(jsonStr : string){
+    return this.http.post_Web('api/xTxt', JSON.stringify({"jsonStr" : jsonStr})).map((res: Response) =>  { return true;});
   }
 }

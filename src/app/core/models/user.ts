@@ -10,4 +10,5 @@ export class User {
   payment_sources: [any];
   bill_address: [Address];
   ship_address: [Address];
+  lvl : number;
 }

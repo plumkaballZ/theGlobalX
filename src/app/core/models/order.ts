@@ -36,10 +36,23 @@ export class Order {
   canceler_id: string;
   total_quantity: string;
   token: string;
-  bill_address: [Address];
-  ship_address: [Address];
-  line_items: [LineItem];
+  bill_address: Address;
+  ship_address: Address;
+  public line_items: LineItem[];
   payments: [Payment];
+  /**
+   *
+   */
+  /**
+   *
+   */
+  constructor() {
+    this.line_items = [];
+  }
+  public addLineItem(item:LineItem)
+  {
+    this.line_items.push(item);
+  }
 }
 
 // NOTE: This just mimics the serializer exposed in the API

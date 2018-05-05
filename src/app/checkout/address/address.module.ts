@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { DeliveryAddressComponent } from './delivery-address/delivery-address.component';
 import { DeliveryOptionsComponent } from './delivery-options/delivery-options.component';
+import { SharedModule } from './../../shared/index';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { DeliveryOptionsComponent } from './delivery-options/delivery-options.co
     RouterModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     AddressService

@@ -1,6 +1,7 @@
 import { LineItem } from './../../core/models/line_item';
 import { Order } from './../../core/models/order';
 import { Action } from '@ngrx/store';
+import { Product } from './../../core/models/product';
 
 export class CheckoutActions {
   static FETCH_CURRENT_ORDER = 'FETCH_CURRENT_ORDER';
@@ -17,6 +18,12 @@ export class CheckoutActions {
   static UPDATE_ORDER_SUCCESS = 'UPDATE_ORDER_SUCCESS';
   static ORDER_COMPLETE_SUCCESS = 'ORDER_COMPLETE_SUCCESS';
 
+
+
+  static txtGET = 'GET_TXT';
+  static txtGOT = "GOT_TXT";
+
+
   fetchCurrentOrder() {
     return { type: CheckoutActions.FETCH_CURRENT_ORDER };
   }
@@ -28,10 +35,10 @@ export class CheckoutActions {
     };
   }
 
-  addToCart(variant_id: number): Action {
+  addToCart(prod: Product): Action {
     return {
       type: CheckoutActions.ADD_TO_CART,
-      payload: variant_id
+      payload: prod
     };
   }
 
@@ -78,7 +85,7 @@ export class CheckoutActions {
     };
   }
 
-  updateOrder(): Action {
+  updateOrder(param): Action {
     return { type: CheckoutActions.UPDATE_ORDER };
   }
 
@@ -91,6 +98,16 @@ export class CheckoutActions {
 
   orderCompleteSuccess() {
     return { type: CheckoutActions.ORDER_COMPLETE_SUCCESS };
+  }
+
+  txtGet(){
+    return {type: CheckoutActions.txtGET }
+  }
+  txtGot(data): Action {
+    return {
+      type: CheckoutActions.txtGOT,
+      payload: data
+    };
   }
 
 }

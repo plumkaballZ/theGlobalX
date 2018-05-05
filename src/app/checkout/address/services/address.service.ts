@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { HttpService } from './../../../core/services/http';
 import { CheckoutActions } from './../../../checkout/actions/checkout.actions';
 import { AppState } from './../../../interfaces';
+import { Address } from '../../../core/models/address';
 import { Store } from '@ngrx/store';
 
 @Injectable()
@@ -28,7 +29,6 @@ export class AddressService {
       'country_id': [232, Validators.required]
     });
   }
-
   initEmailForm() {
     return this.fb.group({
       'email': ['', Validators.required]
@@ -73,11 +73,7 @@ export class AddressService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
-
-        console.log('createAddress');
-        console.log(order)
-
-        this.store.dispatch(this.actions.updateOrderSuccess(order));
+        this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
       });
 
     // return this.http.post_Web(

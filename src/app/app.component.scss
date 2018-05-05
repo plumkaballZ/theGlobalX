@@ -1,6 +1,8 @@
-main {
-  padding-top: 90px;
-}
 .content {
   min-height: calc(100vh - 80px);
+}
+
+:host ::ng-deep .c-inline-editor { 
+  color: #333333;
+  text-decoration: none;
 }

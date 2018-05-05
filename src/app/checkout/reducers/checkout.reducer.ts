@@ -9,7 +9,6 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
 
-
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
         _totalCartItems = 0, _totalCartValue,
@@ -23,9 +22,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _lineItems = payload.line_items;
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
         _totalCartItems = payload.total_quantity;
-        
-        console.log("FETCH_CURRENT_ORDER_SUCCESS");
-
         _totalCartValue = 10;
         
         _ship_address = payload.ship_address;
@@ -52,6 +48,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
 
+      console.log('ADD_TO_CART_SUCCESS');
+      console.log(payload);
+
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
 
@@ -59,9 +58,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         if (state.lineItemIds.includes(_lineItemId)) {
           return state;
         }
-
-        console.log('ADD_TO_CART_SUCCESS');
-
+        
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = 300;
 
@@ -87,27 +84,13 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           _totalCartValue = 10;
         }
 
-        console.log('REMOVE_LINE_ITEM_SUCCESS');
-        
         return state.merge({
           lineItemIds: _lineItemIds,
           lineItemEntities: _lineItemEntities,
           totalCartItems: _totalCartItems,
           totalCartValue: _totalCartValue
         }) as CheckoutState;
-
-      // case CheckoutActions.CHANGE_LINE_ITEM_QUANTITY:
-      //   const quantity = payload.quantity;
-      //   lineItemId = payload.lineItemId;
-      //   _lineItemEntities = state.lineItemEntities;
-      //   _lineItemEntities[lineItemId][quantity] = quantity;
-
-      //   return state.merge({
-      //     lineItemEntities: _lineItemEntities
-      //   }) as CheckoutState;
-
-      // case CheckoutActions.CHANGE_ORDER_STATE:
-
+        
       case CheckoutActions.CHANGE_ORDER_STATE_SUCCESS:
         _orderState = payload.state;
 
@@ -116,12 +99,21 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
+      
 
+      if(payload == null) 
+      {
+        return state;
+      }
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
+<<<<<<< HEAD
 
       console.log(state);
 
+=======
+            
+>>>>>>> 5c0b74dd464ed3f6cb4379056ca6d9fb8535f15a
         return state.merge({
           shipAddress: _ship_address,
           billAddress: _bill_address
@@ -130,6 +122,13 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       case CheckoutActions.ORDER_COMPLETE_SUCCESS:
         return initialState;
 
+      case CheckoutActions.txtGET:
+      case CheckoutActions.txtGOT:
+
+      case CheckoutActions.ADD_TO_CART:
+      console.log('ADD_TO_CART');
+      console.log(payload);
+      
       default:
         return state;
     }

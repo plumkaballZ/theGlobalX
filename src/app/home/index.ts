@@ -36,6 +36,9 @@ import { HomeRoutes as routes } from './home.routes';
 
 import { FilterPipe } from './content/product-list/product-filter.pipe';
 
+//lang stuff yay :D
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +49,7 @@ import { FilterPipe } from './content/product-list/product-filter.pipe';
     ProductPriceInfoComponent,
     ProductVariantsComponent,
     ProductComponent,
-
+    
     // components
     HomeComponent,
     TaxonsComponent,
@@ -62,8 +65,9 @@ import { FilterPipe } from './content/product-list/product-filter.pipe';
   exports: [
   ],
   imports: [
+    HttpClientModule,
     RouterModule.forChild(routes),
-    SharedModule,
+    SharedModule
   ],
   providers: [
     ProductActions,

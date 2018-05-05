@@ -16,7 +16,6 @@ const userReducer: ActionReducer<UserState> =
     switch (type) {
       case UserActions.GET_USER_ORDERS_SUCCESS:
         return state.merge({ orders: payload }) as UserState;
-
       default:
         return state;
     }

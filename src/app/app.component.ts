@@ -6,6 +6,8 @@ import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+import {TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,8 +22,10 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private checkoutService: CheckoutService,
-    private store: Store<AppState>
+    private store: Store<AppState>, 
+    private translate: TranslateService
     ) {
+
     router
       .events
       .filter(e => e instanceof NavigationEnd)
@@ -30,12 +34,15 @@ export class AppComponent implements OnInit, OnDestroy {
         this.findCurrentStep(this.currentUrl);
         window.scrollTo(0, 0);
       });
+
+      var localFlag = localStorage.getItem('localFlag');
+      if(localFlag) translate.use(localFlag)
+      else translate.use('dk')
   }
 
   ngOnInit() {
-    
-    this.store.select(getAuthStatus).
 
+    this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder().subscribe();
       });

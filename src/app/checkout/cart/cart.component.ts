@@ -7,6 +7,7 @@ import { AppState } from './../../interfaces';
 import { Store } from '@ngrx/store';
 import { LineItem } from './../../core/models/line_item';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cart',
@@ -18,9 +19,12 @@ export class CartComponent implements OnInit {
   totalCartValue$: Observable<number>;
   totalCartItems$: Observable<number>;
 
-  constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>, private translate: TranslateService) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
+  
+    console.log(this.totalCartItems$);
+    console.log(this.totalCartValue$);
   }
   
   ngOnInit() {

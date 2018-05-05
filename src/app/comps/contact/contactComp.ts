@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
+import {UserService } from './../../user/services/user.service';
 
 @Component({
   selector: 'contactComp',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ContactComp implements OnInit {
-  
-  constructor() { }
+  yName: string;
+  yEmail: string;
+  ySubject: string;
+  yDesc: string;
 
+  constructor(
+    private translate: TranslateService
+  ) { 
+  }
   ngOnInit() {
+     this.translate.get('contact.yName').subscribe((res: string) => {
+       this.yName = res;
+     });
+     this.translate.get('contact.yEmail').subscribe((res: string) => {
+       this.yEmail = res;
+     });
+
+     this.translate.get('contact.ySubject').subscribe((res: string) => {
+       this.ySubject = res;
+     });
+     this.translate.get('contact.yDesc').subscribe((res: string) => {
+       this.yDesc = res;
+     });
   }
 }

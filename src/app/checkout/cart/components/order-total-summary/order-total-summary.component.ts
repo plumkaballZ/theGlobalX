@@ -6,6 +6,7 @@ import { AppState } from './../../../../interfaces';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs/Subscription';
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-order-total-summary',
@@ -13,6 +14,21 @@ import { Component, OnInit, Input, OnDestroy } from '@angular/core';
   styleUrls: ['./order-total-summary.component.scss']
 })
 export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
+
+  cupon001: string;
+  cupon002: string;
+  cupon003: string;
+
+  bag001: string;
+
+  delivery001: string;
+  delivery002: string;
+
+  order001: string;
+
+  total001: string;
+
+
 
   stateSub$: Subscription;
   orderState: string;
@@ -22,12 +38,43 @@ export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
   constructor(private store: Store<AppState>,
     private actions: CheckoutActions,
     private checkoutService: CheckoutService,
-    private router: Router) {
+    private router: Router,
+    private translate: TranslateService) {
   this.stateSub$ = this.store.select(getOrderState)
     .subscribe(state => this.orderState = state);
   }
 
   ngOnInit() {
+    this.translate.get('orderTotal.cupon001').subscribe((res: string) => {
+      this.cupon001 = res;
+    });
+    this.translate.get('orderTotal.cupon002').subscribe((res: string) => {
+      this.cupon002 = res;
+    });
+
+    this.translate.get('orderTotal.cupon003').subscribe((res: string) => {
+      this.cupon003 = res;
+    });
+
+    this.translate.get('orderTotal.bag001').subscribe((res: string) => {
+      this.bag001 = res;
+    });
+
+    this.translate.get('orderTotal.delivery001').subscribe((res: string) => {
+      this.delivery001 = res;
+    });
+
+    this.translate.get('orderTotal.delivery002').subscribe((res: string) => {
+      this.delivery002 = res;
+    });
+
+    this.translate.get('orderTotal.order001').subscribe((res: string) => {
+      this.order001 = res;
+    });
+
+    this.translate.get('orderTotal.total001').subscribe((res: string) => {
+      this.total001 = res;
+    });
   }
 
   placeOrder() {

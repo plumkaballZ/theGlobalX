@@ -33,6 +33,7 @@
 
             margin: 0;
         }
+    
         
         .footer-distributed h3 span{
             color:  #1d886d;
@@ -121,17 +122,22 @@
         
         .footer-distributed .footer-company-about span{
             display: block;
-            color:  #ffffff;
             font-size: 14px;
             font-weight: bold;
             margin-bottom: 20px;
             font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
         }
-        
+          :host ::ng-deep .footer-company-about #inlineEditWrapper a { 
+            color:  #ffffff;
+            text-decoration: none;
+          }
+          :host ::ng-deep .footer-center #inlineEditWrapper a { 
+            color:  #1d886d;
+            text-decoration: none;
+          }
         .footer-distributed .footer-icons{
             margin-top: 25px;
         }
-        
         .footer-distributed .footer-icons a{
             display: inline-block;
             width: 35px;
@@ -148,7 +154,16 @@
             margin-right: 3px;
             margin-bottom: 5px;
         }
-        
+
+        :host ::ng-deep .footer-left #inlineEditWrapper a { 
+            color:  #ffffff;
+          }
+
+          :host ::ng-deep .footer-distributed h3 span #inlineEditWrapper a { 
+            color:  #1d886d;
+          }
+
+
         @media (max-width: 880px) {
         
             .footer-distributed{
@@ -164,9 +179,10 @@
                 text-align: center;
             }
         
+            
+
             .footer-distributed .footer-center i{
                 margin-left: 0;
             }
         
         }
-        

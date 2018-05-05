@@ -15,7 +15,7 @@
             {{order.shipment_state | uppercase}} on {{order.updated_at | date:'fullDate'}} -->
             
             <div class="pull-right">
-              <a [routerLink]="['edit', address.id]" class="view-details-link strong">Edit</a>
+              <a [routerLink]="['edit', address.uid]" class="view-details-link strong">Edit</a>
             </div>
 
           </h5>

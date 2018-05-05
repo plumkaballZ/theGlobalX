@@ -7,9 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductDescriptionComponent implements OnInit {
   @Input() description;
-  constructor() { }
-
+  constructor() { 
+  }
   ngOnInit() {
   }
-
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../../../core/services/auth.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile-dropdown',
@@ -10,11 +11,36 @@ export class ProfileDropdownComponent implements OnInit {
   @Input() isAuthenticated: boolean;
   @Input() totalCartItems: number;
 
+  public langZ: string;
+
+  public bag: string;
+  public chooseLang: string;
+  public english:string;
+  public danish: string;
+
   constructor(
-    private authService: AuthService
+    private authService: AuthService, private translate: TranslateService
   ) { }
 
   ngOnInit() {
+    this.langZ = localStorage.getItem('localLang');
+    if(this.langZ == null) this.langZ = 'en';
+
+    this.translate.get('profile.bag').subscribe((res: string) => {
+      this.bag = res;
+    });
+
+    this.translate.get('profile.chooseLang').subscribe((res: string) => {
+      this.chooseLang = res;
+    });
+
+    this.translate.get('profile.english').subscribe((res: string) => {
+      this.english = res;
+    });
+
+    this.translate.get('profile.danish').subscribe((res: string) => {
+      this.danish = res;
+    });
   }
 
   logout() {
@@ -22,5 +48,9 @@ export class ProfileDropdownComponent implements OnInit {
       data => console.log(data)
     );
   }
-
+  changeLang(lang: string)
+  {
+    localStorage.setItem('localLang', lang);
+    location.reload();
+  }
 }
