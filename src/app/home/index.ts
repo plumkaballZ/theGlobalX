@@ -14,6 +14,13 @@ import { ProductPriceInfoComponent } from './../product/components/product-detai
 import { ProductVariantsComponent } from './../product/components/product-detail-page/product-variants/product-variants.component';
 import { ProductComponent } from './../product/product.component';
 
+import { ProductListComponent } from './content/product-list/product-list.component';
+import { ProductListItemComponent } from './content/product-list/product-list-item/product-list-item.component';
+import { FilterSummaryComponent } from './content/filter-summary/filter-summary.component';
+import { CustomizeComponent } from './content/customize/customize.component';
+import { ContentHeaderComponent } from './content/content-header/content-header.component';
+import { ContentComponent } from './content/content'; 
+
 //prod effects
 import { EffectsModule } from '@ngrx/effects';
 import { ProductEffects } from './../product/effects/product.effects';
@@ -23,10 +30,7 @@ import { HomeComponent } from './home.component';
 // Breadcrumb components
 import { BreadcrumbComponent } from './breadcrumb/components/breadcrumb/breadcrumb.component';
 
-import { FilterSummaryComponent } from './content/filter-summary/filter-summary.component';
-import { CustomizeComponent } from './content/customize/customize.component';
-import { ContentHeaderComponent } from './content/content-header/content-header.component';
-import { ContentComponent } from './content/content'; 
+
 
 // Sidebar components
 import { TaxonsComponent } from './sidebar/taxons/taxons.component';
@@ -58,6 +62,8 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
     ContentHeaderComponent,
     CustomizeComponent,
     FilterSummaryComponent,
+    ProductListComponent,
+    ProductListItemComponent,
     ContentComponent,
     // pipes
     FilterPipe,

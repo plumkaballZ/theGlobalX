@@ -23,7 +23,7 @@ export class flagSelectComp implements OnInit {
         this._flagsArray = [];
         
         this.FlagsArray.forEach(element => {
-            this._flagsArray.push({lang: element, checked: ((element == localFlag) ? true : false)}) 
+            this._flagsArray.push({lang: element, checked: ((element == this._localFlag) ? true : false)}) 
         });
     }
     saveFlag(flag : string) {

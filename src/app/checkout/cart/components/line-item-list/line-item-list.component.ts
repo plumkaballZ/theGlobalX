@@ -17,8 +17,6 @@ export class LineItemListComponent implements OnInit {
 
   constructor(private store: Store<AppState>, private actions: CheckoutActions) {
     this.lineItems$ = this.store.select(getLineItems);
-    console.log('lineItems:');
-    console.log(this.lineItems$);
    }
 
   ngOnInit() {

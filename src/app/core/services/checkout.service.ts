@@ -44,9 +44,7 @@ export class CheckoutService {
       const currOrder: Order = res.json();
       this.currentOrder = currOrder;
 
-      console.log('fetchCurrentOrder');
-      console.log(order);
-
+    
       if(order.nope){
         this.createEmptyOrder().subscribe();
       }

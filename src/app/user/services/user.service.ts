@@ -36,7 +36,6 @@ export class UserService {
 
     return this.http.get_Web(orderUrl, {params: {email: (localUser== null ? '': localUser.email)}})
       .map((res: Response) =>  {
-        console.log(res.json());
         return res.json();
       });
   }

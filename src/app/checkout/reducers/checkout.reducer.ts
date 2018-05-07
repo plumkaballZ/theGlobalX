@@ -47,10 +47,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
-
-      console.log('ADD_TO_CART_SUCCESS');
-      console.log(payload);
-
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
 
@@ -107,13 +103,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       }
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
-<<<<<<< HEAD
-
-      console.log(state);
-
-=======
             
->>>>>>> 5c0b74dd464ed3f6cb4379056ca6d9fb8535f15a
         return state.merge({
           shipAddress: _ship_address,
           billAddress: _bill_address
@@ -126,9 +116,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       case CheckoutActions.txtGOT:
 
       case CheckoutActions.ADD_TO_CART:
-      console.log('ADD_TO_CART');
-      console.log(payload);
-      
+   
+   
       default:
         return state;
     }
