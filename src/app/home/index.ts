@@ -6,13 +6,13 @@ import { SharedModule } from './../shared/index';
 import { ProductService } from './../core/services/product.service';
 
 //prod comps.. clean this up plz :D
-import { ProductDetailPageComponent } from './../product/components/product-detail-page/product-detail-page.component';
-import { ProductDetailsComponent } from './../product/components/product-detail-page/product-details/product-details.component';
-import { ProductDescriptionComponent } from './../product/components/product-detail-page/product-description/product-description.component';
-import { ProductImagesComponent } from './../product/components/product-detail-page/product-images/product-images.component';
-import { ProductPriceInfoComponent } from './../product/components/product-detail-page/product-price-info/product-price-info.component';
-import { ProductVariantsComponent } from './../product/components/product-detail-page/product-variants/product-variants.component';
-import { ProductComponent } from './../product/product.component';
+// import { ProductDetailPageComponent } from './../product/components/product-detail-page/product-detail-page.component';
+// import { ProductDetailsComponent } from './../product/components/product-detail-page/product-details/product-details.component';
+// import { ProductDescriptionComponent } from './../product/components/product-detail-page/product-description/product-description.component';
+// import { ProductImagesComponent } from './../product/components/product-detail-page/product-images/product-images.component';
+// import { ProductPriceInfoComponent } from './../product/components/product-detail-page/product-price-info/product-price-info.component';
+// import { ProductVariantsComponent } from './../product/components/product-detail-page/product-variants/product-variants.component';
+// import { ProductComponent } from './../product/product.component';
 
 import { ProductListComponent } from './content/product-list/product-list.component';
 import { ProductListItemComponent } from './content/product-list/product-list-item/product-list-item.component';
@@ -46,13 +46,13 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    ProductDetailPageComponent,
-    ProductDetailsComponent,
-    ProductDescriptionComponent,
-    ProductImagesComponent,
-    ProductPriceInfoComponent,
-    ProductVariantsComponent,
-    ProductComponent,
+    // ProductDetailPageComponent,
+    // ProductDetailsComponent,
+    // ProductDescriptionComponent,
+    // ProductImagesComponent,
+    // ProductPriceInfoComponent,
+    // ProductVariantsComponent,
+    // ProductComponent,
     
     // components
     HomeComponent,
