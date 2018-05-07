@@ -12,9 +12,9 @@ export class ProductService {
     .map(res => res.json());
   }
   getTaxonomies(): any {
-    return this.http.get(`/assets/api/prods/taxonomies.json`).map(res => res.json());
+    return this.http.get(`/assets/api/_prod/taxonomies.json`).map(res => res.json());
   }
   getProducts(): any {
-    return this.http.get(`/assets/api/prods/prods.json`).map(res => res.json());
+    return this.http.get(`/assets/api/_prod/prodList.json`).map(res => res.json());
   }
 }

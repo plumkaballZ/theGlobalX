@@ -32,6 +32,7 @@ export class ProductListComponent implements OnInit {
     return environment.API_ENDPOINT + url;
   }
   addToCart(product: Product) {
+    console.log('addToCart')
     const variant_id = product.master.id;
     // this.store.dispatch(this.checkoutActions.addToCart(variant_id));
   }
