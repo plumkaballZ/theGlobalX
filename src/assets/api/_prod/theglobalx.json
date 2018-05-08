@@ -50,8 +50,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "small_url": "/assets/api/prods/imgs/dark_front.jpg",
-            "large_url": "/assets/api/prods/imgs/dark_front.jpg"
+            "small_url": "/assets/api/_prod/theglobalx/21.jpg",
+            "large_url": "/assets/api/_prod/theglobalx/21.jpg"
           },
           {
             "id": 2,
@@ -65,8 +65,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-              "small_url": "/assets/api/prods/imgs/dark_side.jpg",
-            	"large_url": "/assets/api/prods/imgs/dark_side.jpg"
+              "small_url": "/assets/api/_prod/theglobalx/22.jpg",
+            	"large_url": "/assets/api/_prod/theglobalx/22.jpg"
           },
           {
             "id": 3,
@@ -80,8 +80,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-           	"small_url": "/assets/api/prods/imgs/both.jpg",
-            	"large_url": "/assets/api/prods/imgs/both.jpg"
+           	"small_url": "/assets/api/_prod/theglobalx/23.jpg",
+            	"large_url": "/assets/api/_prod/theglobalx/23.jpg"
           }
         ],
         "display_price": "$15.99",
@@ -92,7 +92,9 @@
         "total_on_hand": 10,
         "is_destroyed": false
       },
-      "variants": [],
+      "variants": [
+
+      ],
       "option_types": [
 
       ],
@@ -124,5 +126,5 @@
           }
         }
       ],
-      "has_variants": false
+      "has_variants": true
     }
