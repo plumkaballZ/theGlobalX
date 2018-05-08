@@ -1,4 +1,4 @@
- <div class="row">
+ <!-- <div class="row">
     <div itemscope  *ngIf="product != null" class="rowZ grpZ" style="padding-top: 90px;">
       <div class="col-xs-12 col-sm-7">
         <app-image-container [images]="images" [selectedImage]="images[0]">
@@ -55,16 +55,75 @@
             
         </div>
       </div>
+</div>  -->
+
+
+
+<div class="row">
+    <div itemscope  *ngIf="product != null" class="rowZ grpZ" style="padding-top: 90px;">
+      <div class="col-xs-12 col-sm-7">
+        <app-image-container [images]="images" [selectedImage]="images[0]">
+          </app-image-container> 
+      </div>
+      
+        <div class="col-xs-12 col-sm-5 colZ_002">
+                    
+          <h1 class="hZ_001">
+            <span>
+              <inline-translator [page]="'prodDetails'" [key]="'hz001'" [elementType]="'text'"></inline-translator>
+            </span>
+          </h1>
+      
+            <div class="pi1">
+              <ul class="ulz_001 centered">
+                <li>
+                  <inline-translator [page]="'prodDetails'" [key]="'ulz001'" [elementType]="'text'"></inline-translator>
+                </li>
+                <li>
+                  <inline-translator [page]="'prodDetails'" [key]="'ulz002'" [elementType]="'text'"></inline-translator>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="pi_box">
+             
+                    
+                        <app-product-price-info [product]="product" class="row">
+                        </app-product-price-info>
+                    
+                        <app-product-variants
+                          [customOptionTypesHash]="customOptionTypesHash"
+                          [currentSelectedOptions]="currentSelectedOptions" 
+                          (onOptionClickEvent)="onOptionClick($event)"
+                          [correspondingOptions]="correspondingOptions"
+                          [mainOptions]="mainOptions"
+                          class="row"></app-product-variants>  
+                    
+                        <div>
+                          <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">ADD TO BAG</button>
+                        </div>
+                    
+                        <app-product-description 
+                          [description]="product.description" 
+                          class="row">
+                        </app-product-description>  
+                   
+            </div>
+            
+        </div>
+      </div>
 </div> 
 
 
+
+<!-- 
 <div itemscope itemtype="https://schema.org/Product" *ngIf="product != null" class="row padding-top">
 
-  <!-- <app-image-container 
+  <app-image-container 
     [images]="images" 
     [selectedImage]="images[0]"
     class="col-md-6">
-  </app-image-container> -->
+  </app-image-container> 
   
   <div class="col-md-6">
 
@@ -89,4 +148,4 @@
     </app-product-description>  
   </div>
 
-</div>
+</div> -->
