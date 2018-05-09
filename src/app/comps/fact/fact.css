@@ -1,7 +1,6 @@
 .hidden.menu {
     display: none;
   }
-
   .masthead.segment {
 
     padding: 1em 0em;
@@ -86,7 +85,6 @@
 .ui.inverted.segment, .ui.primary.inverted.segment{
 background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225');
 }
-
 
 .containers
 {

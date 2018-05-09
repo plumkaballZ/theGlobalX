@@ -34,11 +34,11 @@ export class HeaderComponent implements OnInit {
     "name": "Facts", 
     "link": 'fact'
     },
-    {
-       "id": 3,
-       "name": "About Us", 
-       "link": 'story'
-     },
+    // {
+    //    "id": 3,
+    //    "name": "About Us", 
+    //    "link": 'story'
+    //  },
     {
     "id": 4,
     "name": "Contact",
@@ -77,11 +77,11 @@ export class HeaderComponent implements OnInit {
     this.translate.get('header.facts').subscribe((res: string) => {
       this.taxonList[1].name = res;
     });
-     this.translate.get('header.about').subscribe((res: string) => {
-       this.taxonList[2].name = res;
-     });
+    //  this.translate.get('header.about').subscribe((res: string) => {
+    //    this.taxonList[2].name = res;
+    //  });
     this.translate.get('header.contact').subscribe((res: string) => {
-      this.taxonList[3].name = res;
+      this.taxonList[2].name = res;
     });
   }
   selectTaxon(taxon) {
