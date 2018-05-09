@@ -11,7 +11,8 @@ import { Product } from '../core/models/product';
 
 @Component({
   selector: 'app-home',
-  template: `<app-breadcrumb [taxonomies]="taxonomies$ | async"></app-breadcrumb>
+  template: `
+    <app-breadcrumb [taxonomies]="taxonomies$ | async"></app-breadcrumb>
     <div class="col-xs-12">
       <div class="col-xs-3">
         <app-taxons [taxonomies]="taxonomies$ | async"></app-taxons>
@@ -22,7 +23,8 @@ import { Product } from '../core/models/product';
           [taxonIds]="selectedTaxonIds$ | async">
         </app-content>
       </div>
-    </div>`,
+    </div>
+    `,
   styleUrls: ['./home.component.scss']
 })
 
