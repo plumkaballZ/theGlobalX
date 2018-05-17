@@ -32,7 +32,6 @@ export class ProductDetailPageComponent implements OnInit {
       this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
         this.productId = params['id'];
-        console.log(this.productId)
         this.productService
           .getProduct(this.productId)
           .subscribe(response => this.product$ = response);

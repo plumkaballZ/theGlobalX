@@ -1,5 +1,12 @@
+
+@media screen and (min-height: 670px) {
+  .content {
+      width:  100%;
+  }
+}
+
 .content {
-  width: 759px;
+
   display: inline-block;
   .queried-for {
     display: inline;
@@ -17,7 +24,7 @@
       max-width: 67%;
     }
     span {
-      line-height: 39px; // Temporary hack fix it later
+      line-height: 39px;
       color: #282c3f;
       font-weight: 400;
       font-size: 18px;

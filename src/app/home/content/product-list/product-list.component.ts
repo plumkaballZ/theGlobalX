@@ -22,23 +22,16 @@ export class ProductListComponent implements OnInit {
     private checkoutService: CheckoutService,
     private store: Store<AppState>,
     private checkoutActions: CheckoutActions) {
-        console.log('prodList');
-     }
 
-  ngOnInit() {
-  }
+    }
+    ngOnInit() {}
 
   getProductImageUrl(url) {
     return environment.API_ENDPOINT + url;
   }
-  addToCart(product: Product) {
-    
-    console.log('addToCart')
-    
-    const variant_id = product.master.id;
-    
-    console.log(variant_id);
 
+  addToCart(product: Product) {
+    const variant_id = product.master.id;
     // this.store.dispatch(this.checkoutActions.addToCart(variant_id));
   }
   getMargin() {

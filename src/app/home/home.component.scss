@@ -1,0 +1,12 @@
+.taxCol{
+    width: 20.5%;
+}
+
+@media (max-width: 600px) {
+    .taxCol {
+        width: 100%;
+    }
+    .mainCol {
+        width: 100%;
+    }
+}

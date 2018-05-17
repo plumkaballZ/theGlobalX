@@ -58,6 +58,14 @@
     display: none;
   }
 
+  @media screen and (max-height: 870px) {
+    .colz{
+      margin-top: 300px;
+    }
+  }
+
+
+
   @media only screen and (max-width: 700px) {
     .ui.fixed.menu {
       display: none !important;
@@ -80,6 +88,7 @@
       margin-top: 0.5em;
       font-size: 1.5em;
     }
+ 
   }
 
 .ui.inverted.segment, .ui.primary.inverted.segment{
@@ -112,7 +121,7 @@ background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879
   position: absolute;
   width: 450px;
   height: 450px;
-  background: url('http://localhost:4200/assets/31391203_181937675786024_871299098848788480_n.jpg') center center;
+  background: url('https://shevlin.co/assets/31391203_181937675786024_871299098848788480_n.jpg') center center;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -281,3 +290,4 @@ span
 {
   color:pink;
 }
+

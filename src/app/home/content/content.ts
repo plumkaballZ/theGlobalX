@@ -19,7 +19,6 @@ export class ContentComponent implements OnInit {
   toggleLayout = {size: 'COZY'};
 
   constructor() {
-    console.log('content');
    }
 
   ngOnInit() {

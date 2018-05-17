@@ -1,121 +1,61 @@
-{
-  "taxonomies": [
-    {
-      "id": 1,
-      "name": "CLOTHING",
-      "root": {
-        "id": 1,
-        "name": "CLOTHING",
-        "pretty_name": "CLOTHING",
-        "permalink": "CLOTHING",
-        "parent_id": 1,
-        "taxonomy_id": 1,
-        "meta_title": "CLOTHING",
-        "meta_description": "CLOTHING",
-        "taxons": [
-          {
-            "id": 1,
-            "name": "Underwear",
-            "pretty_name": "Underwear",
-            "permalink": "Underwear",
-            "parent_id": 1,
-            "taxonomy_id": 1
-          },
-          {
-            "id": 2,
-            "name": "Socks",
-            "pretty_name": "Socks",
-            "permalink": "Socks",
-            "parent_id": 1,
-            "taxonomy_id": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 2,
-      "name": "ACCESSORIES",
-      "root": {
-        "id": 2,
-        "name": "ACCESSORIES",
-        "pretty_name": "ACCESSORIES",
-        "permalink": "ACCESSORIES",
-        "parent_id": 2,
-        "taxonomy_id": 2,
-        "meta_title": "ACCESSORIES",
-        "meta_description": "ACCESSORIES",
-        "taxons": [
-          {
-            "id": 3,
-            "name": "Wallets",
-            "pretty_name": "Wallets",
-            "permalink": "Wallets",
-            "parent_id": 2,
-            "taxonomy_id": 3,
-            "meta_title": "Wallets",
-            "meta_description": "Wallets"
-          },
-          {
-            "id": 4,
-            "name": "Cardholders",
-            "pretty_name": "Cardholders",
-            "permalink": "Cardholders",
-            "parent_id": 2,
-            "taxonomy_id": 4,
-            "meta_title": "Cardholders",
-            "meta_description": "Cardholders"
-          },
-          {
-            "id": 5,
-            "name": "Belts",
-            "pretty_name": "Belts",
-            "permalink": "Belts",
-            "parent_id": 2,
-            "taxonomy_id": 5,
-            "meta_title": "Belts",
-            "meta_description": "Belts"
-          },
-          {
-            "id": 6,
-            "name": "Keyhangers",
-            "pretty_name": "Keyhangers",
-            "permalink": "Keyhangers",
-            "parent_id": 2,
-            "taxonomy_id": 6,
-            "meta_title": "Keyhangers",
-            "meta_description": "Keyhangers"
-          }
-        ]
-      }
-    },
-{
-      "id": 999,
-      "name": "SPECIAL OFFERS",
-      "root": {
-        "id": 999,
-        "name": "SPECIAL OFFERS",
-        "pretty_name": "SPECIAL OFFERS",
-        "permalink": "SPECIAL OFFERS",
-        "parent_id": 999,
-        "taxonomy_id": 999,
-        "meta_title": "SPECIAL OFFERS",
-        "meta_description": "SPECIAL OFFERS",
-        "taxons": [
-          {
-            "id": 991,
-            "name": "SPECIAL OFFERS",
-            "pretty_name": "SPECIAL OFFERS",
-            "permalink": "SPECIAL OFFERS",
-            "parent_id": 991,
-            "taxonomy_id": 991,
-            "meta_title": "SPECIAL OFFERS",
-            "meta_description": "SPECIAL OFFERS"
-          }
-        ]
-      }
-    }
+{  
+  "taxonomies":[  
+     {  
+        "id":1,
+        "name":"CLOTHING",
+        "root":{  
+           "taxons":[  
+              {  
+                 "id":1,
+                 "name":"Underwear"
+              },
+              {  
+                 "id":2,
+                 "name":"Socks"
+              }
+           ]
+        }
+     },
+     
+     {  
+       "id":2,
+        "name":"ACCESSORIES",
+        "root":{  
+           "taxons":[  
+              {  
+                 "id":3,
+                 "name":"Wallets"
+              },
+              {  
+                 "id":4,
+                 "name":"Cardholders"
+              },
+              {  
+                 "id":5,
+                 "name":"Belts"
+              },
+              {  
+                 "id":6,
+                 "name":"Keyhangers"
+              }
+           ]
+        }
+     },
+
+     {  
+        "id":999,
+        "name":"SPECIAL OFFERS",
+        "root":{  
+           "taxons":[  
+              {  
+                 "id":991,
+                 "name":"Something"
+              }
+           ]
+        }
+     }
   ],
-  "count": 5,
-  "current_page": 1,
-  "pages": 2
+  "count":5,
+  "current_page":1,
+  "pages":2
 }
