@@ -6,3 +6,101 @@
   color: #333333;
   text-decoration: none;
 }
+
+body { overflow:hidden; }
+
+.Pic{
+	width: 100%;
+	height: 100%;
+  position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.upperPic{
+	width: 100%;
+	height: 50%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-image: url("https://cdn.shopify.com/s/files/1/1100/0520/files/Mens_Collection_Banner_option_1_2048x2048.jpg?v=1494018606");
+	background-attachment: scroll;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	display: block;
+	transition: all 0.5s linear;
+	z-index: 2;
+	text-align: center;
+}
+.lowerPic{
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-image: url("http://bsnscb.com/data/out/45/27123155-cotton-field-wallpapers.jpeg");
+	background-attachment: scroll;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	display: block;
+	transition: all 0.5s linear;
+	z-index: 2;
+	text-align: center;
+}
+.upperPichover{
+	margin-top: -50%;
+	opacity: 0;
+}
+.lowerPichover{
+	margin-bottom: -50%;
+	opacity: 0;
+}
+.contentz{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	text-align: center;
+}
+.up{
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: solid white 2px;
+	border-bottom: none;
+	border-top-right-radius: 50%;
+	border-top-left-radius: 50%;
+	width: 141px;
+	height: 100px;
+	line-height: 100px;
+	text-shadow: 0px 0px 10px rgba(0,0,0, 0.5);
+}
+.down{
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: solid white 2px;
+	border-top: none;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	width: 141px;
+	height: 100px;
+	line-height: 100px;
+	text-shadow: 0px 0px 10px rgba(0,0,0, 0.5);
+}
+
+// .menu a:hover{
+// 	color: white;
+// }
+// .menu{
+// 	border: 1px solid rgba(255,255,255, 0.7);
+// 	margin-right: 20px;
+// 	padding: 5px 10px;
+// 	margin-bottom: 60px;
+// 	display: inline-block;
+// 	background-color: transparent;
+// }
+

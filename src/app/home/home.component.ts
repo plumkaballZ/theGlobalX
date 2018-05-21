@@ -8,26 +8,12 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { Product } from '../core/models/product';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-home',
-  template: `
-    <app-breadcrumb [taxonomies]="taxonomies$ | async"></app-breadcrumb>
-    
-    <div class="col-xs-12">
-      <div class="col-xs-3 taxCol">
-        <app-taxons [taxonomies]="taxonomies$ | async"></app-taxons>
-      </div>
-      
-      <div class="col-xs-9 mainCol">
-        <app-content 
-          [products]="products$ | async" 
-          [taxonIds]="selectedTaxonIds$ | async">
-        </app-content>
-      </div>
-
-    </div>
-    `,
+  templateUrl: './home.html',
   styleUrls: ['./home.component.scss']
 })
 
@@ -49,6 +35,9 @@ export class HomeComponent implements OnInit {
 
     this.selectedTaxonIds$ = this.store.select(getSelectedTaxonIds);
   }
+  
   ngOnInit() { 
   }
+
+
 }

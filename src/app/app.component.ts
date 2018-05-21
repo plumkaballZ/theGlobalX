@@ -5,8 +5,9 @@ import { Subscription } from 'rxjs/Subscription';
 import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
 import {TranslateService} from '@ngx-translate/core';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-root',
@@ -41,7 +42,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-
+    this.initJs();
     this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder().subscribe();
@@ -68,6 +69,25 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
+  }
+  initJs(){
+    $(document).ready(function(){
+      $(".Pic").click(function() {
+        $(".upperPic").addClass("upperPichover");
+        $(".lowerPic").addClass("lowerPichover");
+        $(".Pic").removeClass("Pic");
+
+        $(".contentz").removeClass("contentz");
+        $(".default").unwrap();
+
+
+        setTimeout(function(){
+          $(".upperPic").removeClass("upperPic");
+          $(".lowerPic").removeClass("lowerPic");
+        }, 1000);
+
+      });
+    });	
   }
 
 }

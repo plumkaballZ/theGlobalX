@@ -1,16 +1,30 @@
-<div class="default">
-  <section>
-    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
-    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
-    <app-loading-indicator></app-loading-indicator>
-    <app-notification></app-notification>
 
-    <main class="body container content">
-      <router-outlet></router-outlet>
-    </main>
+<div class="Pic">
+		<div class="contentz">
+        <div class="default">
+            <section>
+              <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
+              <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+              <app-loading-indicator></app-loading-indicator>
+              <app-notification></app-notification>
+          
+              <main class="body container content">
+                <router-outlet></router-outlet>
+              </main>
+          
+              <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
+              <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
+            </section>
+          </div>
+		</div>
+		<div class="upperPic">
+			<h2 class="up">START</h2>
+		</div>
+		<div class="lowerPic">
+			<h2 class="down">SHOPPING</h2>
+		</div>
+		
+	</div>
 
-    <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
-    <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
-  </section>
-</div>
+
 
