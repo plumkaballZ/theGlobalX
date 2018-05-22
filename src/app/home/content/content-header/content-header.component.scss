@@ -1,13 +1,21 @@
 
+.showHide { display:none; }
+
+@media screen and (min-width: 768px) {
+  .showHide  { display: block; }
+  #leftside > button { display: none; }
+}
+
+
 @media screen and (min-height: 670px) {
   .content {
       width:  100%;
   }
 }
 
-.content {
 
-  display: inline-block;
+.content {
+  
   .queried-for {
     display: inline;
     overflow: hidden;
