@@ -2,11 +2,6 @@
 	max-width: 980px;
 	margin: auto;
 	.left	{
-	// 	display: inline-block;
-    // width: 70%;
-    padding-right: 40px;
-    border-right: 1px solid #f5f5f6;
-    min-height: 500px;
 		.checkout-header-container {
 			.checkout-header {
 				display: inline-block;
@@ -65,14 +60,14 @@
 	}
 }
 
-// @media screen and (max-width: 768px) {
-// 	.cart-section {
-// 		.left	{
-// 			width: 100%;
-// 		}
-// 		.right{
-// 			width: 90%;
-// 		}
-// 	}
-// }
+@media screen and (max-width: 768px) {
+ 	.cart-section {
+ 		.left	{
+ 			width: 100%;
+ 		}
+ 		.right{
+ 			width: 90%;
+ 		}
+	 }
+ }
   

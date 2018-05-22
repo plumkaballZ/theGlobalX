@@ -13,6 +13,8 @@ import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 import {inlineTranslatorComp} from './../../../../_custom/inlineTranslatorComp';
 
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-product-details',
@@ -49,6 +51,11 @@ export class ProductDetailsComponent implements OnInit {
       .getOptionsToDisplay(this.product.variants, this.product.option_types);
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
+
+    $(document).ready(function(){
+     
+    });	
+
   }
   
   onOptionClick(option) {
@@ -86,5 +93,6 @@ export class ProductDetailsComponent implements OnInit {
   addToCart() {
     this.store.dispatch(this.checkoutActions.addToCart(this.product)); 
     this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
+    $(".navbar-toggle").click();
   }
 }
