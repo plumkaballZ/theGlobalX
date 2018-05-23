@@ -8,8 +8,8 @@ export const initialState: ProductState = new ProductStateRecord() as ProductSta
 
 export const productReducer: ActionReducer<ProductState> =
   (state: ProductState = initialState, { type, payload }: Action): ProductState => {
-  switch (type) {
 
+  switch (type) {
     case ProductActions.GET_PRODUCT_DETAIL_SUCCESS:
       return state.merge({
         selectedProduct: payload

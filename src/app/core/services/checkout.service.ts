@@ -30,6 +30,7 @@ export class CheckoutService {
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem = res.json();
       lineItem.prod = prod;
+      lineItem.id = prod.id;
       return lineItem;
     });
   }

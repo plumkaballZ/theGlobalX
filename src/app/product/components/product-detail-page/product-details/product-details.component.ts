@@ -11,7 +11,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from './../../../../core/models/product';
 import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
-import {inlineTranslatorComp} from './../../../../_custom/inlineTranslatorComp';
+import { inlineTranslatorComp } from './../../../../_custom/inlineTranslatorComp';
 
 declare var jquery:any;
 declare var $ :any;

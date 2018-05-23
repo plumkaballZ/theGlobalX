@@ -41,6 +41,12 @@ export class CheckoutActions {
       payload: prod
     };
   }
+  addToCart_dev(variant_id : number){
+    return {
+      type: CheckoutActions.ADD_TO_CART,
+      payload: variant_id
+    };
+  }
 
   addToCartSuccess(lineItem: any): Action {
     return {
