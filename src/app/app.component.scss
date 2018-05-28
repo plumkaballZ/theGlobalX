@@ -1,7 +1,6 @@
 .content {
   min-height: calc(100vh - 80px);
 }
-
 :host ::ng-deep .c-inline-editor { 
   color: #333333;
   text-decoration: none;
@@ -48,11 +47,11 @@ body { overflow:hidden; }
 	z-index: 2;
 	text-align: center;
 }
-.upperPichover{
+.upperPichover {
 	margin-top: -50%;
 	opacity: 0;
 }
-.lowerPichover{
+.lowerPichover {
 	margin-bottom: -50%;
 	opacity: 0;
 }
@@ -63,6 +62,7 @@ body { overflow:hidden; }
 	z-index: 1;
 	text-align: center;
 }
+
 .up{
 	position: absolute;
 	bottom: -30px;
@@ -91,16 +91,208 @@ body { overflow:hidden; }
 	line-height: 100px;
 	text-shadow: 0px 0px 10px rgba(0,0,0, 0.5);
 }
+@mixin transition($dur) {
+  -webkit-transition: $dur;
+  -moz-transition: $dur;
+  -ms-transition: $dur;
+  -o-transition: $dur;
+  transition: $dur;
+}
+@mixin transitionDelay($dur) {
+  -webkit-transition-delay: $dur;
+  -moz-transition-delay: $dur;
+  -ms-transition-delay: $dur;
+  -o-transition-delay: $dur;
+  transition-delay: $dur;
+}
+@mixin translateXY($x: 0, $y: 0) {
+  -webkit-transform: translateX($x) translateY($y);
+  -moz-transform: translateX($x) translateY($y);
+  -ms-transform: translateX($x) translateY($y);
+  -o-transform: translateX($x) translateY($y);
+  transform: translateX($x) translateY($y);
+}
+@mixin translateXYandScale($x: 0, $y: 0, $scale: 0) {
+  -webkit-transform: translateX($x) translateY($y) scale($scale);
+  -moz-transform: translateX($x) translateY($y) scale($scale);
+  -ms-transform: translateX($x) translateY($y) scale($scale);
+  -o-transform: translateX($x) translateY($y) scale($scale);
+  transform: translateX($x) translateY($y) scale($scale);
+}
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin scale($val) {
+  -webkit-transform: scale($val);
+  -moz-transform: scale($val);
+  -ms-transform: scale($val);
+  -o-transform: scale($val);
+  transform: scale($val);
+}
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+$green: #c7ff66;
+$gray: #dcdcdc;
+$lightGray: #8f8f8f;
+$darkBg: rgba(49,49,49, .7);
+$red: #54FFCC;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include transition(.3s);
+  list-style-type: none;
 
-// .menu a:hover{
-// 	color: white;
-// }
-// .menu{
-// 	border: 1px solid rgba(255,255,255, 0.7);
-// 	margin-right: 20px;
-// 	padding: 5px 10px;
-// 	margin-bottom: 60px;
-// 	display: inline-block;
-// 	background-color: transparent;
-// }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  font-family: decade;
+}
+.half {
+  position: absolute;
+  overflow: hidden;
+  z-index: 50;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  @include transition(3s);
+  will-change: transform;
+  
+  img {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 100%;
+  }
+  
+  &.top {
+    top: 0;
+  }
+  
+  &.bottom {
+    top: 50%;
+
+    img {
+      top: -110%;
+    }
+  }
+  
+  &.active.top {
+    @include translateXY(0, -100%);
+  }
+  
+  &.active.bottom {
+    @include translateXY(0, 100%);
+  }
+}
+.super-button {
+
+	font-size: 18px;
+	border: 1px solid #1d886d;
+	background-color: #1d886d;
+	color: #f2f2f2;
+	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	z-index: 200;
+  	opacity: 0.8;
+  	@include translateXY(-50%, -50%);
+  	text-transform: uppercase;
+  	font-size: 40px;
+  	font-weight: bold;
+  	color: $lightGray;
+  	background-color: transparent;
+  	border: 4px solid rgba(143,143,143, 0.5);
+  	@include transition(1.5s);
+  	will-change: color, opacity, border-color;
+  
+  &:hover {
+    color: #fff;
+    opacity: 1;
+    border-color: #fff;
+  }
+  &:hover ~ .overlay {
+    background-color: #16a082;
+  }
+  &:hover ~ .overlay.active {
+    background-color: transparent;
+  }
+  
+  &:hover ~ .button-line .inner {
+    max-width: 100%;
+  }
+  
+  &.active {
+    @include transition(4.5s);
+    @include translateXY(-50%, -1000px);
+  }
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(155, 0, 0, 0);
+  @include transition(1.5s);
+  will-change: background-color;
+  
+  &.active {
+    background-color: transparent;
+  }
+}
+.button-line {
+  position: absolute;
+  top: -webkit-calc(50% - 2px);
+  top: -moz-calc(50% - 2px);
+  top: calc(50% - 2px);
+  left: 0;
+  z-index: 200;
+  width: -webkit-calc(44% - 100px);
+  width: -moz-calc(44% - 100px);
+  width: calc(44% - 100px);
+  height: 4px;
+  background-color: rgba(143,143,143, 0.5);
+  @include transition(.5s);
+  will-change: width, max-width;
+  
+  &.left {
+    @include rotate(180deg);
+  }
+  
+  &.right {
+    left: -webkit-calc(56% + 100px);
+    left: -moz-calc(56% + 100px);
+    left: calc(56% + 100px); 
+  }
+  
+  .inner {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    max-width: 0;
+    @include transition(1.5s);
+  }
+  
+  &.active {
+    opacity: 0;
+  }
+}
 

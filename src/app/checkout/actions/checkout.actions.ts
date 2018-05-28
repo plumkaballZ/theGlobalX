@@ -18,8 +18,6 @@ export class CheckoutActions {
   static UPDATE_ORDER_SUCCESS = 'UPDATE_ORDER_SUCCESS';
   static ORDER_COMPLETE_SUCCESS = 'ORDER_COMPLETE_SUCCESS';
 
-
-
   static txtGET = 'GET_TXT';
   static txtGOT = "GOT_TXT";
 

@@ -70,24 +70,35 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
   }
+
   initJs(){
     $(document).ready(function(){
-      $(".Pic").click(function() {
+
+      $(".super-button").click(function() {
+        removeStuff();
+      });
+
+      $(".overlay").click(function() {
+        removeStuff();
+      });
+
+      function removeStuff(){
+
         $(".upperPic").addClass("upperPichover");
         $(".lowerPic").addClass("lowerPichover");
         $(".Pic").removeClass("Pic");
+    
+        $(".main").remove();
+    
 
         $(".contentz").removeClass("contentz");
         $(".default").unwrap();
-
 
         setTimeout(function(){
           $(".upperPic").removeClass("upperPic");
           $(".lowerPic").removeClass("lowerPic");
         }, 1000);
-
-      });
+      }
     });	
   }
-
 }
