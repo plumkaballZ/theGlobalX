@@ -133,87 +133,18 @@ body { overflow:hidden; }
   -o-transform: scale($val);
   transform: scale($val);
 }
-@mixin clearfix {
-  content: "";
-  display: table;
-  clear: both;
-}
-$green: #c7ff66;
-$gray: #dcdcdc;
+
 $lightGray: #8f8f8f;
-$darkBg: rgba(49,49,49, .7);
-$red: #54FFCC;
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  @include transition(.3s);
-  list-style-type: none;
 
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-body {
-  font-family: decade;
-}
-.half {
-  position: absolute;
-  overflow: hidden;
-  z-index: 50;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  @include transition(3s);
-  will-change: transform;
-  
-  img {
-    position: absolute;
-    top: -10%;
-    left: 0;
-    width: 100%;
-  }
-  
-  &.top {
-    top: 0;
-  }
-  
-  &.bottom {
-    top: 50%;
-
-    img {
-      top: -110%;
-    }
-  }
-  
-  &.active.top {
-    @include translateXY(0, -100%);
-  }
-  
-  &.active.bottom {
-    @include translateXY(0, 100%);
-  }
-}
 .super-button {
-
-	font-size: 18px;
-	border: 1px solid #1d886d;
-	background-color: #1d886d;
-	color: #f2f2f2;
-	position: absolute;
-  	left: 50%;
-  	top: 50%;
-  	z-index: 200;
-  	opacity: 0.8;
-  	@include translateXY(-50%, -50%);
-  	text-transform: uppercase;
-  	font-size: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 200;
+  opacity: 0.8;
+  @include translateXY(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 40px;
   	font-weight: bold;
   	color: $lightGray;
   	background-color: transparent;
@@ -222,9 +153,9 @@ body {
   	will-change: color, opacity, border-color;
   
   &:hover {
-    color: #fff;
+    color: #f2f2f2;
     opacity: 1;
-    border-color: #fff;
+    border-color: #f2f2f2;
   }
   &:hover ~ .overlay {
     background-color: #16a082;
@@ -250,7 +181,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background-color: rgba(155, 0, 0, 0);
+  
   @include transition(1.5s);
   will-change: background-color;
   
@@ -258,6 +189,7 @@ body {
     background-color: transparent;
   }
 }
+
 .button-line {
   position: absolute;
   top: -webkit-calc(50% - 2px);
@@ -265,9 +197,9 @@ body {
   top: calc(50% - 2px);
   left: 0;
   z-index: 200;
-  width: -webkit-calc(44% - 100px);
-  width: -moz-calc(44% - 100px);
-  width: calc(44% - 100px);
+  width: -webkit-calc(32% - 100px);
+  width: -moz-calc(32% - 100px);
+  width: calc(32% - 100px);
   height: 4px;
   background-color: rgba(143,143,143, 0.5);
   @include transition(.5s);
@@ -278,19 +210,17 @@ body {
   }
   
   &.right {
-    left: -webkit-calc(56% + 100px);
-    left: -moz-calc(56% + 100px);
-    left: calc(56% + 100px); 
+    left: -webkit-calc(68% + 100px);
+    left: -moz-calc(68% + 100px);
+    left: calc(68% + 100px); 
   }
-  
   .inner {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: #f2f2f2;
     max-width: 0;
     @include transition(1.5s);
   }
-  
   &.active {
     opacity: 0;
   }

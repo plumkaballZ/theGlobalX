@@ -63,9 +63,6 @@
       margin-top: 300px;
     }
   }
-
-
-
   @media only screen and (max-width: 700px) {
     .ui.fixed.menu {
       display: none !important;
@@ -97,18 +94,14 @@
     }
  
   }
-
 .ui.inverted.segment, .ui.primary.inverted.segment{
-background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225');
+  background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225');
 }
-
-.containers
-{
+.containers {
   margin: -8em 0em;
 }
 
-.pic
-{
+.pic {
   box-shadow: 6px 6px 7px #888888;
   width:300px;
   height:300px;
@@ -120,8 +113,8 @@ background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.pic:before
-{
+
+.pic:before {
   content: '';
   margin-top:-63px;
   margin-left:-70px;
@@ -134,8 +127,7 @@ background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879
   transform: rotate(-45deg);
 }
 
-.pic:hover , .box1:hover , .box2:hover , .social1:hover , .social2:hover , .social3:hover 
-{
+.pic:hover , .box1:hover , .box2:hover , .social1:hover , .social2:hover , .social3:hover {
   box-shadow: 3px 3px 7px #888888;
   cursor:pointer;
 }
@@ -264,37 +256,28 @@ background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879
   transform: rotate(-45deg);
   color:#ffffff;
 }
-
-.content
-{
+.content {
   height:100%;
   width:500px;
 }
 
-p
-{
+p {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-h2
-{
+h2 {
   font-family: 'Dancing Script', cursive;
 }
-
-.contentHead
-{
+.contentHead {
     font-size: 1.33em;
-}
+  }
 
-sup
-{
+sup {
   font-family: 'Open Sans Condensed', sans-serif;
   font-style: italic;
   font-size:smaller;
 }
-
-span
-{
+span {
   color:pink;
 }
 

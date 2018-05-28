@@ -60,7 +60,7 @@ export class AppComponent implements OnInit, OnDestroy {
       return false;
     }
   }
-
+  
   private findCurrentStep(currentRoute) {
     const currRouteFragments = currentRoute.split('/');
     const length = currRouteFragments.length;
@@ -88,7 +88,7 @@ export class AppComponent implements OnInit, OnDestroy {
         $(".lowerPic").addClass("lowerPichover");
         $(".Pic").removeClass("Pic");
     
-        $(".main").remove();
+        $(".mainZ").remove();
     
 
         $(".contentz").removeClass("contentz");

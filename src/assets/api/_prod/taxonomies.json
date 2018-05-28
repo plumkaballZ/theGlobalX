@@ -7,10 +7,6 @@
            "taxons":[  
               {  
                  "id":1,
-                 "name":"Underwear"
-              },
-              {  
-                 "id":2,
                  "name":"Socks"
               }
            ]
@@ -21,11 +17,7 @@
        "id":2,
         "name":"ACCESSORIES",
         "root":{  
-           "taxons":[  
-              {  
-                 "id":3,
-                 "name":"Wallets"
-              },
+           "taxons":[
               {  
                  "id":4,
                  "name":"Cardholders"
@@ -37,19 +29,6 @@
               {  
                  "id":6,
                  "name":"Keyhangers"
-              }
-           ]
-        }
-     },
-
-     {  
-        "id":999,
-        "name":"SPECIAL OFFERS",
-        "root":{  
-           "taxons":[  
-              {  
-                 "id":991,
-                 "name":"Something"
               }
            ]
         }
