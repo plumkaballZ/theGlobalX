@@ -3,13 +3,14 @@ html, body {
 }
 
 body {
-	margin: 0px;
-	padding: 0px;
+	padding: 0;
+	margin: 0;
 	background: #16a085;
 	font-family: 'Raleway', sans-serif;
 	font-size: 11pt;
 	font-weight: 400;
 	color: #363636;
+	overflow: visible !important;
 }
 
 
@@ -225,6 +226,7 @@ hr {
 
 #header-wrapper
 {
+
 	overflow: hidden;
 	background: url(images/bg01.png) repeat;
 	background-size: 100%;

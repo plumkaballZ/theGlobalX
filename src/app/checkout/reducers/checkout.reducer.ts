@@ -57,8 +57,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }
         
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
-        _totalCartValue = 300;
-
+        _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
+ 
         _lineItemEntity = { [_lineItemId]: _lineItem };
         _lineItemIds = state.lineItemIds.push(_lineItemId);
 
