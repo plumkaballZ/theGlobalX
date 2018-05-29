@@ -28,6 +28,8 @@ export class LineItemComponent implements OnInit {
     this.name = this.lineItem.prod.name;
     this.quantity = this.lineItem.quantity;
     this.amount = this.lineItem.prod.price;
+
+    console.log(this.lineItem);
   }
 
   removeLineItem() {

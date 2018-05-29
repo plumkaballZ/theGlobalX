@@ -98,6 +98,11 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
+    console.log('delete');
+    console.log(this.currentOrder);
+    this.currentOrder.line_items.push(new LineItem().CardHolderX());
+    this.currentOrder.line_items.push(new LineItem().CardHolderX2());
+
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
         "Order" : this.currentOrder, 
@@ -128,6 +133,9 @@ export class CheckoutService {
   postTxt(){
   }
   updateOrder(params) {
+    
+    console.log('update order');
+
     const user = JSON.parse(localStorage.getItem('user'));
     
     var data ={
@@ -136,6 +144,7 @@ export class CheckoutService {
       password : (user != null ? user.password : ''),
       password_confirmation : ''
     }
+
 
     if(this.currentOrder.line_items.length == 0){
       this.currentOrder.line_items.push(new LineItem().CardHolderX());

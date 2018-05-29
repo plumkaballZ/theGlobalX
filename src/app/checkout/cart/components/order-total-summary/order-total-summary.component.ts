@@ -89,9 +89,10 @@ export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
     const threshould = $rect.offset().top + gap;
     const animOption = {easing: 'easein'};
     
+  
     $(document).on('scroll', debounce(function () {
-      console.log('scroll');
-      if ($(window).scrollTop() > threshould) {
+
+      if ($(window).scrollTop() > threshould && $(window).width() > 800) {
         $rect.animate('stop').css({
           top: $(window).scrollTop() + gap
         }, animOption);
