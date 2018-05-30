@@ -24,10 +24,17 @@ export class LineItemComponent implements OnInit {
    }
    
   ngOnInit() {
-    this.image = this.lineItem.prod.master.images[0].small_url;
-    this.name = this.lineItem.prod.name;
+    
+    // this.products$ = this.store.select(getProducts);
+
+    if(this.lineItem.prod != null){
+
+      this.image = this.lineItem.prod.master.images[0].small_url;
+      this.name = this.lineItem.prod.name;
+    }
+
     this.quantity = this.lineItem.quantity;
-    this.amount = this.lineItem.prod.price;
+    this.amount = this.lineItem.price
   }
 
   removeLineItem() {

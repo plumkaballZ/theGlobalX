@@ -44,8 +44,7 @@ export class CheckoutService {
       const order = res.json();
       const currOrder: Order = res.json();
       this.currentOrder = currOrder;
-
-    
+         
       if(order.nope){
         this.createEmptyOrder().subscribe();
       }
@@ -116,11 +115,9 @@ export class CheckoutService {
   }
 
   addLineItem(lineItem: LineItem) {
-    
-    console.log('addLineItem');
-    
+
     const user = JSON.parse(localStorage.getItem('user'));
-    
+
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
