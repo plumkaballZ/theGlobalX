@@ -87,6 +87,7 @@ export class CheckoutService {
       return order;
     });
   }
+  
   deleteLineItem(lineItem: LineItem) {
 
     const user = JSON.parse(localStorage.getItem('user'));
@@ -98,10 +99,9 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-    console.log('delete');
-    console.log(this.currentOrder);
-    this.currentOrder.line_items.push(new LineItem().CardHolderX());
-    this.currentOrder.line_items.push(new LineItem().CardHolderX2());
+    this.currentOrder.line_items = [];
+    
+    var tmpLineItem = new LineItem();
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
@@ -112,6 +112,34 @@ export class CheckoutService {
     }))
       .map((res: Response) =>  {
         this.store.dispatch(this.actions.removeLineItemSuccess(lineItem));
+      });
+  }
+
+  addLineItem(lineItem: LineItem) {
+    
+    console.log('addLineItem');
+    
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+    var data ={
+      email : (user != null ? user.email : ''),
+      mobile: '',
+      password : (user != null ? user.password : ''),
+      password_confirmation : ''
+    }
+
+     this.currentOrder.line_items = [];
+     this.currentOrder.line_items.push(lineItem);
+
+    return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
+      {
+        "Order" : this.currentOrder, 
+        "glxUser" : data, 
+        "bill_address_attributes": null, 
+        "ship_address_attributes": null
+    }))
+      .map((res: Response) =>  {
+        console.log(res);
       });
   }
 
@@ -132,12 +160,11 @@ export class CheckoutService {
   }
   postTxt(){
   }
+  
   updateOrder(params) {
     
-    console.log('update order');
-
     const user = JSON.parse(localStorage.getItem('user'));
-    
+
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
@@ -147,7 +174,6 @@ export class CheckoutService {
 
 
     if(this.currentOrder.line_items.length == 0){
-      this.currentOrder.line_items.push(new LineItem().CardHolderX());
     }
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
@@ -162,7 +188,7 @@ export class CheckoutService {
         return this.store.dispatch(this.actions.updateOrderSuccess(order));
       });
   }
-
+  
   availablePaymentMethods() {
     return this.http.get_Web(
       `api/xPaymentMode`

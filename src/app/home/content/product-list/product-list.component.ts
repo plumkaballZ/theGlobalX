@@ -5,6 +5,7 @@ import { CheckoutActions } from './../../../checkout/actions/checkout.actions';
 import { AppState } from './../../../interfaces';
 import { Store } from '@ngrx/store';
 import { Product } from './../../../core/models/product';
+import { LineItem } from './../../../core/models/line_item';
 import { environment } from './../../../../environments/environment';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -17,13 +18,12 @@ export class ProductListComponent implements OnInit {
   @Input() products;
   @Input('taxonIds') selectedTaxonIds;
   @Input() toggleLayout;
-
+  
   constructor(
     private checkoutService: CheckoutService,
     private store: Store<AppState>,
-    private checkoutActions: CheckoutActions) {
-
-    }
+    private checkoutActions: CheckoutActions) { }
+  
     ngOnInit() {}
 
   getProductImageUrl(url) {
@@ -31,8 +31,17 @@ export class ProductListComponent implements OnInit {
   }
 
   addToCart(product: Product) {
+
     const variant_id = product.master.id;
     this.store.dispatch(this.checkoutActions.addToCart(product));
+    
+
+    var _line = new LineItem();
+    _line.variant_id = product.id;
+    _line.single_display_amount = 10;
+    _line.quantity = 1;
+
+    this.checkoutService.addLineItem(_line).subscribe();
   }
   getMargin() {
     return this.toggleLayout.size === 'COZY' ? '0 15px 20px 0' : '0 80px 20px 0';
