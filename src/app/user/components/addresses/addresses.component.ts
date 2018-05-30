@@ -45,6 +45,7 @@ export class AddressesComponent implements OnInit {
     this.showAdrs$ = true;
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
+        
         this.userService.getAddrs(
           JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
             response => {
