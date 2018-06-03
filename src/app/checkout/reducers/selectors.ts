@@ -21,6 +21,7 @@ export function fetchOrderNumber(state: CheckoutState) {
 }
 
 export function fetchTotalCartItems(state: CheckoutState) {
+  console.log(state.totalCartItems);
   return state.totalCartItems;
 }
 

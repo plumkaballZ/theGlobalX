@@ -77,16 +77,7 @@ export class AddressService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
-        this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
       });
-
-    // return this.http.post_Web(
-    //   `api/xOrder/updateOrder`,
-    //   params
-    // ).map((res) => {
-    //   const order = res.json();
-    //   this.store.dispatch(this.actions.updateOrderSuccess(order));
-    // });
   }
 
 

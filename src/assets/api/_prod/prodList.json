@@ -2,9 +2,9 @@
   "products":[  
      {  
         "id":1,
-        "name":"The Global X",
+        "name":"The Global X cardholder By Shevlin",
         "description":"By Shevlin",
-        "price":"00,00",
+        "price":"449,95",
         "display_price":"49,95 €",
         "available_on":"2012-10-17T03:43:57Z",
         "slug":"theglobalx",
@@ -116,9 +116,9 @@
 
      {  
         "id":2,
-        "name":"XBelt",
+        "name":"Belt By Shevlin",
         "description":"By Shevlin",
-        "price":"00,00",
+        "price":"399,95",
         "display_price":"49,95 €",
         "available_on":"2012-10-17T03:43:57Z",
         "slug":"xbelt",
@@ -231,9 +231,9 @@
 
      {  
         "id":3,
-        "name":"Keyhanger X",
+        "name":"Keyhanger By Shevlin",
         "description":"By Shevlin",
-        "price":"00,00",
+        "price":"149,95",
         "display_price":"49,95 €",
         "available_on":"2012-10-17T03:43:57Z",
         "slug":"keyhangerx",

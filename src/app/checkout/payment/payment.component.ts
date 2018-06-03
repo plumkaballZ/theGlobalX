@@ -3,7 +3,7 @@ import { CheckoutService } from './../../core/services/checkout.service';
 import { CheckoutActions } from './../actions/checkout.actions';
 import { getTotalCartValue, getOrderNumber, getTotalCartItems, getShipAddress } from './../reducers/selectors';
 import { AppState } from './../../interfaces';
-import { Router } from '@angular/router';
+import { Router, ChildrenOutletContexts } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -21,7 +21,6 @@ export class PaymentComponent implements OnInit {
   orderNumber$: Observable<number>;
 
   constructor(private store: Store<AppState>, private router: Router) {
-    
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
     this.address$ = this.store.select(getShipAddress);

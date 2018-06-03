@@ -4,6 +4,7 @@ import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
 import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
+import { termsComp } from './comps/terms/terms'
 
 export const routes: Routes = [
   {
@@ -27,5 +28,6 @@ export const routes: Routes = [
   },
   {path: 'fact', component: FactComp},
   {path: 'story', component: AboutComp},
-  {path: 'contact', component: ContactComp}
+  {path: 'contact', component: ContactComp},
+  {path: 'terms', component: termsComp}
 ];

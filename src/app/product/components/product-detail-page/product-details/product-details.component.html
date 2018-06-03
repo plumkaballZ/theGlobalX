@@ -9,23 +9,30 @@
                     
           <h1 class="hZ_001">
             <span>
-              <inline-translator [page]="'prodDetails'" [key]="'hz001'" [elementType]="'text'"></inline-translator>
+              {{product.name}}
             </span>
           </h1>
       
             <div class="pi1">
-              <ul class="ulz_001 centered">
-                <li>
-                  <inline-translator [page]="'prodDetails'" [key]="'ulz001'" [elementType]="'text'"></inline-translator>
-                </li>
-                <li>
-                  <inline-translator [page]="'prodDetails'" [key]="'ulz002'" [elementType]="'text'"></inline-translator>
-                </li>
-              </ul>
+                <ul class="ulz_001 centered" >
+                    <li *ngFor="let taxon of product.liArray" class="">
+                      {{taxon.li}}
+                    </li>
+                </ul>
             </div>
             
             <div class="pi_box">
              
+                <app-product-description 
+                [description]="product.description" 
+                class="row">
+              </app-product-description>  
+              
+              <app-product-description 
+              [description]="product.meta_description" 
+              class="row">
+            </app-product-description>  
+              
                     
                         <app-product-price-info [product]="product" class="row">
                         </app-product-price-info>
@@ -42,10 +49,7 @@
                           <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">ADD TO BAG</button>
                         </div>
                     
-                        <app-product-description 
-                          [description]="product.description" 
-                          class="row">
-                        </app-product-description>  
+                     
                    
             </div>
 

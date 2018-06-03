@@ -40,7 +40,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.showAdrs$ = false;
+    this.showAdrs$ = true;
 
       this.orderNumber$ = this.store.select(getOrderNumber);
       this.shipAddress$ = this.store.select(getShipAddress);
@@ -65,7 +65,6 @@ export class AddressComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
   checkoutToPayment() {
-    
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
         .do(() => { 
@@ -85,11 +84,8 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.stateSub$.unsubscribe();
   }
   c01_onSubmit(message:string){
-    
-    this.strMail= JSON.parse(localStorage.getItem('user')).email == null ? message : JSON.parse(localStorage.getItem('user')).email
+    this.strMail= JSON.parse(localStorage.getItem('user')) == null ? message : JSON.parse(localStorage.getItem('user')).email
     this.showAdrs$ = true;
-  
-
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
         this.userService.getAddrs(this.strMail).subscribe(

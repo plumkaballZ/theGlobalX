@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {UserService } from './../../user/services/user.service';
 import {InlineEditorComponent} from 'ng2-inline-editor';
@@ -18,7 +19,7 @@ export class FooterComponent implements OnInit {
   about001: string;
   about002: string;
 
-  constructor(private userService: UserService, private translate: TranslateService) { 
+  constructor(private userService: UserService, private translate: TranslateService, private router: Router) { 
     this.loadTxt();
   }
 
@@ -53,5 +54,9 @@ export class FooterComponent implements OnInit {
 
     this.userService.postTxt(jsonStr).subscribe(response => { });
   }
+  goToLink(str) {
+    this.router.navigateByUrl(str);
+  }
+
 
 }

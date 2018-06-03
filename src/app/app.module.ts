@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
+import { termsComp } from './comps/terms/terms';
 
 
 
@@ -53,7 +54,8 @@ export function createTranslateLoader(http: HttpClient) {
     CheckoutFooterComponent,
     FactComp,
     AboutComp,
-    ContactComp
+    ContactComp,
+    termsComp
   ],
   imports: [
     NgbModule,

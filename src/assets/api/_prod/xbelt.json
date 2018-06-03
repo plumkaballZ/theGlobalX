@@ -1,12 +1,12 @@
     {
       "id": 5,
-      "name": "XBelt",
-      "description": "XBelt",
-      "price": "299,99",
+      "name": "Belt By Shevlin",
+      "description": "Det første produkt i vores kommende kollektion “pure cognac”. Dette unikke bælte er chrom garvet under bæredygtige forhold og overholder alle EU regulationer.",
+      "price": "399,95",
       "display_price": "299,99 DKK",
       "available_on": "2012-10-17T03:43:57Z",
       "slug": "prod_01",
-      "meta_description": null,
+      "meta_description": "Vi har udviklet et bælte der ikke bare er bæredygtigt men samtidig utrolig smukt og klassisk i sit udtryk.",
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
@@ -124,5 +124,10 @@
           }
         }
       ],
-      "has_variants": false
+      "has_variants": false,
+      "liArray":[
+    {"li": "Bæredygtig chrom-garvet læder "},
+    {"li": "Håndlavet"},
+    {"li": "Ansvarlig"}
+  ]
     }

@@ -191,6 +191,7 @@ export class CheckoutService {
       `api/xPaymentMode`
     ).map((res) => {
       const payments = res.json();
+      console.log(payments);
       return payments;
     });
   }

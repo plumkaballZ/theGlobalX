@@ -42,12 +42,18 @@ export class PaymentModesListComponent implements OnInit {
   private fetchAllPayments() {
     this.checkoutService.availablePaymentMethods()
       .subscribe((payment) => {
+        
         this.paymentModes = payment.payment_methods;
+        this.paymentModes.splice(0, 1);
+        
         this.selectedMode = this.paymentService.setCODAsSelectedMode(this.paymentModes);
       });
   }
 
   makePayment() {
+    
+    console.log('make payment');
+
     const paymentModeId = this.selectedMode.id;
     this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)
       .do(() => {

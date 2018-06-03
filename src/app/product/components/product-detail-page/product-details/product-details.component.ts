@@ -44,6 +44,7 @@ export class ProductDetailsComponent implements OnInit {
                 this._checkoutService = checkoutService;
   }
   ngOnInit() {
+    console.log(this.product)
     this.description = this.product.description;
     this.images = this.product.master.images;
     this.variantId = this.product.master.id;

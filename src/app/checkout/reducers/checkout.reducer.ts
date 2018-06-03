@@ -9,7 +9,7 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
 
-   
+
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
         _totalCartItems = 0, _totalCartValue,
@@ -34,9 +34,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
             [lineItem.id]: lineItem
           });
         }, { });
-
-        console.log(payload);
-
+        
         return state.merge({
           orderNumber: _orderNumber,
           orderState: _orderState,
