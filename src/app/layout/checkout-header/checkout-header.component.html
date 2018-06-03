@@ -1,6 +1,11 @@
 <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">Shevlin</a>
+      <a class="navbar-brand" routerLink="/">Shevlin</a>
+  
+    <!-- <div class="col-md-12">
+      <a class="navbar-brand" routerLink="/">Even the smallest thing is packed for a King</a>
+  </div> -->
+
     <ol class="checkout-steps">
       <li class="step step1">
         <a [ngClass]="{'can-click': checkIfClickable('cart'), 'active': isActiveRoute('cart')}" [routerLink]="getRouterLink('cart')"><inline-translator [page]="'checkoutHeader'" [key]="'bag'" [elementType]="'text'"></inline-translator></a>
