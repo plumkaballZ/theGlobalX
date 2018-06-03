@@ -49,7 +49,7 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     
     this.addrService.createAddress(addressAttributes).subscribe(
       response => {
-        this.notify.emit("1");
+        this.notify.emit(this.getEmailFromUser());
       }
     );
  

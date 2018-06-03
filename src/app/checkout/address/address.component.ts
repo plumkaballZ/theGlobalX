@@ -29,6 +29,7 @@ export class AddressComponent implements OnInit, OnDestroy {
   addrs$: Observable<any[]>;
 
   showAdrs$ : boolean;
+  strMail: string;
 
 
   constructor(
@@ -49,6 +50,7 @@ export class AddressComponent implements OnInit, OnDestroy {
         this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
             this.userService.getAddrs(
+
               JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
                   if(response.length > 0) this.showAdrs$ = true;
@@ -63,13 +65,11 @@ export class AddressComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
   checkoutToPayment() {
-
+    
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
         .do(() => { 
           this.router.navigate(['/checkout', 'payment']);
-
-    
         })
         .subscribe();
     } else {
@@ -85,11 +85,14 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.stateSub$.unsubscribe();
   }
   c01_onSubmit(message:string){
+    
+    this.strMail= JSON.parse(localStorage.getItem('user')).email == null ? message : JSON.parse(localStorage.getItem('user')).email
     this.showAdrs$ = true;
+  
+
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
-        this.userService.getAddrs(
-          JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+        this.userService.getAddrs(this.strMail).subscribe(
             response => {
               if(response.length > 0) this.showAdrs$ = true;
               else this.showAdrs$ = false;

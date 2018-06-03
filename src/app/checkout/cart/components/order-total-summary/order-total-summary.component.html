@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
     <div class="order-total-summary rect">
    
@@ -23,3 +24,27 @@
         </div>
       </div>
 </div>
+=======
+<div class="order-total-summary">
+   
+    <div class="order-summary-span">
+      <div class="bag-total">
+        <span>Bag Total</span>
+        <span class="value">${{totalCartValue | number:'1.2-2'}}</span>
+      </div>
+
+      <div class="shipping">
+        <span>Delivery</span>
+        <span class="shipping-fee c-green">FREE</span>
+      </div>
+    </div>
+    <div class="order-total footer">
+      <div class="place-order">
+        <button (click)="placeOrder()" class="order-btn">PLACE ORDER</button>
+      </div>
+      <div class="total-amount">
+        <span class="total-rupees">${{totalCartValue | number:'1.2-2'}}</span>
+      </div>
+    </div>
+  </div>
+>>>>>>> eeeb787fdcf8caeba29980764e17dc77bfee6ff8

@@ -22,9 +22,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
-        _totalCartItems = payload.total_quantity;
-        _totalCartValue = 10;
-        
+        _totalCartItems = _lineItemIds.length;
+
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
 
@@ -35,6 +34,8 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
             [lineItem.id]: lineItem
           });
         }, { });
+
+        console.log(payload);
 
         return state.merge({
           orderNumber: _orderNumber,

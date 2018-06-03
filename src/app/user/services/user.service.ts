@@ -76,7 +76,7 @@ export class UserService {
   }
   getAddr(adrId)
   {
-    return this.http.get_Web('api/xAddress', {params: {id: adrId}}).map((res: Response) =>  {return res.json();});
+    return this.http.get_Web('api/xAddress', {params: { id: adrId }}).map((res: Response) =>  {return res.json();});
   }
   updateUser(params) {
     return this.http.post_Web('api/xUser/UpdateUser', JSON.stringify({

@@ -24,9 +24,9 @@ export class AddressService {
       'address2': ['', Validators.required],
       'city': ['', Validators.required],
       'phone': ['', Validators.required],
-      'zipcode': [10001, Validators.required],
-      'state_id': [3561, Validators.required],
-      'country_id': [232, Validators.required]
+      'zipcode': ['', Validators.required],
+      'state_id': ['', Validators.required],
+      'country_id': ['', Validators.required]
     });
   }
   initEmailForm() {
@@ -55,6 +55,10 @@ export class AddressService {
   }
 
   createAddress(params) {
+    
+    console.log('createAddrs');
+    console.log(params);
+
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
