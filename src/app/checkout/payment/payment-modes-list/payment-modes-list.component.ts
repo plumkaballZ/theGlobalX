@@ -1,4 +1,5 @@
 import { getAuthStatus } from './../../../auth/reducers/selectors';
+import { getTotalCartValue, getOrderNumber, getTotalCartItems, getShipAddress } from './../../reducers/selectors';
 import { CheckoutActions } from './../../actions/checkout.actions';
 import { AppState } from './../../../interfaces';
 import { Store } from '@ngrx/store';
@@ -46,9 +47,17 @@ export class PaymentModesListComponent implements OnInit {
       });
   }
   makePayment() {
-    
+    var tmpAddr;
+    this.store.select(getShipAddress).subscribe((addr) => {
+      tmpAddr = addr;
+      
+    });
+    console.log(tmpAddr)
+
     this.checkoutService.currentOrder.payment_state = 0;
+    this.checkoutService.currentOrder.ship_address = tmpAddr;
     this.store.dispatch(this.checkoutActions.updateOrder(""));
+    this.router.navigate(['/user', 'orders']);
 
     // const paymentModeId = this.selectedMode.id;
     // this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)

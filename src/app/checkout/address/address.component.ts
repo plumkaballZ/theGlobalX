@@ -84,8 +84,12 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.stateSub$.unsubscribe();
   }
   c01_onSubmit(message:string){
+
     this.strMail= JSON.parse(localStorage.getItem('user')) == null ? message : JSON.parse(localStorage.getItem('user')).email
+    this.strMail = this.strMail == null ? message : this.strMail;
+    
     this.showAdrs$ = true;
+
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
         this.userService.getAddrs(this.strMail).subscribe(

@@ -6,7 +6,7 @@
           <div class="row">
 
             <div class="col-md-4">
-              <small>SHIPMENT</small>
+              <small>TOTAL</small>
               <h5>
                 <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
                 {{order.total}}
@@ -16,7 +16,7 @@
             <div class="col-md-4">
               <small>STATUS</small>
               <h5 class="status">
-                {{order.shipment_state | uppercase}}
+                {{order.payment_state | uppercase}}
               </h5>
             </div>
             
@@ -33,26 +33,15 @@
       <hr>
       <div class='row' *ngFor="let line_item of order.line_items">
         <br>
-
-        <!-- <div class="col-md-2">
-          <img class="line_item_image" [src]="getProductImageUrl(line_item)" alt="Line Item">
-        </div> -->
-        
-        <!-- <div class="col-md-3">
-          <h5 class="ptitle">
-            <a [routerLink]="['/product', line_item.variant.slug]">
-              <span class="text-uppercase text-primary">{{line_item.variant.name}}</span>
-            </a>
-          </h5>
-        </div> -->
+        id: {{line_item.id}}
 
         <div class="col-md-3">
           <h5 class="strong">
             <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            {{line_item.total}}
+            quantity: {{line_item.quantity}}
           </h5>
           <small>
-            MRP: 
+            Price: 
             <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
             {{line_item.price}}
           </small><br/>
@@ -80,15 +69,16 @@
         <h5>Order No: {{order.id}}</h5>
       </div>
       
-      <!-- <div class="col-md-12">
+      <br>
+      <div class="col-md-12">
         <address>
-          <strong>{{order.ship_address.full_name}}.</strong><br>
+          <strong>{{order.ship_address.firstname}}</strong><br>
           {{order.ship_address.address1}}<br>
           {{order.ship_address.address2}}<br>
-          {{order.ship_address.city}}, {{order.ship_address.zipcode}}<br>
-          <abbr title="Phone">P:</abbr> {{order.ship_address.phone}}
+          {{order.ship_address.city}}{{order.ship_address.zipcode}}<br>
+          <abbr title="Phone">Phone:</abbr> {{order.ship_address.phone}}
         </address>
-      </div> -->
+      </div>
 
       <dl class="col-md-12">
         <dt>

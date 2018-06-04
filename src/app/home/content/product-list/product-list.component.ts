@@ -39,6 +39,7 @@ export class ProductListComponent implements OnInit {
     var _line = new LineItem();
     _line.variant_id = product.id;
     _line.single_display_amount = parseInt(product.price, 10)
+    _line.display_amount = parseInt(product.price, 10)
     _line.quantity = 1;
 
     this.checkoutService.addLineItem(_line).subscribe();

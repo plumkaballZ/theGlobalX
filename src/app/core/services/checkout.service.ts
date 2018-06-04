@@ -31,6 +31,7 @@ export class CheckoutService {
       const lineItem: LineItem = res.json();
       lineItem.prod = prod;
       lineItem.id = prod.id;
+      lineItem.display_amount = parseInt(prod.price, 10);
       lineItem.total = parseInt(prod.price, 10);
       return lineItem;
     });

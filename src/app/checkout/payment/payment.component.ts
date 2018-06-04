@@ -31,6 +31,7 @@ export class PaymentComponent implements OnInit {
       if(tot == 0) this.router.navigate(['/checkout', 'cart']);
       else {
         this.store.select(getShipAddress).subscribe((addr) => {
+          console.log(addr);
           if(!addr)  this.router.navigate(['/checkout', 'address']);
         });
       }
