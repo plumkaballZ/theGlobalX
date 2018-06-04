@@ -13,7 +13,6 @@
 </div>
 
 <div class="pay-btn-wrap">
-	<!-- <button (click)="onPay()" class="pay-btn">PAY ON DELIVERY</button> -->
-	<PayPalComp (click)="onPay()"></PayPalComp>
+	<PayPalComp [totalCartItems]="totalCartItems$ | async" [totalCartValue]="totalCartValue$ | async" (click)="onPay()"></PayPalComp>
 </div>
 

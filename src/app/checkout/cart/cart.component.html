@@ -9,13 +9,12 @@
                     <div class="checkout-header-container">
                       <div class="checkout-header">
                         <span class="text">
-                          <inline-translator [page]="'cart'" [key]="'myBag'" [elementType]="'text'"></inline-translator>
                           ({{totalCartItems$ | async}})
                         </span>
                       </div>
                       
                       <div class="total-price">
-                          <inline-translator [page]="'cart'" [key]="'total'" [elementType]="'text'"></inline-translator>
+                          ({{totalCartValue$ | async}})
                       </div>
                     </div>
                     <div class="prod-set">

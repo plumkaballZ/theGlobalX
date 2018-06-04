@@ -30,41 +30,40 @@ export class PaymentModesListComponent implements OnInit {
         this.isAuthenticated = auth;
       });
   }
-
   ngOnInit() {
     this.fetchAllPayments();
   }
-
   selectedPaymentMode(mode) {
     this.selectedMode = mode;
   }
-
   private fetchAllPayments() {
     this.checkoutService.availablePaymentMethods()
       .subscribe((payment) => {
         
         this.paymentModes = payment.payment_methods;
-        this.paymentModes.splice(0, 1);
         
         this.selectedMode = this.paymentService.setCODAsSelectedMode(this.paymentModes);
       });
   }
-
   makePayment() {
     
-    console.log('make payment');
+    this.checkoutService.currentOrder.payment_state = 0;
+    this.store.dispatch(this.checkoutActions.updateOrder(""));
 
-    const paymentModeId = this.selectedMode.id;
-    this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)
-      .do(() => {
-        this.store.dispatch(this.checkoutActions.orderCompleteSuccess());
-        this.redirectToNewPage();
-        this.checkoutService.createEmptyOrder()
-          .subscribe();
-      })
-      .subscribe();
+    // const paymentModeId = this.selectedMode.id;
+    // this.checkoutService.createNewPayment(paymentModeId, this.paymentAmount)
+
+    // var currOrder = this.checkoutService.currentOrder;
+    // currOrder.state = 1;
+
+      // .do(() => {
+      //   this.store.dispatch(this.checkoutActions.orderCompleteSuccess());
+      //   this.redirectToNewPage();
+      //   this.checkoutService.createEmptyOrder()
+      //     .subscribe();
+      // })
+      // .subscribe();
   }
-
   private redirectToNewPage() {
     if (this.isAuthenticated) {
       this.router.navigate(['/user', 'orders', 'detail', this.orderNumber]);

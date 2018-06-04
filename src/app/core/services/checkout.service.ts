@@ -31,6 +31,7 @@ export class CheckoutService {
       const lineItem: LineItem = res.json();
       lineItem.prod = prod;
       lineItem.id = prod.id;
+      lineItem.total = parseInt(prod.price, 10);
       return lineItem;
     });
   }
@@ -88,9 +89,9 @@ export class CheckoutService {
   }
   
   deleteLineItem(lineItem: LineItem) {
-
+    
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
@@ -98,8 +99,10 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-    this.currentOrder.line_items = [];
-    
+    this.currentOrder.line_items.forEach(element => {
+      if(element.id == lineItem.id) element.delStr = "true";
+    });
+
     var tmpLineItem = new LineItem();
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(

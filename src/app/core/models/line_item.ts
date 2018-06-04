@@ -18,6 +18,7 @@ export class LineItem {
   public prod: Product;
   public size : string;
   public color: string;
+  public delStr : string;
 
   constructor(){
   }

@@ -13,12 +13,12 @@
 </div>
 <div class="mini-bag-summary">
   <div class="items">
-      {{totalItems}}
+      ({{totalCartItems$ | async}})
   </div>
   <div class="order-total">
     <span>{{orderTotal001}}</span>
     <span class="value">
-        {{orderTotal002}}
+        ({{totalCartValue$ | async}})
       </span>
   </div>
   <div class="shipping">
@@ -27,16 +27,6 @@
   </div>
 </div>
 <div class="pay-lbl-total">
-  <span class="pay-lbl">{{totalPay}}</span>
-  <span class="pay-total">{{orderTotal002}}</span>
+  <span class="pay-lbl"></span>
+  <span class="pay-total">({{totalCartValue$ | async}})</span>
 </div>
-
-<!-- <inline-translator [page]="'del'" [key]="'delSpeed'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'stdDel'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'freeDel'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'totalItems'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'orderTotal001'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'orderTotal002'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'del001'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'del002'" [elementType]="'text'"></inline-translator>
-<inline-translator [page]="'del'" [key]="'totalPay'" [elementType]="'text'"></inline-translator> -->

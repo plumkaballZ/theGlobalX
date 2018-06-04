@@ -32,6 +32,7 @@ export class DeliveryOptionsComponent implements OnInit {
   order;
   selectedShippingRate;
   shippingRates = [];
+  
   totalCartValue$: Observable<number>;
   totalCartItems$: Observable<number>;
 
