@@ -97,15 +97,10 @@
     "quant": "Antal"
   },
   "orderTotal": {
-    "bagTotal": "Total på order",
-    "total001": "399,99 DKK",
-    "bag001": "Pris",
-    "cupon001": "Kuponer",
-    "cupon002": "Tilføj kupon",
-    "cupon003": "Kupon rabat",
-    "delivery001": "Levering",
-    "delivery002": "FRI",
-    "order001": "Bestil"
+    "bagTotal": "Total i tasken",
+    "delivery": "Forsendelse",
+    "placeOrder": "BESTIL",
+    "orderTotal":"Total på order"
   },
   "addrs": {
     "addNew": "Tilføj ny en adresse",

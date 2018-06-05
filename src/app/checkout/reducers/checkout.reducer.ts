@@ -48,6 +48,10 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
 
+      console.log('ADD_TO_CART_SUCCESS');
+
+      console.log(payload);
+
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
       

@@ -1,6 +1,5 @@
 .order-total-summary {
 	&:before {
-		content: '';
     text-align: left;
     width: 100%;
     display: block;
@@ -28,7 +27,6 @@
 		}
 		.apply-coupon:after {
       font-size: 14px;
-			content: 'Apply Coupon';
 			position: absolute;
 			background: #fff;
 			color: #526cd0;
@@ -79,7 +77,6 @@
     padding: none;
     border-bottom: 1px solid #eaeaec;
     &:before {
-      content: 'Price Details';
       position: absolute;
       top: -32px;
       font-size: 12px;
@@ -161,7 +158,6 @@
         font-family: "Whitney-semi-bold";
       }
       &:after {
-        content: 'Order Total';
         font-size: 15px;
         top: 0;
         position: absolute;

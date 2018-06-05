@@ -98,11 +98,10 @@
     "total": "49,95 €"
   },
   "orderTotal": {
-    "delivery002": "FREE",
-    "total001": "49,95 €",
-    "order001": "Place order",
-    "bag001": "Total in bag",
-    "delivery001": "Delivery"
+    "bagTotal": "Bag Total",
+    "delivery": "Delivery",
+    "placeOrder": "PLACE ORDER",
+    "orderTotal":"Order Total"
   },
   "lineItem": {
     "item1": "The Global X by Shevlin.co",

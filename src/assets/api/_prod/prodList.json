@@ -2,7 +2,7 @@
   "products":[  
      {  
         "id":1,
-        "name":"The Global X cardholder By Shevlin",
+        "name":"The Global X cardholder",
         "description":"By Shevlin",
         "price":"449,95 DKK",
         "price_en":"$ 000",
@@ -117,7 +117,7 @@
 
      {  
         "id":2,
-        "name":"Belt By Shevlin",
+        "name":"Belt",
         "description":"By Shevlin",
         "price":"399,95 DKK",
         "price_en":"$ 000",
@@ -233,7 +233,7 @@
 
      {  
         "id":3,
-        "name":"Keyhanger By Shevlin",
+        "name":"Keyhanger",
         "description":"By Shevlin",
         "price":"149,95 DKK",
         "price_en":"$ 000",
@@ -348,12 +348,12 @@
 
      {  
       "id":4,
-      "name":"Keyhanger X",
+      "name":"Bamboo socks",
       "description":"By Shevlin",
-      "price":"00,00",
+      "price":"149,95 DKK",
       "display_price":"49,95 €",
       "available_on":"2012-10-17T03:43:57Z",
-      "slug":"ruby-on-rails-baseball-jersey",
+      "slug":"xsocks",
       "meta_description":null,
       "meta_keywords":null,
       "shipping_category_id":1,
@@ -389,8 +389,8 @@
                "id":1,
                "position":1,
                "attachment_content_type":"image/jpg",
-               "large_url":"/assets/api/_prod/theglobalx/21.jpg",
-               "small_url":"/assets/api/_prod/theglobalx/21.jpg",
+               "large_url":"/assets/api/_prod/xsocks/1.jpg",
+               "small_url":"/assets/api/_prod/xsocks/1.jpg",
                "type":"Spree::Image",
                "attachment_updated_at":null,
                "attachment_width":360,

@@ -1,7 +1,7 @@
 {  
          "id":3,
-         "name":"Ruby on Rails Baseball Jersey",
-         "description":"Ullam delectus provident et sapiente repellendus laboriosam dolorem dicta. Nemo id unde cupiditate distinctio earum beatae id. Quia in aut voluptates ut quis quo vitae quos. Minima doloremque aut quidem ratione et repudiandae iusto vel.",
+         "name":"Bamboo socks by Shevlin",
+         "description":"description pending...",
          "price":"19.99",
          "display_price":"$19.99",
          "available_on":"2018-05-04T12:34:50.508Z",
@@ -29,12 +29,7 @@
             "track_inventory":true,
             "option_values":[  
               {  
-                "id":1,
-                "name":"Antique",
-                "presentation":"Antique",
-                "option_type_name":"Color",
-                "option_type_id":1,
-                "option_type_presentation":"Color"
+              
              }
             ],
             "images":[  
@@ -50,8 +45,8 @@
                   "alt":null,
                   "viewable_type":"Spree::Variant",
                   "viewable_id":3,
-                  "small_url": "/assets/api/_prod/theglobalx/21.jpg",
-                  "large_url": "/assets/api/_prod/theglobalx/21.jpg"
+                  "small_url": "/assets/api/_prod/xsocks/1.jpg",
+                  "large_url": "/assets/api/_prod/xsocks/1.jpg"
                },
                {  
                   "id":25,
@@ -65,24 +60,9 @@
                   "alt":null,
                   "viewable_type":"Spree::Variant",
                   "viewable_id":3,
-                  "small_url": "/assets/api/_prod/theglobalx/22.jpg",
-            	"large_url": "/assets/api/_prod/theglobalx/22.jpg"
-               },
-               {
-                  "id": 3,
-                  "position": 3,
-                  "attachment_content_type": "image/jpg",
-                  "attachment_file_name": "ror_tote.jpeg",
-                  "type": "Spree::Image",
-                  "attachment_updated_at": null,
-                  "attachment_width": 360,
-                  "attachment_height": 360,
-                  "alt": null,
-                  "viewable_type": "Spree::Variant",
-                  "viewable_id": 1,
-                       "small_url": "/assets/api/_prod/theglobalx/23.jpg",
-                        "large_url": "/assets/api/_prod/theglobalx/23.jpg"
-                }
+                  "small_url": "/assets/api/_prod/xsocks/2.jpg",
+            	"large_url": "/assets/api/_prod/xsocks/2.jpg"
+               }
             ],
             "display_price":"$19.99",
             "options_text":"",
@@ -107,12 +87,7 @@
                "track_inventory":true,
                "option_values":[  
                   {  
-                     "id":5,
-                     "name":"Silver",
-                     "presentation":"Silver",
-                     "option_type_name":"Color",
-                     "option_type_id":2,
-                     "option_type_presentation":"Color"
+                    
                   }
                ],
                "images":[  
@@ -169,12 +144,7 @@
                   "track_inventory":true,
                   "option_values":[  
                      {  
-                        "id":1,
-                        "name":"Antique",
-                        "presentation":"Antique",
-                        "option_type_name":"Color",
-                        "option_type_id":1,
-                        "option_type_presentation":"Color"
+                      
                      }
                   ],
                   "images":[  

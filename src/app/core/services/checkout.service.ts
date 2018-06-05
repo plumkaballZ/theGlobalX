@@ -29,10 +29,16 @@ export class CheckoutService {
   createNewLineItem(prod: Product) {  
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem = res.json();
+      
       lineItem.prod = prod;
       lineItem.id = prod.id;
       lineItem.display_amount = parseInt(prod.price, 10);
       lineItem.total = parseInt(prod.price, 10);
+      lineItem.price  = prod.price, 10;
+
+      console.log('createNewLineItem');
+      console.log(lineItem);
+
       return lineItem;
     });
   }

@@ -2,20 +2,27 @@
    
     <div class="order-summary-span">
       <div class="bag-total">
-        <span>Bag Total</span>
+        <span>
+          {{pageTranslator.bagTotal}}
+        </span>
         <span class="value">${{totalCartValue | number:'1.2-2'}}</span>
       </div>
 
       <div class="shipping">
-        <span>Delivery</span>
-        <span class="shipping-fee c-green">FREE</span>
+        <span>
+            {{pageTranslator.delivery}}
+        </span>
+        <span class="shipping-fee c-green">40 DKK</span>
       </div>
     </div>
     <div class="order-total footer">
       <div class="place-order">
-        <button (click)="placeOrder()" class="order-btn">PLACE ORDER</button>
+        <button (click)="placeOrder()" class="order-btn">
+          {{pageTranslator.placeOrder}}
+        </button>
       </div>
       <div class="total-amount">
+        <span class="pull-left"> {{pageTranslator.orderTotal}}</span>
         <span class="total-rupees">${{totalCartValue | number:'1.2-2'}}</span>
       </div>
     </div>

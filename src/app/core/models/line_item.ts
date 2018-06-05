@@ -12,6 +12,7 @@ export class LineItem {
   public price: string;
   public single_display_amount: number;
   public total: number;
+  public _total: number;
   public display_amount: number;
   public variant_id: number;
   public variant: Variant;
