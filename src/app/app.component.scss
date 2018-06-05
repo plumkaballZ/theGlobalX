@@ -20,8 +20,8 @@ body { overflow:hidden; }
 	height: 50%;
 	top: 0;
 	left: 0;
-	position: absolute;
-	background-image: url("https://cdn.shopify.com/s/files/1/1100/0520/files/Mens_Collection_Banner_option_1_2048x2048.jpg?v=1494018606");
+  position: absolute;
+  background-color:#f2f2f2;
 	background-attachment: scroll;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -31,13 +31,20 @@ body { overflow:hidden; }
 	z-index: 2;
 	text-align: center;
 }
+
+.upperPicTxt{
+  font-family: 'Poiret One';
+    font-size: 200px;
+    padding-top: 25px;
+}
+
 .lowerPic{
 	width: 100%;
 	height: 50%;
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	background-image: url("http://bsnscb.com/data/out/45/27123155-cotton-field-wallpapers.jpeg");
+  left: 0;
+  background-color: #101010;
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center top;
@@ -139,7 +146,7 @@ $lightGray: #8f8f8f;
 .super-button {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   z-index: 200;
   opacity: 0.8;
   @include translateXY(-50%, -50%);
@@ -192,14 +199,14 @@ $lightGray: #8f8f8f;
 
 .button-line {
   position: absolute;
-  top: -webkit-calc(50% - 2px);
-  top: -moz-calc(50% - 2px);
-  top: calc(50% - 2px);
+  top: -webkit-calc(55% - 2px);
+  top: -moz-calc(55% - 2px);
+  top: calc(55% - 2px);
   left: 0;
   z-index: 200;
-  width: -webkit-calc(32% - 100px);
-  width: -moz-calc(32% - 100px);
-  width: calc(32% - 100px);
+  width: -webkit-calc(42% - 100px);
+  width: -moz-calc(42% - 100px);
+  width: calc(42% - 100px);
   height: 4px;
   background-color: rgba(143,143,143, 0.5);
   @include transition(.5s);
@@ -210,9 +217,9 @@ $lightGray: #8f8f8f;
   }
   
   &.right {
-    left: -webkit-calc(68% + 100px);
-    left: -moz-calc(68% + 100px);
-    left: calc(68% + 100px); 
+    left: -webkit-calc(58% + 100px);
+    left: -moz-calc(58% + 100px);
+    left: calc(58% + 100px); 
   }
   .inner {
     width: 100%;
