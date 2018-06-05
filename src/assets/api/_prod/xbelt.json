@@ -3,6 +3,7 @@
       "name": "Belt By Shevlin",
       "description": "Det første produkt i vores kommende kollektion “pure cognac”. Dette unikke bælte er chrom garvet under bæredygtige forhold og overholder alle EU regulationer.",
       "price": "399,95",
+      "price_en": "$ 000",
       "display_price": "299,99 DKK",
       "available_on": "2012-10-17T03:43:57Z",
       "slug": "prod_01",

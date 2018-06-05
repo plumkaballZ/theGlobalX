@@ -38,7 +38,7 @@ export class PayPalComp implements OnInit {
             payment: {
               transactions: [
                 {
-                  amount: { total: totalValue, currency: 'USD' }
+                  amount: { total: totalValue, currency: 'DKK' }
                 }
               ]
             }

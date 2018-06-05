@@ -3,13 +3,14 @@
     <h4 title="men casual shirts" class="q">Displaying available products</h4>
     <span>&nbsp;</span>
   </div>
-
+  
   <div class="options">
     <ul class="img-size">
       <label>View:</label>
       <li (click)="toggleView('COMPACT')" [ngClass]="{'big': true, 'selected': isBigSelected()}"></li>
       <li (click)="toggleView('COZY')" [ngClass]="{'small': true, 'selected': isSmallSelected()}"></li>
     </ul>
+
     <ul class="sort">
       <label>Sort:</label>
       <li data-sortkey=":popularity">Popular</li>
@@ -20,5 +21,6 @@
         <li data-sortkey=":high">High</li>
       </label>
     </ul>
+
   </div>
 </div> 

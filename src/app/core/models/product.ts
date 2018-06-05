@@ -14,6 +14,7 @@ export class Product {
   name: string;
   description: string;
   price: string;
+  price_en: string;
   display_price: string;
   available_on: string;
   slug: string;
