@@ -1,0 +1,285 @@
+    {
+      "id": 4,
+      "name": "The Global X cardholder By Shevlin",
+      "description": "Vores absolut første produkt. Kortholderne er lavet med 100% vegetabilsk garvet læder. Læderet laver over tid sin egen unikke patina, alt afhængig af hvordan den bruges. Kortholderne er dobbeltsidet og kan holde 8-10 kort samt sedler.",
+      "price": "449,95",
+      "price_en": "$ 000",
+      "display_price": "299,99 DKK",
+      "available_on": "2012-10-17T03:43:57Z",
+      "slug": "prod_01",
+      "meta_description": "Hver og én er udført i hånden og vi har benyttet YKK lynlåse på begge modeller for at sikre den absolut højeste kvalitet. ",
+      "meta_keywords": null,
+      "shipping_category_id": 1,
+      "taxon_ids": [
+        1
+      ],
+      "total_on_hand": 300,
+      "master": {
+        "id": 1,
+        "name": "CardHolderX",
+        "sku": "ROR-00011",
+        "price": "299,99",
+        "weight": null,
+        "height": null,
+        "width": null,
+        "depth": null,
+        "is_master": true,
+        "slug": "CardHolderX",
+        "description": "CardHolderX",
+        "track_inventory": true,
+        "cost_price": null,
+        "option_values": [
+          {
+            "id":1,
+            "name":"Antique",
+            "presentation":"Antique",
+            "option_type_name":"Color",
+            "option_type_id":1,
+            "option_type_presentation":"Color"
+          }
+        ],
+        "images": [
+          {
+            "id": 1,
+            "position": 1,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+            "small_url": "/assets/api/_prod/theglobalx/21.jpg",
+            "large_url": "/assets/api/_prod/theglobalx/21.jpg"
+          },
+          {
+            "id": 2,
+            "position": 2,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+              "small_url": "/assets/api/_prod/theglobalx/22.jpg",
+            	"large_url": "/assets/api/_prod/theglobalx/22.jpg"
+          },
+          {
+            "id": 3,
+            "position": 3,
+            "attachment_content_type": "image/jpg",
+            "attachment_file_name": "ror_tote.jpeg",
+            "type": "Spree::Image",
+            "attachment_updated_at": null,
+            "attachment_width": 360,
+            "attachment_height": 360,
+            "alt": null,
+            "viewable_type": "Spree::Variant",
+            "viewable_id": 1,
+           	"small_url": "/assets/api/_prod/theglobalx/23.jpg",
+            	"large_url": "/assets/api/_prod/theglobalx/23.jpg"
+          }
+        ],
+        "display_price": "$15.99",
+        "options_text": "(Size: small, Colour: red)",
+        "in_stock": true,
+        "is_backorderable": true,
+        "is_orderable": true,
+        "total_on_hand": 10,
+        "is_destroyed": false
+      },
+      "variants": [
+        {  
+               "id":17,
+               "name":"Ruby on Rails Baseball Jersey",
+               "sku":"ROR-00001",
+               "price":"19.99",
+               "weight":"0.0",
+               "height":null,
+               "width":null,
+               "depth":null,
+               "is_master":false,
+               "slug":"ruby-on-rails-baseball-jersey",
+               "description":"Ullam delectus provident et sapiente repellendus laboriosam dolorem dicta. Nemo id unde cupiditate distinctio earum beatae id. Quia in aut voluptates ut quis quo vitae quos. Minima doloremque aut quidem ratione et repudiandae iusto vel.",
+               "track_inventory":true,
+               "option_values":[  
+                  {  
+                     "id":5,
+                     "name":"Silver",
+                     "presentation":"Silver",
+                     "option_type_name":"Color",
+                     "option_type_id":2,
+                     "option_type_presentation":"Color"
+                  }
+               ],
+               "images":[  
+                  {
+                        "id": 1,
+                        "position": 1,
+                        "attachment_content_type": "image/jpg",
+                        "attachment_file_name": "ror_tote.jpeg",
+                        "type": "Spree::Image",
+                        "attachment_updated_at": null,
+                        "attachment_width": 360,
+                        "attachment_height": 360,
+                        "alt": null,
+                        "viewable_type": "Spree::Variant",
+                        "viewable_id": 1,
+                        "small_url": "/assets/api/_prod/theglobalx/11.jpg",
+                        "large_url": "/assets/api/_prod/theglobalx/11.jpg"
+                      },
+                      {
+                        "id": 2,
+                        "position": 2,
+                        "attachment_content_type": "image/jpg",
+                        "attachment_file_name": "ror_tote.jpeg",
+                        "type": "Spree::Image",
+                        "attachment_updated_at": null,
+                        "attachment_width": 360,
+                        "attachment_height": 360,
+                        "alt": null,
+                        "viewable_type": "Spree::Variant",
+                        "viewable_id": 1,
+                          "small_url": "/assets/api/_prod/theglobalx/12.jpg",
+                              "large_url": "/assets/api/_prod/theglobalx/12.jpg"
+                      }
+               ],
+               "display_price":"$19.99",
+               "options_text":"Size: S, Color: Red",
+               "in_stock":true,
+               "is_backorderable":true,
+               "total_on_hand":10,
+               "is_destroyed":false
+            },
+            {  
+                  "id":18,
+                  "name":"Ruby on Rails Baseball Jersey",
+                  "sku":"ROR-00001",
+                  "price":"19.99",
+                  "weight":"0.0",
+                  "height":null,
+                  "width":null,
+                  "depth":null,
+                  "is_master":false,
+                  "slug":"ruby-on-rails-baseball-jersey",
+                  "description":"Ullam delectus provident et sapiente repellendus laboriosam dolorem dicta. Nemo id unde cupiditate distinctio earum beatae id. Quia in aut voluptates ut quis quo vitae quos. Minima doloremque aut quidem ratione et repudiandae iusto vel.",
+                  "track_inventory":true,
+                  "option_values":[  
+                     {  
+                        "id":1,
+                        "name":"Antique",
+                        "presentation":"Antique",
+                        "option_type_name":"Color",
+                        "option_type_id":1,
+                        "option_type_presentation":"Color"
+                     }
+                  ],
+                  "images":[  
+                    {  
+                      "id":24,
+                      "position":1,
+                      "attachment_content_type":"image/jpeg",
+                      "attachment_file_name":"ror_baseball.jpeg",
+                      "type":"Spree::Image",
+                      "attachment_updated_at":"2018-05-04T12:35:35.201Z",
+                      "attachment_width":360,
+                      "attachment_height":360,
+                      "alt":null,
+                      "viewable_type":"Spree::Variant",
+                      "viewable_id":3,
+                      "small_url": "/assets/api/_prod/theglobalx/21.jpg",
+                      "large_url": "/assets/api/_prod/theglobalx/21.jpg"
+                   },
+                   {  
+                      "id":25,
+                      "position":2,
+                      "attachment_content_type":"image/jpeg",
+                      "attachment_file_name":"ror_baseball_back.jpeg",
+                      "type":"Spree::Image",
+                      "attachment_updated_at":"2018-05-04T12:35:36.041Z",
+                      "attachment_width":360,
+                      "attachment_height":360,
+                      "alt":null,
+                      "viewable_type":"Spree::Variant",
+                      "viewable_id":3,
+                      "small_url": "/assets/api/_prod/theglobalx/22.jpg",
+                  "large_url": "/assets/api/_prod/theglobalx/22.jpg"
+                   },
+                   {
+                      "id": 3,
+                      "position": 3,
+                      "attachment_content_type": "image/jpg",
+                      "attachment_file_name": "ror_tote.jpeg",
+                      "type": "Spree::Image",
+                      "attachment_updated_at": null,
+                      "attachment_width": 360,
+                      "attachment_height": 360,
+                      "alt": null,
+                      "viewable_type": "Spree::Variant",
+                      "viewable_id": 1,
+                           "small_url": "/assets/api/_prod/theglobalx/23.jpg",
+                            "large_url": "/assets/api/_prod/theglobalx/23.jpg"
+                    }
+                  ],
+                  "display_price":"$19.99",
+                  "options_text":"Size: S, Color: Red",
+                  "in_stock":true,
+                  "is_backorderable":true,
+                  "total_on_hand":10,
+                  "is_destroyed":false
+               }
+      ],
+      "option_types": [
+        {  
+               "id":1,
+               "name":"Color",
+               "presentation":"Color",
+               "position":1
+            },
+            {  
+               "id":2,
+               "name":"tshirt-color",
+               "presentation":"Color",
+               "position":2
+            }
+      ],
+      "product_properties": [
+        {
+          "id": 1,
+          "product_id": 1,
+          "property_id": 1,
+          "value": "porp1",
+          "property_name": "bag_type"
+        }
+      ],
+      "classifications": [
+        {
+          "taxon_id": 1,
+          "position": 1,
+          "taxon": {
+            "id": 1,
+            "name": "prod_01",
+            "pretty_name": "CardHolder",
+            "permalink": "what",
+            "parent_id": 1,
+            "taxonomy_id": 1,
+            "meta_title": "CardHolder",
+            "meta_description": "CardHolder",
+            "taxons": [
+
+            ]
+          }
+        }
+      ],
+      "has_variants": true,
+      "liArray":[
+    {"li": "100% vegetabilsk garvet læder"},
+    {"li": "Utrolig holdbar"},
+    {"li": "Får unik patina over tid"}
+  ]
+    }

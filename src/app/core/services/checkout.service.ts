@@ -140,7 +140,6 @@ export class CheckoutService {
         "ship_address_attributes": null
     }))
       .map((res: Response) =>  {
-        console.log(res);
       });
   }
 
@@ -195,7 +194,6 @@ export class CheckoutService {
       `api/xPaymentMode`
     ).map((res) => {
       const payments = res.json();
-      console.log(payments);
       return payments;
     });
   }

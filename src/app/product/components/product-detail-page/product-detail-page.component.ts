@@ -20,15 +20,6 @@ export class ProductDetailPageComponent implements OnInit {
   constructor(private productService: ProductService,
               private route: ActivatedRoute) {
                 
-    // this.actionsSubscription = this.route.params.subscribe(
-    //   (params: any) => {
-    //     this.productId = 'prod_01';
-    //     this.productService
-    //       .getProduct(this.productId)
-    //       .subscribe(response => this.product$ = response);
-    //  }
-    // );
-
       this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
         this.productId = params['id'];

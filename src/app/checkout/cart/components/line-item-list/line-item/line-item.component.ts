@@ -5,6 +5,7 @@ import { Store } from '@ngrx/store';
 import { environment } from './../../../../../../environments/environment';
 import { LineItem } from './../../../../../core/models/line_item';
 import { Component, OnInit, Input } from '@angular/core';
+import { ProductService } from './../../../../../core/services/product.service';
 
 @Component({
   selector: 'app-line-item',
@@ -12,7 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./line-item.component.scss']
 })
 export class LineItemComponent implements OnInit {
-
+  prodService: ProductService;
   image: string;
   name: string;
   quantity: number;
@@ -20,16 +21,24 @@ export class LineItemComponent implements OnInit {
 
   @Input() lineItem: LineItem;
 
-  constructor(private store: Store<AppState>, private actions: CheckoutActions, private checkoutService: CheckoutService) {
+  constructor(private store: Store<AppState>, private actions: CheckoutActions, 
+    private checkoutService: CheckoutService, productService: ProductService ) {
+      this.prodService = productService;
    }
-   
+  
   ngOnInit() {
-    
-    console.log(this.lineItem);
     // this.products$ = this.store.select(getProducts);
 
-    if(this.lineItem.prod != null){
-
+    if(this.lineItem.prod == null) {
+      console.log(this.lineItem);
+      this.prodService.getProduct(this.lineItem.id.toString()).subscribe(response => 
+        {
+          this.image = response.master.images[0].small_url;
+          this.name = response.name;
+        }
+      );
+    }
+    else {
       this.image = this.lineItem.prod.master.images[0].small_url;
       this.name = this.lineItem.prod.name;
     }

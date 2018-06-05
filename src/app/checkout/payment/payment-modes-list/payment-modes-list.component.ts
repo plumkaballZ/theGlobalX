@@ -52,8 +52,7 @@ export class PaymentModesListComponent implements OnInit {
       tmpAddr = addr;
       
     });
-    console.log(tmpAddr)
-
+    
     this.checkoutService.currentOrder.payment_state = 0;
     this.checkoutService.currentOrder.ship_address = tmpAddr;
     this.store.dispatch(this.checkoutActions.updateOrder(""));

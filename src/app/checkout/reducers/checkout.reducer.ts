@@ -2,6 +2,7 @@ import { LineItem } from './../../core/models/line_item';
 import { CheckoutActions } from './../actions/checkout.actions';
 import { CheckoutState, CheckoutStateRecord } from './checkout.state';
 import { Action, ActionReducer } from '@ngrx/store';
+import { ProductService } from './../../core/services/product.service';
 
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
@@ -18,7 +19,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
               
         switch (type) {
           case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
-      
 
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
@@ -28,7 +28,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
         _orderState = payload.state;
-
+        
         _lineItemEntities = _lineItems.reduce((lineItems: { [id: number]: LineItem }, lineItem: LineItem) => {
           return Object.assign(lineItems, {
             [lineItem.id]: lineItem
@@ -47,7 +47,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
-
 
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;

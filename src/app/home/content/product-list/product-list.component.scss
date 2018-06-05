@@ -22,7 +22,7 @@ ul {
       opacity: 0;
     }
     &.product-base {
-      width: 180px;
+      width: 280px;
       height: 332px;
       text-align: center;
       position: relative;
@@ -165,4 +165,7 @@ ul {
       z-index: 10;
     }
   }
+}
+.addToBagSpan{
+  color: #1d886d;
 }

@@ -56,9 +56,6 @@ export class AddressService {
 
   createAddress(params) {
     
-    console.log('createAddrs');
-    console.log(params);
-
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
@@ -67,7 +64,7 @@ export class AddressService {
       password : (user != null ? user.password : ''),
       password_confirmation : ''
     }
-
+    
     return this.http.post_Web('api/xAddress', JSON.stringify
     ({
       "order" : params.order,

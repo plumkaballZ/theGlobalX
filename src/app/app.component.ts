@@ -97,6 +97,7 @@ export class AppComponent implements OnInit, OnDestroy {
         setTimeout(function(){
           $(".upperPic").removeClass("upperPic");
           $(".lowerPic").removeClass("lowerPic");
+          $(".upperPicTxt").remove();
           $(".upperPicTxt").removeClass("upperPicTxt");
         }, 800);
       }
