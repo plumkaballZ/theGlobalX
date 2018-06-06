@@ -12,6 +12,7 @@ import { Product } from './../../../../core/models/product';
 import { environment } from './../../../../../environments/environment';
 import { VariantParserService } from './../../../../core/services/variant-parser.service';
 import { inlineTranslatorComp } from './../../../../_custom/inlineTranslatorComp';
+import {TranslateService} from '@ngx-translate/core';
 
 declare var jquery:any;
 declare var $ :any;
@@ -33,6 +34,8 @@ export class ProductDetailsComponent implements OnInit {
   correspondingOptions: any;
   variantId: any;
 
+  pageTranslator: any;
+
   _checkoutService : CheckoutService;
 
 
@@ -40,7 +43,8 @@ export class ProductDetailsComponent implements OnInit {
               private variantRetriver: VariantRetriverService,
               private checkoutService: CheckoutService,
               private checkoutActions: CheckoutActions,
-              private store: Store<AppState>) {
+              private store: Store<AppState>,
+              private translate: TranslateService) {
                 this._checkoutService = checkoutService;
   }
   ngOnInit() {
@@ -51,6 +55,10 @@ export class ProductDetailsComponent implements OnInit {
       .getOptionsToDisplay(this.product.variants, this.product.option_types);
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
+
+    this.translate.get('prodDetails').subscribe((res: any) => {
+      this.pageTranslator = res;
+    });
 
     $(document).ready(function(){
      

@@ -18,7 +18,8 @@ export class FooterComponent implements OnInit {
 
   about001: string;
   about002: string;
-
+  pageTrans : any;
+  
   constructor(private userService: UserService, private translate: TranslateService, private router: Router) { 
     this.loadTxt();
   }

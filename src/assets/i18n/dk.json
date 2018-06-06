@@ -5,7 +5,8 @@
     "hz001": "The Global X by Shevlin",
     "ulz001": "Eco-friendly",
     "ulz002": "Responsible",
-    "btnTxt": "Køb nu"
+    "btnTxt": "Køb nu",
+    "addToBag" : "TILFØJ TIL TASKE"
   },
   "prodPrice": {
     "prodName": "KortHolder ",
@@ -135,7 +136,7 @@
     "socks" : "Sokker",
     "cardholders" : "Kortholdere",
     "belts" : "Bælter",
-    "keyhangers" : "Nøglehængere",
+    "keyhangers" : "Nøgleringe",
     "serachTerms" : "Søgeord",
     "category" : "Kategori"
   },
