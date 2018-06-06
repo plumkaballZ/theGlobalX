@@ -18,6 +18,7 @@ declare var $ :any;
 export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
   stateSub$: Subscription;
   orderState: string;
+  
   pageTranslator: any;
 
   @Input() totalCartValue: number;

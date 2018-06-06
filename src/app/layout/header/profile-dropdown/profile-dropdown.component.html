@@ -12,14 +12,16 @@
       <i class="fa fa-user" aria-hidden="true"></i>
       <span class="caret"></span>
     </a>
-
+    
     <ul class="dropdown-menu" *dropdownMenu>
       <li><a [routerLink]="['/auth']">
-        <inline-translator [page]="'profile'" [key]="'ourFriend'" [elementType]="'text'"></inline-translator>
+        {{pageTranslator.ourFriend}}
       </a>
       </li>
       <li role="separator" class="divider"></li>
-      <li><a [routerLink]="['/auth', 'login']"><inline-translator [page]="'profile'" [key]="'login'" [elementType]="'text'"></inline-translator></a></li>
+      <li><a [routerLink]="['/auth', 'login']">
+        {{pageTranslator.login}}
+      </a></li>
     </ul>
     
   </li>
@@ -31,9 +33,13 @@
     </a>
 
     <ul class="dropdown-menu" *dropdownMenu>
-      <li><a routerLink="/user"><inline-translator [page]="'profile'" [key]="'myProfile'" [elementType]="'text'"></inline-translator></a></li>
+      <li><a routerLink="/user">
+        {{pageTranslator.myProfile}}
+      </a></li>
       <li role="separator" class="divider"></li>
-      <li><a (click)="logout()"><inline-translator [page]="'profile'" [key]="'logout'" [elementType]="'text'"></inline-translator></a></li>
+      <li><a (click)="logout()">
+        {{pageTranslator.logout}}
+      </a></li>
       <li role="separator" class="divider"></li>
     </ul>
 

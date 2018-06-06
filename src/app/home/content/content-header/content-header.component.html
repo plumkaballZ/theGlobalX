@@ -1,25 +1,26 @@
 <div class="content showHide">
   <div itemprop="name" class="queried-for">
-    <h4 title="men casual shirts" class="q">Displaying available products</h4>
+    <h4 title="men casual shirts" class="q">{{pageTranslator.availableProds}}</h4>
     <span>&nbsp;</span>
   </div>
   
   <div class="options">
     <ul class="img-size">
-      <label>View:</label>
+      <label>{{pageTranslator.view}}:</label>
       <li (click)="toggleView('COMPACT')" [ngClass]="{'big': true, 'selected': isBigSelected()}"></li>
       <li (click)="toggleView('COZY')" [ngClass]="{'small': true, 'selected': isSmallSelected()}"></li>
     </ul>
-
     
     <ul class="sort">
-      <label>Sort:</label>
-      <li data-sortkey=":popularity">Popular</li>
-      <li data-sortkey=":new">New</li>
-      <li data-sortkey=":discount">Discount</li>
-      <label>Price: 
-        <li data-sortkey=":low">Low</li>
-        <li data-sortkey=":high">High</li>
+      <label>
+        {{pageTranslator.sort}}:
+      </label>
+      <li data-sortkey=":popularity">{{pageTranslator.popular}}</li>
+      <li data-sortkey=":new">{{pageTranslator.new}}</li>
+      <li data-sortkey=":discount">{{pageTranslator.discount}}</li>
+      <label>{{pageTranslator.price}}: 
+        <li data-sortkey=":low">{{pageTranslator.low}}</li>
+        <li data-sortkey=":high">{{pageTranslator.high}}</li>
       </label>
     </ul>
 

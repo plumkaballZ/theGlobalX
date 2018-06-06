@@ -36,9 +36,6 @@ export class CheckoutService {
       lineItem.total = parseInt(prod.price, 10);
       lineItem.price  = prod.price, 10;
 
-      console.log('createNewLineItem');
-      console.log(lineItem);
-
       return lineItem;
     });
   }

@@ -21,9 +21,8 @@
     "about002": "Our company has been created with sustainability in mind. We care about the enviroment and we produce our products in the most responsible ways possible. Our mission is to make quality products without compromise"
   },
   "header": {
-    "home": "Home",
+    "home": "Shop",
     "facts": "Facts",
-    "about": "About",
     "contact": "Contact"
   },
   "profile": {
@@ -34,10 +33,7 @@
     "myOrders": "My Orders",
     "myAddrs": "MyAddresses",
     "editProfile": "Edit Profile",
-    "logout": "Logout",
-    "chooseLang": "Choose language",
-    "english": "English",
-    "danish": "Danish"
+    "logout": "Logout"
   },
   "login": {
     "forgotPassword": "Forgot your password?",
@@ -123,5 +119,33 @@
   "addrs": {
     "addNew": "Create new address",
     "continue": "CONTINUE TO PAYMENT"
+  },
+  "breadcrumb":{
+    "home" : "Shop",
+    "categories" : "Categories"
+  },
+  "contentHeader":{
+    "availableProds" : "Displaying available products",
+    "popular" : "Popular",
+    "new" : "New",
+    "discount" : "Discount",
+    "low" : "Low",
+    "high" : "High",
+    "view" : "View",
+    "price": "Price",
+    "sort": "Sort"
+  },
+  "taxons":{
+    "clothing" : "CLOTHING",
+    "accessories" : "ACCESSORIES",
+    "socks" : "Socks",
+    "cardholders" : "Cardholders",
+    "belts" : "Belts",
+    "keyhangers" : "Key hangers",
+    "serachTerms" : "Search Terms",
+    "category" : "Category"
+  },
+  "prodList" : {
+    "addToBag" : "ADD TO BAG"
   }
 }

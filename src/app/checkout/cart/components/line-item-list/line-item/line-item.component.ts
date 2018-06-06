@@ -28,10 +28,7 @@ export class LineItemComponent implements OnInit {
   
   ngOnInit() {
     // this.products$ = this.store.select(getProducts);
-
-    console.log('LineItemComponent');
-    console.log(this.lineItem);
-    
+        
     if(this.lineItem.prod == null) {
       this.prodService.getProduct(this.lineItem.id.toString()).subscribe(response => 
         {

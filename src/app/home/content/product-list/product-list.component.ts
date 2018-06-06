@@ -8,6 +8,7 @@ import { Product } from './../../../core/models/product';
 import { LineItem } from './../../../core/models/line_item';
 import { environment } from './../../../../environments/environment';
 import { Component, OnInit, Input } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-product-list',
@@ -18,13 +19,19 @@ export class ProductListComponent implements OnInit {
   @Input() products;
   @Input('taxonIds') selectedTaxonIds;
   @Input() toggleLayout;
-  
+  pageTranslator: any;
+
   constructor(
     private checkoutService: CheckoutService,
     private store: Store<AppState>,
-    private checkoutActions: CheckoutActions) { }
+    private checkoutActions: CheckoutActions, private translate: TranslateService) {
+     }
   
-    ngOnInit() {}
+     ngOnInit() {
+      this.translate.get('prodList').subscribe((res: any) => {
+        this.pageTranslator = res;
+      });
+     }
 
   getProductImageUrl(url) {
     return environment.API_ENDPOINT + url;

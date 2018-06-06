@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { AppState } from './../../../interfaces';
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 declare var jquery:any;
 declare var $ :any;
 
@@ -17,17 +18,27 @@ export class TaxonsComponent implements OnInit {
   searchFilters$: Observable<any>;
   selectedFilters = [];
 
+  pageTranslator: any;
+
   constructor(private store: Store<AppState>, 
     private actions: SearchActions,
-    private ref: ChangeDetectorRef) {
-
+    private ref: ChangeDetectorRef, private translate: TranslateService) {
     this.searchFilters$ = this.store.select(getFilters);
     this.searchFilters$.subscribe(data => {
       this.selectedFilters = data;
     });
+    
+    this.pageTranslator = {
+      "serachTerms" : "Search Terms",
+      "category" : "Category"
+    };
   }
 
   ngOnInit() {
+    this.translate.get('taxons').subscribe((res: any) => {
+      this.pageTranslator = res;
+    });
+
     this.initStuff();
   }
 

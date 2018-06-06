@@ -4,6 +4,7 @@ import { AppState } from './../../../interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-filter-summary',
@@ -12,9 +13,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class FilterSummaryComponent implements OnInit {
   filters$: Observable<any>;
+  pageTranslator: any;
 
   constructor(private store: Store<AppState>,
-    private search: SearchActions) {
+    private search: SearchActions,
+    private translate: TranslateService) {
     this.filters$ = this.store.select(getFilters);
   }
 

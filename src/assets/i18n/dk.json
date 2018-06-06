@@ -21,10 +21,9 @@
     "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis. "
   },
   "header": {
-    "home": "Hjem",
+    "home": "Butik",
     "facts": "Info",
-    "about": "Om os",
-    "contact": "Kontakt os"
+    "contact": "Kontakt"
   },
   "profile": {
     "bag": "Taske",
@@ -34,10 +33,7 @@
     "myOrders": "Mine Ordere",
     "myAddrs": "Mine Addresser",
     "editProfile": "Redigere Profil",
-    "logout": "Log af",
-    "chooseLang": "Vælg sporg",
-    "english": "Engelsk",
-    "danish": "Dansk"
+    "logout": "Log af"
   },
   "login": {
     "easilyUsing": "Log på nemt med:",
@@ -117,5 +113,33 @@
     "del001": "Levering",
     "del002": "Gratis",
     "totalPay": "399,99 DKK"
+  },
+  "breadcrumb":{
+    "home" : "Butik",
+    "categories" : "Kategorier"
+  },
+  "contentHeader":{
+    "availableProds" : "Viser tilgængelige produkter",
+    "popular" : "Populær",
+    "new" : "Ny",
+    "discount" : "Rabat",
+    "low" : "Lav",
+    "high" : "Høj",
+    "view" : "Visning",
+    "price": "Pris",
+    "sort": "Sortere"
+  },
+  "taxons":{
+    "clothing" : "TØJ",
+    "accessories" : "TILBEHØR",
+    "socks" : "Sokker",
+    "cardholders" : "Kortholdere",
+    "belts" : "Bælter",
+    "keyhangers" : "Nøglehængere",
+    "serachTerms" : "Søgeord",
+    "category" : "Kategori"
+  },
+  "prodList" : {
+    "addToBag" : "TILFØJ TIL TASKE"
   }
 }

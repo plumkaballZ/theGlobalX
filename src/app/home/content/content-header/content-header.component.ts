@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-content-header',
@@ -8,10 +9,24 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ContentHeaderComponent implements OnInit {
   @Output() toggleSize = new EventEmitter();
   selectedSize: string = 'COZY';
+  pageTranslator: any;
 
-  constructor() { }
+  constructor(private translate: TranslateService) { 
+    this.pageTranslator = {
+      "availableProds" : "Displaying available products",
+      "popular" : "Popular",
+      "new" : "New",
+      "discount" : "Discount",
+      "low" : "Low",
+      "high" : "High",
+      "view" : "View"
+    }
+  }
 
   ngOnInit() {
+     this.translate.get('contentHeader').subscribe((res: any) => {
+       this.pageTranslator = res;
+     });
   }
 
   toggleView(view) {

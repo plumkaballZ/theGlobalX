@@ -22,6 +22,8 @@ export class HeaderComponent implements OnInit {
   isAuthenticated: Observable<boolean>;
   totalCartItems: Observable<number>;
   taxonomies$: Observable<any>;
+  
+  translateBot: any;
 
   taxonList = [
     {
@@ -62,20 +64,19 @@ export class HeaderComponent implements OnInit {
   }
 }
   ngOnInit() {
+    
     this.store.dispatch(this.authActions.authorize());
     this.isAuthenticated = this.store.select(getAuthStatus);
     this.totalCartItems = this.store.select(getTotalCartItems);
-    
-    this.translate.get('header.home').subscribe((res: string) => {
-      this.taxonList[0].name = res;
-    });
-    this.translate.get('header.facts').subscribe((res: string) => {
-      this.taxonList[1].name = res;
-    });
-    this.translate.get('header.contact').subscribe((res: string) => {
-      this.taxonList[2].name = res;
+
+    this.translate.get('header').subscribe((res: any) => {
+      this.translateBot = res;
+      this.taxonList[0].name = this.translateBot.home;
+      this.taxonList[1].name = this.translateBot.facts;
+      this.taxonList[2].name = this.translateBot.contact;
     });
   }
+
   selectTaxon(taxon) {
     this.router.navigateByUrl(taxon.link);
   }
