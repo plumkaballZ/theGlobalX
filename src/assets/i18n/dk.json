@@ -63,11 +63,13 @@
     "payment": "BETALING"
   },
   "emptyBag": {
-    "quant": "Din takse er tom"
+    "yourBag": "Din takse er tom"
   },
   "cart": {
     "myBag": "Min taske",
-    "total": "399,99 DKK"
+    "myShoppingBag" : "Min taske",
+    "total" : "I alt",
+    "totalCurrency" : "DKK"
   },
   "aboutUs": {
     "h001": "Denne side kommer snart :)"
@@ -87,17 +89,12 @@
     "ulz001": "Instagram: Shevlin.co",
     "ulz003": "Facebook: Shevlin.co"
   },
-  "lineItem": {
-    "item1": "The Global X by Shevlin.co",
-    "item2": "(1)",
-    "size": "Størrelse",
-    "quant": "Antal"
-  },
   "orderTotal": {
     "bagTotal": "Total i tasken",
     "delivery": "Forsendelse",
     "placeOrder": "BESTIL",
-    "orderTotal":"Total på order"
+    "orderTotal":"Total på order",
+    "totalCurrency" : "DKK"
   },
   "addrs": {
     "addNew": "Tilføj ny en adresse",
@@ -142,5 +139,11 @@
   },
   "prodList" : {
     "addToBag" : "TILFØJ TIL TASKE"
+  },
+  "lineItem" : {
+    "amount" : "Pris",
+    "size" : "Størrelse",
+    "qty" : "Antal",
+    "remove" : "FJERN"
   }
 }

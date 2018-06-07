@@ -64,7 +64,7 @@
     "payment": "PAYMENT"
   },
   "emptyBag": {
-    "quant": "Your Shopping Bag is empty"
+    "yourBag": "Your Shopping Bag is empty"
   },
   "contact": {
     "title001": "Contact us here on site or:",
@@ -92,19 +92,16 @@
   },
   "cart": {
     "myBag": "Bag",
-    "total": "49,95 €"
+    "myShoppingBag" : "My Shopping Bag",
+    "total" : "Total",
+    "totalCurrency": "$"
   },
   "orderTotal": {
     "bagTotal": "Bag Total",
     "delivery": "Delivery",
     "placeOrder": "PLACE ORDER",
-    "orderTotal":"Order Total"
-  },
-  "lineItem": {
-    "item1": "The Global X by Shevlin.co",
-    "item2": "(1)",
-    "size": "Size",
-    "quant": "Quantity"
+    "orderTotal":"Order Total",
+    "totalCurrency": "$"
   },
   "del": {
     "delSpeed": "DELIVERY SPEED",
@@ -148,5 +145,11 @@
   },
   "prodList" : {
     "addToBag" : "ADD TO BAG"
+  },
+  "lineItem" : {
+    "amount" : "Amount",
+    "size" : "Size",
+    "qty" : "Quantity",
+    "remove" : "REMOVE"
   }
 }

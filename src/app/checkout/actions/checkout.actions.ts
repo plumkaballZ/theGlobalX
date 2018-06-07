@@ -26,7 +26,8 @@ export class CheckoutActions {
     return { type: CheckoutActions.FETCH_CURRENT_ORDER };
   }
 
-  fetchCurrentOrderSuccess(order: Order) {
+  fetchCurrentOrderSuccess(order: Order, total : number) {
+    order.total = total.toString();
     return {
       type: CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS,
       payload: order

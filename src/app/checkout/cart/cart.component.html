@@ -7,15 +7,13 @@
             <div class="col-xs-12 col-sm-8">
                 <div class="left">
                     <div class="checkout-header-container">
-                      <div class="checkout-header">
-                        <span class="text">
-                          ({{totalCartItems$ | async}})
-                        </span>
-                      </div>
-                      
-                      <div class="total-price">
-                          ({{totalCartValue$ | async}})
-                      </div>
+                        <div class="checkout-header">
+                            <span class="text">
+                              {{pageTrans.myShoppingBag}}
+                              ({{totalCartItems$ | async}})</span>
+                          </div>
+                          <div class="pull-right total-price"> 
+                              {{pageTrans.total}}: {{totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.totalCurrency}}</div>
                     </div>
                     <div class="prod-set">
                       <app-line-item-list></app-line-item-list>

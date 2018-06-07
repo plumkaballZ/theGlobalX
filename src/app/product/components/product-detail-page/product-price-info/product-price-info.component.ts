@@ -13,11 +13,6 @@ export class ProductPriceInfoComponent implements OnInit {
   constructor() {
    }
   ngOnInit() {
-    this.price = this.product.price;
-    var langZ = localStorage.getItem('localFlag');
-
-    if(langZ)
-      if(langZ == 'gb') this.price = this.product.price_en;
-      
+    this.price = this.product.display_price;  
   }
 }

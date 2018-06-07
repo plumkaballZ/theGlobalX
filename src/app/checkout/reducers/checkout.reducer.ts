@@ -2,13 +2,11 @@ import { LineItem } from './../../core/models/line_item';
 import { CheckoutActions } from './../actions/checkout.actions';
 import { CheckoutState, CheckoutStateRecord } from './checkout.state';
 import { Action, ActionReducer } from '@ngrx/store';
-import { ProductService } from './../../core/services/product.service';
-
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
 
 export const checkoutReducer: ActionReducer<CheckoutState> =
-  (state: CheckoutState = initialState, { type, payload }: Action): CheckoutState => {
+  (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
 
 
     let _lineItems, _lineItemEntities, _lineItemIds,
@@ -28,7 +26,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
         _orderState = payload.state;
-        
         _lineItemEntities = _lineItems.reduce((lineItems: { [id: number]: LineItem }, lineItem: LineItem) => {
           return Object.assign(lineItems, {
             [lineItem.id]: lineItem

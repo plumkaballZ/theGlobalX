@@ -12,6 +12,8 @@ import { Product } from './../../core/models/product';
 
 import { HttpService } from './http';
 
+import { ProductService } from './../../core/services/product.service';
+
 @Injectable()
 export class CheckoutService {
   private orderNumber: number;
@@ -21,43 +23,67 @@ export class CheckoutService {
     private http: HttpService,
     private actions: CheckoutActions,
     private store: Store<AppState>,
+    private prodService: ProductService,
   ) {
       this.store.select(getOrderNumber)
         .subscribe(number => this.orderNumber = number);
     }
 
   createNewLineItem(prod: Product) {  
+
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
       const lineItem: LineItem = res.json();
       
       lineItem.prod = prod;
       lineItem.id = prod.id;
-      lineItem.display_amount = parseInt(prod.price, 10);
-      lineItem.total = parseInt(prod.price, 10);
-      lineItem.price  = prod.price, 10;
+      lineItem.display_amount = lineItem.display_amount
+      lineItem.total = parseInt(prod.price);
+      lineItem.price  = prod.price;
 
       return lineItem;
     });
   }
 
   fetchCurrentOrder() {
+    
     var localUser = JSON.parse(localStorage.getItem('user'));
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
-      
-      const order = res.json();
+
+      var order = res.json();
       const currOrder: Order = res.json();
       this.currentOrder = currOrder;
-         
+
+      var total = 0;
+      var index = 1;
+
+      if(currOrder.line_items)
+      {
+        var fin = currOrder.line_items.length;
+        
+        currOrder.line_items.forEach(lineItem => {
+          this.prodService.getProduct(lineItem.id.toString()).subscribe(response => 
+            {
+              total += parseFloat(response.price);
+  
+              if(fin == index)
+              {
+                const token = order;        
+                this.setOrderTokenInLocalStorage({order_token: token});
+                return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order, total));
+    
+              }
+              index++;
+  
+            });
+          });
+      }
+      
       if(order.nope){
-        this.createEmptyOrder().subscribe();
+        this.createEmptyOrder().subscribe();        
       }
-      else{
-        const token = order;        
-        this.setOrderTokenInLocalStorage({order_token: token});
-        return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
-      }
+
     });
   }
 
@@ -79,7 +105,7 @@ export class CheckoutService {
       const token = order;
 
       this.setOrderTokenInLocalStorage({order_token: token});
-      return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order));
+      return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order, 0));
     });
   }
   

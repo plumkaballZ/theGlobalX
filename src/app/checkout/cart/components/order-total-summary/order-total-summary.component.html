@@ -5,14 +5,14 @@
         <span>
           {{pageTranslator.bagTotal}}
         </span>
-        <span class="value">${{totalCartValue | number:'1.2-2'}}</span>
+        <span class="value">{{totalCartValue | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span>
       </div>
 
       <div class="shipping">
         <span>
             {{pageTranslator.delivery}}
         </span>
-        <span class="shipping-fee c-green">40 DKK</span>
+        <span class="shipping-fee c-green">40 {{pageTranslator.totalCurrency}}</span>
       </div>
     </div>
     <div class="order-total footer">
@@ -23,7 +23,7 @@
       </div>
       <div class="total-amount">
         <span class="pull-left"> {{pageTranslator.orderTotal}}</span>
-        <span class="total-rupees">${{totalCartValue | number:'1.2-2'}}</span>
+        <span class="total-rupees">{{totalCartValue | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span>
       </div>
     </div>
   </div>
