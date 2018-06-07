@@ -106,17 +106,20 @@
   "del": {
     "delSpeed": "DELIVERY SPEED",
     "stdDel": "Standard delivery",
-    "freeDel": "Free delivery",
-    "totalItems": "1 ITEMS",
-    "orderTotal001": "Order Total",
-    "orderTotal002": "49,95 €",
+    "freeDel": "1 to 2 days",
+    "totalItems": "Total items",
+    "orderTotal001": "Total in bag",
+    "orderTotal002": "Total on Order",
     "del001": "Delivery",
     "del002": "Delivery FREE",
-    "totalPay": "Total Payable"
+    "totalPay": "Total Payable",
+    "currency" : "$"
   },
   "addrs": {
     "addNew": "Create new address",
-    "continue": "CONTINUE TO PAYMENT"
+    "continue": "CONTINUE TO PAYMENT",
+    "selectAddr": "Select delivery address"
+
   },
   "breadcrumb":{
     "home" : "Shop",
@@ -151,5 +154,8 @@
     "size" : "Size",
     "qty" : "Quantity",
     "remove" : "REMOVE"
+  },
+  "deliveryAddress" : {
+    "mobile" : "Mobile"
   }
 }

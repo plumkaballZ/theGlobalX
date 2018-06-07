@@ -103,14 +103,15 @@
   },
   "del": {
     "delSpeed": "Leveringstid",
-    "stdDel": "Standart levering",
-    "freeDel": "Gratis levering",
-    "totalItems": "1 vare",
-    "orderTotal001": "Ordre Total",
-    "orderTotal002": "399,99 DKK",
+    "stdDel": "GLS Standart levering",
+    "freeDel": "1 til 2 hverdage",
+    "totalItems": "Antal vare",
+    "orderTotal001": "Total i tasken",
+    "orderTotal002": "Total på order",
     "del001": "Levering",
     "del002": "Gratis",
-    "totalPay": "399,99 DKK"
+    "totalPay": "399,99 DKK",
+    "currency" : "DKK"
   },
   "breadcrumb":{
     "home" : "Butik",
@@ -145,5 +146,8 @@
     "size" : "Størrelse",
     "qty" : "Antal",
     "remove" : "FJERN"
+  },
+  "deliveryAddress" : {
+    "mobile" : "Mobil"
   }
 }

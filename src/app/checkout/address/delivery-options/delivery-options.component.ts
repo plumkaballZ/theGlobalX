@@ -36,47 +36,27 @@ export class DeliveryOptionsComponent implements OnInit {
   totalCartValue$: Observable<number>;
   totalCartItems$: Observable<number>;
 
+  pageTrans: any;
+
   constructor(private checkoutService: CheckoutService, private store: Store<AppState>, private translate: TranslateService) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
   }
 
   ngOnInit() {
-    this.translate.get('del.delSpeed').subscribe((res: string) => {
-      this.delSpeed = res;
-    });
-    this.translate.get('del.stdDel').subscribe((res: string) => {
-      this.stdDel = res;
-    });
-
-    this.translate.get('del.freeDel').subscribe((res: string) => {
-      this.freeDel = res;
-    });
-
-    this.translate.get('del.totalItems').subscribe((res: string) => {
-      this.totalItems = res;
-    });
-
-    this.translate.get('del.orderTotal001').subscribe((res: string) => {
-      this.orderTotal001 = res;
-    });
-
-    this.translate.get('del.orderTotal002').subscribe((res: string) => {
-      this.orderTotal002 = res;
-    });
-
-    this.translate.get('del.del001').subscribe((res: string) => {
-      this.del001 = res;
-    });
-
-    this.translate.get('del.del002').subscribe((res: string) => {
-      this.del002 = res;
+    this.translate.get('del').subscribe((res: any) => {
+      this.pageTrans = res;
+      this.delSpeed = res.delSpeed;
+      this.stdDel = res.stdDel;
+      this.freeDel = res.freeDel;
+      this.totalItems = res.totalItems;
+      this.orderTotal001 = res.orderTotal001;
+      this.orderTotal002 = res.orderTotal002;
+      this.del001 = res.del001;
+      this.del002 = res.del002;
+      this.totalPay = res.totalPay;
     });
     
-    this.translate.get('del.totalPay').subscribe((res: string) => {
-      this.totalPay = res;
-    });
-
     // this.setOrder();
   }
 

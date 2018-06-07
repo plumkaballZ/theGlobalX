@@ -1,5 +1,8 @@
 <div class="del-lbl">
-{{delSpeed}}
+{{delSpeed}} 
+<div class="items pull-right">
+    {{freeDel}}
+</div>
 </div>
 <div class="del-options">
   <div class="option">
@@ -7,26 +10,27 @@
         {{stdDel}}
     </div>
     <div class="option-rate">
-        {{freeDel}}
+        40 DKK
     </div>
   </div>
 </div>
 <div class="mini-bag-summary">
-  <div class="items">
-      ({{totalCartItems$ | async}})
+    <span>{{pageTrans.totalItems}}:</span>
+  <div class="items pull-right">
+      {{totalCartItems$ | async}}
   </div>
   <div class="order-total">
     <span>{{orderTotal001}}</span>
     <span class="value">
-        ({{totalCartValue$ | async}})
+        {{totalCartValue$ | async}} {{pageTrans.currency}}
       </span>
   </div>
   <div class="shipping">
     <span>{{del001}}</span>
-    <span class="shipping-fee c-green">{{del002}}</span>
+    <span class="shipping-fee c-green">40 {{pageTrans.currency}}</span>
   </div>
 </div>
 <div class="pay-lbl-total">
-  <span class="pay-lbl"></span>
-  <span class="pay-total">({{totalCartValue$ | async}})</span>
+  <span class="pay-lbl">{{orderTotal002}}</span>
+  <span class="pay-total">{{totalCartValue$ | async}} {{pageTrans.currency}}</span>
 </div>
