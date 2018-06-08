@@ -53,9 +53,12 @@
     "login": "Log på here!"
   },
   "user": {
-    "hello": "Hello {{User.id}}, welcome!",
     "activeOrders": "Mine ordere",
-    "myAddresses": "Mine addresser"
+    "myAddresses": "Mine addresser",
+    "hello": "Hej",
+    "yourName" : "Hej og velkommen!, hvad er dit",
+    "welcome" : "velkommen",
+    "name" : "navn"
   },
   "checkoutHeader": {
     "bag": "TASKE",
@@ -149,5 +152,34 @@
   },
   "deliveryAddress" : {
     "mobile" : "Mobil"
+  },
+  "addAddress" : {
+    "email" : "Email",
+    "zipcode" : "Postnummer",
+    "town" : "By",
+    "firstName" : "Navn",
+    "lastName" : "Efternavn",
+    "address" : "Addresse",
+    "mobile" : "Mobil",
+    "create" : "Opret",
+    "mandatory" : "Dette felt er påkrævet"
+  },
+  "payment" : {
+    "choosePaymentMode" : "Vælg betalingsmetode",
+    "youPay" : "Du skal betale",
+    "orderSummary" : "ORDER OVERSIGT",
+    "items" : "VARE",
+    "orderTotal" : "Total på Orderen",
+    "delivery" : "Levering",
+    "totalPayable" : "Total at betale",
+    "deliverTo" : "LEVERING TIL",
+    "mobile" : "Mobil",
+    "currency": "DKK"
+  },
+  "orderList" : {
+    "placedOn" : "Betalingsdato",
+    "total" : "Total",
+    "state" : "Status",
+    "shipment" : "Leveringsstatus"
   }
 }

@@ -3,12 +3,13 @@
   
     
     <div *ngIf="User.id;else other_content">
-        <h4>Hello {{User.id}}, welcome!</h4>
+        <h4>{{pageTrans.hello}} {{User.id}}, {{pageTrans.welcome}}!</h4>
     </div>
 
     <ng-template #other_content>
-        <h4>Hello and welcome!, what is your
-          <input [(ngModel)]="userId" class="userInputId" placeholder="name?" autocomplete="off" (keyup.enter)="updateId($event)">
+        <h4> 
+          {{pageTrans.yourName}}
+          <input [(ngModel)]="userId" class="userInputId" placeholder=" {{pageTrans.name}}?" autocomplete="off" (keyup.enter)="updateId($event)">
         </h4>
     </ng-template>
 
@@ -18,15 +19,15 @@
   <div class="sidebar col-md-3">
     <p>
       <a routerLink="/user/orders" routerLinkActive="active">
-        <inline-translator [page]="'user'" [key]="'activeOrders'" [elementType]="'text'"></inline-translator>
+        {{pageTrans.activeOrders}}
       </a>
     </p>
-    <hr>
+    <!-- <hr>
     <p>
       <a routerLink="/user/addresses" routerLinkActive="active">
-        <inline-translator [page]="'user'" [key]="'myAddresses'" [elementType]="'text'"></inline-translator>
+        {{pageTrans.myAddresses}}
     </a>
-    </p>
+    </p> -->
   </div>
 
   <div class="col-md-9">

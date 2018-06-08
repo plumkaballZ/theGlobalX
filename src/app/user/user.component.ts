@@ -7,6 +7,7 @@ import { AppState } from './../interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { environment } from './../../environments/environment';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user',
@@ -16,18 +17,23 @@ import { environment } from './../../environments/environment';
 export class UserComponent implements OnInit {
   User: User;
   userId: string;
+  pageTrans: any;
 
   private data: Observable<User>;
 
   constructor(
     private userService: UserService,
     private userAction: UserActions,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private translate: TranslateService
   ) {
     this.User = JSON.parse(localStorage.getItem('user'));
     this.userService._user = this.User;
   }
   ngOnInit() {
+    this.translate.get('user').subscribe((res: any) => {
+      this.pageTrans = res;
+    });
   }
   updateId(e: any) {
     this.User.id = this.userId;   

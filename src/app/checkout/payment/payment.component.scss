@@ -1,9 +1,9 @@
 .payment-section {
 	.left {
-		display: inline-block;
+		// display: inline-block;
 		vertical-align: top;
-		border-right: 1px solid #efefef;
-		padding-right: 30px;
+		// border-right: 1px solid #efefef;
+		// padding-right: 30px;
 		.payment-header {
 			background: #fff;
     	padding: 10px 0;
@@ -37,7 +37,7 @@
 		}
 	}
 	.right {
-		padding-left: 30px;
+		padding-right: 30px;
 		padding-top: 15px;
 		.mini-bag-summary {
 			position: relative;

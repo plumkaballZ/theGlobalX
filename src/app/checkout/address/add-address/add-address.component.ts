@@ -6,6 +6,8 @@ import { AddressService } from './../services/address.service';
 import { CheckoutService } from './../../../core/services/checkout.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-add-address',
   templateUrl: './add-address.component.html',
@@ -15,6 +17,8 @@ export class AddAddressComponent implements OnInit, OnDestroy {
 
   @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
+  pageTrans: any;
+
   addressForm: FormGroup;
   emailForm: FormGroup;
   isAuthenticated: boolean;
@@ -23,7 +27,8 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     private fb: FormBuilder, private authActions: AuthActions,
     private checkoutService: CheckoutService,
     private addrService: AddressService,
-    private store: Store<AppState>) {
+    private store: Store<AppState>,
+    private translate: TranslateService) {
       
       this.addressForm = addrService.initAddressForm();
       this.emailForm = addrService.initEmailForm();
@@ -34,6 +39,9 @@ export class AddAddressComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.translate.get('addAddress').subscribe((res: any) => {
+      this.pageTrans = res;
+    });
   }
 
   onSubmit() {

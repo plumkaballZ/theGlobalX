@@ -56,7 +56,11 @@
   },
   "user": {
     "activeOrders": "My orders",
-    "myAddresses": "My addresses"
+    "myAddresses": "My addresses",
+    "hello": "Hello",
+    "yourName" : "Hell and welcome!, what is your",
+    "welcome" : "welcome!",
+    "name" : "name"
   },
   "checkoutHeader": {
     "bag": "BAG",
@@ -157,5 +161,34 @@
   },
   "deliveryAddress" : {
     "mobile" : "Mobile"
+  },
+  "addAddress" : {
+    "email" : "Email",
+    "zipcode" : "Zipcode",
+    "town" : "Town",
+    "firstName" : "First Name",
+    "lastName" : "Last Name",
+    "address" : "Address",
+    "mobile" : "Mobile",
+    "create" : "Create",
+    "mandatory" : "This is a mandatory field"
+  },
+  "payment" : {
+    "choosePaymentMode" : "Choose Payment Mode",
+    "youPay" : "You Pay",
+    "orderSummary" : "ORDER SUMMARY",
+    "items" : "ITEMS",
+    "orderTotal" : "Order Total",
+    "delivery" : "Delivery",
+    "totalPayable" : "Total Payable",
+    "deliverTo" : "DELIVER TO",
+    "mobile" : "Mobile",
+    "currency": "$"
+  },
+  "orderList" : {
+    "placedOn" : "Placed on",
+    "total" : "Total",
+    "state" : "State",
+    "shipment" : "Shipment"
   }
 }

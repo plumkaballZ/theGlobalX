@@ -7,6 +7,7 @@ import { Router, ChildrenOutletContexts } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-payment',
@@ -19,15 +20,17 @@ export class PaymentComponent implements OnInit {
   totalCartItems$: Observable<number>;
   address$: Observable<Address>;
   orderNumber$: Observable<number>;
+  pageTrans: any;
 
-  constructor(private store: Store<AppState>, private router: Router) {
+  constructor(private store: Store<AppState>, private router: Router, private translate: TranslateService) {
+    
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
     this.address$ = this.store.select(getShipAddress);
     this.orderNumber$ = this.store.select(getOrderNumber);
 
     this.store.select(getTotalCartItems).subscribe((tot) => {
-
+      
       if(tot == 0) this.router.navigate(['/checkout', 'cart']);
       else {
         this.store.select(getShipAddress).subscribe((addr) => {
@@ -39,6 +42,9 @@ export class PaymentComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.translate.get('payment').subscribe((res: any) => {
+      this.pageTrans = res;
+    });
   }
 
 }
