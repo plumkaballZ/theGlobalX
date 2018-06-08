@@ -1,4 +1,5 @@
 <div *ngIf="order">
+    <button *ngIf="isAdmin" (click)="confirmOrder()" class="pdp-add-to-bag pdp-button">BEKRÆFT ORDER</button>
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">

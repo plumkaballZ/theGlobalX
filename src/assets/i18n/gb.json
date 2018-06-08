@@ -189,6 +189,7 @@
     "placedOn" : "Placed on",
     "total" : "Total",
     "state" : "State",
-    "shipment" : "Shipment"
+    "shipment" : "Order state",
+    "details" : "Details"
   }
 }

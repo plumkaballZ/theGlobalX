@@ -9,6 +9,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../../../environments/environment';
 import { LineItem } from '../../../../core/models/line_item';
+import { CheckoutActions } from './../../../../checkout/actions/checkout.actions';
+import { CheckoutService } from './../../../../core/services/checkout.service';
 
 @Component({
   selector: 'app-order-detail',
@@ -20,11 +22,19 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
   orderSubscription$: Subscription;
   orderNumber: String;
   order: Order;
+  isAdmin : boolean;
+
+  private _store: Store<AppState>;
+  private _actions: CheckoutActions;
 
   constructor(
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    store: Store<AppState>, actions: CheckoutActions,
+    private checkoutService: CheckoutService
   ) {
+    this._store = store;
+    this._actions = actions;
   }
 
   ngOnInit() {
@@ -37,16 +47,34 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
           .subscribe(order => this.order = order);
      }
     );
+
+    var localUser = JSON.parse(localStorage.getItem('user'));
+    this.isAdmin = true;
+
+    if(localUser != null) 
+      if(localUser.lvl == 99) this.isAdmin = true;
   }
 
   getProductImageUrl(line_item: LineItem) {
     const image_url = line_item.variant.images[0].small_url;
     return environment.API_ENDPOINT + image_url;
   }
-
   ngOnDestroy() {
     this.routeSubscription$.unsubscribe();
     this.orderSubscription$.unsubscribe();
+  }
+
+  confirmOrder(){
+    
+    this.order.shipment_state = "2";
+    this.order.payment_state = "2";
+    
+    this._store.dispatch(this._actions.updateOrder(this.order));
+
+    // this.route.navigate(['/user', 'orders']);
+
+    console.log(this.order);
+    console.log('confirmOrder()');
   }
 
 }

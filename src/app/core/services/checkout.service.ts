@@ -192,6 +192,13 @@ export class CheckoutService {
   
   updateOrder(params) {
     
+    console.log(params);
+
+    if(params == null)
+    {
+      console.log('empty');
+    }
+
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
@@ -207,7 +214,7 @@ export class CheckoutService {
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
-        "Order" : this.currentOrder, 
+        "Order" : (params == "" ? this.currentOrder : params), 
         "glxUser" : data, 
         "bill_address_attributes": (params != null ? params : null), 
         "ship_address_attributes": (params != null ? params : null)

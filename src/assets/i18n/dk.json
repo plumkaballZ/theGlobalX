@@ -180,6 +180,7 @@
     "placedOn" : "Betalingsdato",
     "total" : "Total",
     "state" : "Status",
-    "shipment" : "Leveringsstatus"
+    "shipment" : "Orderstatus",
+    "details" : "Detaljer"
   }
 }

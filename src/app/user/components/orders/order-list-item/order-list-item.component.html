@@ -1,27 +1,35 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h5 class="active">
-      {{order.id}} / {{order.shipment_state | uppercase}} / {{order.email}} 
+      {{order.id}} / {{order.shipment_state | uppercase}}
     </h5>
     <small>
-      {{pageTrans.placedOn}}: {{order.created_at | date:'fullDate'}} / 
+      {{pageTrans.placedOn}}: {{order.created_at | date:'fullDate'}}
       <i class="fa fa-{{order.currency | lowercase}}"aria-hidden="true"></i>
-      {{pageTrans.total}}: {{order.total}} /
-      {{pageTrans.state}}: {{order.payment_state | humanize | uppercase}} 
+      <!-- {{pageTrans.total}}: {{order.total}} /
+      {{pageTrans.state}}: {{order.payment_state | humanize | uppercase}}  -->
       
     </small>
     <hr>
     <h5 class="strong">
-      
-      
+
       {{pageTrans.shipment}}: 
       
-      {{order.line_items.length}} items | 
+      <div *ngIf="order.shipment_state == 1">
+        Venter på bekræftelse
+      </div>
       
-      {{order.shipment_state | uppercase}} on {{order.updated_at | date:'fullDate'}} 
+      <div *ngIf="order.shipment_state == 2">
+        Order sent via GLS
+      </div>
+      
+
+      <!-- {{order.line_items.length}} items | 
+      
+      {{order.shipment_state | uppercase}} on {{order.updated_at | date:'fullDate'}}  -->
 
       <div class="pull-right">
-        <a [routerLink]="['detail', order.id]" class="view-details-link strong">View Details</a>
+        <a [routerLink]="['detail', order.id]" class="view-details-link strong"> {{pageTrans.details}}</a>
       </div>
 
     </h5>
