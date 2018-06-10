@@ -13,3 +13,13 @@
   background-color: #1d886d;
   color: #f2f2f2
 }
+.col1 {
+  width: 20%;
+  display: inline-block;
+  vertical-align: bottom;
+  img {
+    width: 120px;
+    height: 160px;
+    object-fit: contain;
+  }
+}

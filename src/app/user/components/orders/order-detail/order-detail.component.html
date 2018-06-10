@@ -7,22 +7,23 @@
           <div class="row">
 
             <div class="col-md-4">
-              <small>TOTAL</small>
+              <small>Total</small>
               <h5>
                 <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-                {{order.total}}
+                {{order.total}} DKK
               </h5>
             </div>
 
             <div class="col-md-4">
               <small>STATUS</small>
               <h5 class="status">
-                {{order.payment_state | uppercase}}
+                IKKE SENT
+                <!-- {{order.payment_state | uppercase}} -->
               </h5>
             </div>
             
             <div class="col-md-4">
-              <small>ITEMS</small>
+              <small>Antal vare</small>
               <h5>
                 {{order.line_items.length}}
               </h5>
@@ -34,23 +35,18 @@
       <hr>
       <div class='row' *ngFor="let line_item of order.line_items">
         <br>
-        id: {{line_item.id}}
+        Product: {{line_item.prod.name}}
 
         <div class="col-md-3">
           <h5 class="strong">
             <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            quantity: {{line_item.quantity}}
+            Antal: {{line_item.quantity}}
           </h5>
           <small>
-            Price: 
+            Pris: 
             <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            {{line_item.price}}
+            {{line_item.prod.display_price}}
           </small><br/>
-          <small class="text-warning">
-            VAT/CST: 
-            <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            {{line_item.total - line_item.price}}
-          </small>
         </div>
 
         <div class="col-md-4">
@@ -63,21 +59,20 @@
   </div>
 
   <br>
-  <h5>SHIPPING DETAILS</h5>
+  <h5>LEVERINGS DETALJER</h5>
   <div class="panel panel-default">
     <div class="row panel-body">
       <div class="col-md-12">
-        <h5>Order No: {{order.id}}</h5>
+        <h5>Order Nummer: {{order.id}}</h5>
       </div>
       
       <br>
       <div class="col-md-12">
         <address>
-          <strong>{{order.ship_address.firstname}}</strong><br>
-          {{order.ship_address.address1}}<br>
-          {{order.ship_address.address2}}<br>
-          {{order.ship_address.city}}{{order.ship_address.zipcode}}<br>
-          <abbr title="Phone">Phone:</abbr> {{order.ship_address.phone}}
+          <strong>Navn: {{order.ship_address.firstname}}</strong><br>
+          Addresse: {{order.ship_address.address1}}<br>
+          By og Postnummer: {{order.ship_address.city}}{{order.ship_address.zipcode}}<br>
+          <abbr title="Phone">Mobil:</abbr> {{order.ship_address.phone}}
         </address>
       </div>
 
@@ -85,31 +80,31 @@
         <dt>
           Total Amount:
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.total}}
+          {{order.total}} DKK
         </dt>
         
-        <dd>
+        <!-- <dd>
           MRP: 
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
           {{order.item_total}}
-        </dd>
+        </dd> -->
 
         <dd>
-          Shipping: 
+          LEVERING: 
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.ship_total}}
+          40 DKK
         </dd>
         
-        <dd>
-          Adjustment: 
+        <!-- <dd>
+          Adjustment:
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
           {{order.adjustment_total}}
-        </dd>
+        </dd> -->
       </dl>
 
       <dl class="col-md-12">
         <dt>
-          Payment: {{order.payment_state | humanize | uppercase}}
+          Betalingsfrom: Paypal
         </dt>
       </dl>
     </div>
