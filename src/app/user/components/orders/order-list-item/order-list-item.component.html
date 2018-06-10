@@ -15,11 +15,11 @@
 
       {{pageTrans.shipment}}: 
       
-      <div *ngIf="order.shipment_state == 1">
+      <div *ngIf="order.shipment_state == '1'">
         Venter på bekræftelse
       </div>
       
-      <div *ngIf="order.shipment_state == 2">
+      <div *ngIf="order.shipment_state == '2'">
         Order sent via GLS
       </div>
       
