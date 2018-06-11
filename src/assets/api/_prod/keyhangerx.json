@@ -118,5 +118,10 @@
     {"li": "Håndlavet"},
     {"li": "Utrolig smuk"}
   ],
-  "liArray_GB":[]
+  "liArray_GB":
+  [
+    {"li": "100% vegetable tanned leather"},
+    {"li": "Handmade"},
+    {"li": "Beautiful"}
+  ]
 }

@@ -1,46 +1,8 @@
-<!-- <div class="row-base" style="display: -webkit-flex">
-  
-  <section>
-    
-    <ul class="results-base">
-      <p *ngIf="products.length === 0">No Products found for this category</p>
-      <li *ngFor="let product of products | filter : selectedTaxonIds" class="product-base" [style.margin]="getMargin()" itemscope
-        itemtype="https://schema.org/Product">
-        <div class="product-thumbShim"></div>
-
-        <a itemprop="url" [routerLink]="['/product/', product.slug]">
-          <img itemprop="image"
-            class="product-thumb"
-            alt="{{product.name}}" 
-            [src]="getProductImageUrl(product.master.images[0]?.large_url)">
-          <div class="product-productMetaInfo">
-            <div itemprop="name" class="product-brand">{{ product.name }}</div>
-            <h2 class="product-product">{{ product.description }}</h2>
-            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="product-price">
-              <span>
-                <span itemprop="price" class="product-discountedPrice"> {{ product.display_price }}</span>
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <div class="product-actions">
-          <span class="product-actionsButton product-addToaddToBag">
-            <span class="addToBagSpan" (click)="addToCart(product)">{{pageTranslator.addToBag}}</span>
-          </span>
-        </div>
-
-      </li>
-    </ul>
-    
-  </section>
-</div> -->
-
 <div class="row-base" style="display: -webkit-flex">
     <section>
       <ul class="results-base">
         <p *ngIf="products.length === 0">No Products found for this category</p>
-        <li *ngFor="let product of products | filter : selectedTaxonIds; trackBy: trackByFn" class="product-base" [style.margin]="getMargin()" itemscope
+        <li *ngFor="let product of products | filter : selectedTaxonIds;" class="product-base" [style.margin]="getMargin()" itemscope
           itemtype="https://schema.org/Product">
           <div class="product-thumbShim"></div>
           <a itemprop="url" [routerLink]="['/product/', product.slug]">
@@ -53,14 +15,9 @@
               <h2 class="product-product">{{ product.description }}</h2>
               <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="product-price">
                 <span>
-                  <!-- Discounted price -->
                   <span itemprop="price" class="product-discountedPrice">$ {{ product.display_price }}</span>
-                  <!-- Original price -->
-                  <!--<span class="product-strike"> react-text: 485 Rs.  /react-text  react-text: 486 1699 /react-text </span>-->
                 </span>
-                <!--Percentage off --><!--<span class="product-discountPercentage">(40% OFF)</span>-->
               </div>
-              <!-- Product Size --><!--<div class="product-sizes">Sizes: S, M, L, XL, XXL</div>-->
             </div>
           </a>
           <div class="product-sizeDisplayDiv">

@@ -45,6 +45,7 @@
     text-align: right;
     margin: 12px 0 0 5px;
     display: inline-block;
+    float: right;
     ul.img-size {
       display: inline-block;
       margin-right: 10px;
@@ -122,6 +123,7 @@
   .options:before, .options:after {
     content: "";
     display: table;
+
   }
 }
 

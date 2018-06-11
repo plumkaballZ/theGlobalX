@@ -133,5 +133,10 @@
     {"li": "Håndlavet"},
     {"li": "Ansvarlig"}
   ],
-  "liArray_GB":[]
+  "liArray_GB":
+  [
+    {"li": " Eco-friendly chrome tanned leather"},
+    {"li": "Handmade "},
+    {"li": "Responsible"}
+  ]
     }
