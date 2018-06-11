@@ -197,7 +197,17 @@
     "codeOfConduct" : "CODE OF CONDUCT AND CSR",
     "codeOfConductAnd" : "Code of Conduct og Corporate Social Responsibilities dækker over en række forskellige krav, som vi sætter til os selv og vores under-leverandører",
     "appliesTo" : "det gælder blandt:", 
-    "li1" : ""
+    "li1" : "Ingen børnearbejde",
+    "li2" : "Ingen diskrimination eller krænkelse af menneske- og arbejdsrettigheder",
+    "li3" : "Den lokale lov skal overholdes",
+    "li4" : "Sundt arbejdsmiljø og faciliteter for de ansatte",
+    "li5" : "Bygningssikkerhed og certificeringer",
+    "li6" : "Brandslukkere, nødprocedure og øvelser",
+    "li7" : "Håndtering, handsker og masker ved kemikalier",
+    "li8" : "Sikkerhed om maskiner",
+    "li9" : "Arbejdstid og lønninger skal overholde gældende lov",
+    "li10" : "Førstehjælpere, brandtræningsuddannede m.m. skal være på fabrikken",
+    "li11" : "Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m"
   }
 
 }
