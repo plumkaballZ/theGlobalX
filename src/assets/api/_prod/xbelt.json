@@ -2,12 +2,14 @@
       "id": 5,
       "name": "Belt By Shevlin",
       "description": "Det første produkt i vores kommende kollektion “pure cognac”. Dette unikke bælte er chrom garvet under bæredygtige forhold og overholder alle EU regulationer.",
+      "description_GB" : "This is the first products in a new collection we’re working on called “pure cognac”. This unique belt has been chrome tanned to make it as tough as we can. The belt isn’t only sustainable and eco-friendly, it’s also beautiful, timeless and classic.",
       "price": "399,95",
       "price_GB": "000",
       "display_price": "399,95 DKK",
       "available_on": "2012-10-17T03:43:57Z",
       "slug": "prod_01",
       "meta_description": "Vi har udviklet et bælte der ikke bare er bæredygtigt men samtidig utrolig smukt og klassisk i sit udtryk.",
+      "meta_description_GB": "",
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
@@ -130,5 +132,6 @@
     {"li": "Bæredygtig chrom-garvet læder "},
     {"li": "Håndlavet"},
     {"li": "Ansvarlig"}
-  ]
+  ],
+  "liArray_GB":[]
     }

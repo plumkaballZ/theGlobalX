@@ -12,7 +12,11 @@
         <div class="leftBottom">
             <span class="txt-color-white ng-binding">
                 CVR nr. 38 95 98 24 | 
-                <a class="linkz" (click)="goToLink('terms')">Handelsbetingelser</a>
+
+                <a class="linkz" (click)="goToLink('terms')">
+                    <inline-translator [page]="'footer'" [key]="'conditions'" [elementType]="'text'"></inline-translator>
+                </a>
+
             </span>
         </div>
     </div>

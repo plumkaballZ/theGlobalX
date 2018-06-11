@@ -2,12 +2,14 @@
   "id": 6,
   "name": "Keyhanger By Shevlin",
   "description": "Keyhangeren er lavet af samme vegetabilsk garvede lædertype som vores kortholder. Med denne nøglering har du altid dine nøgler med dig på ansvarlig vis, både for dig selv men også for miljøet.",
+  "description_GB" : "The keyhanger is made of the same vegetable tanned leather as our Global X cardholder. With this keyhanger you can carry around your keys responsibly... even for the environment.",
   "price": "149,95",
   "price_GB": "000",
   "display_price": "149,95 DKK",
   "available_on": "2012-10-17T03:43:57Z",
   "slug": "prod_01",
   "meta_description": null,
+  "meta_description_GB": null,
   "meta_keywords": null,
   "shipping_category_id": 1,
   "taxon_ids": [
@@ -115,5 +117,6 @@
     {"li": "100% vegetabilsk garvet læder"},
     {"li": "Håndlavet"},
     {"li": "Utrolig smuk"}
-  ]
+  ],
+  "liArray_GB":[]
 }

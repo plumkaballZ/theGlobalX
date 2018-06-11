@@ -28,6 +28,9 @@ export class ProductService {
         if(this._useEuroPrice) {
           prod.price = prod.price_GB;
           prod.display_price = prod.price_GB + ' €';
+          prod.description =  prod.description_GB;
+          prod.meta_description =  prod.meta_description_GB;
+          prod.liArray =  prod.liArray_GB;
         }
 
         return prod;

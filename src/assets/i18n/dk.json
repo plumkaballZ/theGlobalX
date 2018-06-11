@@ -19,7 +19,8 @@
   "footer": {
     "mailTxt": "info@shevlin.co",
     "about001": "Omkring virksomheden",
-    "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis. "
+    "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis.",
+    "conditions" : "Handelsbetingelser"
   },
   "header": {
     "home": "Butik",

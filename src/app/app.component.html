@@ -1,6 +1,5 @@
-<div class="Pic">
-		<div class="contentz">
-        <div class="default">
+<div class="contentz">
+  <div class="default">
             <section>
               <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
               <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
@@ -15,31 +14,4 @@
               <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
             </section>
           </div>
-    </div>
-
-		<div class="upperPic">
-      <p class="upperPicTxt">
-        Shevlin
-      </p>
-    </div>
-    
-		<div class="lowerPic">
-    </div>
-
-	</div>
-
-  <div class="mainZ">
-    <button class="super-button">START SHOPPING</button>
-
-    <div class="overlay"></div>
-    <div class="button-line left">
-      <div class="inner"></div>
-    </div>
-
-    <div class="button-line right">
-      <div class="inner"></div>
-    </div>
-    
-  </div>
-
-
+        </div>

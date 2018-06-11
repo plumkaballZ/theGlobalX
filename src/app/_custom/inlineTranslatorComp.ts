@@ -13,6 +13,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class inlineTranslatorComp implements OnInit {
 
     public editorDisabled: boolean = true;
+    
     @Input() page: string;
     @Input() key: string;
     @Input() elementType: string;
@@ -20,21 +21,19 @@ export class inlineTranslatorComp implements OnInit {
 
     public line: string;
     
-    constructor(private userService: UserService, private translate: TranslateService) {  
+    constructor(private userService: UserService, private translate: TranslateService) { 
     }
+    
     ngOnInit() {
       this.loadTxt(); 
     }
     loadTxt()
     {
-        var localUser = JSON.parse(localStorage.getItem('user'));
-
-        // if(localUser != null) 
-        //   if(localUser.lvl == 99) this.editorDisabled = false;
-
-          var searchStr = this.page + '.' + this.key;
+      var localUser = JSON.parse(localStorage.getItem('user'));
+      var searchStr = this.page + '.' + this.key;
           
           this.translate.get(searchStr).subscribe((res: string) => {
+            console.log(res);
             if(this.extValue != null) this.line = res + this.extValue;
             else this.line = res;
          });
