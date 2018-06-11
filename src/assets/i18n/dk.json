@@ -207,7 +207,23 @@
     "li8" : "Sikkerhed om maskiner",
     "li9" : "Arbejdstid og lønninger skal overholde gældende lov",
     "li10" : "Førstehjælpere, brandtræningsuddannede m.m. skal være på fabrikken",
-    "li11" : "Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m"
+    "li11" : "Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m",
+    "productionOf" : " Fremstilling af vores produkter",
+    "handlingOf" : "Håndtering af kemikalier, er et meget vigtigt element, når man får produceret produkter i Østen. Det omhandler naturligvis både miljø'et men også vores slut-forbrugeres sikkerhed.",
+    "inEurope" : "I Europa har vi selvfølgelig en kemikalielovgivning, der kaldes REACH forordning. REACH bygger på et hav af studier, og har via dem opsat regler og love for håndtering af kemikalier i produktion og slut-produkterne. Det betyder rent praksis at vi sætter krav til:",
+    "inEuropeShort" : "I Europa har vi selvfølgelig...",
+    "li12" : "ChromVI i læder",
+    "li13" : "Ulovlige Azo-farvestoffer",
+    "li14" : "Formaldehyd",
+    "li15" : " Alkylphenol, Alkulphenolethoxylates (APEO, miljøskadelige stoffer)",
+    "li16" : "Tungmetaller i metaldele (lynlåse, studs m.v.)",
+    "li17" : "PH-værdier",
+    "aboutMe" : "OM MIG",
+    "toStartWith" : "Oprindeligt startede jeg denne virksomhed i håbet om at jeg kunne lave et eller andet der kunne gøre en forskel for vores miljø.",
+    "fastI" : "Hurtigt nåede jeg til en konklusion om at lave tilbehør samt tøj til den modebevidste mand. Der blev brugt rigtig meget tid på ideer og samtaler med forskellige producenter, men til sidst fandt jeg frem til de der deler samme vision som jeg selv.",
+    "nowAllOur" : "Nu laves alle vores produkter under bæredygtige forhold, med skrappe krav omkring kemikalier samt arbejdsforhold for de ansatte i fabrikkerne.",
+    "weAreStill" : "Vi er stadig en meget ung virksomhed, men jeg tror på at mine idé og min virksomhed har stort potentiale, og derfor arbejder vi konstant på højtryk for at opnår de bedste løsninger og resultater for alt vores arbejde nu og i fremtiden.",
+    "fastIShort" : "Hurtigt nåede jeg til en konklusion...",
+    "close" : "Luk"
   }
-
 }
