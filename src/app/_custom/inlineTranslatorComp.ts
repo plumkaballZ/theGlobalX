@@ -22,6 +22,7 @@ export class inlineTranslatorComp implements OnInit {
     public line: string;
     
     constructor(private userService: UserService, private translate: TranslateService) { 
+      console.log('ctor');
     }
     
     ngOnInit() {
@@ -33,7 +34,6 @@ export class inlineTranslatorComp implements OnInit {
       var searchStr = this.page + '.' + this.key;
           
           this.translate.get(searchStr).subscribe((res: string) => {
-            console.log(res);
             if(this.extValue != null) this.line = res + this.extValue;
             else this.line = res;
          });

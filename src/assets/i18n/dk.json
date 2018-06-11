@@ -11,7 +11,7 @@
   "prodPrice": {
     "prodName": "KortHolder ",
     "pprice": "399,99 DKK",
-    "prodVat": "eksl. moms (25%)"
+    "prodVat": "inkl. moms 25%"
   },
   "prodDesc": {
     "desc": "Kortholder i vegetabislk garvet læder."
@@ -183,5 +183,21 @@
     "state" : "Status",
     "shipment" : "Orderstatus",
     "details" : "Detaljer"
+  },
+  "facts" : {
+    "sustainability" : "Sustainability",
+    "weWish" : "Vi ønsker det bedste for miljøet!",
+    "becuaseWe" : "Fordi vi tænker så meget på miljøet bliver vores varer produceret langsommere end konventionelle produkter. Her er det bl.a. vores læder der skal garve i vadbassiner med bark i stedet for kemiske løsninger.",
+    "ourTextile" : "Vores tekstiler laves af organiske og bæredygtige materialer såsom bambus, hemp, økologisk bomuld mm. Vi stræber hele tiden efter at udvikle og producere de mest bæredygtige produkter vi kan på den mest bæredygtige måde - for dig, for mig og for os alle sammen.",
+    "ourTextileShort" : "Vores tekstiler laves af...",
+    "inspirationAnd" : "Inspiration og Mission",
+    "weTakeOur" : "Vi tager vores inspiration fra en velafbalanceret blanding af 1920'ernes klassiske udtryk samt det moderne og stilrene London.",
+    "ourMissionIs" : "Vores mission er at skabe produkter til den modeinteresserede mand der ikke går på kompromis for sit udseende som samtidig også ønsker det bedste for miljøet og fremtiden. Alle vores lædervarer er lavet i hånden for at give den absolut højeste kvalitet i hvert eneste produkt",
+    "ourMissionIsShort" : "Vores mission er...",
+    "codeOfConduct" : "CODE OF CONDUCT AND CSR",
+    "codeOfConductAnd" : "Code of Conduct og Corporate Social Responsibilities dækker over en række forskellige krav, som vi sætter til os selv og vores under-leverandører",
+    "appliesTo" : "det gælder blandt:", 
+    "li1" : ""
   }
+
 }

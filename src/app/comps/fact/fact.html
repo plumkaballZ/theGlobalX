@@ -5,7 +5,9 @@
       <h1 class="ui inverted header">
         Shevlin
       </h1>
-      <h2>Sustainability</h2>
+      <h2>
+        <inline-translator [page]="'facts'" [key]="'sustainability'" [elementType]="'text'"></inline-translator>
+      </h2>
       </div>
   </div>
 
@@ -13,23 +15,35 @@
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="eight wide column">
-            <h3 class="ui header">Vi ønsker det bedste for miljøet!</h3>
+            <h3 class="ui header">
+              <inline-translator [page]="'facts'" [key]="'weWish'" [elementType]="'text'"></inline-translator>
+            </h3>
 
-            <p> Fordi vi tænker så meget på miljøet bliver vores varer produceret langsommere end konventionelle produkter. Her er det bl.a. vores læder der skal garve i vadbassiner med bark i stedet for kemiske løsninger.</p>
+            <p> 
+              <inline-translator [page]="'facts'" [key]="'becuaseWe'" [elementType]="'text'"></inline-translator>
+            </p>
             <p data-collapse="collapse-content4" data-text-close="Luk">
-                Vores tekstiler laves af organiske og bæredygtige materialer såsom bambus, hemp, økologisk bomuld mm. Vi stræber hele tiden efter at udvikle og producere de mest bæredygtige produkter vi kan på den mest bæredygtige måde - for dig, for mig og for os alle sammen.    
+              <inline-translator [page]="'facts'" [key]="'ourTextile'" [elementType]="'text'"></inline-translator>
             </p>
-            <a data-target="collapse-content4" data-text-more="" class="read-more"> Vores tekstiler laves af...</a>
+            <a data-target="collapse-content4" data-text-more="" class="read-more"> 
+                <inline-translator [page]="'facts'" [key]="'ourTextileShort'" [elementType]="'text'"></inline-translator>
+            </a>
             
-            <h3 class="ui header">Inspiration og Mission</h3>
+            <h3 class="ui header">
+                <inline-translator [page]="'facts'" [key]="'inspirationAnd'" [elementType]="'text'"></inline-translator>
+            </h3>
 
             
-            <p>Vi tager vores inspiration fra en velafbalanceret blanding af 1920'ernes klassiske udtryk samt det moderne og stilrene London.</p>
-            <p data-collapse="collapse-content5" data-text-close="Luk">    
-                Vores mission er at skabe produkter til den modeinteresserede mand der ikke går på kompromis for sit udseende som samtidig også ønsker det bedste for miljøet og fremtiden. Alle vores lædervarer er lavet i hånden for at give den absolut højeste kvalitet i hvert eneste produkt
+            <p>
+              <inline-translator [page]="'facts'" [key]="'weTakeOur'" [elementType]="'text'"></inline-translator>
+            </p>
+            <p data-collapse="collapse-content5" data-text-close="Luk">
+                <inline-translator [page]="'facts'" [key]="'ourMissionIs'" [elementType]="'text'"></inline-translator>
             </p>
 
-            <a data-target="collapse-content5" data-text-more="" class="read-more"> Vores mission er...</a>
+            <a data-target="collapse-content5" data-text-more="" class="read-more"> 
+              <inline-translator [page]="'facts'" [key]="'ourMissionIsShort'" [elementType]="'text'"></inline-translator>
+            </a>
 
             <p></p>
           </div>
@@ -42,12 +56,19 @@
 
     <div class="ui vertical stripe segment">
       <div class="ui text container">
-        <h3 class="ui header">CODE OF CONDUCT AND CSR</h3>
-
-        <p>Code of Conduct og Corporate Social Responsibilities dækker over en række forskellige krav, som vi sætter til os selv og vores under-leverandører</p>
-        <p data-collapse="collapse-content3" data-text-close="Luk">det gælder blandt:</p>
+        <h3 class="ui header">
+            <inline-translator [page]="'facts'" [key]="'codeOfConduct'" [elementType]="'text'"></inline-translator>
+        </h3>
+        <p>
+            <inline-translator [page]="'facts'" [key]="'codeOfConductAnd'" [elementType]="'text'"></inline-translator>
+        </p>
+        <p data-collapse="collapse-content3" data-text-close="Luk">
+            <inline-translator [page]="'facts'" [key]="'appliesTo'" [elementType]="'text'"></inline-translator>
+        </p>
         <ul data-collapse="collapse-content3" style="font-size: 19px;">
-            <li> Ingen børnearbejde</li>
+
+            <inline-translator [page]="'facts'" [key]="'asdf'" [elementType]="'text'"></inline-translator>
+            <!-- <li> Ingen børnearbejde</li>
             <li> Ingen diskrimination eller krænkelse af menneske- og arbejdsrettigheder</li>	
             <li> Den lokale lov skal overholdes</li>
             <li> Sundt arbejdsmiljø og faciliteter for de ansatte</li>
@@ -57,7 +78,8 @@
             <li> Sikkerhed om maskiner</li>
             <li> Arbejdstid og lønninger skal overholde gældende lov</li>
             <li> Førstehjælpere, brandtræningsuddannede m.m. skal være på fabrikken</li>
-            <li> Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m	</li>
+            <li> Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m	</li> -->
+
           </ul>
           <a data-target="collapse-content3" data-text-more="" class="read-more">det gælder blandt...</a>
 
