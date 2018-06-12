@@ -6,7 +6,7 @@
         Shevlin
       </h1>
       <h2>
-        <inline-translator [page]="'facts'" [key]="'sustainability'" [elementType]="'text'"></inline-translator>
+        {{tranz.sustainability}}
       </h2>
       </div>
   </div>
@@ -16,29 +16,31 @@
         <div class="row">
           <div class="eight wide column">
             <h3 class="ui header">
-              <inline-translator [page]="'facts'" [key]="'weWish'" [elementType]="'text'"></inline-translator>
+                {{tranz.weWish}}
             </h3>
             <p> 
-              <inline-translator [page]="'facts'" [key]="'becuaseWe'" [elementType]="'text'"></inline-translator>
-            </p>
-            <p data-collapse="collapse-content4" data-text-close="X">
-              <inline-translator [page]="'facts'" [key]="'ourTextile'" [elementType]="'text'"></inline-translator>
-            </p>
-            <a data-target="collapse-content4" data-text-more="" class="read-more"> 
-                <inline-translator [page]="'facts'" [key]="'ourTextileShort'" [elementType]="'text'"></inline-translator>
-            </a>
-            <h3 class="ui header">
-                <inline-translator [page]="'facts'" [key]="'inspirationAnd'" [elementType]="'text'"></inline-translator>
-            </h3>
-            <p>
-              <inline-translator [page]="'facts'" [key]="'weTakeOur'" [elementType]="'text'"></inline-translator>
-            </p>
-            <p data-collapse="collapse-content5" data-text-close="X">
-                <inline-translator [page]="'facts'" [key]="'ourMissionIs'" [elementType]="'text'"></inline-translator>
+              {{tranz.becuaseWe}}
             </p>
 
+            <p data-collapse="collapse-content4" data-text-close="X">
+                {{tranz.ourTextile}}
+            </p>
+
+            <a data-target="collapse-content4" data-text-more="" class="read-more"> 
+                {{tranz.ourTextileShort}}
+         
+            </a>
+            <h3 class="ui header">
+                {{tranz.inspirationAnd}}
+            </h3>
+            <p>
+                {{tranz.weTakeOur}}
+            </p>
+            <p data-collapse="collapse-content5" data-text-close="X">
+                {{tranz.ourMissionIs}}
+            </p>
             <a data-target="collapse-content5" data-text-more="" class="read-more"> 
-              <inline-translator [page]="'facts'" [key]="'ourMissionIsShort'" [elementType]="'text'"></inline-translator>
+                {{tranz.ourMissionIsShort}}
             </a>
 
             <p></p>
@@ -53,13 +55,16 @@
     <div class="ui vertical stripe segment">
       <div class="ui text container">
         <h3 class="ui header">
-            <inline-translator [page]="'facts'" [key]="'codeOfConduct'" [elementType]="'text'"></inline-translator>
+    
+            {{tranz.codeOfConduct}}
         </h3>
         <p>
-            <inline-translator [page]="'facts'" [key]="'codeOfConductAnd'" [elementType]="'text'"></inline-translator>
+            {{tranz.codeOfConductAnd}}
+         
         </p>
         <p data-collapse="collapse-content3" data-text-close="X">
-            <inline-translator [page]="'facts'" [key]="'appliesTo'" [elementType]="'text'"></inline-translator>
+            {{tranz.appliesTo}}
+  
         </p>
         <ul data-collapse="collapse-content3" style="font-size: 19px;">      
             <li><inline-translator [page]="'facts'" [key]="'li1'" [elementType]="'text'"></inline-translator></li>
