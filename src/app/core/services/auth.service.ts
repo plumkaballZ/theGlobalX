@@ -120,7 +120,7 @@ export class AuthService {
    * @memberof AuthService
    */
   logout() {
-    return this.http.get('spree/logout.json')
+    return this.http.get('assets/logout.json')
       .map((res: Response) => {
         localStorage.removeItem('user');
         this.store.dispatch(this.actions.logoutSuccess());

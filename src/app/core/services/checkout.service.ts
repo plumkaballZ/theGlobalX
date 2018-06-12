@@ -45,11 +45,13 @@ export class CheckoutService {
   }
 
   fetchCurrentOrder() {
-    
+    console.log('fetchCurrentOrder');
     var localUser = JSON.parse(localStorage.getItem('user'));
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
+
+    
 
       var order = res.json();
       const currOrder: Order = res.json();
@@ -61,7 +63,7 @@ export class CheckoutService {
       if(currOrder.line_items)
       {
         var fin = currOrder.line_items.length;
-        
+
         currOrder.line_items.forEach(lineItem => {
           this.prodService.getProduct(lineItem.id.toString()).subscribe(response => 
             {
@@ -88,6 +90,7 @@ export class CheckoutService {
   }
 
   createEmptyOrder() {  
+    console.log('createEmptyOrder');
     const user = JSON.parse(localStorage.getItem('user'));
     
     var data ={
@@ -100,6 +103,9 @@ export class CheckoutService {
     return this.http.post_Web(
       'api/xOrder', JSON.stringify({ "glxUser": data })
     ).map((res: Response) => {
+       
+      const currOrder: Order = res.json();
+      this.currentOrder = currOrder;
 
       const order = res.json();
       const token = order;
@@ -129,8 +135,6 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-    console.log('deleteLineItem');
-    
     this.currentOrder.line_items.forEach(element => {
       if(element.id == lineItem.id) element.delStr = "true";
     });
@@ -196,11 +200,6 @@ export class CheckoutService {
   }
   
   updateOrder(params) {
-    
-    console.log('updateOrder');
-
-    console.log(params);
-    console.log(this.currentOrder);
 
     const user = JSON.parse(localStorage.getItem('user'));
     

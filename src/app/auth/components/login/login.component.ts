@@ -45,7 +45,10 @@ export class LoginComponent implements OnInit, OnDestroy {
           keys.forEach(val => {
             this.pushErrorFor(val, error);
           });
+
+    
         }
+        // location.reload();
       });
     } else {
       keys.forEach(val => {

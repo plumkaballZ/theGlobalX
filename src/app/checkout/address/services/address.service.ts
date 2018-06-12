@@ -74,6 +74,7 @@ export class AddressService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
+        return order;
       });
   }
 
