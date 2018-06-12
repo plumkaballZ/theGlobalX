@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
   taxonList = [
     {
     "id": 1,
-    "name": "Home", 
+    "name": "Shop", 
     "link": ''
     },
     {
