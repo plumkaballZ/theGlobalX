@@ -12,6 +12,7 @@ import { LineItem } from '../../../../core/models/line_item';
 import { CheckoutActions } from './../../../../checkout/actions/checkout.actions';
 import { CheckoutService } from './../../../../core/services/checkout.service';
 import { ProductService } from './../../../../core/services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-detail',
@@ -33,7 +34,8 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     store: Store<AppState>, actions: CheckoutActions,
     private checkoutService: CheckoutService,
-    private prodService: ProductService
+    private prodService: ProductService,
+    private router: Router
   ) {
     this._store = store;
     this._actions = actions;
@@ -50,9 +52,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
             this.order = order
 
             this.order.line_items.forEach(lineItem => {
-              this.prodService.getProduct(lineItem.id.toString()).subscribe(response => 
-                {
-                  console.log(response)
+              this.prodService.getProduct(lineItem.id.toString()).subscribe(response => {
                   lineItem.prod = response;
                 }
               );
@@ -64,7 +64,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     );
 
     var localUser = JSON.parse(localStorage.getItem('user'));
-    this.isAdmin = false;
+    this.isAdmin = true;
 
     if(localUser != null) 
       if(localUser.lvl == 99) this.isAdmin = true;
@@ -80,13 +80,10 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
   }
 
   confirmOrder(){
-    
-    this.order.shipment_state = "2";
-    this.order.payment_state = "2";
-    
+    this.order.shipment_state = "1";
+    this.order.special_instructions = 'updateShipment';
     this._store.dispatch(this._actions.updateOrder(this.order));
-
-    // this.route.navigate(['/user', 'orders']);
+    this.router.navigate(['/user', 'orders']);
   }
 
 }

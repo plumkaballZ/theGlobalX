@@ -91,7 +91,7 @@ export class CheckoutActions {
   }
 
   updateOrder(param): Action {
-    return { type: CheckoutActions.UPDATE_ORDER };
+    return { type: CheckoutActions.UPDATE_ORDER, payload : param };
   }
 
   updateOrderSuccess(order: Order): Action {

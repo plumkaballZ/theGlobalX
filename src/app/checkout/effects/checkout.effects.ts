@@ -26,7 +26,7 @@ export class CheckoutEffects {
     FetchCurrentOrder$ = this.actions$
     .ofType(CheckoutActions.UPDATE_ORDER)
     .switchMap((action: Action) => {
-      return this.checkoutService.updateOrder("");
+      return this.checkoutService.updateOrder(action.payload);
     })
     .map((data: any) => {
       return this.actions.updateOrderSuccess(data);

@@ -1,7 +1,7 @@
 import { AppState } from './../../../../interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-
+import { LineItem } from './../../../../core/models/line_item';
 import { CheckoutService } from './../../../../core/services/checkout.service';
 import { CheckoutActions } from './../../../../checkout/actions/checkout.actions';
 
@@ -99,8 +99,22 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
   addToCart() {
-    this.store.dispatch(this.checkoutActions.addToCart(this.product)); 
-    this.store.dispatch(this.checkoutActions.updateOrder('asdf')); 
+
+    const variant_id = this.product.master.id;
+    this.store.dispatch(this.checkoutActions.addToCart(this.product));
+
+    // this.store.dispatch(this.checkoutActions.addToCart(this.product)); 
+    // this.store.dispatch(this.checkoutActions.updateOrder('')); 
+
+    var _line = new LineItem();
+    _line.variant_id = this.product.id;
+    _line.single_display_amount = parseInt(this.product.price, 10)
+    _line.display_amount = parseInt(this.product.price, 10)
+    _line.quantity = 1;
+
+    this.checkoutService.addLineItem(_line).subscribe();
+
+
     $(".navbar-toggle").click();
   }
 }

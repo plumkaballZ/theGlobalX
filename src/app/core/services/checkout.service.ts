@@ -129,9 +129,13 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
+    console.log('deleteLineItem');
+    
     this.currentOrder.line_items.forEach(element => {
       if(element.id == lineItem.id) element.delStr = "true";
     });
+
+    this.currentOrder.special_instructions = 'deleteLineItem';
 
     var tmpLineItem = new LineItem();
 
@@ -160,6 +164,7 @@ export class CheckoutService {
 
      this.currentOrder.line_items = [];
      this.currentOrder.line_items.push(lineItem);
+     this.currentOrder.special_instructions = 'addLineItem';
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
@@ -192,15 +197,13 @@ export class CheckoutService {
   
   updateOrder(params) {
     
-    console.log(params);
+    console.log('updateOrder');
 
-    if(params == null)
-    {
-      console.log('empty');
-    }
+    console.log(params);
+    console.log(this.currentOrder);
 
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
@@ -208,13 +211,12 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-
     if(this.currentOrder.line_items.length == 0){
     }
 
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
-        "Order" : (params == "" ? this.currentOrder : params), 
+        "Order" : (params != "" ? params : this.currentOrder), 
         "glxUser" : data, 
         "bill_address_attributes": (params != null ? params : null), 
         "ship_address_attributes": (params != null ? params : null)

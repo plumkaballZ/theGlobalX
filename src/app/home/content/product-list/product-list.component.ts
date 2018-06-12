@@ -39,7 +39,7 @@ export class ProductListComponent implements OnInit {
 
   addToCart(product: Product) {
 
-    const variant_id = product.master.id;
+    const variant_id = product.id;
     this.store.dispatch(this.checkoutActions.addToCart(product));
     
 
@@ -48,6 +48,7 @@ export class ProductListComponent implements OnInit {
     _line.single_display_amount = parseInt(product.price, 10)
     _line.display_amount = parseInt(product.price, 10)
     _line.quantity = 1;
+    _line.id = product.id;
 
     this.checkoutService.addLineItem(_line).subscribe();
   }
