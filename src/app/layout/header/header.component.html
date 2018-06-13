@@ -7,6 +7,10 @@
               Shevlin
             </a>
         
+            <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
+                <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+            </div>
+            
             <div class="navbar-header">
               <button type="button"class="navbar-toggle" data-toggle="collapse" (click)="toggleState()"
                 aria-expanded="false">
@@ -17,7 +21,8 @@
               </button>
             </div>
       
-            <div class="col-md-9" style="float: right;padding-top: 15px;" class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+       
+            <div style="float: right;padding-top: 15px;" class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
 
                   <ul class="nav navbar-nav"  id="navz" style="display: -webkit-inline-box;">
@@ -28,10 +33,13 @@
                       </li>
                   </ul>
                       <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
-                      <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+                    
               </div>
-         
+              
             </div>
+
+          
+
           </div>
   </div>
   

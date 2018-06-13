@@ -56,12 +56,10 @@
   }
   @media screen and (max-width: 768px) {
     .navbar-nav .open .dropdown-menu {
-      position: absolute;
       border: none;
       background: #ffffff;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-      left: 57%;
-      top: 250%;
+      margin-left: -100px;
     }
 
     #profDown {
