@@ -1,6 +1,6 @@
 import { AppState } from './../../../interfaces';
 import { Store } from '@ngrx/store';
-import { getTotalCartValue, getTotalCartItems } from './../../reducers/selectors';
+import { getTotalCartValue, getTotalCartItems, del_getTotalCartValue } from './../../reducers/selectors';
 import { Observable } from 'rxjs/Observable';
 import { Order } from './../../../core/models/order';
 import { CheckoutService } from './../../../core/services/checkout.service';
@@ -34,6 +34,7 @@ export class DeliveryOptionsComponent implements OnInit {
   shippingRates = [];
   
   totalCartValue$: Observable<number>;
+  del_totalCartValue$: Observable<number>;
   totalCartItems$: Observable<number>;
 
   pageTrans: any;
@@ -41,6 +42,7 @@ export class DeliveryOptionsComponent implements OnInit {
   constructor(private checkoutService: CheckoutService, private store: Store<AppState>, private translate: TranslateService) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
+    this.del_totalCartValue$ = this.store.select(del_getTotalCartValue)
   }
 
   ngOnInit() {

@@ -20,7 +20,7 @@
 							
 							<div class="pay-lbl-total">
 								<span class="pay-lbl">{{pageTrans.totalPayable}}</span>
-								<span class="pay-total">{{totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
+								<span class="pay-total">{{del_totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
 							</div>
 							
 							<div *ngIf="address$ | async" class="address-summary">
@@ -39,7 +39,7 @@
 								<span class="lbl">{{pageTrans.choosePaymentMode}}</span>
 								<span class="amt you-pay">
 									<span class="amt">{{pageTrans.youPay}}</span>
-									<span class="you-pay">{{totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
+									<span class="you-pay">{{del_totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
 								</span>
 							</div>
 							<div class="pay-body">

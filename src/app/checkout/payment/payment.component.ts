@@ -1,7 +1,7 @@
 import { Address } from './../../core/models/address';
 import { CheckoutService } from './../../core/services/checkout.service';
 import { CheckoutActions } from './../actions/checkout.actions';
-import { getTotalCartValue, getOrderNumber, getTotalCartItems, getShipAddress } from './../reducers/selectors';
+import { getTotalCartValue, getOrderNumber, getTotalCartItems, getShipAddress, del_getTotalCartValue } from './../reducers/selectors';
 import { AppState } from './../../interfaces';
 import { Router, ChildrenOutletContexts } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -17,6 +17,9 @@ import {TranslateService} from '@ngx-translate/core';
 export class PaymentComponent implements OnInit {
 
   totalCartValue$: Observable<number>;
+
+  del_totalCartValue$: Observable<number>;
+
   totalCartItems$: Observable<number>;
   address$: Observable<Address>;
   orderNumber$: Observable<number>;
@@ -26,6 +29,9 @@ export class PaymentComponent implements OnInit {
     
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
+    
+    this.del_totalCartValue$ = this.store.select(del_getTotalCartValue);
+
     this.address$ = this.store.select(getShipAddress);
     this.orderNumber$ = this.store.select(getOrderNumber);
 

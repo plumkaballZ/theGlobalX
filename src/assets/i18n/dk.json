@@ -6,7 +6,7 @@
     "ulz001": "Eco-friendly",
     "ulz002": "Responsible",
     "btnTxt": "Køb nu",
-    "addToBag" : "TILFØJ TIL TASKE"
+    "addToBag" : "TILFØJ TIL KURV"
   },
   "prodPrice": {
     "prodName": "KortHolder ",
@@ -28,7 +28,7 @@
     "contact": "Kontakt"
   },
   "profile": {
-    "bag": "Taske",
+    "bag": "Kurv",
     "ourFriend": "Bliv vores ven",
     "login": "Log på",
     "myProfile": "Min Profil",
@@ -62,16 +62,16 @@
     "name" : "navn"
   },
   "checkoutHeader": {
-    "bag": "TASKE",
+    "bag": "KURV",
     "delivery": "LEVERING",
     "payment": "BETALING"
   },
   "emptyBag": {
-    "yourBag": "Din takse er tom"
+    "yourBag": "Din kruv er tom"
   },
   "cart": {
-    "myBag": "Min taske",
-    "myShoppingBag" : "Min taske",
+    "myBag": "Min kruv",
+    "myShoppingBag" : "Min kruv",
     "total" : "I alt",
     "totalCurrency" : "DKK"
   },
@@ -94,7 +94,7 @@
     "ulz003": "Facebook: Shevlin.co"
   },
   "orderTotal": {
-    "bagTotal": "Total i tasken",
+    "bagTotal": "Total i kruven",
     "delivery": "Forsendelse",
     "placeOrder": "BESTIL",
     "orderTotal":"Total på order",
@@ -110,7 +110,7 @@
     "stdDel": "GLS Standart levering",
     "freeDel": "1 til 2 hverdage",
     "totalItems": "Antal vare",
-    "orderTotal001": "Total i tasken",
+    "orderTotal001": "Total i kruven",
     "orderTotal002": "Total på order",
     "del001": "Levering",
     "del002": "Gratis",
@@ -143,7 +143,7 @@
     "category" : "Kategori"
   },
   "prodList" : {
-    "addToBag" : "TILFØJ TIL TASKE"
+    "addToBag" : "TILFØJ TIL KRUV"
   },
   "lineItem" : {
     "amount" : "Pris",
@@ -218,12 +218,12 @@
     "li15" : " Alkylphenol, Alkulphenolethoxylates (APEO, miljøskadelige stoffer)",
     "li16" : "Tungmetaller i metaldele (lynlåse, studs m.v.)",
     "li17" : "PH-værdier",
-    "aboutMe" : "OM MIG",
-    "toStartWith" : "Oprindeligt startede jeg denne virksomhed i håbet om at jeg kunne lave et eller andet der kunne gøre en forskel for vores miljø.",
-    "fastI" : "Hurtigt nåede jeg til en konklusion om at lave tilbehør samt tøj til den modebevidste mand. Der blev brugt rigtig meget tid på ideer og samtaler med forskellige producenter, men til sidst fandt jeg frem til de der deler samme vision som jeg selv.",
+    "aboutMe" : "OM OS",
+    "toStartWith" : "Oprindeligt startede vi denne virksomhed i håbet om at kunne lave et eller andet der kunne gøre en forskel for vores miljø.",
+    "fastI" : "Hurtigt nåede vi til en konklusion om at lave tilbehør samt tøj til den modebevidste mand. Der blev brugt rigtig meget tid på ideer og samtaler med vores forskellige producenter, men til sidst fandt vi frem til de der deler samme vision som vi selv gør!",
     "nowAllOur" : "Nu laves alle vores produkter under bæredygtige forhold, med skrappe krav omkring kemikalier samt arbejdsforhold for de ansatte i fabrikkerne.",
-    "weAreStill" : "Vi er stadig en meget ung virksomhed, men jeg tror på at mine idé og min virksomhed har stort potentiale, og derfor arbejder vi konstant på højtryk for at opnår de bedste løsninger og resultater for alt vores arbejde nu og i fremtiden.",
-    "fastIShort" : "Hurtigt nåede jeg til en konklusion...",
+    "weAreStill" : "Vi er stadig en meget ung virksomhed, med tro på at vores idé og vores virksomhed har stort potentiale, og derfor arbejder vi konstant på højtryk for at opnår de bedste løsninger og resultater for alt vores arbejde nu og i fremtiden",
+    "fastIShort" : "Hurtigt nåede vi til en konklusion...",
     "close" : "Luk"
   }
 }

@@ -32,6 +32,9 @@ export function fetchTotalCartItems(state: CheckoutState) {
 export function fetchTotalCartValue(state: CheckoutState) {
   return state.totalCartValue;
 }
+export function del_fetchTotalCartValue(state: CheckoutState){
+  return state.totalCartValue + 40;
+}
 
 export function fetchShipAddress(state: CheckoutState) {
   return state.shipAddress ? state.shipAddress.toJS() : state.shipAddress;
@@ -51,6 +54,7 @@ export const getLineIds = createSelector(getCheckoutState, fetchLineIds);
 export const getOrderNumber = createSelector(getCheckoutState, fetchOrderNumber);
 export const getTotalCartItems = createSelector(getCheckoutState, fetchTotalCartItems);
 export const getTotalCartValue = createSelector(getCheckoutState, fetchTotalCartValue);
+export const del_getTotalCartValue = createSelector(getCheckoutState, del_fetchTotalCartValue);
 export const getShipAddress = createSelector(getCheckoutState, fetchShipAddress);
 export const getBillAddress = createSelector(getCheckoutState, fetchBillAddress);
 export const getOrderState = createSelector(getCheckoutState, fetchOrderState);
