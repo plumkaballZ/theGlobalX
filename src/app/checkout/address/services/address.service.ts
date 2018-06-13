@@ -30,8 +30,10 @@ export class AddressService {
     });
   }
   initEmailForm() {
+
+    const user = JSON.parse(localStorage.getItem('user'));
     return this.fb.group({
-      'email': ['', Validators.required]
+      'email': [(user != null ? user.email : '')]
     });
   }
 

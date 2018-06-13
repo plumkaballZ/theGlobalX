@@ -1,9 +1,9 @@
 
-<form *ngIf="!isAuthenticated" class="form" [formGroup]="emailForm">
+<form class="form" [formGroup]="emailForm">
   <div class="email">
     <label>
       {{pageTrans.email}}
-      <span class="required">*</span>
+      <span>*</span>
     </label>
     <input type="tel" class="full-width" formControlName="email">
     <p *ngIf="emailForm.get('email').hasError('required') && emailForm.get('email').touched" class="value-err show">{{pageTrans.mandatory}}</p>
@@ -15,7 +15,7 @@
   <div class="pincode">
     <label>
         {{pageTrans.zipcode}}
-      <span class="required">*</span>      <span class="required">*</span>
+      <span class="required">*</span>
     </label>
     <input type="tel" class="half-width" formControlName="zipcode">
     <p *ngIf="addressForm.get('zipcode').hasError('required') && addressForm.get('zipcode').touched" class="value-err show">{{pageTrans.mandatory}}</p>

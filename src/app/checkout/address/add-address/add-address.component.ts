@@ -15,13 +15,14 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class AddAddressComponent implements OnInit, OnDestroy {
 
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
+  @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
   pageTrans: any;
 
   addressForm: FormGroup;
   emailForm: FormGroup;
   isAuthenticated: boolean;
+  userEmail: string;
 
   constructor(
     private fb: FormBuilder, private authActions: AuthActions,
@@ -36,12 +37,15 @@ export class AddAddressComponent implements OnInit, OnDestroy {
       this.store.select(getAuthStatus).subscribe((auth) => {
         this.isAuthenticated = auth;
       });   
+
+     
   }
 
   ngOnInit() {
     this.translate.get('addAddress').subscribe((res: any) => {
       this.pageTrans = res;
     });
+    this.userEmail = 'asdf';
   }
 
   onSubmit() {
@@ -57,7 +61,10 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     
     this.addrService.createAddress(addressAttributes).subscribe(
       response => {
-        this.notify.emit(this.getEmailFromUser());
+        var addr = response.bill_address;
+        var arr = [];
+        arr.push(addr);
+        this.notify.emit(arr);
       }
     );
  

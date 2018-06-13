@@ -31,6 +31,8 @@ export class AddressComponent implements OnInit, OnDestroy {
   showAdrs$ : boolean;
   strMail: string;
 
+  isAuthenticated: boolean;
+
 
   constructor(
     private store: Store<AppState>,
@@ -53,8 +55,14 @@ export class AddressComponent implements OnInit, OnDestroy {
 
               JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
-                  if(response.length > 0) this.showAdrs$ = true;
-                  else this.showAdrs$ = false;
+                  if(response.length > 0) {
+                    this.showAdrs$ = true;
+                    this.isAuthenticated = true;
+                  }
+                  else {
+                    this.showAdrs$ = false;
+                    this.isAuthenticated = false;
+                  }
 
                   this.addrs$ = response
                 } 
@@ -62,8 +70,10 @@ export class AddressComponent implements OnInit, OnDestroy {
           }
         );
   }
+
   ngOnInit() {
   }
+
   checkoutToPayment() {
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
@@ -83,24 +93,32 @@ export class AddressComponent implements OnInit, OnDestroy {
     }
     this.stateSub$.unsubscribe();
   }
-  c01_onSubmit(message:string){
-
+  c01_onSubmit(message:any){
+    
     this.strMail= JSON.parse(localStorage.getItem('user')) == null ? message : JSON.parse(localStorage.getItem('user')).email
     this.strMail = this.strMail == null ? message : this.strMail;
-    
     this.showAdrs$ = true;
+ 
 
-    this.actionsSubscription = this.route.params.subscribe(
-      (params: any) => {
-        this.userService.getAddrs(this.strMail).subscribe(
-            response => {
-              if(response.length > 0) this.showAdrs$ = true;
-              else this.showAdrs$ = false;
-              this.addrs$ = response
-            } 
-          );
-      }
-    );
+    if(this.isAuthenticated) {
+      
+      this.actionsSubscription = this.route.params.subscribe(
+        (params: any) => {
+          this.userService.getAddrs(this.strMail).subscribe(
+              response => {
+                if(response.length > 0) this.showAdrs$ = true;
+                else this.showAdrs$ = false;
+                this.addrs$ = response
+              } 
+            );
+        }
+      );
+    }
+    else {
+      this.addrs$ = message;
+    }
+
+    
   }
   AddNewAddr(){
     this.showAdrs$ = false;
