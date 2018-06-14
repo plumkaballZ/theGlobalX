@@ -44,16 +44,24 @@
     "recoverPassword": "Recover password",
     "newTo": "New to Shevlin.co?",
     "loginTo": "Login to Shevlin.co",
-    "createAccount": "Create Account"
+    "createAccount": "Create Account",
+    "email" : "Your email address",
+    "pw" : "Password"
   },
   "signUp": {
     "becomeFriend": "Become our friend",
-    "easilyUsing": "EASILY USING",
+    "easilyUsing": "REGISTER WITH YOUR EMAIL",
     "orUsing": "- OR USING EMAIL -",
     "wishNotif": " Do you wish email notifications?",
     "register": "REGISTER",
     "login": "Login!",
-    "haveAccount": "Already have an account?"
+    "haveAccount": "Already have an account?",
+    "yes" : "Yes",
+    "no" : "No",
+    "mobile" : "Mobile number",
+    "email" : "Your email address",
+    "choosePw" : "Choose a password",
+    "pwMustMatch" : "Password must match"
   },
   "user": {
     "activeOrders": "My orders",

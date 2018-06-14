@@ -7,6 +7,7 @@ import { AppState } from '../../../interfaces';
 import { Router, ActivatedRoute } from '@angular/router';
 import { getAuthStatus } from '../../reducers/selectors';
 import { Subscription } from 'rxjs/Subscription';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -19,12 +20,17 @@ export class LoginComponent implements OnInit, OnDestroy {
   loginSubs: Subscription;
   returnUrl: string;
 
+  tranz: any = {
+  };
+
+
   constructor(
     private fb: FormBuilder,
     private store: Store<AppState>,
     private route: ActivatedRoute,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private translate: TranslateService
   ) {
     this.redirectIfUserLoggedIn();
   }
@@ -32,6 +38,9 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.initForm();
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.translate.get('login').subscribe((res: any) => {
+      this.tranz = res;
+    });
   }
 
   onSubmit() {

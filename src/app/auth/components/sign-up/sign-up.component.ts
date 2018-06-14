@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 import { getAuthStatus } from '../../reducers/selectors';
 import { Subscription } from 'rxjs/Subscription';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,17 +21,24 @@ export class SignUpComponent implements OnInit, OnDestroy {
   title = environment.AppName;
   registerSubs: Subscription;
 
+  tranz: any = {
+  };
+
   constructor(
     private fb: FormBuilder,
     private store: Store<AppState>,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private translate: TranslateService
   ) {
     this.redirectIfUserLoggedIn();
   }
 
   ngOnInit() {
     this.initForm();
+    this.translate.get('signUp').subscribe((res: any) => {
+      this.tranz = res;
+    });
   }
 
   onSubmit() {

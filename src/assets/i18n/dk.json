@@ -44,14 +44,24 @@
     "recoverPassword": "Gendan adgangskode",
     "newTo": "Er du ny her?",
     "createAccount": "Opret konto",
-    "loginTo": "Log på Shevlin.co"
+    "loginTo": "Log på Shevlin.co",
+    "email" : "Din email",
+    "pw" : "Adangskode"
   },
   "signUp": {
     "becomeFriend": "Bliv vores ven",
-    "easilyUsing": "Log på nemt med:",
+    "easilyUsing": "Log på med email:",
     "orUsing": "- Eller via Email -",
     "haveAccount": "Har du allerede en konto?",
-    "login": "Log på here!"
+    "login": "Log på here!",
+    "register" : "Bliv vores ven",
+    "wishNotif" : "Vil du gerne tilmedes vores nyhedsbrev?",
+    "yes" : "Ja",
+    "no" : "Nej",
+    "mobile" : "Mobil nummer",
+    "email" : "Din email",
+    "choosePw" : "Vælg et password",
+    "pwMustMatch" : "Gentag password"
   },
   "user": {
     "activeOrders": "Mine ordere",

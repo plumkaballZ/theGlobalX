@@ -3,27 +3,19 @@
     <div class="col-md-5 col-centered">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><inline-translator [page]="'login'" [key]="'loginTo'" [elementType]="'text'"></inline-translator></h3>
+          <h3 class="panel-title">
+              {{tranz.loginTo}}
+            </h3>
         </div>
         <div id="existing-customer" class="panel-body" data-hook="login">
-          <div class="register-third-party-register">
-            <p class="register-button-info-text register-info-text"><inline-translator [page]="'login'" [key]="'easilyUsing'" [elementType]="'text'"></inline-translator></p>
-            <div class="register-button-container">
-              <button class="register-facebook register-button coming-soon">
-                <span class="register-fb-logo register-sprite"></span>
-                FACEBOOK
-              </button>
-              <button class="register-google register-button coming-soon" id="gPlusLogin">
-                <span class="register-gplus-logo register-sprite"></span>
-                GOOGLE
-              </button>
-            </div>
-          </div>
-          <p class="register-info-text"><inline-translator [page]="'login'" [key]="'orEmail'" [elementType]="'text'"></inline-translator></p>
+
+          <p class="register-info-text">
+              {{tranz.orEmail}}
+        </p>
           <form class="register-register-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
             <fieldset class="register-input-container">
               <div class="register-input-item">
-                <input type="email" class="register-user-input-email register-user-input" name="email" placeholder="Your Email Address" formControlName="email"
+                <input type="email" class="register-user-input-email register-user-input" name="email" placeholder="{{tranz.email}}" formControlName="email"
                   autocomplete="off">
                 <div *ngIf="signInForm.get('email').errors && signInForm.get('email').touched">
                   <span class="register-error-icon text-danger">!</span>
@@ -31,7 +23,7 @@
                 </div>
               </div>
               <div class="register-input-item">
-                <input type="password" class="register-user-input-password register-user-input" name="password" placeholder="Enter Password" formControlName="password"
+                <input type="password" class="register-user-input-password register-user-input" name="password" placeholder="{{tranz.pw}}" formControlName="password"
                   autocomplete="off">
                 <div *ngIf="signInForm.get('password').errors && signInForm.get('password').touched">
                   <span class="register-error-icon text-danger">!</span>
@@ -46,7 +38,8 @@
           <div class="register-link-container">
             <small>
                 <div class="register-right-links">
-                    <span class="register-info-text"><inline-translator [page]="'login'" [key]="'forgotPassword'" [elementType]="'text'"></inline-translator></span>
+                    <span class="register-info-text">
+                      <inline-translator [page]="'login'" [key]="'forgotPassword'" [elementType]="'text'"></inline-translator></span>
                     <a class="register-create-account-link register-link" [routerLink]="['/auth']"><inline-translator [page]="'login'" [key]="'recoverPassword'" [elementType]="'text'"></inline-translator></a>
                   </div>
               <div class="register-right-links">
