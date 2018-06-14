@@ -31,12 +31,12 @@
            "cost_price":null,
            "option_values":[  
               {  
-                 "id":1,
-                 "name":"Small",
-                 "presentation":"S",
-                 "option_type_name":"tshirt-size",
-                 "option_type_id":1,
-                 "option_type_presentation":"S"
+                "id":1,
+                "name":"Antique",
+                "presentation":"Antique",
+                "option_type_name":"Color",
+                "option_type_id":1,
+                "option_type_presentation":"Color"
               }
            ],
            "images":[  
@@ -146,12 +146,12 @@
            "cost_price":null,
            "option_values":[  
               {  
-                 "id":1,
-                 "name":"Small",
-                 "presentation":"S",
-                 "option_type_name":"tshirt-size",
-                 "option_type_id":1,
-                 "option_type_presentation":"S"
+                "id": 1,
+                "name": "80CM",
+                "presentation": "80CM",
+                "option_type_name": "Size",
+                "option_type_id": 1,
+                "option_type_presentation": "Size"
               }
            ],
            "images":[  
@@ -377,12 +377,12 @@
          "cost_price":null,
          "option_values":[  
             {  
-               "id":1,
-               "name":"Small",
-               "presentation":"S",
-               "option_type_name":"tshirt-size",
-               "option_type_id":1,
-               "option_type_presentation":"S"
+              "id": 1,
+              "name": "35-40 EU",
+              "presentation": "35-40 EU",
+              "option_type_name": "Size",
+              "option_type_id": 1,
+              "option_type_presentation": "Size"
             }
          ],
          "images":[  

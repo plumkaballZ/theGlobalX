@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'termsComp',
@@ -7,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class termsComp implements OnInit {
+
+    tranz: any = {};
+    
+    constructor(private translate: TranslateService){
+        this.translate.get('terms').subscribe((res: any) => {
+            this.tranz = res;
+        });
+    }
     ngOnInit() {
     }
 }

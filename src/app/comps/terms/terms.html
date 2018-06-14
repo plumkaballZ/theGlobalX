@@ -2,25 +2,21 @@
           <div class="ui vertical stripe segment">
             <div class="ui text container">
               
-                <h3 class="ui header">Betaling</h3>
-                <p>Shevlin modtager betaling med Dankort/VISA-Dankort, VISA, VISA Electron, Mastercard og JCB. Betaling vil først blive trukket på din konto, når varen afsendes.
-                    Alle beløb er i DKK. Danske kroner og er incl. moms.
-                    Shevlin bruger en godkendt betalingsserver, der krypterer alle dine kortoplysninger med SSL (Secure Socket Layer) protokol. Det betyder, at man ikke kan aflæse dine informationer.</p>
+                <h3 class="ui header">{{tranz.payment}}</h3>
+                <p>
+                    {{tranz.paymentTxt}}
+                </p>
        
 
-              <h3 class="ui header">Levering</h3>
+              <h3 class="ui header"> {{tranz.del}}</h3>
               <p>
-                  Shevlin leverer på alle hverdage, med ordre indgået inden kl. 12.00
-                  NOTE: Her skrives jeres egne leveringsformer og betingelser! 
-
-                  <h3 class="ui header">Reklamationsret</h3>
+                  {{tranz.delTxt}}
+                  <h3 class="ui header">{{tranz.rekl}}</h3>
                   <p>
-                        Der gives 2 års reklamationsret i henhold til købeloven. Vores reklamationsret gælder for fejl i materiale og/eller fabrikation.
-                        Reklamationen gælder ikke fejl eller skader begået ved forkert betjening af produktet / ydelsen.
-                        Shevlin vil dække returneringsomkostninger i et rimeligt omfang.
-
-                        <h3 class="ui header">Ved returnering</h3>
+                      {{tranz.reklTxt}}
+                        <h3 class="ui header">{{tranz.return}}</h3>
                         <p>
+                            {{tranz.returnTxt}}
                             Rettes henvendelse til og reklamationer sendes til:
                             <br>
                             <br>
@@ -32,31 +28,17 @@
                             <br>
                             Der modtages ikke pakker sendt på efterkrav.
 
-                            <h3 class="ui header">Levering</h3>
-                            <p>
-                                Shevlin leverer på alle hverdage, med ordre indgået inden kl. 12.00
-                                NOTE: Her skrives jeres egne leveringsformer og betingelser! 
-
-                                <h3 class="ui header">Refusion</h3>
+                            
+                                <h3 class="ui header">{{tranz.refusion}}</h3>
                                 <p>
-                                    Hvis der er aftalt refusion, så bedes I sende jeres bankoplysninger, så vi kan overføre det aftalte beløb.
-                                        Fortrydelsesret
-                                        Der gives 14 dages fuld returret på varer købt i vores Webshop.
-                                        Perioden regnes fra den dag, hvor du modtager ordren.
-                                        Returneringsomkostninger skal du selv afholde.
-                                        Fortrydelse skal anmeldes til os senest 14 efter købet og fra fortrydelsen skal I senest 14 dage efter returnere forsendelsen.
-                                        Meddelelsen skal gives pr. mail på info@domæne.dk. I meddelelsen skal du gøre os tydeligt opmærksom på, at du ønsker at udnytte din fortrydelsesret. Du kan også vælge at benytte vores standard fortrydelsesformular og sende med retur. Den finder du her (INDSÆT LINK TIL FORTRYDELSESFORMULAR)
-                                        Varens stand, når du sender den retur
-                                        Du hæfter kun for eventuel forringelse af varens værdi, som skyldes anden håndtering, end hvad der er nødvendigt for at fastslå varens art, egenskaber og den måde, den fungerer på. Med andre ord - du kan prøve varen på samme måde, som hvis du prøvede den i en fysisk butik.
-                                        Hvis varen er prøvet udover, hvad der er beskrevet ovenfor, betragter vi den som brugt, hvilket betyder, at du ved fortrydelse af købet kun får en del eller intet af købsbeløbet retur, afhængig af varens handelsmæssige værdi.
-                                        For at modtage hele købsbeløbet retur må du altså gøre det samme, som man kan i en fysisk butik. Du må afprøve varen, men ikke tage den i egentlig brug.
-
-                                        <h3 class="ui header"> Klagemuligheder - oversigt og links:</h3>
+                                  
+                                        {{tranz.refusionTxt}}
+                                        <h3 class="ui header">  {{tranz.comp}}</h3>
                                         <p>
-                                                Har du en klage over et produkt, købt i vores Webshop, kan der sendes en klage til:
+                                                {{tranz.compTxt}}
                                                 <br>
                                              
-                                                Konkurrence- og Forbrugerstyrelsens Center for Klageløsning
+                                                {{tranz.compTxt2}}
                                                 <br>
 
                                                 Carl Jacobsens Vej 35
@@ -65,11 +47,11 @@
                                                 <br>
                                                 Link: www.forbrug.dk
                                                 <br>
-                                                Hvis du er forbruger med bopæl i et andet EU-land, kan du angive din klage i EU Kommissionens online klageplatform.
+                                                {{tranz.compTxt3}}
                                                 <br>
-                                                Platformen findes her: http://ec.europa.eu/consumers/odr/
+                                                {{tranz.compTxt4}}http://ec.europa.eu/consumers/odr/
                                                 <br>
-                                                Angiver du en klage her, skal du oplyse vores E-mail adresse: info@domæne.dk
+                                                {{tranz.compTxt5}}info@shevlin.co
                                         
               </div>
             </div>

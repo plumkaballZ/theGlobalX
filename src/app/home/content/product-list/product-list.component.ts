@@ -39,6 +39,20 @@ export class ProductListComponent implements OnInit {
 
   addToCart(product: Product) {
 
+ 
+    if(product.master.option_values != null) {
+      if(product.master.option_values.length > 0) {
+
+        if(product.master.option_values[0].option_type_name == 'Color') {
+          product.color = product.master.option_values[0].name;
+        }
+
+        if(product.master.option_values[0].option_type_name == 'Size') {
+          product.size = product.master.option_values[0].name;
+        }
+      }
+    }
+
     const variant_id = product.id;
     this.store.dispatch(this.checkoutActions.addToCart(product));
     
@@ -49,6 +63,8 @@ export class ProductListComponent implements OnInit {
     _line.display_amount = parseInt(product.price, 10)
     _line.quantity = 1;
     _line.id = product.id;
+    _line.color = product.color;
+    _line.size = product.size;
 
     this.checkoutService.addLineItem(_line).subscribe();
   }
