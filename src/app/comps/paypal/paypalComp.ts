@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { getTotalCartValue, getTotalCartItems } from './../../checkout/reducers/selectors';
 import { CheckoutService } from './../../core/services/checkout.service';
 
+declare var jquery:any;
+declare var $ :any;
 declare let paypal: any;
 
 @Component({
@@ -31,7 +33,9 @@ export class PayPalComp implements OnInit {
             env: 'sandbox',
             funding: {
               allowed: [ 
-                paypal.FUNDING.CARD,
+                paypal.FUNDING.CARD
+              ],
+              disAllowed : [
                 paypal.FUNDING.CREDIT
               ]
           },
@@ -47,23 +51,35 @@ export class PayPalComp implements OnInit {
                 },
                 commit: true,
                 payment: function (data, actions) {return actions.payment.create({
-            payment: {
-              transactions: [
-                {
-                  amount: { total: totalValue, currency: 'DKK' }
-                }
-              ]
-            }
+                  payment: {
+                    transactions: [
+                      {
+                        amount: { total: totalValue, currency: 'DKK' }
+                      }
+                    ],
+                    redirect_urls: {
+                      return_url: 'http://localhost:4200/user/orders',
+                      cancel_url: 'http://localhost:4200/user/orders'
+                      }
+                  }
           })
         },
         onAuthorize: function(data, actions) {
           return actions.payment.execute().then(function(payment) {
+            actions.redirect();
           })
+        },
+        onCancel: function(data, actions) {
+          console.log(data);
+
+          $('#asdf').show();
+          $('#asdf01').hide();
+          // actions.redirect();
         }
       }, '#paypalBtn');
     })
   }
-  
+
   private loadExternalScript(scriptUrl: string) {
     return new Promise((resolve, reject) => {
       const scriptElement = document.createElement('script')
