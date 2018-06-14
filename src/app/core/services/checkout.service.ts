@@ -39,19 +39,18 @@ export class CheckoutService {
       lineItem.display_amount = lineItem.display_amount
       lineItem.total = parseInt(prod.price);
       lineItem.price  = prod.price;
+      lineItem.color = prod.color;
+      lineItem.size = prod.size;
 
       return lineItem;
     });
   }
 
   fetchCurrentOrder() {
-    console.log('fetchCurrentOrder');
     var localUser = JSON.parse(localStorage.getItem('user'));
     return this.http.get_Web(
       'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
     ).map(res => {
-
-    
 
       var order = res.json();
       const currOrder: Order = res.json();
@@ -90,7 +89,6 @@ export class CheckoutService {
   }
 
   createEmptyOrder() {  
-    console.log('createEmptyOrder');
     const user = JSON.parse(localStorage.getItem('user'));
     
     var data ={

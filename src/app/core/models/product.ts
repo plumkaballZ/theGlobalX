@@ -31,4 +31,6 @@ export class Product {
   product_properties: ProductProperty[];
   classifications: Classification[];
   liArray: string[];
+  size: string;
+  color: string;
 }

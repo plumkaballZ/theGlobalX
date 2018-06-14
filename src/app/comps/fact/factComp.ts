@@ -84,7 +84,6 @@ export class FactComp implements OnInit {
 
       this.translate.get('facts').subscribe((res: any) => {
         this.tranz = res;
-        console.log(this.tranz);
       });
      
   }

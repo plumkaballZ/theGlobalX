@@ -66,11 +66,12 @@ export class PayPalComp implements OnInit {
         },
         onAuthorize: function(data, actions) {
           return actions.payment.execute().then(function(payment) {
-            actions.redirect();
+            $('#asdf').show();
+            $('#asdf01').hide();
+            // actions.redirect();
           })
         },
         onCancel: function(data, actions) {
-          console.log(data);
 
           $('#asdf').show();
           $('#asdf01').hide();

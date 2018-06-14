@@ -18,7 +18,7 @@
          ],
          "total_on_hand":106,
          "master":{  
-            "id":3,
+            "id":4,
             "name":"Ruby on Rails Baseball Jersey",
             "sku":"ROR-001",
             "price":"19.99",
@@ -32,7 +32,12 @@
             "track_inventory":true,
             "option_values":[  
               {  
-              
+                "id": 1,
+                "name": "35-40 EU",
+                "presentation": "35-40 EU",
+                "option_type_name": "Size",
+                "option_type_id": 1,
+                "option_type_presentation": "Size"
              }
             ],
             "images":[  
@@ -74,149 +79,34 @@
             "total_on_hand":6,
             "is_destroyed":false
          },
-         "variants":[  
-            {  
-               "id":17,
-               "name":"Ruby on Rails Baseball Jersey",
-               "sku":"ROR-00001",
-               "price":"19.99",
-               "weight":"0.0",
-               "height":null,
-               "width":null,
-               "depth":null,
-               "is_master":false,
-               "slug":"ruby-on-rails-baseball-jersey",
-               "description":"Ullam delectus provident et sapiente repellendus laboriosam dolorem dicta. Nemo id unde cupiditate distinctio earum beatae id. Quia in aut voluptates ut quis quo vitae quos. Minima doloremque aut quidem ratione et repudiandae iusto vel.",
-               "track_inventory":true,
-               "option_values":[  
-                  {  
-                    
-                  }
-               ],
-               "images":[  
-                  {
-                        "id": 1,
-                        "position": 1,
-                        "attachment_content_type": "image/jpg",
-                        "attachment_file_name": "ror_tote.jpeg",
-                        "type": "Spree::Image",
-                        "attachment_updated_at": null,
-                        "attachment_width": 360,
-                        "attachment_height": 360,
-                        "alt": null,
-                        "viewable_type": "Spree::Variant",
-                        "viewable_id": 1,
-                        "small_url": "/assets/api/_prod/theglobalx/11.jpg",
-                        "large_url": "/assets/api/_prod/theglobalx/11.jpg"
-                      },
-                      {
-                        "id": 2,
-                        "position": 2,
-                        "attachment_content_type": "image/jpg",
-                        "attachment_file_name": "ror_tote.jpeg",
-                        "type": "Spree::Image",
-                        "attachment_updated_at": null,
-                        "attachment_width": 360,
-                        "attachment_height": 360,
-                        "alt": null,
-                        "viewable_type": "Spree::Variant",
-                        "viewable_id": 1,
-                          "small_url": "/assets/api/_prod/theglobalx/12.jpg",
-                              "large_url": "/assets/api/_prod/theglobalx/12.jpg"
-                      }
-               ],
-               "display_price":"$19.99",
-               "options_text":"Size: S, Color: Red",
-               "in_stock":true,
-               "is_backorderable":true,
-               "total_on_hand":10,
-               "is_destroyed":false
-            },
-            {  
-                  "id":18,
-                  "name":"Ruby on Rails Baseball Jersey",
-                  "sku":"ROR-00001",
-                  "price":"19.99",
-                  "weight":"0.0",
-                  "height":null,
-                  "width":null,
-                  "depth":null,
-                  "is_master":false,
-                  "slug":"ruby-on-rails-baseball-jersey",
-                  "description":"Ullam delectus provident et sapiente repellendus laboriosam dolorem dicta. Nemo id unde cupiditate distinctio earum beatae id. Quia in aut voluptates ut quis quo vitae quos. Minima doloremque aut quidem ratione et repudiandae iusto vel.",
-                  "track_inventory":true,
-                  "option_values":[  
-                     {  
-                      
-                     }
-                  ],
-                  "images":[  
-                    {  
-                      "id":24,
-                      "position":1,
-                      "attachment_content_type":"image/jpeg",
-                      "attachment_file_name":"ror_baseball.jpeg",
-                      "type":"Spree::Image",
-                      "attachment_updated_at":"2018-05-04T12:35:35.201Z",
-                      "attachment_width":360,
-                      "attachment_height":360,
-                      "alt":null,
-                      "viewable_type":"Spree::Variant",
-                      "viewable_id":3,
-                      "small_url": "/assets/api/_prod/theglobalx/21.jpg",
-                      "large_url": "/assets/api/_prod/theglobalx/21.jpg"
-                   },
-                   {  
-                      "id":25,
-                      "position":2,
-                      "attachment_content_type":"image/jpeg",
-                      "attachment_file_name":"ror_baseball_back.jpeg",
-                      "type":"Spree::Image",
-                      "attachment_updated_at":"2018-05-04T12:35:36.041Z",
-                      "attachment_width":360,
-                      "attachment_height":360,
-                      "alt":null,
-                      "viewable_type":"Spree::Variant",
-                      "viewable_id":3,
-                      "small_url": "/assets/api/_prod/theglobalx/22.jpg",
-                  "large_url": "/assets/api/_prod/theglobalx/22.jpg"
-                   },
-                   {
-                      "id": 3,
-                      "position": 3,
-                      "attachment_content_type": "image/jpg",
-                      "attachment_file_name": "ror_tote.jpeg",
-                      "type": "Spree::Image",
-                      "attachment_updated_at": null,
-                      "attachment_width": 360,
-                      "attachment_height": 360,
-                      "alt": null,
-                      "viewable_type": "Spree::Variant",
-                      "viewable_id": 1,
-                           "small_url": "/assets/api/_prod/theglobalx/23.jpg",
-                            "large_url": "/assets/api/_prod/theglobalx/23.jpg"
-                    }
-                  ],
-                  "display_price":"$19.99",
-                  "options_text":"Size: S, Color: Red",
-                  "in_stock":true,
-                  "is_backorderable":true,
-                  "total_on_hand":10,
-                  "is_destroyed":false
-               }
+         "variants":[
+          {
+            "option_values":[  
+              {  
+                 "id":1,
+                 "name":"35-40 EU",
+                 "presentation":"35-40 EU",
+                 "option_type_name":"Size",
+                 "option_type_id":1,
+                 "option_type_presentation":"Size"
+              },
+              {  
+                "id":2,
+                "name":"41-48 EU",
+                "presentation":"41-48 EU",
+                "option_type_name":"Size",
+                "option_type_id":2,
+                "option_type_presentation":"Size"
+             }
+           ]
+          }
          ],
          "option_types":[  
             {  
-               "id":1,
-               "name":"Color",
-               "presentation":"Color",
-               "position":1
-            },
-            {  
-               "id":2,
-               "name":"tshirt-color",
-               "presentation":"Color",
-               "position":2
+              "id":1,
+              "name":"Size",
+              "presentation":"Size",
+              "position":1
             }
          ],
          "product_properties":[  
@@ -226,55 +116,6 @@
                "property_id":1,
                "value":"Wilson",
                "property_name":"Manufacturer"
-            },
-            {  
-               "id":2,
-               "product_id":3,
-               "property_id":2,
-               "value":"Wannabe Sports",
-               "property_name":"Brand"
-            },
-            {  
-               "id":3,
-               "product_id":3,
-               "property_id":3,
-               "value":"JK1002",
-               "property_name":"Model"
-            },
-            {  
-               "id":4,
-               "product_id":3,
-               "property_id":4,
-               "value":"Baseball Jersey",
-               "property_name":"Shirt Type"
-            },
-            {  
-               "id":5,
-               "product_id":3,
-               "property_id":5,
-               "value":"Long",
-               "property_name":"Sleeve Type"
-            },
-            {  
-               "id":6,
-               "product_id":3,
-               "property_id":6,
-               "value":"100% cotton",
-               "property_name":"Made from"
-            },
-            {  
-               "id":7,
-               "product_id":3,
-               "property_id":7,
-               "value":"Loose",
-               "property_name":"Fit"
-            },
-            {  
-               "id":8,
-               "product_id":3,
-               "property_id":8,
-               "value":"Men's",
-               "property_name":"Gender"
             }
          ],
          "classifications":[  

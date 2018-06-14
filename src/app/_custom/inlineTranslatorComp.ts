@@ -22,7 +22,6 @@ export class inlineTranslatorComp implements OnInit {
     public line: string;
     
     constructor(private userService: UserService, private translate: TranslateService) { 
-      console.log('ctor');
     }
     
     ngOnInit() {

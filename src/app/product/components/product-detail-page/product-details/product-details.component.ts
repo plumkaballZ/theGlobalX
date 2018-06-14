@@ -63,6 +63,20 @@ export class ProductDetailsComponent implements OnInit {
       this.pageTranslator = res;
     });
 
+    if(this.product.master.option_values != null) {
+      if(this.product.master.option_values.length > 0) {
+
+        if(this.product.master.option_values[0].option_type_name == 'Color') {
+          this.selectedColor = this.product.master.option_values[0].name;
+        }
+
+        if(this.product.master.option_values[0].option_type_name == 'Size') {
+          this.selectedSize = this.product.master.option_values[0].name;
+        }
+      }
+    }
+  
+
     $(document).ready(function(){
      
     });	
@@ -116,6 +130,10 @@ export class ProductDetailsComponent implements OnInit {
   addToCart() {
 
     const variant_id = this.product.master.id;
+
+    this.product.size = this.selectedSize;
+    this.product.color = this.selectedColor;
+    
     this.store.dispatch(this.checkoutActions.addToCart(this.product));
 
 

@@ -33,11 +33,11 @@
         "option_values": [
           {
             "id": 1,
-            "name": "Small",
-            "presentation": "S",
-            "option_type_name": "tshirt-size",
+            "name": "80CM",
+            "presentation": "80CM",
+            "option_type_name": "Size",
             "option_type_id": 1,
-            "option_type_presentation": "S"
+            "option_type_presentation": "Size"
           }
         ],
         "images": [
@@ -100,20 +100,44 @@
           "option_values":[  
             {  
                "id":1,
-               "name":"33",
-               "presentation":"33",
+               "name":"80CM",
+               "presentation":"80CM",
                "option_type_name":"Size",
                "option_type_id":1,
                "option_type_presentation":"Size"
             },
             {  
               "id":2,
-              "name":"35",
-              "presentation":"35",
+              "name":"85CM",
+              "presentation":"85CM",
               "option_type_name":"Size",
               "option_type_id":1,
               "option_type_presentation":"Size"
-           }
+           },
+           {  
+            "id":3,
+            "name":"90CM",
+            "presentation":"90CM",
+            "option_type_name":"Size",
+            "option_type_id":1,
+            "option_type_presentation":"Size"
+         },
+         {  
+          "id":4,
+          "name":"95CM",
+          "presentation":"95CM",
+          "option_type_name":"Size",
+          "option_type_id":1,
+          "option_type_presentation":"Size"
+       },
+       {  
+        "id":5,
+        "name":"100CM",
+        "presentation":"100CM",
+        "option_type_name":"Size",
+        "option_type_id":1,
+        "option_type_presentation":"Size"
+      }
          ]
         }
       ],
