@@ -16,6 +16,7 @@
     margin-bottom: 0em;
     font-size: 4em;
     font-weight: normal;
+    font-family: 'Poiret One';
   }
   .masthead h2 {
     font-size: 1.7em;
@@ -27,6 +28,7 @@
   }
   .ui.vertical.stripe h3 {
     font-size: 2em;
+    font-family: 'Poiret One';
   }
   .ui.vertical.stripe .button + h3,
   .ui.vertical.stripe p + h3 {
@@ -78,6 +80,7 @@
     .masthead h1.ui.header {
       font-size: 2em;
       margin-top: 1.5em;
+      font-family: 'Poiret One';
     }
     .masthead h2 {
       margin-top: 0.5em;
@@ -89,6 +92,7 @@
     }
     .ui.vertical.stripe {
       padding: 3em 0em;
+
     }
  
   }
@@ -171,7 +175,7 @@
   position: absolute;
   width: 200px;
   height: 200px;
-  background: url('https://shevlin.co/assets/leatherStudio.png') center center;
+  background: url('https://shevlin.co/assets/api/pics/bambooForest.png') center center;
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -254,25 +258,29 @@
 
 .social3
 {
+
+  -webkit-box-shadow: 6px 6px 7px #888888;
   box-shadow: 6px 6px 7px #888888;
-  width:80px;
-  height:80px;
-  background-color:#000000;
-  margin-top:-143px;
-  margin-left:435px;
-  -ms-transform: rotate(45deg);
+  width: 80px;
+  height: 123px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -185px;
+  margin-left: 451px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.social3 > i
+.social3:before
 {
-  font-size:60px;
-  margin-top:9px;
-  margin-left:9px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  color:#ffffff;
+  content: '';
+  margin-left: -46px;
+  position: absolute;
+  width: 181px;
+  height: 144px;
+  background: url(https://shevlin.co/assets/leatherStudio.png) center center;
+  background-color: black;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(-47deg);
 }
 .content {
   height:100%;
@@ -284,7 +292,7 @@ p {
 }
 
 h2 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Poiret One';
 }
 .contentHead {
     font-size: 1.33em;

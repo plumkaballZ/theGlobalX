@@ -12,7 +12,7 @@
               [src]="getProductImageUrl(product.master.images[0]?.large_url)">
             <div class="product-productMetaInfo">
               <div itemprop="name" class="product-brand">{{ product.name }}</div>
-              <h2 class="product-product">{{ product.description }}</h2>
+              <h2 class="product-product prodName">{{ product.description }}</h2>
               <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="product-price">
                 <span>
                   <span itemprop="price" class="product-discountedPrice">{{ product.display_price }}</span>

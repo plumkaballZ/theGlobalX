@@ -235,5 +235,23 @@
     "weAreStill" : "We are still a very young company, but I believe that my idea and business are of great potential and we are constantly working on high pressure to achieve the best solutions and results for all our projects both now and in the future.",
     "fastIShort" : "I quickly reached a conclusion...",
     "close" : "Close"
+  },
+  "terms" : {
+    "payment" : "Payment",
+    "paymentTxt" : "Shevlin receives payment with Dankort / VISA-Dankort, VISA, VISA Electron, Mastercard and JCB. Payment will only be deducted from your account when the item is shipped. All prices are in DKK and EUR. And includes VAT/moms. Shevlin uses an authorized payment server that encrypts all your card information using the SSL (Secure Socket Layer) protocol. This means that we can not read your information.",
+    "del" : "Delivery",
+    "delTxt" : "Shevlin delivers on weekdays only. All orders placed before 16.00 will be processed the same day. 12.00 NOTE: The processing time is between 3-5 working days.",
+    "rekl" : "Warranty",
+    "reklTxt" : "A warranty of 2 years is granted in accordance with the danish Purchasing Act. Your right of complaint applies to defects in materials and / or fabrication. The complaint does not apply to errors or damage caused by improper use of the product. Shevlin will cover return costs to a reasonable extent.",
+    "return" : "Upon return",
+    "returnTxt" : "Legal notice and complaints are sent to:",
+    "refusion" : "Reimbursement",
+    "refusionTxt" : "If a refund has been agreed upon, please send your bank details so that we can transfer the agreed amount back to you. We have a 14 day full return on goods purchased in our webshop. The period is counted from the day you receive the order. Return costs must be taken care of by yourself. Cancellation must be notified to us no later than 14 days after the purchase and from the cancellation you must return within 14 days of returning the shipment. The notification shall be given per mail at info@shevlin.co. In the message, please let us know clearly that you wish to exercise your right for a refund. You can also use our 'contact' page, and remember to attach your order no. You are liable for any wear and tear on the products and of the value of the item due to handling other than what is necessary to determine the nature, characteristics and manner of the item. In other words - you can try the product in the same way as if you tried it in a physical store. If the product is tested beyond what is described above, we consider it used, which means that in the case of a refund of the purchase, only a portion or none of the purchase amount will be returned, depending on the products commercial value. In order to receive the full purchase amount, the products must be unused. You may test the product, but do not take it into real use.",
+    "comp" : "Klagemuligheder - oversigt og links:",
+    "compTxt" : "Har du en klage over et produkt, købt i vores Webshop, kan der sendes en klage til:",
+    "compTxt2" : "Konkurrence- og Forbrugerstyrelsens Center for Klageløsning",
+    "compTxt3" : "Hvis du er forbruger med bopæl i et andet EU-land, kan du angive din klage i EU Kommissionens online klageplatform.",
+    "compTxt4" : "Platformen findes her: ",
+    "compTxt5" : "Angiver du en klage her, skal du oplyse vores E-mail adresse: "
   }
 }

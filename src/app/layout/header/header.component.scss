@@ -25,6 +25,11 @@
    font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
   }
 
+  @media screen and (max-width: 400px) {
+    .navbar-brand {
+      font-size: 39px;
+    }
+  }
   @media screen and (min-width: 768px) {
     .az_001 {
       padding-right: 30px;
