@@ -34,6 +34,9 @@ export class ProductDetailsComponent implements OnInit {
   correspondingOptions: any;
   variantId: any;
 
+  selectedSize: any;
+  selectedColor: any;
+
   pageTranslator: any;
 
   _checkoutService : CheckoutService;
@@ -67,19 +70,31 @@ export class ProductDetailsComponent implements OnInit {
   }
   
   onOptionClick(option) {
+    
+     if(option.value.optionValue.option_type_name == 'Color') {
+       this.selectedColor = option.value.optionValue.name;
+      }
+
+     if(option.value.optionValue.option_type_name == 'Size') {
+       this.selectedSize = option.value.optionValue.name;
+      }
+
     const result = new VariantRetriverService()
                     .getVariant(this.currentSelectedOptions,
                                 this.customOptionTypesHash,
-                                option, this.product);
+                                option, this.product);  
 
     this.createNewCorrespondingOptions(result.newCorrespondingOptions,
                                        option.value.optionValue.option_type_name);
 
-    this.currentSelectedOptions = result.newSelectedoptions;
     const newVariant: Variant = result.variant;
-    this.variantId = newVariant.id;
-    this.description = newVariant.description;
-    this.images = newVariant.images;
+
+    if(newVariant != null)
+    {
+      if(newVariant.images != null) {
+        this.images = newVariant.images;
+      }
+    }
   }
 
   makeGlobalOptinTypesHash(customOptionTypes) {
@@ -103,17 +118,16 @@ export class ProductDetailsComponent implements OnInit {
     const variant_id = this.product.master.id;
     this.store.dispatch(this.checkoutActions.addToCart(this.product));
 
-    // this.store.dispatch(this.checkoutActions.addToCart(this.product)); 
-    // this.store.dispatch(this.checkoutActions.updateOrder('')); 
 
     var _line = new LineItem();
     _line.variant_id = this.product.id;
     _line.single_display_amount = parseInt(this.product.price, 10)
     _line.display_amount = parseInt(this.product.price, 10)
     _line.quantity = 1;
+    _line.color = this.selectedColor;
+    _line.size = this.selectedSize;
 
     this.checkoutService.addLineItem(_line).subscribe();
-
 
     $(".navbar-toggle").click();
   }

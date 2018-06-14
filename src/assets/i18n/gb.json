@@ -158,7 +158,8 @@
     "amount" : "Amount",
     "size" : "Size",
     "qty" : "Quantity",
-    "remove" : "REMOVE"
+    "remove" : "REMOVE",
+    "color" : "Color"
   },
   "deliveryAddress" : {
     "mobile" : "Mobile"

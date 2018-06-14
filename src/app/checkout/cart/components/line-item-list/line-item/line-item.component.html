@@ -13,14 +13,22 @@
     </div>
     <div class="size-qty-wrap">
       <div class="size-qty">
-        <span class="size"> 
+
+        <span *ngIf="size != null" class="size"> 
           <span class="gray">{{pageTrans.size}}:</span>
-          <span class="value">L</span>
+          <span class="value">{{size}}</span>
         </span>
+
+        <span *ngIf="color != null" class="size">
+          <span class="gray">{{pageTrans.color}}:</span>
+          <span class="value">{{color}}</span>
+        </span>
+        
         <span class="qty">
           <span class="gray">{{pageTrans.qty}}:</span>
           <span class="value">{{quantity}}</span>
         </span>
+        
       </div>
       <div class="seller"></div>
     </div>

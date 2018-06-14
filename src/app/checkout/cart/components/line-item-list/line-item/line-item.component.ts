@@ -21,6 +21,9 @@ export class LineItemComponent implements OnInit {
   amount: string;
   pageTrans: any;
 
+  size: string;
+  color : string;
+
   @Input() lineItem: LineItem;
 
   constructor(private store: Store<AppState>, private actions: CheckoutActions, 
@@ -36,23 +39,10 @@ export class LineItemComponent implements OnInit {
         this.amount = response.display_price;
       }
     );
-
-    // if(this.lineItem.prod == null) {
-    //   this.prodService.getProduct(this.lineItem.id.toString()).subscribe(response => 
-    //     {
-    //       this.image = response.master.images[0].small_url;
-    //       this.name = response.name;
-    //       this.amount = response.price;
-    //     }
-    //   );
-    // }
-    // else {
-    //   this.image = this.lineItem.prod.master.images[0].small_url;
-    //   this.name = this.lineItem.prod.name;
-    //   this.amount = this.lineItem.prod.price;
-    // }
-
+    
     this.quantity = this.lineItem.quantity;
+    this.size = this.lineItem.size;
+    this.color = this.lineItem.color;
 
     this.translate.get('lineItem').subscribe((res: any) => {
       this.pageTrans = res;

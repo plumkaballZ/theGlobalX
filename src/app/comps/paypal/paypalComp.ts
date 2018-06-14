@@ -29,12 +29,18 @@ export class PayPalComp implements OnInit {
         this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
           paypal.Button.render({
             env: 'sandbox',
+            funding: {
+              allowed: [ 
+                paypal.FUNDING.CARD,
+                paypal.FUNDING.CREDIT
+              ]
+          },
             style: {
               size: 'large',
+              label: 'checkout',
               color: 'gold',
-              shape: 'rect',
-              label: 'checkout'
-          },
+              fundingicons : true
+            },
                  client: {
                     sandbox:    'AWi18rxt26-hrueMoPZ0tpGEOJnNT4QkiMQst9pYgaQNAfS1FLFxkxQuiaqRBj1vV5PmgHX_jA_c1ncL',
                     production: '<1>'

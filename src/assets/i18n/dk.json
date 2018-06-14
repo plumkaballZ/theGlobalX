@@ -149,7 +149,8 @@
     "amount" : "Pris",
     "size" : "Størrelse",
     "qty" : "Antal",
-    "remove" : "FJERN"
+    "remove" : "FJERN",
+    "color" : "Farve"
   },
   "deliveryAddress" : {
     "mobile" : "Mobil"

@@ -26,6 +26,7 @@ export class ProductVariantsComponent implements OnInit {
   }
 
   onOptionClick(option) {
+    console.log(option);
     this.onOptionClickEvent.emit(option);
   }
 
