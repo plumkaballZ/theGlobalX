@@ -5,6 +5,8 @@ import { Action, ActionReducer } from '@ngrx/store';
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
 
+
+
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
 
@@ -71,10 +73,11 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _lineItemId = _lineItem.id;
         const index = state.lineItemIds.indexOf(_lineItemId);
         if (index >= 0) {
+         
           _lineItemIds = state.lineItemIds.splice(index, 1);
           _lineItemEntities = state.lineItemEntities.delete(_lineItemId);
           _totalCartItems = state.totalCartItems - _lineItem.quantity;
-          _totalCartValue = 10;
+          _totalCartValue = (state.totalCartValue - _lineItem.price);
         }
 
         return state.merge({
