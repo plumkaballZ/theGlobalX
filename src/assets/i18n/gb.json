@@ -255,11 +255,11 @@
     "returnTxt" : "Legal notice and complaints are sent to:",
     "refusion" : "Reimbursement",
     "refusionTxt" : "If a refund has been agreed upon, please send your bank details so that we can transfer the agreed amount back to you. We have a 14 day full return on goods purchased in our webshop. The period is counted from the day you receive the order. Return costs must be taken care of by yourself. Cancellation must be notified to us no later than 14 days after the purchase and from the cancellation you must return within 14 days of returning the shipment. The notification shall be given per mail at info@shevlin.co. In the message, please let us know clearly that you wish to exercise your right for a refund. You can also use our 'contact' page, and remember to attach your order no. You are liable for any wear and tear on the products and of the value of the item due to handling other than what is necessary to determine the nature, characteristics and manner of the item. In other words - you can try the product in the same way as if you tried it in a physical store. If the product is tested beyond what is described above, we consider it used, which means that in the case of a refund of the purchase, only a portion or none of the purchase amount will be returned, depending on the products commercial value. In order to receive the full purchase amount, the products must be unused. You may test the product, but do not take it into real use.",
-    "comp" : "Klagemuligheder - oversigt og links:",
-    "compTxt" : "Har du en klage over et produkt, købt i vores Webshop, kan der sendes en klage til:",
-    "compTxt2" : "Konkurrence- og Forbrugerstyrelsens Center for Klageløsning",
-    "compTxt3" : "Hvis du er forbruger med bopæl i et andet EU-land, kan du angive din klage i EU Kommissionens online klageplatform.",
-    "compTxt4" : "Platformen findes her: ",
-    "compTxt5" : "Angiver du en klage her, skal du oplyse vores E-mail adresse: "
+    "comp" : "Complaints - overview and links:",
+    "compTxt" : "If you have a complaint about a product purchased from our webshop, a complaint may be sent to:",
+    "compTxt2" : "The Competition and Consumer Agency's Center for Complaints",
+    "compTxt3" : "If you are a consumer living in another EU country, you can state your complaint in the EU Commission Online Complaints Platform.",
+    "compTxt4" : "The platform can be found here: ",
+    "compTxt5" : "If you submit a complaint here, please provide them with our e-mail address: "
   }
 }

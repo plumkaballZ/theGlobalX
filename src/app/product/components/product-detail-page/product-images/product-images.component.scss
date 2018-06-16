@@ -19,3 +19,10 @@ article {
   width: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px)
+{
+  .article-img2 {
+    margin-top: 133px;
+  }
+}

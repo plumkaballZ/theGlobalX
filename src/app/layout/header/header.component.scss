@@ -5,7 +5,7 @@
  }
  .navbar-brand {
    font-family: 'Poiret One';
-   font-size: 62px;
+   font-size: 58px;
    padding-top: 25px;
    padding: 30px 0px !important;
    img {
@@ -48,20 +48,30 @@
     margin-top: 26px;
   }
 
-  .navbar-fixed-top, .navbar-fixed-bottom {
-    position: sticky;
+  @media screen and (min-width: 768px)
+  {
+    .navbar-fixed-top, .navbar-fixed-bottom {
+      position: sticky;
+  
+    }
   }
+  
   
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
    border-color: transparent; 
   }
   
+  @media screen and (min-width: 768px) {
+    .padTop{
+      padding-top: 15px;
+  }
+}
   @media screen and (max-width: 768px) {
     .bla1 {
       float: left;
-      margin: -2px 14px 0;
+      // margin: -2px 14px 0;
       list-style: none;
-      font-size: 14px;
+      font-size: 15px;
       text-align: left;
       background-color: #FFFFFF;
     }

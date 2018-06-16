@@ -55,6 +55,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           return state;
         }
 
+        console.log(_lineItem.total);
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
  

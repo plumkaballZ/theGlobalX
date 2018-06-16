@@ -32,7 +32,7 @@
 				margin-left: 5px;
 			}
 			.divider {
-				width: 10%;
+				width: 3%;
 				border-top: 1px dashed #94969f;
 				height: 5px;
 				display: inline-block!important;
@@ -53,7 +53,7 @@
 		}
 		.navbar-brand {
 			font-family: 'Poiret One';
-			font-size: 62px;
+			font-size: 58px;
 			padding-top: 25px;
 			padding: 30px 0px !important;
 			img {
@@ -81,9 +81,9 @@
 			}
 		 @media screen and (max-width: 768px) {
 			.checkout-steps ul, ol {
-				margin-top: 70px;
-				padding-left: 0%;
+				 margin-top: 30px;
 			}
+			
 		}
 		 @media screen and (min-width: 768px) {
 			 .az_001 {
@@ -101,8 +101,21 @@
 			 margin-top: 22px;
 		 }
 		 .navbar-fixed-top, .navbar-fixed-bottom {
-			 position: sticky; /* this can also be static */
+			//  position: sticky; /* this can also be static */
 		 }
+
+		 @media screen and (min-width: 768px) {
+			.navbar-fixed-top, .navbar-fixed-bottom {
+				position: sticky; /* this can also be static */
+			}
+		  }
 		 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 			border-color: transparent; 
 		 }
+		 @media screen and (max-width: 400px) {
+			.navbar-brand {
+			  font-size: 39px;
+			}
+		  }
+
+		  

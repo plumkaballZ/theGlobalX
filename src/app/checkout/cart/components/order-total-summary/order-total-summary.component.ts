@@ -37,7 +37,9 @@ export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
     this.translate.get('orderTotal').subscribe((res: any) => {
       this.pageTranslator = res;
     });
-    this.initJs();
+    if($(window).width() > 700){
+      // this.initJs();
+    }
   }
 
   initJs() {
@@ -45,7 +47,7 @@ export class OrderTotalSummaryComponent implements OnInit, OnDestroy {
     const $rect = $('.rect');
     const threshould = $rect.offset().top + gap;
     const animOption = {easing: 'easein'};
-
+    
     $(document).on('scroll', debounce(function () {
 
       if ($(window).scrollTop() > threshould && $(window).width() > 800) {
