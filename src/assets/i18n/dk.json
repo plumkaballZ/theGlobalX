@@ -46,7 +46,10 @@
     "createAccount": "Opret konto",
     "loginTo": "Log på Shevlin.co",
     "email" : "Din email",
-    "pw" : "Adangskode"
+    "pw" : "Adangskode",
+    "enterValidId" : "Udfyld venligst med gyldig email",
+    "pw6chars" : "Adgangskode skal være mindst på 6 tegn",
+    "enterValidNumber" : "Mobile nummer skal være på mindst 8 tal"
   },
   "signUp": {
     "becomeFriend": "Bliv vores ven",
@@ -61,7 +64,10 @@
     "mobile" : "Mobil nummer",
     "email" : "Din email",
     "choosePw" : "Vælg et password",
-    "pwMustMatch" : "Gentag password"
+    "pwMustMatch" : "Gentag password",
+    "enterValidId" : "Udfyld venligst med gyldig email",
+    "pw6chars" : "Adgangskode skal være mindst på 6 tegn",
+    "enterValidNumber" : "Mobile nummer skal være på mindst 8 tal"
   },
   "user": {
     "activeOrders": "Mine ordere",

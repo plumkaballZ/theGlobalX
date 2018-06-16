@@ -23,13 +23,13 @@
 				
 			}
 			.step1 {
-				margin-right: 5px;
+			
 			}
 			.step2 {
-				margin: 0 5px;
+			
 			}
 			.step3 {
-				margin-left: 5px;
+			
 			}
 			.divider {
 				width: 3%;
@@ -77,11 +77,12 @@
 
 		 .checkout-steps ul, ol {
 				padding-left:34%;
-				margin-top: 20px;
+				margin-top: 30px;
 			}
 		 @media screen and (max-width: 768px) {
 			.checkout-steps ul, ol {
 				 margin-top: 30px;
+				 padding-left:36%;
 			}
 			
 		}
@@ -100,10 +101,6 @@
 			 margin-right: 4px;
 			 margin-top: 22px;
 		 }
-		 .navbar-fixed-top, .navbar-fixed-bottom {
-			//  position: sticky; /* this can also be static */
-		 }
-
 		 @media screen and (min-width: 768px) {
 			.navbar-fixed-top, .navbar-fixed-bottom {
 				position: sticky; /* this can also be static */
@@ -118,4 +115,14 @@
 			}
 		  }
 
+		  @media screen and (max-width: 768px) {
+			.checkout-steps {
+				.step {
+					a {
+						font-size: 9px;
+					}
+
+				}}
+		  }
+		  
 		  

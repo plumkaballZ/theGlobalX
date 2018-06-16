@@ -19,7 +19,7 @@
                   autocomplete="off">
                 <div *ngIf="signInForm.get('email').errors && signInForm.get('email').touched">
                   <span class="register-error-icon text-danger">!</span>
-                  <p class="register-error-message text-danger">{{signInForm.get('email').errors.msg || 'Please enter a valid email id'}}</p>
+                  <p class="register-error-message text-danger"></p>
                 </div>
               </div>
               <div class="register-input-item">
@@ -27,7 +27,7 @@
                   autocomplete="off">
                 <div *ngIf="signInForm.get('password').errors && signInForm.get('password').touched">
                   <span class="register-error-icon text-danger">!</span>
-                  <p class="register-error-message text-danger">{{signInForm.get('password').errors.msg || 'Password must be at least 6 characters'}}</p>
+                  <p class="register-error-message text-danger"></p>
                 </div>
               </div>
             </fieldset>

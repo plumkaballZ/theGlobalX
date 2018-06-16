@@ -26,13 +26,14 @@
 		.prod-name {
 			display: inline-block;
 			overflow: hidden;
-    	text-overflow: ellipsis;
-    	white-space: nowrap;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 			max-width: 400px;
-    	padding: 5px 5px 5px 0;
+			padding: 5px 5px 5px 0;
+		
 			a {
 				font-size: 14px;
-				font-family: "Whitney-semi-bold";
+				font-family: 'Poiret One';
 				font-weight: 600;
     		color: #535766;
     		margin-right: 6px;
@@ -105,6 +106,5 @@
 			width: 100%;
 		}
 	}
-	
 }
  
