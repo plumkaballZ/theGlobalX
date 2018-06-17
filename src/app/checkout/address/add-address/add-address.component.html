@@ -42,7 +42,7 @@
       <input type="text" class="half-width" formControlName="firstname">
       <p *ngIf="addressForm.get('firstname').hasError('required') &&  addressForm.get('firstname').touched" class="value-err show">{{pageTrans.mandatory}}</p>
     </div>
-    <div class="last-name">
+    <div class="first-name">
       <label>
           {{pageTrans.lastName}}
         <span class="required">*</span>
