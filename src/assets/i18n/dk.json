@@ -169,7 +169,8 @@
     "color" : "Farve"
   },
   "deliveryAddress" : {
-    "mobile" : "Mobil"
+    "mobile" : "Mobil",
+    "zipcode" : "Postnummer"
   },
   "addAddress" : {
     "email" : "Email",

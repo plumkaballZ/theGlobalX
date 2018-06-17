@@ -1,16 +1,19 @@
 <div class="items">
-        <div (click)="selectAddr($event, address)" *ngFor="let address of addrs" class="address-row">
-            <div class="name">{{address.full_name}}</div>
+
+  <div (click)="selectAddr($event, address)" *ngFor="let address of addrs" class="address-row">
+            <div class="name">{{address.firstname}} {{address.lastname}}</div>
             <div class="address">
               <div class="address-content">
                 <div class="address-field">{{address.address1}}</div>
                 <div class="address-field">{{address.address2}}</div>
                 <span class="address-field">{{address.city}}</span>
-                <span class="address-field">-{{address.zipcode}}</span>
+                <span class="address-field">{{address.zipcode}}</span>
+                
                 <div class="mob">
                   <span class="mob-lbl">{{pageTrans.mobile}}: </span>
-                  <span class="mob-no">{{address.phone}}</span>
+                  <span class="mob-no pull-right">{{address.phone}}</span>
                 </div>
+
               </div>
             </div>
           

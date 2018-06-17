@@ -84,4 +84,12 @@
   }
   .addAddrBtn:hover {
     background-color:#104739;
-  }
+	}
+	
+
+
+	@media screen and (max-width: 768px) {
+		.address-section{
+			margin: 90px auto;
+		}
+}

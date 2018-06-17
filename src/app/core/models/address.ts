@@ -22,4 +22,9 @@ export class Address {
   uid: string;
 
   public v_selected : boolean;
+
+  public getFullName(){
+    return this.firstname + " " + this.lastname;
+  }
+
 }
