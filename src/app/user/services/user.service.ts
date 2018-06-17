@@ -34,7 +34,7 @@ export class UserService {
 
     if(localUser.lvl == 99) orderUrl = 'api/xOrders/GetOrdersLvl99'
 
-    return this.http.get_Web(orderUrl, {params: {email: (localUser== null ? '': localUser.email)}})
+    return this.http.get_Web(orderUrl, {params: {email: (localUser== null ? '': localUser.email), ip : localStorage.getItem('userUid')}})
       .map((res: Response) =>  {
         return res.json();
       });

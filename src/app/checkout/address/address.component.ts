@@ -53,7 +53,7 @@ export class AddressComponent implements OnInit, OnDestroy {
           (params: any) => {
             this.userService.getAddrs(
 
-              JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+              JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
                   if(response.length > 0) {
                     this.showAdrs$ = true;

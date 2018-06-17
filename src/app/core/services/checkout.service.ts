@@ -10,9 +10,19 @@ import {Order} from './../../core/models/order';
 import {Address} from './../../core/models/address';
 import { Product } from './../../core/models/product';
 
+
 import { HttpService } from './http';
 
 import { ProductService } from './../../core/services/product.service';
+
+class Guid {
+  static newGuid() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+          return v.toString(16);
+      });
+  }
+}
 
 @Injectable()
 export class CheckoutService {
@@ -47,10 +57,29 @@ export class CheckoutService {
   }
 
   fetchCurrentOrder() {
+   
     var localUser = JSON.parse(localStorage.getItem('user'));
+   
+    var _email = localStorage.getItem('userUid');
+
+    if(_email == null) {
+      _email = Guid.newGuid();
+      localStorage.setItem('userUid', _email);
+    }
+
+    if(localUser != null)
+    {
+      if(localUser.email != null) {
+        _email = localUser.email;
+      }
+  
+    }
+  
     return this.http.get_Web(
-      'api/xOrder', { params:{email:(localUser== null ? '': localUser.email)} }
+      'api/xOrder', { params:{ email:_email } }
     ).map(res => {
+
+      console.log(res);
 
       var order = res.json();
       const currOrder: Order = res.json();
@@ -91,12 +120,17 @@ export class CheckoutService {
   createEmptyOrder() {  
     const user = JSON.parse(localStorage.getItem('user'));
     
+    
+    var ip = localStorage.getItem('userUid');
+
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
       password : (user != null ? user.password : ''),
-      password_confirmation : ''
+      password_confirmation : '',
+      ip : ip
     }
+
 
     return this.http.post_Web(
       'api/xOrder', JSON.stringify({ "glxUser": data })
@@ -257,3 +291,5 @@ export class CheckoutService {
     localStorage.setItem('order', jsonData);
   }
 }
+
+

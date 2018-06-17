@@ -7,6 +7,15 @@ import { AppState } from '../../interfaces';
 import { Store } from '@ngrx/store';
 import { AuthActions } from '../../auth/actions/auth.actions';
 
+class Guid {
+  static newGuid() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+          return v.toString(16);
+      });
+  }
+}
+
 @Injectable()
 export class AuthService {
 
@@ -34,6 +43,16 @@ export class AuthService {
    * @memberof AuthService
    */
   login(data): Observable<any> {
+
+    var _ip = localStorage.getItem('userUid');
+    
+        if(_ip == null) {
+          _ip = Guid.newGuid();
+          localStorage.setItem('userUid', _ip);
+        }
+
+    data.ip = _ip;
+
     return this.http.get_Web(
       'api/xUser', { params: data }
     ).map((res: any) => {
@@ -66,6 +85,17 @@ export class AuthService {
    * @memberof AuthService
    */
   register(data): Observable<any> {
+
+
+    var _ip = localStorage.getItem('userUid');
+    
+        if(_ip == null) {
+          _ip = Guid.newGuid();
+          localStorage.setItem('userUid', _ip);
+        }
+
+    data.ip = _ip;
+
     return this.http.post_Web('api/xUser', JSON.stringify({ "glxUser": data })).map((res: Response) => {
       var pw = data.password;
       var resReq = res.json();
@@ -97,6 +127,9 @@ export class AuthService {
   authorized(): Observable<any> {
     var localUser = JSON.parse(localStorage.getItem('user'));
     
+  
+
+
     return this.http
       .get_Web(
         'api/xUser', { params: { json: 'asdf', email:(localUser== null ? '': localUser.email), password:(localUser== null ? '': localUser.password) } }

@@ -29,7 +29,7 @@ export class AddressesComponent implements OnInit {
     this.actionsSubscription = this.route.params.subscribe(
       (params: any) => {
         this.userService
-          .getAddrs( JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email)
+          .getAddrs( JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email)
           .subscribe(response => this.addrs$ = response);
         }
 
@@ -47,7 +47,7 @@ export class AddressesComponent implements OnInit {
       (params: any) => {
         
         this.userService.getAddrs(
-          JSON.parse(localStorage.getItem('user')) == null ? "" : JSON.parse(localStorage.getItem('user')).email).subscribe(
+          JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
             response => {
               if(response.length > 0) this.showAdrs$ = true;
               else this.showAdrs$ = false;
