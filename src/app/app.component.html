@@ -10,8 +10,20 @@
                 <router-outlet></router-outlet>
               </main>
           
+              
+       
+
               <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
               <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
             </section>
+          </div>
+
+
+        </div>
+        <div class="cookie-disclaimer">
+          <div class="cookie_container">
+            <p>Websitet andvender cookies til at huske dine indstillinger, for mere info se vores <a class="pp" (click)="goToLink('cookiePolicy')">privatepolitik</a></p>
+
+            <button type="button" class="btn btn-success accept-cookie">Ok</button>
           </div>
         </div>

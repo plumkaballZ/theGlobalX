@@ -20,7 +20,8 @@
     "mailTxt": "info@shevlin.co",
     "about001": "About the company",
     "about002": "Our company has been created with sustainability in mind. We care about the enviroment and we produce our products in the most responsible ways possible. Our mission is to make quality products without compromise",
-    "conditions" : "Conditions"
+    "conditions" : "Conditions",
+    "cookiePolicy" : "Private policy"
   },
   "header": {
     "home": "Shop",
@@ -261,5 +262,28 @@
     "compTxt3" : "If you are a consumer living in another EU country, you can state your complaint in the EU Commission Online Complaints Platform.",
     "compTxt4" : "The platform can be found here: ",
     "compTxt5" : "If you submit a complaint here, please provide them with our e-mail address: "
+  },
+  "orders" : {
+    "noOrders" : "You have'nt ordered anything yet.",
+    "startShopping" : "Start Shopping"
+  },
+  "orderDetails" : {
+    "size" : "Size",
+    "color" : "Color",
+    "qty" : "Quantity",
+    "price" : "Price",
+    "currency": "$",
+    "total" : "TOTAL",
+    "state" : "STATUS",
+    "items" : "ITEMS",
+    "shipDetails" : "SHIPPING DETAILS",
+    "orderNo" : "Order Nummer: "
+  },
+  "app" : {
+    "cookiePlicy" : "This website is using cookies to keep track of your settings, for more info please read or ",
+    "privatePolicy" : "private policy"
+  },
+  "cookiePolicy" : {
+    
   }
 }

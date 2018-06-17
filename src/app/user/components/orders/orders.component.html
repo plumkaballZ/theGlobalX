@@ -8,7 +8,9 @@
 <ng-template #elseBlock>
   <div class="cart-empty">
     <div class="empty-cart-icon"></div>
-    <div class="empty-cart-message">You have'nt ordered anything yet.</div>
-    <a class="empty-wishlist-link" routerLink="/home">Start Shopping</a>
+    <div class="empty-cart-message">
+      {{tranz.noOrders}}
+    </div>
+    <a class="empty-wishlist-link" routerLink="/home">{{tranz.startShopping}}</a>
   </div>
 </ng-template>

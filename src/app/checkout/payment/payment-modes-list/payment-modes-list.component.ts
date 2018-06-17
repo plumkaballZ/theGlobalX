@@ -47,6 +47,9 @@ export class PaymentModesListComponent implements OnInit {
       });
   }
   makePayment() {
+
+    console.log('makePayment');
+    
     var tmpAddr;
     this.store.select(getShipAddress).subscribe((addr) => {
       tmpAddr = addr;

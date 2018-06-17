@@ -9,22 +9,22 @@
           <div class="row">
 
             <div class="col-md-4">
-              <small>TOTAL</small>
+              <small>{{tranz.total}}</small>
               <h5>
                 <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-                {{order.total}}
+                {{order.total}} {{tranz.currency}}
               </h5>
             </div>
 
             <div class="col-md-4">
-              <small>STATUS</small>
+              <small>{{tranz.state}}</small>
               <h5 class="status">
                 {{order.shipment_state | uppercase}}
               </h5>
             </div>
             
             <div class="col-md-4">
-              <small>ITEMS</small>
+              <small>{{tranz.items}}</small>
               <h5>
                 {{order.line_items.length}}
               </h5>
@@ -34,38 +34,57 @@
           </div>
       </div>
       <hr>
-      <div class='row' *ngFor="let line_item of order.line_items">
-        <br>
-        id: {{line_item.id}}
+      
+      <div *ngFor="let line_item of order.line_items">
 
-        <div class="col-md-3">
-          <h5 class="strong">
-            <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            quantity: {{line_item.quantity}}
-          </h5>
-          <small>
-            Price: 
-            <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            {{line_item.price}}
-          </small><br/>
-          <small class="text-warning">
-            VAT/CST: 
-            <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-            {{line_item.total - line_item.price}}
-          </small>
+          <div class="prod-item">
+              <div *ngIf="line_item.prod != null" class="col1">
+                <img  [src]="line_item.prod.master.images[0].small_url" alt=""> 
+              </div>
+              <div class="col2">
+                <div class="prod-name">
+                  <a *ngIf="line_item.prod != null" class="c-gray">
+                    {{line_item.prod.name}}
+                  </a>
+                </div>
+                <div *ngIf="line_item.prod != null" class="prod-amount">
+                  {{tranz.price}}: {{line_item.prod.display_price}}
+                </div>
+                <div class="size-qty-wrap">
+                  <div class="size-qty">
+            
+                    <span *ngIf="line_item.size != null" class="size"> 
+                      <span class="gray">{{tranz.size}}:</span> 
+                      <span class="value">{{line_item.size}}</span>
+                    </span>
+            
+                    <span *ngIf="line_item.color != null" class="size">
+                       <span class="gray">{{tranz.color}}:</span> 
+                      <span class="value">{{line_item.color}}</span>
+                    </span>
+                    
+             
+                    <span class="qty">
+                      <span class="gray">{{tranz.qty}}:</span>
+                      <span class="value">{{line_item.quantity}}</span>
+                    </span>
+                    
+                    
+                  </div>
+                  <div class="seller"></div>
+                </div>
+              </div>
+            </div>
+            
+            
+          
         </div>
 
-        <div class="col-md-4">
-          <p>
-            <strong class="text-warning">Please note:</strong> You can return or exchange this within 30 days. 
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 
   <br>
-  <h5>SHIPPING DETAILS</h5>
+  <h5>{{tranz.shipDetails}}</h5>
   <div class="panel panel-default">
     <div class="row panel-body">
       <div class="col-md-12">
@@ -83,7 +102,7 @@
         </address>
       </div>
 
-      <dl class="col-md-12">
+      <!-- <dl class="col-md-12">
         <dt>
           Total Amount:
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
@@ -107,7 +126,7 @@
           <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
           {{order.adjustment_total}}
         </dd>
-      </dl>
+      </dl> -->
 
       <dl class="col-md-12">
         <dt>

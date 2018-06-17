@@ -5,6 +5,7 @@ import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
 import { termsComp } from './comps/terms/terms'
+import { cookiePolicyComp } from './comps/cookiePolicy/cookiePolicyComp'
 
 export const routes: Routes = [
   {
@@ -29,5 +30,6 @@ export const routes: Routes = [
   {path: 'fact', component: FactComp},
   {path: 'story', component: AboutComp},
   {path: 'contact', component: ContactComp},
-  {path: 'terms', component: termsComp}
+  {path: 'terms', component: termsComp},
+  {path: 'cookiePolicy', component: cookiePolicyComp}
 ];

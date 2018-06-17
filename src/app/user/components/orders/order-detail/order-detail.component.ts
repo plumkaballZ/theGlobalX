@@ -13,6 +13,7 @@ import { CheckoutActions } from './../../../../checkout/actions/checkout.actions
 import { CheckoutService } from './../../../../core/services/checkout.service';
 import { ProductService } from './../../../../core/services/product.service';
 import { Router } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-order-detail',
@@ -26,6 +27,9 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
   order: Order;
   isAdmin : boolean;
 
+  tranz: any;
+
+
   private _store: Store<AppState>;
   private _actions: CheckoutActions;
 
@@ -35,13 +39,19 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     store: Store<AppState>, actions: CheckoutActions,
     private checkoutService: CheckoutService,
     private prodService: ProductService,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) {
     this._store = store;
     this._actions = actions;
   }
 
   ngOnInit() {
+
+    this.translate.get('orderDetails').subscribe((res: any) => {
+      this.tranz = res;
+    });
+    
     this.routeSubscription$ = this.route.params.subscribe(
       (params: any) => {
         this.orderNumber = params['number'];
@@ -50,7 +60,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
           .getOrderDetail(this.orderNumber)
           .subscribe(order => {
             this.order = order
-
+            console.log(this.order);
             this.order.line_items.forEach(lineItem => {
               this.prodService.getProduct(lineItem.id.toString()).subscribe(response => {
                   lineItem.prod = response;

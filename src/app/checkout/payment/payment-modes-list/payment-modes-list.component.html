@@ -1,11 +1,3 @@
-
-<!-- 
-<div class="pay-modes">
-  <div class="mode" [ngClass]="{'selected': mode.id == selectedMode.id, 'coming-soon': mode.id != selectedMode.id}" *ngFor="let mode of paymentModes">
-    {{mode.name}}
-  </div>
-</div> -->
-
 <div class="selected-mode" [ngSwitch]="selectedMode.name">
   <ng-template [ngSwitchCase]="'Credit Card'"> 
      <app-credit-card></app-credit-card>   

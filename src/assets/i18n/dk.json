@@ -20,7 +20,8 @@
     "mailTxt": "info@shevlin.co",
     "about001": "Omkring virksomheden",
     "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis.",
-    "conditions" : "Handelsbetingelser"
+    "conditions" : "Handelsbetingelser",
+    "cookiePolicy" : "Privatepolitik"
   },
   "header": {
     "home": "Butik",
@@ -261,6 +262,29 @@
     "compTxt3" : "Hvis du er forbruger med bopæl i et andet EU-land, kan du angive din klage i EU Kommissionens online klageplatform.",
     "compTxt4" : "Platformen findes her: ",
     "compTxt5" : "Angiver du en klage her, skal du oplyse vores E-mail adresse: "
+  },
+  "orders" : {
+    "noOrders" : "Du har ikke bestilt noget endnu",
+    "startShopping" : "Køb noget"
+  },
+  "orderDetails" : {
+    "size" : "Størrelse",
+    "color" : "Farve",
+    "qty" : "Antal",
+    "price": "Pris",
+    "currency" : "DKK",
+    "total" : "TOTAL",
+    "state" : "STATUS",
+    "items" : "ANTAL VARE",
+    "shipDetails" : "FORSENDELSESDETALJER",
+    "orderNo" : "Order Nummer: "
+  },
+  "app" : {
+    "cookiePlicy" : "Dette website andvender cookies til at huske dine indstillinger, for mere info se vores",
+    "privatePolicy" : "privatepolitik"
+  },
+  "cookiePolicy" : {
+    
   }
 
 }

@@ -6,7 +6,7 @@ import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
-declare var jquery:any;
+declare var jQuery:any;
 declare var $ :any;
 
 @Component({
@@ -19,6 +19,8 @@ export class AppComponent implements OnInit, OnDestroy {
   currentUrl: string;
   currentStep: string;
   checkoutUrls = ['/checkout/cart', '/checkout/address', '/checkout/payment'];
+
+  tranz: any;
 
   constructor(
     private router: Router,
@@ -42,11 +44,15 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // this.initJs();
+    this.initJs();
     this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder().subscribe(res => {
         });
+      });
+
+      this.translate.get('app').subscribe((res: any) => {
+        this.tranz = res;
       });
   }
 
@@ -70,38 +76,86 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
+
+
+    // var localFlag = localStorage.getItem('localFlag');
+    // localStorage.setItem('localFlag', flag);
   }
 
+  goToLink(str) {
+    console.log(str);
+    this.router.navigateByUrl(str);
+  }
   initJs(){
-    $(document).ready(function(){
+    jQuery(document).ready(function() { 
+      
+  
+      var cookie: any = false;
 
-      $(".super-button").click(function() {
-        removeStuff();
-      });
+      var cookieContent = $('.cookie-disclaimer');
+  
+      checkCookie();
 
-      $(".overlay").click(function() {
-        removeStuff();
-      });
+       if (cookie == true) {
+         cookieContent.hide();
+       }
 
-      function removeStuff(){
-
-        $(".upperPic").addClass("upperPichover");
-        $(".lowerPic").addClass("lowerPichover");
-        $(".Pic").removeClass("Pic");
-    
-        $(".mainZ").remove();
-    
-
-        $(".contentz").removeClass("contentz");
-        $(".default").unwrap();
-
-        setTimeout(function(){
-          $(".upperPic").removeClass("upperPic");
-          $(".lowerPic").removeClass("lowerPic");
-          $(".upperPicTxt").remove();
-          $(".upperPicTxt").removeClass("upperPicTxt");
-        }, 800);
+      function setCookie(cname, cvalue, exdays) {
+        localStorage.setItem('cookie_Z', 'true');
       }
-    });	
+
+      function checkCookie() {
+        
+        var cookie_Z = localStorage.getItem('cookie_Z');
+
+        if (cookie_Z != null) {
+          cookie = true;
+        }
+      }
+
+      function deleteCookie() {
+        localStorage.removeItem('cookie_Z');
+      }
+
+      $('.accept-cookie').click(function () {
+        setCookie("cname", "cvalue", 365);
+        cookieContent.hide();
+      });
+
+      $('.decline-cookie').click(function () {
+          deleteCookie();
+      });
+  });
+
+    // $(document).ready(function(){
+
+    //   $(".super-button").click(function() {
+    //     removeStuff();
+    //   });
+
+    //   $(".overlay").click(function() {
+    //     removeStuff();
+    //   });
+
+    //   function removeStuff(){
+
+    //     $(".upperPic").addClass("upperPichover");
+    //     $(".lowerPic").addClass("lowerPichover");
+    //     $(".Pic").removeClass("Pic");
+    
+    //     $(".mainZ").remove();
+    
+
+    //     $(".contentz").removeClass("contentz");
+    //     $(".default").unwrap();
+
+    //     setTimeout(function(){
+    //       $(".upperPic").removeClass("upperPic");
+    //       $(".lowerPic").removeClass("lowerPic");
+    //       $(".upperPicTxt").remove();
+    //       $(".upperPicTxt").removeClass("upperPicTxt");
+    //     }, 800);
+    //   }
+    // });	
   }
 }

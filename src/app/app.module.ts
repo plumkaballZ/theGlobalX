@@ -11,6 +11,7 @@ import { FactComp } from './comps/fact/factComp';
 import { AboutComp } from './comps/about/aboutComp';
 import { ContactComp } from './comps/contact/contactComp';
 import { termsComp } from './comps/terms/terms';
+import { cookiePolicyComp } from './comps/cookiePolicy/cookiePolicyComp';
 
 
 
@@ -55,7 +56,8 @@ export function createTranslateLoader(http: HttpClient) {
     FactComp,
     AboutComp,
     ContactComp,
-    termsComp
+    termsComp,
+    cookiePolicyComp
   ],
   imports: [
     NgbModule,

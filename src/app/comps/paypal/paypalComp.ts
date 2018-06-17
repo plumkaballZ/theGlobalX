@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AppState } from './../..../../../interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
@@ -19,15 +19,19 @@ export class PayPalComp implements OnInit {
   @Input() totalCartValue: number;
   @Input() totalCartItems: number;
 
+  @Output() payOnDelivery: EventEmitter<boolean> = new EventEmitter<boolean>();
+
     constructor(private checkoutService: CheckoutService, private store: Store<AppState>) {
     }
 
     ngOnInit() {
+      console.log(this.payOnDelivery);
     }
 
     ngAfterViewInit(): void {
       var totalValue = this.totalCartValue;
 
+      var eventEmitter = this.payOnDelivery;
         this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
           paypal.Button.render({
             env: 'sandbox',
@@ -72,9 +76,9 @@ export class PayPalComp implements OnInit {
           })
         },
         onCancel: function(data, actions) {
-
-          $('#asdf').show();
-          $('#asdf01').hide();
+          console.log(eventEmitter.emit(true));
+          // $('#asdf').show();
+          // $('#asdf01').hide();
           // actions.redirect();
         }
       }, '#paypalBtn');
