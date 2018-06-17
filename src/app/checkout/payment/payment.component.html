@@ -34,11 +34,13 @@
 			<div class="col-sm-6">
 					<div class="left">
 							<div class="payment-header">
-								<span class="lbl">{{pageTrans.choosePaymentMode}}</span>
+								
+								<span class="lbl">{{pageTrans.youPay}}: </span>
 								<span class="amt you-pay">
-									<span class="amt">{{pageTrans.youPay}}</span>
-									<span class="you-pay">{{del_totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
-								</span>
+										<!-- <span class="amt">{{pageTrans.youPay}}</span> -->
+										<span class="you-pay">{{del_totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
+									</span>
+								
 							</div>
 							<div class="pay-body">
 								<app-payment-modes-list [orderNumber]="orderNumber$ | async" [paymentAmount]="totalCartValue$ | async"></app-payment-modes-list>

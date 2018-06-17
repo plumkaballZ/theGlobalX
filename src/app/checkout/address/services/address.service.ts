@@ -18,15 +18,15 @@ export class AddressService {
 
   initAddressForm() {
     return this.fb.group({
-      'firstname': ['', Validators.required],
-      'lastname': ['', Validators.required],
-      'address1': ['', Validators.required],
-      'address2': ['', Validators.required],
-      'city': ['', Validators.required],
-      'phone': ['', Validators.required],
-      'zipcode': ['', Validators.required],
-      'state_id': ['', Validators.required],
-      'country_id': ['', Validators.required]
+      'firstname': [''],
+      'lastname': [''],
+      'address1': [''],
+      'address2': [''],
+      'city': [''],
+      'phone': [''],
+      'zipcode': [''],
+      'state_id': [''],
+      'country_id': ['']
     });
   }
   initEmailForm() {
