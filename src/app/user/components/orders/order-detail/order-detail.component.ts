@@ -60,7 +60,6 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
           .getOrderDetail(this.orderNumber)
           .subscribe(order => {
             this.order = order
-            console.log(this.order);
             this.order.line_items.forEach(lineItem => {
               this.prodService.getProduct(lineItem.id.toString()).subscribe(response => {
                   lineItem.prod = response;

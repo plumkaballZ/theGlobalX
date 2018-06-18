@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Order } from '../../../../core/models/order';
 import { environment } from '../../../../../environments/environment';
 import {TranslateService} from '@ngx-translate/core';
+import { ProductService } from './../../../../core/services/product.service';
 
 @Component({
   selector: 'app-order-list-item',
@@ -15,12 +16,17 @@ export class OrderListItemComponent implements OnInit {
   constructor(private translate: TranslateService) { }
 
   ngOnInit() {
+    
+    console.log(this.order);
+
     this.translate.get('orderList').subscribe((res: any) => {
       this.pageTrans = res;
     });
+
   }
 
   getProductImageUrl(url) {
+    console.log(url);
     return environment.API_ENDPOINT + url;
   }
 

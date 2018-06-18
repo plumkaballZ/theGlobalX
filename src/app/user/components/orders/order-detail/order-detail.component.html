@@ -76,8 +76,6 @@
               </div>
             </div>
             
-            
-          
         </div>
 
     </div>
@@ -102,37 +100,12 @@
         </address>
       </div>
 
-      <!-- <dl class="col-md-12">
-        <dt>
-          Total Amount:
-          <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.total}}
-        </dt>
-        
-        <dd>
-          MRP: 
-          <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.item_total}}
-        </dd>
-
-        <dd>
-          Shipping: 
-          <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.ship_total}}
-        </dd>
-        
-        <dd>
-          Adjustment: 
-          <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
-          {{order.adjustment_total}}
-        </dd>
-      </dl> -->
-
       <dl class="col-md-12">
         <dt>
           Payment: {{order.payment_state | humanize | uppercase}}
         </dt>
       </dl>
+
     </div>
   </div>
 </div>
