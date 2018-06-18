@@ -1,32 +1,26 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <h5 class="active">
-      {{order.id}} / {{order.shipment_state | uppercase}}
+      {{order.id}} / {{order.email}} 
     </h5>
     <small>
       {{pageTrans.placedOn}}: {{order.created_at | date:'fullDate'}}
       <i class="fa fa-{{order.currency | lowercase}}"aria-hidden="true"></i>
-      / {{order.email}} 
     </small>
     
     
     <hr>
     <h5 class="strong">
-
-      {{pageTrans.shipment}}: 
       
+      {{pageTrans.shipment}}: 
+
       <div *ngIf="order.shipment_state == '1'">
-        Venter på bekræftelse
+        {{pageTrans.orderWating}}: 
       </div>
       
       <div *ngIf="order.shipment_state == '0'">
-        Order sent via GLS
+        {{pageTrans.orderSentGls}}: 
       </div>
-      
-
-      <!-- {{order.line_items.length}} items | 
-      
-      {{order.shipment_state | uppercase}} on {{order.updated_at | date:'fullDate'}}  -->
 
       <div class="pull-right">
         <a [routerLink]="['detail', order.id]" class="view-details-link strong"> {{pageTrans.details}}</a>

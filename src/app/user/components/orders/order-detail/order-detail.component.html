@@ -1,33 +1,42 @@
 <div *ngIf="order">
     
-  <button *ngIf="isAdmin" (click)="confirmOrder()" class="pdp-add-to-bag pdp-button">BEKRÆFT ORDER</button>
+ 
 
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">
-        <div class="active col-md-6">
+        <div class="active col-md-12">
           <div class="row">
 
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top:10px">
               <small>{{tranz.total}}</small>
-              <h5>
+              <p>
                 <i class="fa fa-{{order.currency | lowercase}}" aria-hidden="true"></i>
                 {{order.total}} {{tranz.currency}}
-              </h5>
+              </p>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top:10px">
               <small>{{tranz.state}}</small>
-              <h5 class="status">
-                {{order.shipment_state | uppercase}}
-              </h5>
+              <div class="status">
+                <!-- {{order.shipment_state | uppercase}} -->
+
+                <div *ngIf="order.shipment_state == '1'">
+                    {{tranz.orderWating}}: 
+                  </div>
+                  
+                  <div *ngIf="order.shipment_state == '0'">
+                    {{tranz.orderSentGls}}: 
+                  </div>
+
+                </div>
             </div>
             
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top:10px">
               <small>{{tranz.items}}</small>
-              <h5>
+              <p>
                 {{order.line_items.length}}
-              </h5>
+              </p>
             </div>
 
           </div>
@@ -96,16 +105,19 @@
           {{order.ship_address.address1}}<br>
           {{order.ship_address.address2}}<br>
           {{order.ship_address.city}}{{order.ship_address.zipcode}}<br>
-          <abbr title="Phone">Phone:</abbr> {{order.ship_address.phone}}
+          <abbr title="Phone"></abbr> {{order.ship_address.phone}}
         </address>
       </div>
 
-      <dl class="col-md-12">
+      <!-- <dl class="col-md-12">
         <dt>
           Payment: {{order.payment_state | humanize | uppercase}}
         </dt>
-      </dl>
+      </dl> -->
 
     </div>
   </div>
+
+  <button *ngIf="isAdmin" (click)="confirmOrder()" class="pdp-add-to-bag pdp-button pull-right">{{tranz.confirmOrder}}</button>
+
 </div>

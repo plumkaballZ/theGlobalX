@@ -71,7 +71,7 @@
     "enterValidNumber" : "Mobile nummer skal være på mindst 8 tal"
   },
   "user": {
-    "activeOrders": "Mine ordere",
+    "activeOrders": "ORDER OVERSIGT",
     "myAddresses": "Mine addresser",
     "hello": "Hej",
     "yourName" : "Hej og velkommen!, hvad er dit",
@@ -157,7 +157,7 @@
     "belts" : "Bælter",
     "keyhangers" : "Nøgleringe",
     "serachTerms" : "Søgeord",
-    "category" : "Kategori"
+    "category" : "Kategorier"
   },
   "prodList" : {
     "addToBag" : "TILFØJ TIL KRUV"
@@ -201,7 +201,9 @@
     "total" : "Total",
     "state" : "Status",
     "shipment" : "Orderstatus",
-    "details" : "Detaljer"
+    "details" : "Detaljer",
+    "orderSentGls" : "Order sendt med GLS",
+    "orderWating" : "Order venter på bekræftelse"
   },
   "facts" : {
     "sustainability" : "Sustainability",
@@ -277,7 +279,10 @@
     "state" : "STATUS",
     "items" : "ANTAL VARE",
     "shipDetails" : "FORSENDELSESDETALJER",
-    "orderNo" : "Order Nummer: "
+    "orderNo" : "Order Nummer: ",
+    "confirmOrder" : "BEKRÆFT ORDER",
+    "orderSentGls" : "Order sendt med GLS",
+    "orderWating" : "Order venter på bekræftelse"
   },
   "app" : {
     "cookiePlicy" : "Dette website andvender cookies til at huske dine indstillinger, for mere info se vores",

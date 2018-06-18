@@ -54,7 +54,11 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     
     this.routeSubscription$ = this.route.params.subscribe(
       (params: any) => {
+        
         this.orderNumber = params['number'];
+
+        console.log(this.orderNumber);
+
         this.orderSubscription$ =
           this.userService
           .getOrderDetail(this.orderNumber)
@@ -73,8 +77,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     );
 
     var localUser = JSON.parse(localStorage.getItem('user'));
-    this.isAdmin = true;
-
+    
     if(localUser != null) 
       if(localUser.lvl == 99) this.isAdmin = true;
   }

@@ -65,7 +65,7 @@
     "pwMustMatch" : "Password must match"
   },
   "user": {
-    "activeOrders": "My orders",
+    "activeOrders": "ORDER OVERVIEW",
     "myAddresses": "My addresses",
     "hello": "Hello",
     "yourName" : "Hell and welcome!, what is your",
@@ -158,7 +158,7 @@
     "belts" : "Belts",
     "keyhangers" : "Key hangers",
     "serachTerms" : "Search Terms",
-    "category" : "Category"
+    "category" : "Categories"
   },
   "prodList" : {
     "addToBag" : "ADD TO BAG"
@@ -201,7 +201,9 @@
     "total" : "Total",
     "state" : "State",
     "shipment" : "Order state",
-    "details" : "Details"
+    "details" : "Details",
+    "orderSentGls" : "Order sent with GLS",
+    "orderWating" : "Order is waiting for confirmation"
   },
   "facts" : {
     "sustainability" : "Sustainability",
@@ -277,7 +279,10 @@
     "state" : "STATUS",
     "items" : "ITEMS",
     "shipDetails" : "SHIPPING DETAILS",
-    "orderNo" : "Order Nummer: "
+    "orderNo" : "Order Nummer: ",
+    "confirmOrder" : "CONFIRM ORDER",
+    "orderWating" : "Order is waiting for confirmation",
+    "orderSentGls" : "Order sent with GLS"
   },
   "app" : {
     "cookiePlicy" : "This website is using cookies to keep track of your settings, for more info please read or ",
