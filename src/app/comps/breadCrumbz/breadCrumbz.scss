@@ -1,0 +1,31 @@
+.bread_crumb {
+    margin: 25px 0;
+    li {
+      display: inline-block;
+      float: left;
+      margin-right: 5px;
+      a {
+        color: #696b79;
+      }
+    }
+    li:after {
+      font-size: 10px;
+      content: '/';
+      margin-left: 5px;
+    }
+    li:last-child {
+      font-weight: 500;
+      margin-right: 0;
+      font-family: Whitney-semi-bold;
+    }
+    li:last-child:after {
+      content: '';
+      margin-right: 0;
+    }
+  }
+  
+  ul.bread_crumb:before, ul.bread_crumb:after {
+    content: "";
+    display: table;
+  }
+  

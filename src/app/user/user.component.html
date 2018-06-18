@@ -6,6 +6,7 @@
         <h4>{{pageTrans.hello}} {{User.id}}, {{pageTrans.welcome}}!</h4>
     </div>
 
+
     <ng-template #other_content>
         <h4> 
           {{pageTrans.yourName}}
@@ -17,17 +18,9 @@
   </div>
 
   <div class="sidebar col-md-3">
-    <p>
-      <a routerLink="/user/orders" routerLinkActive="active">
-        {{pageTrans.activeOrders}}
-      </a>
-    </p>
-    <!-- <hr>
-    <p>
-      <a routerLink="/user/addresses" routerLinkActive="active">
-        {{pageTrans.myAddresses}}
-    </a>
-    </p> -->
+
+      <breadCrumbz [crumbz]="breadcrumbs$" [homeLink]="homeLink$">
+      </breadCrumbz>
   </div>
 
   <div class="col-md-9">

@@ -19,6 +19,9 @@ export class UserComponent implements OnInit {
   userId: string;
   pageTrans: any;
 
+  breadcrumbs$: string[] = ['OrderOverview', 'OderDetails'];
+  homeLink$: string = '/user/orders';
+
   private data: Observable<User>;
 
   constructor(
@@ -29,10 +32,13 @@ export class UserComponent implements OnInit {
   ) {
     this.User = JSON.parse(localStorage.getItem('user'));
     this.userService._user = this.User;
+   
   }
   ngOnInit() {
     this.translate.get('user').subscribe((res: any) => {
       this.pageTrans = res;
+      this.breadcrumbs$[0] = this.pageTrans.OrderOverview;
+       this.breadcrumbs$[1] = this.pageTrans.OderDetails;
     });
   }
   updateId(e: any) {

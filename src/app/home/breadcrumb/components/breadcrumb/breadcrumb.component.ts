@@ -13,7 +13,9 @@ export class BreadcrumbComponent implements OnInit {
 
   pageTranslator: any;
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService) {
+    
+   }
 
   ngOnInit() {
     this.translate.get('breadcrumb').subscribe((res: any) => {

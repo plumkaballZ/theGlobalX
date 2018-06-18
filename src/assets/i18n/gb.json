@@ -70,7 +70,9 @@
     "hello": "Hello",
     "yourName" : "Hell and welcome!, what is your",
     "welcome" : "welcome!",
-    "name" : "name"
+    "name" : "name",
+    "OrderOverview" : "Overview",
+    "OderDetails" : "Details"
   },
   "checkoutHeader": {
     "bag": "BAG",
@@ -267,7 +269,9 @@
   },
   "orders" : {
     "noOrders" : "You have'nt ordered anything yet.",
-    "startShopping" : "Start Shopping"
+    "startShopping" : "Start Shopping",
+    "OrderOverview" : "Orderoverview",
+    "OderDetails" : "Order details"
   },
   "orderDetails" : {
     "size" : "Size",

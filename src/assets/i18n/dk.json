@@ -76,7 +76,9 @@
     "hello": "Hej",
     "yourName" : "Hej og velkommen!, hvad er dit",
     "welcome" : "velkommen",
-    "name" : "navn"
+    "name" : "navn",
+    "OrderOverview" : "Oversigt",
+    "OderDetails" : "Detaljer"
   },
   "checkoutHeader": {
     "bag": "KURV",
@@ -267,7 +269,9 @@
   },
   "orders" : {
     "noOrders" : "Du har ikke bestilt noget endnu",
-    "startShopping" : "Køb noget"
+    "startShopping" : "Køb noget",
+    "OrderOverview" : "Oversigt",
+    "OderDetails" : "Detaljer"
   },
   "orderDetails" : {
     "size" : "Størrelse",

@@ -1,0 +1,9 @@
+
+<ul class="bread_crumb">
+    <li *ngFor="let breadcrumb of crumbz; let i = index;">
+      <a *ngIf="i != crumbz.length - 1; else elseBlock" routerLink="{{homeLink}}" class="crumb">
+        <span >{{breadcrumb}}</span>
+      </a>
+      <ng-template #elseBlock>{{breadcrumb}}</ng-template>
+    </li>
+  </ul>
