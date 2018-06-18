@@ -16,7 +16,7 @@ export class ProductDetailPageComponent implements OnInit {
   product$: Product = null;
   routeSubs: Subscription;
   productId: any;
-
+  
   constructor(private productService: ProductService,
               private route: ActivatedRoute) {
                 
