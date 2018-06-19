@@ -69,3 +69,64 @@
 	  }
 	}
 }
+.del-options {
+	border: 1px solid #b9f0e5; 
+	background-color: #f4fdfb;
+	border-radius: 4px;
+	padding: 15px;
+	width: 44%;
+	display: inline-table;
+	padding-top: 25px;
+	margin-right: 18px;
+	margin-top: 28px;
+	position: relative;
+	padding-left: 45px;
+
+	.option {
+		.option-name {
+			font-weight: 700;
+			padding-bottom: 5px;
+			font-family: "Whitney-semi-bold";
+		}
+		.option-rate {
+			font-size: 12px;
+			color: #535766;
+		}
+	}
+	.select {
+		cursor: pointer;
+		position: absolute;
+		left: 14px;
+		top: 23px;
+		width: 20px;
+		height: 20px;
+		border: none;
+		background-position: -551px 0;
+		display: inline-block;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: 4250px 153px;
+		vertical-align: middle;
+		background-image: url(/assets/checkout_sprite.png);
+	}
+}
+
+.edit-address {
+	padding-top: 30px;
+	padding-bottom: 30px;
+		background: #fff;
+		.edit-label {
+			font-size: 17px;
+			color: #596062;
+			font-weight: 600;
+			font-family: "Whitney-semi-bold";
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.items {
+			.del-options  {
+				width: 100%;
+		  }
+		}
+	}

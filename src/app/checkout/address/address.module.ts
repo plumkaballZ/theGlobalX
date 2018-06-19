@@ -17,7 +17,6 @@ import { SharedModule } from './../../shared/index';
     AddAddressComponent,
     DeliveryAddressComponent,
     DeliveryOptionsComponent,
-
   ],
   exports: [],
   imports: [

@@ -59,7 +59,7 @@ export class AddAddressComponent implements OnInit, OnDestroy {
       addressAttributes = this.addrService.createGuestAddressAttributes(address, email);
     }
     
-    console.log(addressAttributes);
+    addressAttributes.order.ship_address_attributes.state_id = localStorage.getItem('userUid');
 
     this.addrService.createAddress(addressAttributes).subscribe(
       response => {

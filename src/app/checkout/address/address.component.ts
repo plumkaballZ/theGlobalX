@@ -65,9 +65,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
         this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
-            this.userService.getAddrs(
-
-              JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
+            this.userService.getAddrs(JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
                   if(response.length > 0) {
                     this.showAdrs$ = true;
@@ -137,9 +135,9 @@ export class AddressComponent implements OnInit, OnDestroy {
       );
     }
     else {
-      this.userService.getAddrs('empty').subscribe(
+      var userUid = localStorage.getItem('userUid');
+      this.userService.getAddrs(userUid).subscribe(
         response => {
-          response = message;
           this.showAdrs$ = true;
           this.addrs$ = response
           this.child.selectAddr('', response[0]);

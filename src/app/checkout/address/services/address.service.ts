@@ -45,7 +45,6 @@ export class AddressService {
       }
     };
   }
-
   createGuestAddressAttributes(address, email) {
     return {
       'order': {
@@ -59,14 +58,14 @@ export class AddressService {
   createAddress(params) {
     
     const user = JSON.parse(localStorage.getItem('user'));
-
+    
     var data ={
       email : (user != null ? user.email : ''),
       mobile: '',
       password : (user != null ? user.password : ''),
       password_confirmation : ''
     }
-    
+
     return this.http.post_Web('api/xAddress', JSON.stringify
     ({
       "order" : params.order,

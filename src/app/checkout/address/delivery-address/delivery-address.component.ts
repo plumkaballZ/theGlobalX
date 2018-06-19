@@ -10,12 +10,14 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './delivery-address.component.html',
   styleUrls: ['./delivery-address.component.scss']
 })
+
 export class DeliveryAddressComponent implements OnInit {
   pageTrans: any;
 
   @Input() selectedAddress: Address;
-
   @Input() addrs: Address[];
+  @Input() delOptions: any[]; 
+  @Input() selectedDel : any;
 
   private _store: Store<AppState>;
   private _actions: CheckoutActions;
@@ -23,6 +25,16 @@ export class DeliveryAddressComponent implements OnInit {
   constructor(store: Store<AppState>, actions: CheckoutActions, private translate: TranslateService) {  
     this._store = store;
     this._actions = actions;
+
+    this.delOptions = [{
+      "prop1":"GLS PakkeShop afhentning",
+      "prop2":"40 DKK"
+    }, {
+      "prop1":"GLS Pakkelevering ", 
+      "prop2":"50 DKK"
+  }];
+
+  this.selectedDel = this.delOptions[0];
   }
 
   ngOnInit() {
@@ -36,6 +48,10 @@ export class DeliveryAddressComponent implements OnInit {
     const order = JSON.parse(localStorage.getItem('order'));
     order.ship_address = item;
     this._store.dispatch(this._actions.updateOrderSuccess(order));
+  }
+
+  public selectDelOption(event, item : any) {
+    this.selectedDel = item;
   }
 
 }
