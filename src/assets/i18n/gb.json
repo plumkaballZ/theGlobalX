@@ -134,7 +134,9 @@
   "addrs": {
     "addNew": "Create new address",
     "continue": "CONTINUE TO PAYMENT",
-    "selectAddr": "Select delivery address"
+    "selectAddr": "Select delivery address",
+    "addrsOverview" : "Overview",
+    "createAddr" : "Create address"
 
   },
   "breadcrumb":{

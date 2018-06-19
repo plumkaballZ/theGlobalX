@@ -13,7 +13,7 @@
 							<button (click)="AddNewAddr()" class="addAddrBtn">
 								<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
 								</button>
-							<app-delivery-address [addrs]="addrs$"></app-delivery-address>
+							<app-delivery-address #delAddrz [addrs]="addrs$"></app-delivery-address>
 						</div>
 				</div>		
 
@@ -29,10 +29,9 @@
 	</div>
 
 	<div *ngIf="!showAdrs$">
-		<div class="col-xs-12 col-sm-8">
+		<div class="col-sm-12">
 			
-			<breadCrumbz [crumbz]="breadcrumbs$" [homeLink]="homeLink$">
-				</breadCrumbz>
+			<breadCrumbz [crumbz]="breadcrumbs$" [homeLink]="homeLink$" (click)=ShowAddrs()></breadCrumbz>
 
 			<div class="left">
 				<div class="add-address">

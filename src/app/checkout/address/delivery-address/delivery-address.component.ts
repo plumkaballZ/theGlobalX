@@ -32,7 +32,6 @@ export class DeliveryAddressComponent implements OnInit {
   }
 
   public selectAddr(event, item : Address) {
-    console.log(item);
     this.selectedAddress = item;
     const order = JSON.parse(localStorage.getItem('order'));
     order.ship_address = item;

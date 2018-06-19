@@ -15,7 +15,8 @@ import { NotificationComponent } from './components/notification/notification.co
 import {InlineEditorModule} from 'ng2-inline-editor';
 
 import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
-
+import { breadCrumbzComp } from './../comps/breadCrumbz/breadCrumbzComp'
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
     NotificationComponent,
     inlineTranslatorComp,
     flagSelectComp,
+    breadCrumbzComp,
     // pipes
     KeysPipe,
     HumanizePipe
@@ -35,6 +37,7 @@ import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
     NotificationComponent,
     inlineTranslatorComp,
     flagSelectComp,
+    breadCrumbzComp,
     // modules
     CommonModule,
     BsDropdownModule,
@@ -49,7 +52,8 @@ import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
     ReactiveFormsModule,
     CommonModule,
     BsDropdownModule.forRoot(),
-    InlineEditorModule
+    InlineEditorModule,
+    RouterModule
   ]
 })
 export class SharedModule {}

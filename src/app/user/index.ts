@@ -10,7 +10,6 @@ import { ReturnsComponent } from './components/returns/returns.component';
 import { ReturnListItemComponent } from './components/returns/return-list-item/return-list-item.component';
 import { UserComponent } from './user.component';
 import { AddAddressComponent } from './components/addresses/add-address/add-address.component';
-import { breadCrumbzComp } from './../comps/breadCrumbz/breadCrumbzComp'
 
 // services
 // import { UserService } from './services/user.service';
@@ -39,8 +38,7 @@ import { AddressService } from './../checkout/address/services/address.service';
     AdrLineEditComp,
     AddressesComponent,
     OrderDetailComponent,
-    AddAddressComponent,
-    breadCrumbzComp
+    AddAddressComponent
     // pipes,
 
   ],

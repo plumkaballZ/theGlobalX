@@ -47,7 +47,7 @@ export class AddAddressComponent implements OnInit, OnDestroy {
     });
     this.userEmail = 'asdf';
   }
-
+  
   onSubmit() {
     const address = this.addressForm.value;
     let addressAttributes;
@@ -59,6 +59,8 @@ export class AddAddressComponent implements OnInit, OnDestroy {
       addressAttributes = this.addrService.createGuestAddressAttributes(address, email);
     }
     
+    console.log(addressAttributes);
+
     this.addrService.createAddress(addressAttributes).subscribe(
       response => {
         var addr = response.bill_address;

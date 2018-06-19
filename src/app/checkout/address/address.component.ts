@@ -5,13 +5,15 @@ import { getShipAddress, getOrderState, getOrderNumber } from './../reducers/sel
 import { AppState } from './../../interfaces';
 import { Store } from '@ngrx/store';
 import { Address } from './../../core/models/address';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit, ViewChildren  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { UserService } from './../../user/services/user.service'
 import { empty } from 'rxjs/Observer';
-
 import { CheckoutActions } from './../../checkout/actions/checkout.actions';
+import {TranslateService} from '@ngx-translate/core';
+import { DeliveryAddressComponent } from './delivery-address/delivery-address.component'; 
+import { getAuthStatus } from './../../auth/reducers/selectors';
 
 @Component({
   selector: 'app-address',
@@ -28,13 +30,18 @@ export class AddressComponent implements OnInit, OnDestroy {
   actionsSubscription: Subscription;
   addrs$: Observable<any[]>;
 
+  hasAddrs : boolean;
   showAdrs$ : boolean;
   strMail: string;
 
   isAuthenticated: boolean;
 
+  pageTrans: any;
+
   breadcrumbs$: string[] = ['OrderOverview', 'OderDetails'];
   homeLink$: string = '/checkout/address';
+
+  @ViewChild(DeliveryAddressComponent) child:DeliveryAddressComponent;
 
   constructor(
     private store: Store<AppState>,
@@ -42,7 +49,8 @@ export class AddressComponent implements OnInit, OnDestroy {
     private checkoutService: CheckoutService,
     private checkoutActions: CheckoutActions,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private translate: TranslateService
   ) {
     this.showAdrs$ = true;
 
@@ -50,6 +58,10 @@ export class AddressComponent implements OnInit, OnDestroy {
       this.shipAddress$ = this.store.select(getShipAddress);
 
       this.stateSub$ = this.store.select(getOrderState).subscribe(state => this.orderState = state);
+
+      this.store.select(getAuthStatus).subscribe((auth) => {
+         this.isAuthenticated = auth;
+      });   
 
         this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
@@ -59,13 +71,13 @@ export class AddressComponent implements OnInit, OnDestroy {
                 response => {
                   if(response.length > 0) {
                     this.showAdrs$ = true;
-                    this.isAuthenticated = true;
+                    this.hasAddrs = true;
+                    this.child.selectAddr('', response[0]);
                   }
                   else {
                     this.showAdrs$ = false;
-                    this.isAuthenticated = false;
+                    this.hasAddrs = false;
                   }
-
                   this.addrs$ = response
                 } 
               );
@@ -73,7 +85,15 @@ export class AddressComponent implements OnInit, OnDestroy {
         );
   }
 
+  ngAfterViewInit() {
+  }
+
   ngOnInit() {
+    this.translate.get('addrs').subscribe((res: any) => {
+      this.pageTrans = res;
+      this.breadcrumbs$[0] = this.pageTrans.addrsOverview;
+       this.breadcrumbs$[1] = this.pageTrans.createAddr;
+    });
   }
 
   checkoutToPayment() {
@@ -96,18 +116,18 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.stateSub$.unsubscribe();
   }
   c01_onSubmit(message:any){
-    
+
     this.strMail= JSON.parse(localStorage.getItem('user')) == null ? message : JSON.parse(localStorage.getItem('user')).email
     this.strMail = this.strMail == null ? message : this.strMail;
     this.showAdrs$ = true;
- 
 
     if(this.isAuthenticated) {
-      
+
       this.actionsSubscription = this.route.params.subscribe(
         (params: any) => {
           this.userService.getAddrs(this.strMail).subscribe(
               response => {
+                this.child.selectAddr('', response[0]);
                 if(response.length > 0) this.showAdrs$ = true;
                 else this.showAdrs$ = false;
                 this.addrs$ = response
@@ -117,12 +137,23 @@ export class AddressComponent implements OnInit, OnDestroy {
       );
     }
     else {
-      this.addrs$ = message;
+      this.userService.getAddrs('empty').subscribe(
+        response => {
+          response = message;
+          this.showAdrs$ = true;
+          this.addrs$ = response
+          this.child.selectAddr('', response[0]);
+        } 
+      );
     }
 
-    
   }
   AddNewAddr(){
     this.showAdrs$ = false;
+  }
+  ShowAddrs(){
+    if(this.hasAddrs) {
+      this.showAdrs$ = true;
+    }
   }
 }

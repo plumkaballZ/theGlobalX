@@ -122,7 +122,9 @@
   "addrs": {
     "addNew": "Opret ny addresse",
     "selectAddr": "Vælg en leveringsadresse",
-    "continue": "TIL BETALING"
+    "continue": "TIL BETALING",
+    "addrsOverview" : "Oversigt",
+    "createAddr" : "Opret address"
   },
   "del": {
     "delSpeed": "Leveringstid",

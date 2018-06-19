@@ -7,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { AddAddressComponent } from './add-address/add-address.component';
 import { DeliveryAddressComponent } from './delivery-address/delivery-address.component';
 import { DeliveryOptionsComponent } from './delivery-options/delivery-options.component';
-import { breadCrumbzComp } from './../../comps/breadCrumbz/breadCrumbzComp'
 import { SharedModule } from './../../shared/index';
 
 
@@ -18,7 +17,7 @@ import { SharedModule } from './../../shared/index';
     AddAddressComponent,
     DeliveryAddressComponent,
     DeliveryOptionsComponent,
-    breadCrumbzComp
+
   ],
   exports: [],
   imports: [
