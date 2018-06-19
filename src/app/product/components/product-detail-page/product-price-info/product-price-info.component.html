@@ -11,3 +11,25 @@
     <inline-translator [page]="'prodPrice'" [key]="'prodVat'" [elementType]="'text'"></inline-translator>
   </p>
 </div>
+
+
+<div>
+  <div class="bordered">
+    <div class="buybox__purchase">
+      <form>
+        <div>
+          <div class="buy-quantity">
+            <a class="primary-btn  quantity-minus" (click)="decreaseCount()">-</a>
+            <span class="quantity-input">
+              <span class="quantity-number">{{count}}</span>
+              <span>Quantity</span>
+            </span>
+            <a class="primary-btn  quantity-plus" (click)="increseCount()">+</a>
+          </div>
+        </div>
+        <div class="buttons row">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
