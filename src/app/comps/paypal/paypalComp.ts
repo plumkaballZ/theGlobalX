@@ -25,9 +25,7 @@ export class PayPalComp implements OnInit {
     }
 
     ngOnInit() {
-      console.log(this.payOnDelivery);
     }
-
     ngAfterViewInit(): void {
       var totalValue = this.totalCartValue;
 
@@ -73,10 +71,11 @@ export class PayPalComp implements OnInit {
             $('#asdf').show();
             $('#asdf01').hide();
             // actions.redirect();
+            eventEmitter.emit(true);
           })
         },
         onCancel: function(data, actions) {
-          console.log(eventEmitter.emit(true));
+          eventEmitter.emit(true);
           // $('#asdf').show();
           // $('#asdf01').hide();
           // actions.redirect();

@@ -54,11 +54,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     
     this.routeSubscription$ = this.route.params.subscribe(
       (params: any) => {
-        
         this.orderNumber = params['number'];
-
-        console.log(this.orderNumber);
-
         this.orderSubscription$ =
           this.userService
           .getOrderDetail(this.orderNumber)

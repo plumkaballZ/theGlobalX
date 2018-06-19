@@ -78,9 +78,6 @@ export class CheckoutService {
     return this.http.get_Web(
       'api/xOrder', { params:{ email:_email } }
     ).map(res => {
-
-      console.log(res);
-
       var order = res.json();
       const currOrder: Order = res.json();
       this.currentOrder = currOrder;

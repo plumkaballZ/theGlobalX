@@ -16,9 +16,6 @@ export class OrderListItemComponent implements OnInit {
   constructor(private translate: TranslateService) { }
 
   ngOnInit() {
-    
-    console.log(this.order);
-
     this.translate.get('orderList').subscribe((res: any) => {
       this.pageTrans = res;
     });
@@ -26,7 +23,6 @@ export class OrderListItemComponent implements OnInit {
   }
 
   getProductImageUrl(url) {
-    console.log(url);
     return environment.API_ENDPOINT + url;
   }
 
