@@ -146,7 +146,5 @@ export class ProductDetailsComponent implements OnInit {
     _line.size = this.selectedSize;
 
     this.checkoutService.addLineItem(_line).subscribe();
-
-    $(".navbar-toggle").click();
   }
 }
