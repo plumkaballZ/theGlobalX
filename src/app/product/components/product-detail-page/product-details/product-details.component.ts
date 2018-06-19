@@ -34,6 +34,8 @@ export class ProductDetailsComponent implements OnInit {
   correspondingOptions: any;
   variantId: any;
 
+  count: any = 1;
+
   selectedSize: any;
   selectedColor: any;
 
@@ -127,13 +129,26 @@ export class ProductDetailsComponent implements OnInit {
       }
     }
   }
+
+  increseCount() {
+    this.count += 1;
+  }
+
+  decreaseCount() {
+    this.count -= 1;
+    if (this.count <= 1) {
+      this.count = 1;
+    }
+  }
+  
   addToCart() {
 
     const variant_id = this.product.master.id;
 
     this.product.size = this.selectedSize;
     this.product.color = this.selectedColor;
-    
+    this.product.total_on_hand = this.count;
+
     this.store.dispatch(this.checkoutActions.addToCart(this.product));
 
 
@@ -141,7 +156,7 @@ export class ProductDetailsComponent implements OnInit {
     _line.variant_id = this.product.id;
     _line.single_display_amount = parseInt(this.product.price, 10)
     _line.display_amount = parseInt(this.product.price, 10)
-    _line.quantity = 1;
+    _line.quantity = this.count;
     _line.color = this.selectedColor;
     _line.size = this.selectedSize;
 

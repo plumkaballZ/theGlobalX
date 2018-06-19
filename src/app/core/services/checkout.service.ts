@@ -51,7 +51,8 @@ export class CheckoutService {
       lineItem.price  = prod.price;
       lineItem.color = prod.color;
       lineItem.size = prod.size;
-
+      lineItem.quantity = prod.total_on_hand;
+      
       return lineItem;
     });
   }

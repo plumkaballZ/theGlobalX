@@ -44,9 +44,34 @@
                           [mainOptions]="mainOptions"
                           class="row"></app-product-variants>  
                     
-                        <div>
+                        <!-- <div>
                           <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">{{pageTranslator.addToBag}}</button>
+                        </div> -->
+
+                        <div>
+                          <div class="bordered">
+                            <div class="buybox__purchase">
+                              <form>
+                                <div>
+                                  <div class="buy-quantity">
+                                    <a class="primary-btn  quantity-minus" (click)="decreaseCount()">-</a>
+                                    <span class="quantity-input">
+                                      <span class="quantity-number">{{count}}</span>
+                                      <span>Quantity</span>
+                                    </span>
+                                    <a class="primary-btn  quantity-plus" (click)="increseCount()">+</a>
+                                  </div>
+                                </div>
+                                <div class="buttons row">
+                                  <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">{{pageTranslator.addToBag}}</button>
+
+                                </div>
+                              </form>
+                            </div>
+                          </div>
                         </div>
+                        
+
                         
             </div>
 

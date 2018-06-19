@@ -2,6 +2,7 @@ import { LineItem } from './../../core/models/line_item';
 import { CheckoutActions } from './../actions/checkout.actions';
 import { CheckoutState, CheckoutStateRecord } from './checkout.state';
 import { Action, ActionReducer } from '@ngrx/store';
+import { createPipeInstance } from '@angular/core/src/view/provider';
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
 
@@ -10,6 +11,8 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
 
+    console.log(type);
+    console.log(payload);
 
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
@@ -19,6 +22,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
               
         switch (type) {
           case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
+
 
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
