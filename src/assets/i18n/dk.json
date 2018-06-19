@@ -120,7 +120,7 @@
     "totalCurrency" : "DKK"
   },
   "addrs": {
-    "addNew": "Tilføj ny en adresse",
+    "addNew": "Opret ny addresse",
     "selectAddr": "Vælg en leveringsadresse",
     "continue": "TIL BETALING"
   },

@@ -110,14 +110,14 @@
     "myBag": "Bag",
     "myShoppingBag" : "My Shopping Bag",
     "total" : "Total",
-    "totalCurrency": "$"
+    "totalCurrency": "€"
   },
   "orderTotal": {
     "bagTotal": "Bag Total",
     "delivery": "Delivery",
     "placeOrder": "PLACE ORDER",
     "orderTotal":"Order Total",
-    "totalCurrency": "$"
+    "totalCurrency": "€"
   },
   "del": {
     "delSpeed": "DELIVERY SPEED",
@@ -129,7 +129,7 @@
     "del001": "Delivery",
     "del002": "Delivery FREE",
     "totalPay": "Total Payable",
-    "currency" : "$"
+    "currency" : "€"
   },
   "addrs": {
     "addNew": "Create new address",
@@ -196,7 +196,7 @@
     "totalPayable" : "Total Payable",
     "deliverTo" : "DELIVER TO",
     "mobile" : "Mobile",
-    "currency": "$"
+    "currency": "€"
   },
   "orderList" : {
     "placedOn" : "Placed on",
@@ -278,7 +278,7 @@
     "color" : "Color",
     "qty" : "Quantity",
     "price" : "Price",
-    "currency": "$",
+    "currency": "€",
     "total" : "TOTAL",
     "state" : "STATUS",
     "items" : "ITEMS",

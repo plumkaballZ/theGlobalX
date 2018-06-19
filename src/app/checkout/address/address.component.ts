@@ -33,6 +33,8 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   isAuthenticated: boolean;
 
+  breadcrumbs$: string[] = ['OrderOverview', 'OderDetails'];
+  homeLink$: string = '/checkout/address';
 
   constructor(
     private store: Store<AppState>,
