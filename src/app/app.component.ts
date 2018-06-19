@@ -83,7 +83,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   goToLink(str) {
-    console.log(str);
     this.router.navigateByUrl(str);
   }
   initJs(){
