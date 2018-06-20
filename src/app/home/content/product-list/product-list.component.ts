@@ -54,6 +54,9 @@ export class ProductListComponent implements OnInit {
     }
 
     const variant_id = product.id;
+
+    product.total_on_hand = 1;
+    
     this.store.dispatch(this.checkoutActions.addToCart(product));
     
 

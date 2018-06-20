@@ -31,6 +31,16 @@ export class Product {
   product_properties: ProductProperty[];
   classifications: Classification[];
   liArray: string[];
-  size: string;
-  color: string;
+  public size: string;
+  public color: string;
+  
+  private _bar:boolean = false;
+  get bar():boolean {
+      return this._bar;
+  }
+  set bar(theBar:boolean) {
+      this._bar = theBar;
+  }
+
+
 }

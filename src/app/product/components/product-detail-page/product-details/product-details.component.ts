@@ -33,15 +33,13 @@ export class ProductDetailsComponent implements OnInit {
   mainOptions: any;
   correspondingOptions: any;
   variantId: any;
-
   count: any = 1;
-
   selectedSize: any;
   selectedColor: any;
-
   pageTranslator: any;
-
   _checkoutService : CheckoutService;
+
+  _added : boolean;
 
 
   constructor(private variantParser: VariantParserService,
@@ -53,6 +51,9 @@ export class ProductDetailsComponent implements OnInit {
                 this._checkoutService = checkoutService;
   }
   ngOnInit() {
+    
+    this._added = false;
+
     this.description = this.product.description;
     this.images = this.product.master.images;
     this.variantId = this.product.master.id;
@@ -60,6 +61,8 @@ export class ProductDetailsComponent implements OnInit {
       .getOptionsToDisplay(this.product.variants, this.product.option_types);
     this.mainOptions = this.makeGlobalOptinTypesHash(this.customOptionTypesHash);
     this.correspondingOptions = this.mainOptions;
+
+
 
     this.translate.get('prodDetails').subscribe((res: any) => {
       this.pageTranslator = res;
@@ -70,19 +73,25 @@ export class ProductDetailsComponent implements OnInit {
 
         if(this.product.master.option_values[0].option_type_name == 'Color') {
           this.selectedColor = this.product.master.option_values[0].name;
+          this.currentSelectedOptions = {"Color" : this.product.master.option_values[0].name};
         }
 
         if(this.product.master.option_values[0].option_type_name == 'Size') {
           this.selectedSize = this.product.master.option_values[0].name;
+          this.currentSelectedOptions = {"Size" : this.product.master.option_values[0].name};
         }
       }
     }
   
 
-    $(document).ready(function(){
+
+
+    $(document).ready(function() {
      
     });	
 
+  }
+  ngOnDestroy(){
   }
   
   onOptionClick(option) {
@@ -143,13 +152,18 @@ export class ProductDetailsComponent implements OnInit {
   
   addToCart() {
 
-    const variant_id = this.product.master.id;
 
-    this.product.size = this.selectedSize;
-    this.product.color = this.selectedColor;
-    this.product.total_on_hand = this.count;
-
+    if (this._added == false)
+    {    
+      const variant_id = this.product.master.id;
+      this.product.size = this.selectedSize;
+      this.product.color = this.selectedColor;
+      this.product.total_on_hand = this.count;
+      this._added = true;
+    }
+    
     this.store.dispatch(this.checkoutActions.addToCart(this.product));
+
     
     var _line : any = {};
     _line.id = this.product.id;
@@ -159,7 +173,7 @@ export class ProductDetailsComponent implements OnInit {
     _line.quantity = this.count;
     _line.color = this.selectedColor;
     _line.size = this.selectedSize;
-
+    
     this.checkoutService.addLineItem(_line).subscribe();
   }
 }

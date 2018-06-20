@@ -201,6 +201,7 @@ export class CheckoutService {
 
   addLineItem(lineItem: any) {
 
+
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
@@ -210,15 +211,25 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-    console.log(this.currentOrder.line_items);
 
     if(this.currentOrder.line_items == null) {
       this.currentOrder.line_items = [];
     }
 
-     this.currentOrder.line_items.push(lineItem);
-     this.currentOrder.special_instructions = 'addLineItem';
-     
+    var pushItem = true;
+
+    this.currentOrder.line_items.forEach(element => {
+      if(element.id = lineItem.id){
+        element.quantity += 1;
+        pushItem = false;
+      }
+    });
+    
+    if(pushItem == true){
+      this.currentOrder.line_items.push(lineItem);
+      this.currentOrder.special_instructions = 'addLineItem';
+    }
+
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
         "Order" : this.currentOrder, 
