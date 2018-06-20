@@ -34,8 +34,6 @@ export class LineItemComponent implements OnInit {
    }
   
   ngOnInit() {
-    console.log('ctor');
-    console.log(this.lineItem);
     this.prodService.getProduct(this.lineItem.id.toString()).subscribe(response => 
       {
         this.image = response.master.images[0].small_url;

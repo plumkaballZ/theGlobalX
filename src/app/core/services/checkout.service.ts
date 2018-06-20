@@ -210,7 +210,10 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-     this.currentOrder.line_items = [];
+    if(this.currentOrder.line_item == null) {
+      this.currentOrder.line_items = [];
+    }
+    
      this.currentOrder.line_items.push(lineItem);
      this.currentOrder.special_instructions = 'addLineItem';
 

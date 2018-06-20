@@ -6,6 +6,8 @@ import { createPipeInstance } from '@angular/core/src/view/provider';
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
 
+var _tmpLines: LineItem[] = [];
+
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
 
@@ -27,6 +29,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
         _orderState = payload.state;
+        
+        _tmpLines = _lineItems;
+
         _lineItemEntities = _lineItems.reduce((lineItems: { [id: number]: LineItem }, lineItem: LineItem) => {
           return Object.assign(lineItems, {
             [lineItem.id]: lineItem
@@ -56,23 +61,28 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           return state;
         }
 
+        _tmpLines.push(_lineItem);
+
+        _lineItemEntities = _tmpLines.reduce((lineItems: { [id: number]: LineItem }, lineItem: LineItem) => {
+          return Object.assign(lineItems, {
+            [lineItem.id]: lineItem
+          });
+        }, { });
+
+        
+        console.log(_lineItemEntities);
+
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
         _lineItemEntity = { [_lineItemId]: _lineItem };
         _lineItemIds = state.lineItemIds.push(_lineItemId);
 
-        console.log(_lineItemEntity);
-        console.log(_lineItemIds);
-
-        
         return state.merge({
           lineItemIds: _lineItemIds,
-          lineItemEntities: state.lineItemEntities.merge(_lineItemEntity),
+          lineItemEntities: _lineItemEntities,
           totalCartItems: _totalCartItems,
           totalCartValue: _totalCartValue
         }) as CheckoutState;
-
-
 
 
       case CheckoutActions.REMOVE_LINE_ITEM_SUCCESS:
