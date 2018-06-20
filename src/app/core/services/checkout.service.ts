@@ -42,8 +42,8 @@ export class CheckoutService {
   createNewLineItem(prod: Product) {  
 
     return this.http.get(`/assets/api/orders/dummyLine.json`).map(res => {
-      const lineItem: LineItem = res.json();
-      
+      var lineItem: any = res.json();
+    
       lineItem.prod = prod;
       lineItem.id = prod.id;
       lineItem.display_amount = lineItem.display_amount
@@ -52,7 +52,7 @@ export class CheckoutService {
       lineItem.color = prod.color;
       lineItem.size = prod.size;
       lineItem.quantity = prod.total_on_hand;
-      
+
       return lineItem;
     });
   }
@@ -199,7 +199,7 @@ export class CheckoutService {
       });
   }
 
-  addLineItem(lineItem: LineItem) {
+  addLineItem(lineItem: any) {
 
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -210,13 +210,15 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
-    if(this.currentOrder.line_item == null) {
+    console.log(this.currentOrder.line_items);
+
+    if(this.currentOrder.line_items == null) {
       this.currentOrder.line_items = [];
     }
-    
+
      this.currentOrder.line_items.push(lineItem);
      this.currentOrder.special_instructions = 'addLineItem';
-
+     
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
         "Order" : this.currentOrder, 

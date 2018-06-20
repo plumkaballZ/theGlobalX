@@ -11,8 +11,11 @@ export function getCheckoutState(state: AppState): CheckoutState {
 
 // ******************** Individual selectors ***************************
 export function fetchLineItems(state: CheckoutState) {
+  console.log('fetchLineItems');
+
   const ids = state.lineItemIds.toJS();
   const lineItemEntitites = state.lineItemEntities.toJS();
+
   return ids.map(id => lineItemEntitites[id]);
 }
 

@@ -151,7 +151,8 @@ export class ProductDetailsComponent implements OnInit {
 
     this.store.dispatch(this.checkoutActions.addToCart(this.product));
     
-    var _line = new LineItem();
+    var _line : any = {};
+    _line.id = this.product.id;
     _line.variant_id = this.product.id;
     _line.single_display_amount = parseInt(this.product.price, 10)
     _line.display_amount = parseInt(this.product.price, 10)
