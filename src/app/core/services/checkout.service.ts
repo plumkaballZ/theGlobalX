@@ -165,8 +165,22 @@ export class CheckoutService {
       password_confirmation : ''
     }
 
+    var lineId = lineItem.id;
+
+    
     this.currentOrder.line_items.forEach(element => {
-      if(element.id == lineItem.id) element.delStr = "true";
+
+      if(element.id == lineId) {
+        
+        element.delStr = "true";
+        element.id = lineId;
+      }
+
+      if(element.variant_id == lineId) {
+        element.delStr = "true";
+        element.id = lineId;
+      }
+
     });
 
     this.currentOrder.special_instructions = 'deleteLineItem';

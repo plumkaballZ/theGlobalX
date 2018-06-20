@@ -6,13 +6,8 @@ import { createPipeInstance } from '@angular/core/src/view/provider';
 
 export const initialState: CheckoutState = new CheckoutStateRecord() as CheckoutState;
 
-
-
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
-
-    console.log(type);
-    console.log(payload);
 
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
@@ -49,21 +44,26 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           billAddress: _bill_address
         }) as CheckoutState;
 
+
+
       case CheckoutActions.ADD_TO_CART_SUCCESS:
 
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
-      
+
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
           return state;
         }
-        
+
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + parseFloat(_lineItem.total);
- 
         _lineItemEntity = { [_lineItemId]: _lineItem };
         _lineItemIds = state.lineItemIds.push(_lineItemId);
+
+        console.log(_lineItemEntity);
+        console.log(_lineItemIds);
+
         
         return state.merge({
           lineItemIds: _lineItemIds,
@@ -71,6 +71,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
           totalCartItems: _totalCartItems,
           totalCartValue: _totalCartValue
         }) as CheckoutState;
+
+
+
 
       case CheckoutActions.REMOVE_LINE_ITEM_SUCCESS:
         _lineItem = payload;
