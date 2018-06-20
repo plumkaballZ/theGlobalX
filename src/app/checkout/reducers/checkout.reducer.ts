@@ -27,7 +27,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
         _orderState = payload.state;
-        
         _lineItemEntities = _lineItems.reduce((lineItems: { [id: number]: LineItem }, lineItem: LineItem) => {
           return Object.assign(lineItems, {
             [lineItem.id]: lineItem
