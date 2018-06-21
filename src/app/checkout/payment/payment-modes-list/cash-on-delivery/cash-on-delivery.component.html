@@ -14,6 +14,6 @@
 
 
 <div class="pay-btn-wrap">
-	<PayPalComp [totalCartItems]="totalCartItems$ | async" [totalCartValue]="totalCartValue$ | async" (payOnDelivery)="onPay()"></PayPalComp>
+	<PayPalComp [totalCartItems]="(totalCartItems$ | async)" [totalCartValue]="(totalCartValue$ | async) + shipTotal" (payOnDelivery)="onPay()"></PayPalComp>
 </div>
 

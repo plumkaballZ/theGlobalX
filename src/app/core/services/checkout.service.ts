@@ -27,7 +27,7 @@ class Guid {
 @Injectable()
 export class CheckoutService {
   private orderNumber: number;
-  public currentOrder: any;
+  public currentOrder: Order;
 
   constructor(
     private http: HttpService,
@@ -214,22 +214,11 @@ export class CheckoutService {
 
     if(this.currentOrder.line_items == null) {
       this.currentOrder.line_items = [];
-    }
+    }   
 
-    var pushItem = true;
-
-    this.currentOrder.line_items.forEach(element => {
-      if(element.id = lineItem.id){
-        element.quantity += 1;
-        pushItem = false;
-      }
-    });
+    this.currentOrder.line_items.push(lineItem);
+    this.currentOrder.special_instructions = 'addLineItem';
     
-    if(pushItem == true){
-      this.currentOrder.line_items.push(lineItem);
-      this.currentOrder.special_instructions = 'addLineItem';
-    }
-
     return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
       {
         "Order" : this.currentOrder, 

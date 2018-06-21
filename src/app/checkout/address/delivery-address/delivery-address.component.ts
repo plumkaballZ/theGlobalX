@@ -19,22 +19,14 @@ export class DeliveryAddressComponent implements OnInit {
   @Input() delOptions: any[]; 
   @Input() selectedDel : any;
 
+  @Output() notify: EventEmitter<any> = new EventEmitter<any>();
+
   private _store: Store<AppState>;
   private _actions: CheckoutActions;
 
   constructor(store: Store<AppState>, actions: CheckoutActions, private translate: TranslateService) {  
     this._store = store;
     this._actions = actions;
-
-    this.delOptions = [{
-      "prop1":"GLS PakkeShop afhentning",
-      "prop2":"40 DKK"
-    }, {
-      "prop1":"GLS Pakkelevering ", 
-      "prop2":"50 DKK"
-  }];
-
-  this.selectedDel = this.delOptions[0];
   }
 
   ngOnInit() {
@@ -51,7 +43,7 @@ export class DeliveryAddressComponent implements OnInit {
   }
 
   public selectDelOption(event, item : any) {
-    this.selectedDel = item;
+    this.notify.emit(item);
   }
 
 }

@@ -117,11 +117,13 @@
     "delivery": "Forsendelse",
     "placeOrder": "BESTIL",
     "orderTotal":"Total på order",
-    "totalCurrency" : "DKK"
+    "totalCurrency" : "DKK",
+    "yourOrder" : "Din order"
   },
   "addrs": {
     "addNew": "Opret ny addresse",
     "selectAddr": "Vælg en leveringsadresse",
+    "selectDelOption" : "Vælg en leveringsmetode",
     "continue": "TIL BETALING",
     "addrsOverview" : "Oversigt",
     "createAddr" : "Opret address"

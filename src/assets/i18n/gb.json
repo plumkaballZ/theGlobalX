@@ -117,7 +117,8 @@
     "delivery": "Delivery",
     "placeOrder": "PLACE ORDER",
     "orderTotal":"Order Total",
-    "totalCurrency": "€"
+    "totalCurrency": "€",
+    "yourOrder" : "Your order"
   },
   "del": {
     "delSpeed": "DELIVERY SPEED",
@@ -135,9 +136,9 @@
     "addNew": "Create new address",
     "continue": "CONTINUE TO PAYMENT",
     "selectAddr": "Select delivery address",
+    "selectDelOption" : "Vælg en leveringsmetode",
     "addrsOverview" : "Overview",
     "createAddr" : "Create address"
-
   },
   "breadcrumb":{
     "home" : "Shop",

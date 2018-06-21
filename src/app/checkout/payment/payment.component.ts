@@ -24,17 +24,20 @@ export class PaymentComponent implements OnInit {
   address$: Observable<Address>;
   orderNumber$: Observable<number>;
   pageTrans: any;
+  shipTotal : any;
+  
 
-  constructor(private store: Store<AppState>, private router: Router, private translate: TranslateService) {
+  constructor(private store: Store<AppState>, private router: Router, private translate: TranslateService, private checkoutService: CheckoutService) {
     
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
     
-    this.del_totalCartValue$ = this.store.select(del_getTotalCartValue);
-
     this.address$ = this.store.select(getShipAddress);
     this.orderNumber$ = this.store.select(getOrderNumber);
 
+    if(this.checkoutService.currentOrder != null)
+    this.shipTotal = this.checkoutService.currentOrder.ship_total;
+    
     this.store.select(getTotalCartItems).subscribe((tot) => {
       
       if(tot == 0) this.router.navigate(['/checkout', 'cart']);

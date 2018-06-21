@@ -24,7 +24,7 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         const _orderNumber = payload.number;
         _lineItems = payload.line_items;
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
-        _totalCartItems = _lineItemIds.length;
+        _totalCartItems = parseFloat(payload.item_total);
         _totalCartValue = parseFloat(payload.total);
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;
@@ -51,14 +51,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
       
-      console.log(_lineItem);
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
-          _totalCartItems += _lineItem.quantity;
-          console.log('nope');
-          return state.merge({
-            totalCartItems: _totalCartItems
-          }) as CheckoutState;
+          return state;
         }
         
         _totalCartItems = state.totalCartItems + _lineItem.quantity;

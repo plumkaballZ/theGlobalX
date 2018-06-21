@@ -1,16 +1,16 @@
 <div class="del-lbl">
 {{delSpeed}} 
 <div class="items pull-right">
-    {{freeDel}}
+    {{selectedDel.prop3}}
 </div>
 </div>
 <div class="del-options">
   <div class="option">
     <div class="option-name">
-        {{stdDel}}
+        {{selectedDel.prop1}}
     </div>
     <div class="option-rate">
-        40 DKK
+        {{selectedDel.prop2}}
     </div>
   </div>
 </div>
@@ -27,10 +27,10 @@
   </div>
   <div class="shipping">
     <span>{{del001}}</span>
-    <span class="shipping-fee c-green">40 {{pageTrans.currency}}</span>
+    <span class="shipping-fee c-green">{{selectedDel.prop2}}</span>
   </div>
 </div>
 <div class="pay-lbl-total">
   <span class="pay-lbl">{{orderTotal002}}</span>
-  <span class="pay-total">{{del_totalCartValue$ | async }} {{pageTrans.currency}}</span>
+  <span class="pay-total">{{(totalCartValue$ | async) + selectedDel.prop4 }} {{pageTrans.currency}}</span>
 </div>

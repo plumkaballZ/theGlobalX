@@ -13,7 +13,7 @@ export class Order {
   number: string;
   item_total: string;
   total: string;
-  ship_total: string;
+  ship_total: number;
   state: string;
   adjustment_total: string;
   user_id: string;
@@ -40,6 +40,9 @@ export class Order {
   ship_address: Address;
   public line_items: LineItem[];
   payments: [Payment];
+
+  _delOption : any;
+
   /**
    *
    */

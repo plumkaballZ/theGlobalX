@@ -41,6 +41,10 @@ export class AddressComponent implements OnInit, OnDestroy {
   breadcrumbs$: string[] = ['OrderOverview', 'OderDetails'];
   homeLink$: string = '/checkout/address';
 
+
+  delOptions: any[];
+  selectedDel : any;
+
   @ViewChild(DeliveryAddressComponent) child:DeliveryAddressComponent;
 
   constructor(
@@ -81,6 +85,27 @@ export class AddressComponent implements OnInit, OnDestroy {
               );
           }
         );
+
+        this.initDel();
+      
+  }
+
+  initDel() {
+
+    this.delOptions = [{
+      "prop1":"GLS PakkeShop afhentning",
+      "prop2":"40 DKK",
+      "prop3" : "1-3 dage",
+      "prop4" : 40
+    }, {
+      "prop1":"GLS Pakkelevering ", 
+      "prop2":"50 DKK",
+      "prop3" : "1-2 dage",
+      "prop4" : 50
+    }];
+
+    this.selectedDel = this.delOptions[0];
+    this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
 
   ngAfterViewInit() {
@@ -95,6 +120,8 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   checkoutToPayment() {
+
+
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
         .do(() => { 
@@ -113,7 +140,8 @@ export class AddressComponent implements OnInit, OnDestroy {
     }
     this.stateSub$.unsubscribe();
   }
-  c01_onSubmit(message:any){
+
+  c01_onSubmit(message:any) {
 
     this.strMail= JSON.parse(localStorage.getItem('user')) == null ? message : JSON.parse(localStorage.getItem('user')).email
     this.strMail = this.strMail == null ? message : this.strMail;
@@ -144,11 +172,17 @@ export class AddressComponent implements OnInit, OnDestroy {
         } 
       );
     }
-
   }
+
+  c02(message:any) {
+    this.selectedDel = message;
+    this.checkoutService.currentOrder.ship_total = message.prop4;
+  }
+
   AddNewAddr(){
     this.showAdrs$ = false;
   }
+
   ShowAddrs(){
     if(this.hasAddrs) {
       this.showAdrs$ = true;

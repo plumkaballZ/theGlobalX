@@ -1,3 +1,4 @@
+import { OrderSuccessComponent } from './order-success/order-success.component';
 import { PaymentModule } from './payment/payment.module';
 import { AddressModule } from './address/address.module';
 import { CheckoutEffects } from './effects/checkout.effects';
@@ -22,7 +23,7 @@ import { CheckoutRoutes as routes } from './checkout.routes';
     AddressModule,
     PaymentModule
   ],
-  declarations: [],
+  declarations: [OrderSuccessComponent],
   providers: [
     CheckoutActions
   ]

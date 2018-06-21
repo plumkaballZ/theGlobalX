@@ -3,9 +3,9 @@
     <div class="order-summary-span">
       <div class="bag-total">
         <span>
-          {{pageTranslator.bagTotal}}
+          {{pageTranslator.yourOrder}}
         </span>
-        <span class="value">{{totalCartValue | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span>
+        <!-- <span class="value">{{totalCartValue | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span> -->
       </div>
 
       <!-- <div class="shipping">
@@ -21,9 +21,12 @@
           {{pageTranslator.placeOrder}}
         </button>
       </div>
-      <!-- <div class="total-amount">
-        <span class="pull-left"> {{pageTranslator.orderTotal}}</span>
-        <span class="total-rupees">{{totalCartValue + 40 | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span>
-      </div> -->
+      <div class="total-amount">
+        <span class="pull-left"> {{pageTranslator.bagTotal}}</span>
+        <span class="total-rupees">{{totalCartValue | number:'1.2-2'}} {{pageTranslator.totalCurrency}}</span>
+      </div>
     </div>
   </div>
+
+
+  

@@ -13,13 +13,13 @@
 							<button (click)="AddNewAddr()" class="addAddrBtn">
 								<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
 								</button>
-							<app-delivery-address #delAddrz [addrs]="addrs$"></app-delivery-address>
+							<app-delivery-address #delAddrz [addrs]="addrs$" [delOptions]="delOptions" [selectedDel]="selectedDel" (notify)='c02($event)'></app-delivery-address>
 						</div>
 				</div>		
 
 				<div class="col-xs-12 col-sm-4">
 						<div class="right">
-								<app-delivery-options [orderNumber]="orderNumber$ | async"></app-delivery-options>
+								<app-delivery-options [selectedDel]="selectedDel" [orderNumber]="orderNumber$ | async"></app-delivery-options>
 								<button (click)="checkoutToPayment()" class="pay-btn">
 									<inline-translator [page]="'addrs'" [key]="'continue'" [elementType]="'text'"></inline-translator>
 								</button>

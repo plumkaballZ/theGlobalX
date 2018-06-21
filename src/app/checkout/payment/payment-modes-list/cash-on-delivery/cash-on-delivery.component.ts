@@ -14,12 +14,17 @@ export class CashOnDeliveryComponent implements OnInit {
   
   totalCartValue$: Observable<number>;
   totalCartItems$: Observable<number>;
+  shipTotal : number;
 
   @Output() payOnDelivery: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private checkoutService: CheckoutService, private store: Store<AppState>) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
+    
+    if(this.checkoutService.currentOrder != null){
+      this.shipTotal = this.checkoutService.currentOrder.ship_total;
+    }
    }
 
   ngOnInit() {

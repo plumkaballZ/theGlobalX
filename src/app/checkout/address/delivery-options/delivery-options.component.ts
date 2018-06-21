@@ -38,6 +38,8 @@ export class DeliveryOptionsComponent implements OnInit {
   totalCartItems$: Observable<number>;
 
   pageTrans: any;
+  @Input() selectedDel : any;
+
 
   constructor(private checkoutService: CheckoutService, private store: Store<AppState>, private translate: TranslateService) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
@@ -58,7 +60,6 @@ export class DeliveryOptionsComponent implements OnInit {
       this.del002 = res.del002;
       this.totalPay = res.totalPay;
     });
-    
     // this.setOrder();
   }
 
@@ -73,7 +74,6 @@ export class DeliveryOptionsComponent implements OnInit {
   private setShippingRates() {
     this.shippingRates = this.order.shipments[0].shipping_rates;
     this.selectedShippingRate = this.order.shipments[0].selected_shipping_rate;
-    console.log(this.shippingRates);
   }
 
 }

@@ -28,7 +28,7 @@
 
 <div class="edit-address">
     <span class="edit-label">
-      <inline-translator [page]="'addrs'" [key]="'selectAddr'" [elementType]="'text'"></inline-translator>
+      <inline-translator [page]="'addrs'" [key]="'selectDelOption'" [elementType]="'text'"></inline-translator>
     </span>
   </div>
   
@@ -36,7 +36,7 @@
 <div class="items">
   
     <div (click)="selectDelOption($event, del)" *ngFor="let del of delOptions" class="del-options">
-
+      
         <div class="option">
             <div class="option-name">
                 {{del.prop1}}
