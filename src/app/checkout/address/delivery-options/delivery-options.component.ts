@@ -73,6 +73,7 @@ export class DeliveryOptionsComponent implements OnInit {
   private setShippingRates() {
     this.shippingRates = this.order.shipments[0].shipping_rates;
     this.selectedShippingRate = this.order.shipments[0].selected_shipping_rate;
+    console.log(this.shippingRates);
   }
 
 }
