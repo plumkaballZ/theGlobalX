@@ -295,7 +295,21 @@
     "cookiePlicy" : "This website is using cookies to keep track of your settings, for more info please read or ",
     "privatePolicy" : "private policy"
   },
-  "cookiePolicy" : {
-    
+  "cookiePolicy" : { 
+  },
+  "orderSucc" : {
+    "thankYou" :"Thank you for your order",
+    "orderTxt" : "      Your order has been placed and is being processed. When the item(s) are shipped, you will receive an email with the details.",
+    "shippingInfo" : "Shipping Info",
+    "orderInfo" : "Order Info",
+    "shippedTo" : "Shipped to: ",
+    "name" : "Name: ",
+    "orderId" : "Order Id: ",
+    "totalItems" : "Total Items: ",
+    "totalAmount" : "Total Amount: ",
+    "isAuth" : "You can view your orders here",
+    "isNotAuth" : "You can registere here and view your orders",
+    "continueShopping" : "Continue Shopping",
+    "currency": "€"
   }
 }

@@ -105,6 +105,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     }];
 
     this.selectedDel = this.delOptions[0];
+    if(this.checkoutService.currentOrder != null)
     this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
 
@@ -148,7 +149,6 @@ export class AddressComponent implements OnInit, OnDestroy {
     this.showAdrs$ = true;
 
     if(this.isAuthenticated) {
-
       this.actionsSubscription = this.route.params.subscribe(
         (params: any) => {
           this.userService.getAddrs(this.strMail).subscribe(

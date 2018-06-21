@@ -31,15 +31,17 @@
 	<div *ngIf="!showAdrs$">
 		<div class="col-sm-12">
 			
-			<breadCrumbz [crumbz]="breadcrumbs$" [homeLink]="homeLink$" (click)=ShowAddrs()></breadCrumbz>
+			<div class="centerDiv">
+				<breadCrumbz [crumbz]="breadcrumbs$" [homeLink]="homeLink$" (click)=ShowAddrs()></breadCrumbz>
 
-			<div class="left">
-				<div class="add-address">
-					<span class="add-label">
-						<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
-					</span>
+				<div class="left">
+					<div class="add-address">
+						<span class="add-label">
+							<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
+						</span>
+					</div>
+						<app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
 				</div>
-					<app-add-address (notify)='c01_onSubmit($event)'></app-add-address>
 			</div>
 		</div>	
 	</div>

@@ -7,8 +7,7 @@
       {{pageTrans.placedOn}}: {{order.created_at | date:'fullDate'}}
       <i class="fa fa-{{order.currency | lowercase}}"aria-hidden="true"></i>
     </small>
-    
-    
+
     <hr>
     <h5 class="strong">
       
@@ -25,9 +24,6 @@
       <div class="pull-right">
         <a [routerLink]="['detail', order.id]" class="view-details-link strong"> {{pageTrans.details}}</a>
       </div>
-
     </h5>
-    
-    
   </div>
 </div>

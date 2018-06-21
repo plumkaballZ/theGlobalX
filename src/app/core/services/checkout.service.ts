@@ -73,41 +73,22 @@ export class CheckoutService {
       if(localUser.email != null) {
         _email = localUser.email;
       }
-  
     }
   
     return this.http.get_Web(
       'api/xOrder', { params:{ email:_email } }
     ).map(res => {
+
       var order = res.json();
       const currOrder: Order = res.json();
       this.currentOrder = currOrder;
 
-      var total = 0;
-      var index = 1;
-
       if(currOrder.line_items)
       {
-        var fin = currOrder.line_items.length;
-
-        currOrder.line_items.forEach(lineItem => {
-          this.prodService.getProduct(lineItem.id.toString()).subscribe(response => 
-            {
-              total += parseFloat(response.price);
-  
-              if(fin == index)
-              {
-                const token = order;        
-                this.setOrderTokenInLocalStorage({order_token: token});
-                return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order, total));
-    
-              }
-              index++;
-  
-            });
-          });
+        const token = order;        
+        this.setOrderTokenInLocalStorage({order_token: token});
+        return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order, parseFloat(this.currentOrder.total)));
       }
-      
       if(order.nope){
         this.createEmptyOrder().subscribe();        
       }

@@ -8,6 +8,8 @@ import { UserService } from './../../user/services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CheckoutService } from './../../core/services/checkout.service';
+import { getAuthStatus } from './../../auth/reducers/selectors';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-order-success',
@@ -18,6 +20,8 @@ export class OrderSuccessComponent implements OnInit {
 
   queryParams: any;
   orderDetails: Order
+  isAuthenticated: boolean;
+  tranz : any;
 
   constructor(
     private userService: UserService,
@@ -25,31 +29,29 @@ export class OrderSuccessComponent implements OnInit {
     private route: Router,
     private store: Store<AppState>,
     private actions: CheckoutActions,
-    private checkoutService : CheckoutService
-  ) {
+    private checkoutService : CheckoutService,
+    private translate: TranslateService
+  ) {    
+
+    this.store.select(getAuthStatus).subscribe((auth) => {
+      this.isAuthenticated = auth;
+    });
+
+    if(this.checkoutService.currentOrder == null) {
+      this.route.navigate(['/']);
+    }
+    if(this.checkoutService.currentOrder.payment_state != '0') {
+      this.route.navigate(['/']);
+    }
+    if(this.checkoutService.currentOrder.payment_state == '0'){
       this.orderDetails = this.checkoutService.currentOrder;
+      // this.checkoutService.createEmptyOrder().subscribe();
       console.log(this.orderDetails);
-    // this.activatedRouter.queryParams
-    //   .subscribe(params => {
-    //     this.queryParams = params
-    //     if (!this.queryParams.orderReferance) {
-    //       this.route.navigate(['/'])
-    //     }
-    //   });
+    }
   }
-
   ngOnInit() {
-    // this.userService
-    //   .getOrderDetail(this.queryParams.orderReferance)
-    //   .subscribe(order => {
-    //     this.orderDetails = order
-    //     console.log(this.orderDetails)
-    //   })
+    this.translate.get('orderSucc').subscribe((res: any) => {
+      this.tranz = res;
+    });
   }
-
-//   getProductImageUrl(line_item: LineItem) {
-//     const image_url = line_item.variant.images[0].small_url;
-//     return environment.apiEndpoint + image_url;
-//   }
-
 }

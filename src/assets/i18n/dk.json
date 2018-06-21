@@ -297,7 +297,20 @@
     "privatePolicy" : "privatepolitik"
   },
   "cookiePolicy" : {
-    
+  },
+  "orderSucc" : {
+    "thankYou" :"Tak for din bestilling",
+    "orderTxt" : "Vi er i gang med at håndtere ding bestilling. Når den bliver sendt vil du bliver infomeret via email.",
+    "shippingInfo" : "Leverings info",
+    "orderInfo" : "Order info",
+    "shippedTo" : "Leveres til: ",
+    "name" : "Navn: ",
+    "orderId" : "Order id: ",
+    "totalItems" : "Antal vare: ",
+    "totalAmount" : "Total beløb: ",
+    "isAuth" : "Se dine ordere her >>>",
+    "isNotAuth" : "Du kan registere dig here og se dine ordere >>>",
+    "continueShopping" : "Fortsæt med at shoppe >>>",
+    "currency" : "DKK"
   }
-
 }
