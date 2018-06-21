@@ -176,4 +176,6 @@ export class ProductDetailsComponent implements OnInit {
     
     this.checkoutService.addLineItem(_line).subscribe();
   }
+  initJs(){
+  }
 }
