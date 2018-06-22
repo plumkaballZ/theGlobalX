@@ -43,34 +43,10 @@
                           [correspondingOptions]="correspondingOptions"
                           [mainOptions]="mainOptions"
                           class="row"></app-product-variants>  
-                    
-                        <!-- <div>
-                          <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">{{pageTranslator.addToBag}}</button>
-                        </div> -->
-
-                        <!-- <div id="buybox">
-                          <div class="bordered">
-                            <div class="buybox__purchase">
-                             
-                                <div>
-                                  <div class="buy-quantity">
-                                    <a class="primary-btn  quantity-minus" (click)="decreaseCount()">-</a>
-                                    <span class="quantity-input">
-                                      <span class="quantity-number">{{count}}</span>
-                                      <span>Quantity</span>
-                                    </span>
-                                    <a class="primary-btn  quantity-plus" (click)="increseCount()">+</a>
-                                  </div>
-                                </div>
-                              
-                      
-                            </div>
-                          </div>
-                        </div> -->
 
                         <div id="app">
                           <div data-reactroot="">
-                            <p>Set the quantity</p>
+                            <p>{{tranz.addQuant}}</p>
                             <div class="quantity-input">
                           <button (click)="decreaseCount()" class="quantity-input__modifier quantity-input__modifier--left">—</button>
                           <input type="text" class="quantity-input__screen" value={{count}}>
@@ -81,7 +57,7 @@
 
                         
                         <div class="buttons">
-                            <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">{{pageTranslator.addToBag}}</button>
+                            <button (click)="addToCart()" class="pdp-add-to-bag pdp-button">{{tranz.addToBag}}</button>
 
                           </div>
 

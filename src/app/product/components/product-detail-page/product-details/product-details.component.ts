@@ -36,9 +36,9 @@ export class ProductDetailsComponent implements OnInit {
   count: any = 1;
   selectedSize: any;
   selectedColor: any;
-  pageTranslator: any;
-  _checkoutService : CheckoutService;
 
+  tranz: any;
+  _checkoutService : CheckoutService;
   _added : boolean;
 
 
@@ -65,7 +65,7 @@ export class ProductDetailsComponent implements OnInit {
 
 
     this.translate.get('prodDetails').subscribe((res: any) => {
-      this.pageTranslator = res;
+      this.tranz = res;
     });
 
     if(this.product.master.option_values != null) {
@@ -177,5 +177,6 @@ export class ProductDetailsComponent implements OnInit {
     this.checkoutService.addLineItem(_line).subscribe();
   }
   initJs(){
+    
   }
 }

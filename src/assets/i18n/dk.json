@@ -6,7 +6,8 @@
     "ulz001": "Eco-friendly",
     "ulz002": "Responsible",
     "btnTxt": "Køb nu",
-    "addToBag" : "TILFØJ TIL KURV"
+    "addToBag" : "TILFØJ TIL KURV",
+    "addQuant" : "Antal"
   },
   "prodPrice": {
     "prodName": "KortHolder ",

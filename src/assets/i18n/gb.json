@@ -6,7 +6,8 @@
     "ulz001": "Eco-friendly cardholder",
     "ulz002": "100% satisfaction",
     "btnTxt": "Buy now",
-    "addToBag" : "ADD TO BAG"
+    "addToBag" : "ADD TO BAG",
+    "addQuant" : "Quantity"
   },
   "prodPrice": {
     "prodName": "TGX Cardholder by Shevlin",
