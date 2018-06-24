@@ -6,7 +6,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   template: `
   
   <app-content-header (toggleSize)="toggleSize($event)"></app-content-header>
-  <app-filter-summary></app-filter-summary>
+  
   <app-customize></app-customize>
   <app-product-list [(toggleLayout)]='toggleLayout' [products]='products' [taxonIds]="taxonIds"></app-product-list>
   `
