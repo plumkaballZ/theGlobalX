@@ -25,7 +25,7 @@
             <div style="float: right;" class="collapse navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
 
-                  <ul class="nav navbar-nav"  id="navz" style="display: -webkit-inline-box;">
+                  <ul class="nav navbar-nav" id="navz" style="display: -webkit-inline-box;">
                       <li *ngFor="let taxon of taxonList" class="">
                         <a class="az_001" (click)="selectTaxon(taxon)"href="javascript:void(0)">{{taxon.name}}
                           <span class="sr-only">(current)</span>

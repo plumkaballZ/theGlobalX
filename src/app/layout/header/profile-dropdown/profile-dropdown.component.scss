@@ -7,8 +7,6 @@
 .cart {
   cursor: pointer;
 }
-.dropdown{
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -61,11 +59,15 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
       margin-left: -100px;
     }
-
     #profDown {
       display: -webkit-inline-box;
     }
-    
+
+    @media screen and (max-width: 768px) {
+      #profDown {
+        margin-right:  10px;
+      }
+    }
     #topMenuLang{
       left: -100%;
       top: -100%;
