@@ -29,6 +29,8 @@ export class PaymentComponent implements OnInit {
   constructor(private store: Store<AppState>, private router: Router, private translate: TranslateService, private checkoutService: CheckoutService) {
     
     this.totalCartValue$ = this.store.select(getTotalCartValue);
+    this.del_totalCartValue$ = this.store.select(del_getTotalCartValue);
+    
     this.totalCartItems$ = this.store.select(getTotalCartItems);
     
     this.address$ = this.store.select(getShipAddress);
