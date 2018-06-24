@@ -33,7 +33,6 @@ export class PaymentModesListComponent implements OnInit {
   }
   ngOnInit() {
     this.fetchAllPayments();
-    this.makePayment();
   }
   selectedPaymentMode(mode) {
     this.selectedMode = mode;
@@ -56,8 +55,7 @@ export class PaymentModesListComponent implements OnInit {
     this.checkoutService.currentOrder.payment_state = '0';
     this.checkoutService.currentOrder.ship_address = tmpAddr;
     this.checkoutService.currentOrder.special_instructions = 'updatePayment';
-
-    // this.store.dispatch(this.checkoutActions.updateOrder(""));
+    this.store.dispatch(this.checkoutActions.updateOrder(""));
     
     this.router.navigate(['checkout', 'order-success']);
   }

@@ -26,7 +26,6 @@ export class PaymentComponent implements OnInit {
   pageTrans: any;
   shipTotal : any;
   
-
   constructor(private store: Store<AppState>, private router: Router, private translate: TranslateService, private checkoutService: CheckoutService) {
     
     this.totalCartValue$ = this.store.select(getTotalCartValue);

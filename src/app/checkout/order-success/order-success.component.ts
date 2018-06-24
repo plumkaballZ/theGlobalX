@@ -46,7 +46,6 @@ export class OrderSuccessComponent implements OnInit {
     if(this.checkoutService.currentOrder.payment_state == '0'){
       this.orderDetails = this.checkoutService.currentOrder;
       // this.checkoutService.createEmptyOrder().subscribe();
-      console.log(this.orderDetails);
     }
   }
   ngOnInit() {

@@ -25,14 +25,16 @@ export class PayPalComp implements OnInit {
     }
 
     ngOnInit() {
+      console.log(this.checkoutService);
     }
     ngAfterViewInit(): void {
       var totalValue = this.totalCartValue;
 
       var eventEmitter = this.payOnDelivery;
+      
         this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
           paypal.Button.render({
-            env: 'sandbox',
+            env: 'production',
             funding: {
               allowed: [ 
                 paypal.FUNDING.CARD
@@ -49,7 +51,7 @@ export class PayPalComp implements OnInit {
             },
                  client: {
                     sandbox:    'AWi18rxt26-hrueMoPZ0tpGEOJnNT4QkiMQst9pYgaQNAfS1FLFxkxQuiaqRBj1vV5PmgHX_jA_c1ncL',
-                    production: '<1>'
+                    production: 'Ae5kKArd7iUNkdxJRr6uGU9v7H0Q0BSKn6V5uaiGgv1j-Np3k4OAD3TvxNXZU1WnuZEHZrzd7xjV6gDk'
                 },
                 commit: true,
                 payment: function (data, actions) {return actions.payment.create({
@@ -59,26 +61,16 @@ export class PayPalComp implements OnInit {
                         amount: { total: totalValue, currency: 'DKK' }
                       }
                     ],
-                    redirect_urls: {
-                      return_url: 'http://localhost:4200/user/orders',
-                      cancel_url: 'http://localhost:4200/user/orders'
-                      }
+                    
                   }
           })
         },
         onAuthorize: function(data, actions) {
           return actions.payment.execute().then(function(payment) {
-            $('#asdf').show();
-            $('#asdf01').hide();
-            // actions.redirect();
             eventEmitter.emit(true);
           })
         },
         onCancel: function(data, actions) {
-          eventEmitter.emit(true);
-          // $('#asdf').show();
-          // $('#asdf01').hide();
-          // actions.redirect();
         }
       }, '#paypalBtn');
     })
