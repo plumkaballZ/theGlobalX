@@ -22,7 +22,7 @@
     "about001": "Omkring virksomheden",
     "about002": "Virksomheden er startet ud fra et bæredygtigt syn på hverdagen. Alle produkter er lavet på ansvarlig vis, med fokus på miljø og økologi. Vi vil fokusere på at lave kvalitetsprodukter uden kompromis.",
     "conditions" : "Handelsbetingelser",
-    "cookiePolicy" : "Privatlivs politik"
+    "cookiePolicy" : "Privatlivspolitik"
   },
   "header": {
     "home": "Butik",
@@ -215,7 +215,7 @@
   "facts" : {
     "sustainability" : "Sustainability",
     "weWish" : "Vi ønsker det bedste for miljøet!",
-    "becuaseWe" : "Fordi vi tænker så meget på miljøet bliver vores varer produceret langsommere end konventionelle produkter. Her er det bl.a. vores læder der skal garve i vadbassiner med bark i stedet for kemiske løsninger.",
+    "becuaseWe" : "Fordi vi tænker så meget på miljøet bliver vores varer produceret langsommere end konventionelle produkter. Her er det bl.a. vores læder der skal garve i vandbassiner med bark i stedet for kemiske løsninger.",
     "ourTextile" : "Vores tekstiler laves af organiske og bæredygtige materialer såsom bambus, hemp, økologisk bomuld mm. Vi stræber hele tiden efter at udvikle og producere de mest bæredygtige produkter vi kan på den mest bæredygtige måde - for dig, for mig og for os alle sammen.",
     "ourTextileShort" : "Vores tekstiler laves af...",
     "inspirationAnd" : "Inspiration og Mission",
@@ -229,11 +229,6 @@
     "li2" : "Ingen diskrimination eller krænkelse af menneske- og arbejdsrettigheder",
     "li3" : "Den lokale lov skal overholdes",
     "li4" : "Sundt arbejdsmiljø og faciliteter for de ansatte",
-    "li5" : "Bygningssikkerhed og certificeringer",
-    "li6" : "Brandslukkere, nødprocedure og øvelser",
-    "li7" : "Håndtering, handsker og masker ved kemikalier",
-    "li8" : "Sikkerhed om maskiner",
-    "li9" : "Arbejdstid og lønninger skal overholde gældende lov",
     "li10" : "Førstehjælpere, brandtræningsuddannede m.m. skal være på fabrikken",
     "li11" : "Miljømæssige hensyn, herunder håndtering af spildevand, forurening m.m",
     "productionOf" : " Fremstilling af vores produkter",
@@ -295,7 +290,7 @@
   },
   "app" : {
     "cookiePlicy" : "Dette website andvender cookies til at huske dine indstillinger, for mere info se vores",
-    "privatePolicy" : "privatepolitik"
+    "privatePolicy" : "Privatlivspolitik"
   },
   "cookiePolicy" : {
     "h001" : "Privatlivspolitik",
