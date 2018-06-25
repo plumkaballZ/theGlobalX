@@ -50,8 +50,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
 
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
-      
-      console.log(_lineItem);
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
           return state;
