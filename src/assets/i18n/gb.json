@@ -301,7 +301,7 @@
     "orderSentGls" : "Order sent with GLS"
   },
   "app" : {
-    "cookiePlicy" : "This website is using cookies to keep track of your settings, for more info please read or ",
+    "cookieText" : "This website is using cookies to keep track of your settings, for more info please read or ",
     "privatePolicy" : "private policy"
   },
   "cookiePolicy" : {

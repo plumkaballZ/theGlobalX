@@ -22,7 +22,11 @@
         </div>
         <div class="cookie-disclaimer">
           <div class="cookie_container">
-            <p>Websitet andvender cookies til at huske dine indstillinger, for mere info se vores <a class="pp" (click)="goToLink('cookiePolicy')">privatepolitik</a></p>
+            <p>
+              {{tranz.cookieText}}
+            <a class="pp" (click)="goToLink('cookiePolicy')">
+              {{tranz.privatePolicy}}
+            </a></p>
 
             <button type="button" class="btn btn-success accept-cookie">Ok</button>
           </div>

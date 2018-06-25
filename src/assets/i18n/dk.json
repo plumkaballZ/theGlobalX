@@ -297,7 +297,7 @@
     "orderWating" : "Order venter på bekræftelse"
   },
   "app" : {
-    "cookiePlicy" : "Dette website andvender cookies til at huske dine indstillinger, for mere info se vores",
+    "cookieText" : "Dette website andvender cookies til at huske dine indstillinger, for mere info se vores",
     "privatePolicy" : "Privatlivspolitik"
   },
   "cookiePolicy" : {

@@ -3,6 +3,7 @@ import { AppState } from './interfaces';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs/Subscription';
 import { CheckoutService } from './core/services/checkout.service';
+import { tranzLat0r } from './core/models/tranzLat0r';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
@@ -20,7 +21,9 @@ export class AppComponent implements OnInit, OnDestroy {
   currentStep: string;
   checkoutUrls = ['/checkout/cart', '/checkout/address', '/checkout/payment'];
 
-  tranz: any;
+  tranz: any = {"cookieText" : "", "privatePolicy" : ""};
+
+  _tranz : tranzLat0r;
 
   constructor(
     private router: Router,
@@ -76,10 +79,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
-
-
-    // var localFlag = localStorage.getItem('localFlag');
-    // localStorage.setItem('localFlag', flag);
   }
 
   goToLink(str) {
