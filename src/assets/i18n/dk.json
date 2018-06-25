@@ -348,5 +348,9 @@
   },
   "payPal" : {
     "currency" : "DKK"
+  },
+  "cashOnDel" : {
+   "payWithPayPal" : "Betal med PayPal",
+   "noteMore" : "NOTE: Flere betalingsmetoder er på vej :)" 
   }
 } 

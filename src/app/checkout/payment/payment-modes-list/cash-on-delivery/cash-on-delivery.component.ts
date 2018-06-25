@@ -4,6 +4,7 @@ import { getTotalCartValue, getTotalCartItems } from './../../../../checkout/red
 import { CheckoutService } from './../../../../core/services/checkout.service';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-cash-on-delivery',
@@ -16,9 +17,11 @@ export class CashOnDeliveryComponent implements OnInit {
   totalCartItems$: Observable<number>;
   shipTotal : number;
 
+  tranz : any;
+
   @Output() payOnDelivery: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private checkoutService: CheckoutService, private store: Store<AppState>) {
+  constructor(private checkoutService: CheckoutService, private store: Store<AppState>, private translate: TranslateService) {
     this.totalCartValue$ = this.store.select(getTotalCartValue);
     this.totalCartItems$ = this.store.select(getTotalCartItems);
     
@@ -28,6 +31,9 @@ export class CashOnDeliveryComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.translate.get('cashOnDel').subscribe((res: any) => {
+      this.tranz = res;
+    });
   }
   
   onPay() {

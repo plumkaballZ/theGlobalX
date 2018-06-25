@@ -130,7 +130,7 @@
     "orderTotal002": "Total on Order",
     "del001": "Delivery",
     "del002": "Delivery FREE",
-    "totalPay": "Total Payable",
+    "totalPay": "Total to pay",
     "currency" : "€"
   },
   "addrs": {
@@ -205,7 +205,7 @@
     "items" : "ITEMS",
     "orderTotal" : "Order Total",
     "delivery" : "Delivery",
-    "totalPayable" : "Total Payable",
+    "totalPayable" : "Total To Pay:",
     "deliverTo" : "DELIVER TO",
     "mobile" : "Mobile",
     "currency": "€"
@@ -352,5 +352,9 @@
   },
   "payPal" : {
     "currency" : "EUR"
-  }
+  },
+  "cashOnDel" : {
+    "payWithPayPal" : "Pay with PayPal",
+    "noteMore" : "NOTE: more paymenttypes are being impmented :)" 
+   }
 }
