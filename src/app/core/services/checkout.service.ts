@@ -92,10 +92,7 @@ export class CheckoutService {
         var fin = currOrder.line_items.length;
         currOrder.line_items.forEach(lineItem => {
           this.prodService.getProduct(lineItem.id.toString()).subscribe(response => {
-            console.log(parseFloat(response.price) * lineItem.quantity);
             total += parseFloat(response.price) * lineItem.quantity;
-            console.log(fin);
-          
             if(fin == index)	
             {	
                const token = order;        	
