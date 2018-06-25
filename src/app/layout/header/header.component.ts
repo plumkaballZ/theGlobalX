@@ -10,6 +10,8 @@ import { Observable } from 'rxjs/Observable';
 import { AuthService } from '../../core/services/auth.service';
 import { AuthActions } from '../../auth/actions/auth.actions';
 import {TranslateService} from '@ngx-translate/core';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'app-header',
@@ -78,6 +80,7 @@ export class HeaderComponent implements OnInit {
   }
 
   selectTaxon(taxon) {
+    this.isIn = false;
     this.router.navigateByUrl(taxon.link);
   }
 

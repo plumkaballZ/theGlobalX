@@ -10,6 +10,10 @@
 .dropdown-submenu {
   position: relative;
 }
+.dropdown-menu{
+position: absolute !important;
+right: 0 !important;
+}
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   right: 100%;
@@ -57,7 +61,6 @@
       border: none;
       background: #ffffff;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-      margin-left: -100px;
     }
     #profDown {
       display: -webkit-inline-box;
