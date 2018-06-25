@@ -84,10 +84,7 @@ export class AddressComponent implements OnInit, OnDestroy {
                 } 
               );
           }
-        );
-
-        this.initDel();
-      
+        );      
   }
 
   initDel() {
@@ -104,6 +101,17 @@ export class AddressComponent implements OnInit, OnDestroy {
       "prop4" : 50
     }];
 
+    this.delOptions[0].prop1 = this.pageTrans.prop1;
+    this.delOptions[0].prop2 = this.pageTrans.prop2;
+    this.delOptions[0].prop3 = this.pageTrans.prop3;
+    this.delOptions[0].prop4 = this.pageTrans.prop4;
+
+    this.delOptions[1].prop1 = this.pageTrans.prop5;
+    this.delOptions[1].prop2 = this.pageTrans.prop6;
+    this.delOptions[1].prop3 = this.pageTrans.prop7;
+    this.delOptions[1].prop4 = this.pageTrans.prop8;
+  
+
     this.selectedDel = this.delOptions[0];
     if(this.checkoutService.currentOrder != null)
     this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
@@ -118,6 +126,8 @@ export class AddressComponent implements OnInit, OnDestroy {
       this.breadcrumbs$[0] = this.pageTrans.addrsOverview;
        this.breadcrumbs$[1] = this.pageTrans.createAddr;
     });
+
+    this.initDel();
   }
 
   checkoutToPayment() {

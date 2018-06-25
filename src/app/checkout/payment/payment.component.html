@@ -38,7 +38,7 @@
 								<span class="lbl">{{pageTrans.youPay}}: </span>
 								<span class="amt you-pay">
 										<!-- <span class="amt">{{pageTrans.youPay}}</span> -->
-										<span class="you-pay">{{del_totalCartValue$ | async | number:'1.2-2'}} {{pageTrans.currency}}</span>
+										<span class="you-pay">{{(totalCartValue$ | async) + shipTotal | number:'1.2-2'}} {{pageTrans.currency}}</span>
 									</span>
 								
 							</div>

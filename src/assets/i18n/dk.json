@@ -127,7 +127,15 @@
     "selectDelOption" : "Vælg en leveringsmetode",
     "continue": "TIL BETALING",
     "addrsOverview" : "Oversigt",
-    "createAddr" : "Opret address"
+    "createAddr" : "Opret address",
+    "prop1" : "GLS PakkeShop afhentning",
+    "prop2" : "34,00 DKK",
+    "prop3" : "1-3 dage",
+    "prop4" : 34.00,
+    "prop5" : "GLS Pakkelevering til privat",
+    "prop6" : "53,00 DKK",
+    "prop7" : "1-2 dage",
+    "prop8" : 53.00
   },
   "del": {
     "delSpeed": "Leveringstid",
@@ -336,6 +344,9 @@
     "isAuth" : "Se dine ordere her",
     "isNotAuth" : "Du kan registere dig here og se dine ordere",
     "continueShopping" : "Fortsæt med at shoppe",
+    "currency" : "DKK"
+  },
+  "payPal" : {
     "currency" : "DKK"
   }
 } 

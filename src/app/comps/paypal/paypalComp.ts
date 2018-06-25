@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { getTotalCartValue, getTotalCartItems } from './../../checkout/reducers/selectors';
 import { CheckoutService } from './../../core/services/checkout.service';
+import {TranslateService} from '@ngx-translate/core';
 
 declare var jquery:any;
 declare var $ :any;
@@ -21,15 +22,20 @@ export class PayPalComp implements OnInit {
 
   @Output() payOnDelivery: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    constructor(private checkoutService: CheckoutService, private store: Store<AppState>) {
+  tranz: any;
+
+    constructor(private checkoutService: CheckoutService, private store: Store<AppState>,  private translate: TranslateService) {
     }
 
     ngOnInit() {
-      console.log(this.checkoutService);
+      this.translate.get('payPal').subscribe((res: any) => {
+        this.tranz = res;
+      });
     }
     ngAfterViewInit(): void {
+      
       var totalValue = this.totalCartValue;
-
+      var currency = this.tranz.currency;
       var eventEmitter = this.payOnDelivery;
       
         this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
@@ -58,7 +64,7 @@ export class PayPalComp implements OnInit {
                   payment: {
                     transactions: [
                       {
-                        amount: { total: totalValue, currency: 'DKK' }
+                        amount: { total: totalValue, currency: currency }
                       }
                     ],
                     
