@@ -1,0 +1,83 @@
+makeTransform(transform)
+  transform transform 
+
+time = 3.5s
+
+.mailsent
+  display block
+  -webkit-animation mailsent-movement time infinite ease-in-out
+  //makeTransform(translate(50%))
+  .envelope
+    font-size 20px
+    margin-left -25px
+    width 25px
+    height 20px
+    top 50%
+    transform-origin 50% 50%
+    -webkit-animation mailsent-rotation time infinite ease-in-out
+    .icon
+      position absolute
+      left 0
+    .line
+      position absolute
+      width 10px
+      height 2px
+      background white
+      display block
+      &.line1
+        width 15px
+        top 4px
+        left -20px
+        -webkit-animation line-size-large time infinite ease-in-out
+      &.line2
+        width 10px
+        top 9px
+        left -20px
+        -webkit-animation line-size-small time infinite ease-in-out
+      &.line3
+        width 15px
+        top 14px
+        left -20px
+        -webkit-animation line-size-large time infinite ease-in-out
+      
+
+@keyframes mailsent-movement
+  0%
+    makeTransform(translate(-50%))
+  50%
+    makeTransform(translate(50%))
+  100%
+    makeTransform(translate(150%))
+@keyframes mailsent-rotation
+  0%
+    makeTransform(skewX(-30deg))
+  50%
+    makeTransform(skewX(0deg))
+  100%
+    makeTransform(skewX(-30deg))
+@keyframes line-size-large
+  0%
+    width 15px
+    left -20px
+  50%
+    width 0
+    left -5px
+  55%
+    width 0
+    left -5px
+  100%
+    width 15px
+    left -20px
+@keyframes line-size-small
+  0%
+    width 10px
+    left -15px
+  50%
+    width 0
+    left -5px
+  55%
+    width 0
+    left -5px
+  100%
+    width 10px
+    left -15px

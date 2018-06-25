@@ -1,3 +1,4 @@
+
 .secDiv{
   text-align: center;
 }
@@ -19,15 +20,6 @@
   max-width: 100%;
   text-align: center;
 }
-.h_001{
-  font-size: 32px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  margin-top: 0;
-}
-.sec_001{
-  padding: 30px 30px;
-}
 .title_001{
   margin-bottom: 45px;
 }
@@ -35,16 +27,10 @@
 #contact{
   padding:10px 0 10px;
 }
-
-.contact-text{
-  margin:45px auto;
-}
-
 .mail-message-area{
   width:100%;
   padding:0 15px;
 }
-
 .mail-message{
   width: 100%;
   background:rgba(255,255,255, 0.8) !important;
@@ -55,15 +41,9 @@
   border-radius: 0;
 }
 
-.not-visible-message{
+.not-visible-message {
   height:0px;
   opacity: 0;
-}
-
-.visible-message{
-  height:auto;
-  opacity: 1;
-  margin:25px auto 0;
 }
 
 /* Input Styles */
@@ -116,16 +96,10 @@
   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
 }
 
-.button:hover{
+.button:hover {
   background:#8BC3A3;
   color:white;
 }
-
-:host ::ng-deep .form-btn #inlineEditWrapper a { 
-  color: #f2f2f2;
-}
-
-/* Send Button Styles */
 
 .form-btn{
   width:180px;
@@ -146,7 +120,7 @@
   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
 }
 
-.form-btn:hover{
+.form-btn:hover {
   background:#111;
   color: white;
   border:none;
@@ -155,10 +129,48 @@
 .form-btn:active{
   opacity: 0.9;
 }
-center{
-margin-top:330px;
-}
+
 input {
   position: relative;
 }
 
+.contz {
+  overflow: hidden;
+  zoom: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .pusher{
+    margin-top: 90px;
+  }
+}
+
+#confirmation {
+  text-align:center;
+  color: #fafdf0;
+  background-color: #1d886d;
+a{
+  color: #fafdf0;
+  display: block;
+  margin: 60px 0 0 0;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+}
+#content{
+width:90%;
+margin: 0 auto;
+padding: 5%;
+h1{
+letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 3em;
+  margin: 0 0 0 0;
+  color:  #f2f2f2;
+}
+p{
+  line-height: 28px;
+  font-size: 1em;
+  font-weight: 200;
+}
+}

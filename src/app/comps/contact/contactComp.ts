@@ -5,7 +5,7 @@ import {UserService } from './../../user/services/user.service';
 @Component({
   selector: 'contactComp',
   templateUrl: './contact.html',
-  styleUrls: ['./contact.css']
+  styleUrls: ['./contact.scss', './contact.styl']
 })
 
 export class ContactComp implements OnInit {
@@ -14,9 +14,13 @@ export class ContactComp implements OnInit {
   ySubject: string;
   yDesc: string;
 
+  mailSent : boolean;
+  tranz : any;
+
   constructor(
     private translate: TranslateService
   ) { 
+    this.mailSent = false;
   }
   ngOnInit() {
      this.translate.get('contact.yName').subscribe((res: string) => {
@@ -32,5 +36,12 @@ export class ContactComp implements OnInit {
      this.translate.get('contact.yDesc').subscribe((res: string) => {
        this.yDesc = res;
      });
+     this.translate.get('contact').subscribe((res: string) => {
+      this.tranz = res;
+    });
+  }
+  
+  sendEmail_click(){
+    this.mailSent = true;
   }
 }

@@ -111,7 +111,10 @@
     "yDesc": "Beskrivelse",
     "submitBtn": "Send",
     "ulz001": "Instagram: Shevlin.co",
-    "ulz003": "Facebook: Shevlin.co"
+    "ulz003": "Facebook: Shevlin.co",
+    "thankYou" : "TAK!",
+    "conTxt" : "Vi har modtaget din mail :)",
+    "continueShopping" : "Fortsæt med at shoppe"
   },
   "orderTotal": {
     "bagTotal": "Total i kurven",

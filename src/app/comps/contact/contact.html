@@ -1,65 +1,96 @@
-<div class="row">
-  <div class="col-md-6">
-      <div class="title_001">
-          <h2 class="">
-            <inline-translator [page]="'contact'" [key]="'submitReq'" [elementType]="'text'"></inline-translator>
-          </h2>
-          <span class="span_001">
-              <inline-translator [page]="'contact'" [key]="'span001'" [elementType]="'text'"></inline-translator>
-          </span> 
-        </div>
 
-    <div class="wow animated slideInLeft" data-wow-delay=".5s">
-      <input type="text" name="name" id="name" required="required" class="form" placeholder="{{yName}}" />
-      <input type="email" name="mail" id="mail" required="required" class="form" placeholder="{{yEmail}}" />
-      <input type="text" name="subject" id="subject" required="required" class="form" placeholder="{{ySubject}}" />
-    </div>
-    
-    <div class="wow animated slideInRight" data-wow-delay=".5s">
-      <textarea name="message" id="message" class="form textarea"  placeholder="{{yDesc}}"></textarea>
-    </div>  
-    
-    <div class="relative fullwidth">
-      <button type="submit" id="submit" name="submit" class="form-btn semibold">
-        <inline-translator [page]="'contact'" [key]="'submitBtn'" [elementType]="'text'"></inline-translator>
-      </button> 
-    </div>
-    <div class="mail-message-area">
-      <div class="alert gray-bg mail-message not-visible-message">
-        <strong>Thank You !</strong> Your email has been delivered.
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  
-  <div class="col-md-6 secDiv">       
-    <div class="title_001">
+<div class="row pusher">
+
+  <div *ngIf="mailSent==false">
+
+      <div class="col-md-6">
+          <div class="title_001">
               <h2 class="">
-                <inline-translator [page]="'contact'" [key]="'title001'" [elementType]="'text'"></inline-translator>
+                <inline-translator [page]="'contact'" [key]="'submitReq'" [elementType]="'text'"></inline-translator>
               </h2>
+              <span class="span_001">
+                  <inline-translator [page]="'contact'" [key]="'span001'" [elementType]="'text'"></inline-translator>
+              </span> 
             </div>
+    
+        <div class="wow animated slideInLeft" data-wow-delay=".5s">
+          <input type="text" name="name" id="name" required="required" class="form" placeholder="{{yName}}" />
+          <input type="email" name="mail" id="mail" required="required" class="form" placeholder="{{yEmail}}" />
+          <input type="text" name="subject" id="subject" required="required" class="form" placeholder="{{ySubject}}" />
+        </div>
+        
+        <div class="wow animated slideInRight" data-wow-delay=".5s">
+          <textarea name="message" id="message" class="form textarea"  placeholder="{{yDesc}}"></textarea>
+        </div>  
+        
+        <div class="relative fullwidth">
+          <button (click)="sendEmail_click()" type="submit" id="submit" name="submit" class="form-btn semibold">
+            <inline-translator [page]="'contact'" [key]="'submitBtn'" [elementType]="'text'"></inline-translator>
+          </button> 
+        </div>
+        <div class="mail-message-area">
+          <div class="alert gray-bg mail-message not-visible-message">
+            <strong>Thank You !</strong> Your email has been delivered.
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
 
-          <ul class="ulz_001">
-            <li>
-              <h4>
-                <inline-translator [page]="'contact'" [key]="'ulz001'" [elementType]="'text'"></inline-translator>
-              </h4>
-              <h4>
-                  <div class="icnz">
-                      <a href="https://www.instagram.com/anthony.shevlin/"><i class="fa fa-instagram"></i></a>
+      <div class="col-md-6 secDiv">       
+          <div class="title_001">
+                    <h2 class="">
+                      <inline-translator [page]="'contact'" [key]="'title001'" [elementType]="'text'"></inline-translator>
+                    </h2>
                   </div>
-                </h4>
-                <h4>
-                    <inline-translator [page]="'contact'" [key]="'ulz003'" [elementType]="'text'"></inline-translator>
-                  </h4>
-            
-                <h4>
-                    <div class="icnz">
-                        <a href="https://www.facebook.com/Shevlin.co/"><i class="fa fa-facebook"></i></a>
-                    </div>   
-                  </h4>
-            </li>    
-          </ul>
       
+                <ul class="ulz_001">
+                  <li>
+                    <h4>
+                      <inline-translator [page]="'contact'" [key]="'ulz001'" [elementType]="'text'"></inline-translator>
+                    </h4>
+                    <h4>
+                        <div class="icnz">
+                            <a href="https://www.instagram.com/anthony.shevlin/"><i class="fa fa-instagram"></i></a>
+                        </div>
+                      </h4>
+                      <h4>
+                          <inline-translator [page]="'contact'" [key]="'ulz003'" [elementType]="'text'"></inline-translator>
+                        </h4>
+                  
+                      <h4>
+                          <div class="icnz">
+                              <a href="https://www.facebook.com/Shevlin.co/"><i class="fa fa-facebook"></i></a>
+                          </div>   
+                        </h4>
+                  </li>    
+                </ul>      
+        </div>
   </div>
+
+  <div *ngIf="mailSent==true"  id="confirmation">
+      <div id="content">
+        <h1> {{tranz.thankYou}}</h1>
+        <p>
+          {{tranz.conTxt}}
+        </p>
+        <div class='contz'>
+            <div class='mailsent'>
+              <div class='envelope'>
+                <i class='line line1'></i>
+                <i class='line line2'></i>
+                <i class='line line3'></i>
+                <i class="iconz fa fa-envelope"></i>
+              </div>
+            </div>
+            </div>
+              <div>
+                  <a href="#">{{tranz.continueShopping}}</a>
+              </div>
+                </div>
+              </div>
+  
 </div>
+
+
+
+

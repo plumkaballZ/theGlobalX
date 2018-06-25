@@ -99,7 +99,10 @@
     "yEmail": "Email",
     "ySubject": "Subject",
     "yDesc": "Description",
-    "submitBtn": "Submit"
+    "submitBtn": "Submit",
+    "thankYou" : "THANK YOU!",
+    "conTxt" : " Your email has been delivered :)",
+    "continueShopping" : "Continue shopping"
   },
   "fact": {
     "h001": "This page is comming soon :)"
