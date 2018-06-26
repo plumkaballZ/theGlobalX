@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {UserService } from './../../user/services/user.service';
+declare var jquery:any;
+declare var $ :any;
 
 @Component({
   selector: 'contactComp',
@@ -16,6 +18,7 @@ export class ContactComp implements OnInit {
 
   mailSent : boolean;
   tranz : any;
+
 
   constructor(
     private translate: TranslateService
@@ -43,5 +46,6 @@ export class ContactComp implements OnInit {
   
   sendEmail_click(){
     this.mailSent = true;
+    window.scrollTo(0, 0);
   }
 }
