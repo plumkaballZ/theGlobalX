@@ -22,7 +22,6 @@ ul {
       overflow: hidden;
       display: inline-block;
       transition: all 500ms;
-      // margin: 0 30px 20px 0;
       a {
         text-decoration: none;
         background-color: transparent;
@@ -47,8 +46,6 @@ ul {
             text-overflow: ellipsis;
             white-space: nowrap;
             font-size: 13px;
-            font-weight: 500;
-            line-height: 14px;
             color: #282c3f;
             text-transform: capitalize;
             margin-top: 10px;
@@ -114,7 +111,7 @@ ul {
       .product-actions {
         position: absolute;
         left: 0;
-        bottom: 40px;
+        bottom: 35px;
         border-bottom: 1px solid #eaeaec;
         border-top: 1px solid #eaeaec;
         background: #fff;
@@ -163,7 +160,4 @@ ul {
       z-index: 10;
     }
   }
-}
-.podName{
-  
 }
