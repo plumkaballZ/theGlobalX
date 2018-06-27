@@ -18,3 +18,15 @@
     }
   }
 }
+
+@media screen and (max-width: 360px) {
+  .navbar-fixed-top {
+    .navbar-nav {
+      & > li {
+        & > a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
