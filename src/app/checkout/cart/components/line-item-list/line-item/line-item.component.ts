@@ -29,10 +29,8 @@ export class LineItemComponent implements OnInit {
   constructor(private store: Store<AppState>, private actions: CheckoutActions, 
     private checkoutService: CheckoutService, productService: ProductService,  private translate: TranslateService) {
       this.prodService = productService;
-      console.log('ctor');
-      console.log(this.checkoutService.currentOrder.line_items);
    }
-  
+   
   ngOnInit() {
     this.prodService.getProduct(this.lineItem.id.toString()).subscribe(response => 
       {
@@ -50,9 +48,7 @@ export class LineItemComponent implements OnInit {
       this.pageTrans = res;
     });
   }
-
   removeLineItem() {
-    this.checkoutService.deleteLineItem(this.lineItem)
-      .subscribe();
+    this.checkoutService.deleteLineItem(this.lineItem).subscribe();
   }
 }

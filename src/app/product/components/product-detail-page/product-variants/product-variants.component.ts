@@ -20,19 +20,15 @@ export class ProductVariantsComponent implements OnInit {
   @Output() onOptionClickEvent = new EventEmitter();
 
   constructor() {
-  
   }
 
   ngOnInit() {
-    console.log(this.mainOptions);
-    console.log(this.currentSelectedOptions);
-  }
-  onOptionClick(option) {
-    console.log(option);
-    console.log(this.currentSelectedOptions);
-    this.onOptionClickEvent.emit(option);
   }
 
+  onOptionClick(option) {
+    this.onOptionClickEvent.emit(option);
+  }
+  
   isDisabled(arrayTocheck, value) {
     return (arrayTocheck.indexOf(value) === -1);
   }

@@ -69,19 +69,26 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.REMOVE_LINE_ITEM_SUCCESS:
-        
+
+
+
       _lineItem = payload;
-        _lineItemId = _lineItem.id;
-        const index = state.lineItemIds.indexOf(_lineItemId);
-        
-        if (index >= 0) {
-         
+      _lineItemId = _lineItem.id;
+      const index = state.lineItemIds.indexOf(_lineItemId);
+      
+
+      console.log('removeLineItem');
+      console.log(payload);
+      console.log(index);
+
+
+      if (index >= 0) {   
           _lineItemIds = state.lineItemIds.splice(index, 1);
           _lineItemEntities = state.lineItemEntities.delete(_lineItemId);
           _totalCartItems = state.totalCartItems - _lineItem.quantity;
-          _totalCartValue = (state.totalCartValue - _lineItem.price);
+          _totalCartValue = (state.totalCartValue - (parseFloat(_lineItem.price) * _lineItem.quantity));
         }
-
+        
         return state.merge({
           lineItemIds: _lineItemIds,
           lineItemEntities: _lineItemEntities,

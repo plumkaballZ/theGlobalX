@@ -5,6 +5,5 @@ export class tranzLat0r {
 
     constructor(page: string){
         this._localFlag = localStorage.getItem('localFlag');
-        console.log(this._localFlag);
     }
 }
