@@ -42,19 +42,19 @@ export class ProductImagesComponent implements OnInit {
     // build items array
     var items = [
         {
-            src: 'https://placekitten.com/600/400',
+            src: 'https://www.sideshowtoy.com/wp-content/uploads/2018/04/marvel-avengers-infinity-war-iron-spider-sixth-scale-hot-toys-feature-903471.jpg',
             w: 600,
             h: 400
         },
         {
-            src: 'https://placekitten.com/1200/900',
-            w: 1200,
-            h: 900
+            src: 'https://www.sideshowtoy.com/wp-content/uploads/2018/03/marvel-avengers-infinity-war-iron-man-sixth-scale-figure-hot-toys-feature-903421.jpg',
+            w: 600,
+            h: 400
         }
     ];
     
     var options = {
-        index: 0 
+      index: 0
     };
     
     // Initializes and opens PhotoSwipe
