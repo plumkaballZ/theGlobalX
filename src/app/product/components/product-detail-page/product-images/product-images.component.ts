@@ -24,7 +24,7 @@ export class ProductImagesComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.initJs();
+    // this.initJs();
   }
   
   getProductImageUrl(url) {
