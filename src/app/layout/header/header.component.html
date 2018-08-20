@@ -5,9 +5,9 @@
       
             <!-- <a class="navbar-brand" routerLink="/">
               Shevlin
-            </a> -->
+            </a>  -->
 
-            <a class="navbar-brand" routerLink="/"><img src="assets/shevlin_logo.png" alt=""></a>
+            <!-- <a class="navbar-brand" routerLink="/"><img src="assets/shevlin_logo.png" alt=""></a> -->
             
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
@@ -24,7 +24,7 @@
             </div>
       
        
-            <div style="float: right;" class="collapse navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
+            <div class="collapse navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
 
                   <ul class="nav navbar-nav" id="navz" style="display: -webkit-inline-box;">
@@ -34,7 +34,7 @@
                         </a>
                       </li>
                   </ul>
-                      <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+                      <!-- <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp> -->
                     
               </div>
               

@@ -362,7 +362,7 @@ hr {
 
 	#sidebar
 	{
-		float: right;
+		/* float: right; */
 		width: 345px;
 	}
 	

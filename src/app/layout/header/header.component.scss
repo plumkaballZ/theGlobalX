@@ -1,5 +1,4 @@
  .navbar {
-   height: 160px;
    background-color: #FFFFFF;
    list-style: none;
  }
@@ -13,8 +12,6 @@
    }
  }
  .nav navbar-nav {
-  top: 0;
-  right: 100%;
   -webkit-border-radius: 0 6px 6px 6px;
   -moz-border-radius: 0 6px 6px 6px;
   border-radius: 0 6px 6px 6px;
@@ -33,13 +30,13 @@
   }
   @media screen and (min-width: 768px) {
     .az_001 {
-      padding-right: 30px;
+      // padding-right: 30px;
     }
   }
 
   @media screen and (max-width: 768px) {
     collapse navbar-collapse {
-      float: right;
+      // float: right;
     }
     padding-left: 35px;
   }
@@ -52,8 +49,7 @@
   @media screen and (min-width: 768px)
   {
     .navbar-fixed-top, .navbar-fixed-bottom {
-      position: sticky;
-  
+   
     }
   }
   
@@ -76,7 +72,7 @@
 
   @media screen and (max-width: 768px) {
     .bla1 {
-      float: left;
+      // float: left;
       list-style: none;
       font-size: 15px;
       text-align: left;

@@ -33,6 +33,8 @@
     </a>
 
     <ul class="dropdown-menu" *dropdownMenu>
+      <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+      <li role="separator" class="divider"></li>
       <li><a routerLink="/user">
         {{pageTranslator.myProfile}}
       </a></li>
@@ -41,6 +43,7 @@
         {{pageTranslator.logout}}
       </a></li>
       <li role="separator" class="divider"></li>
+     
     </ul>
   </li>
 </ul>

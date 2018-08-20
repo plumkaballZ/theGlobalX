@@ -1,3 +1,19 @@
+.navbar {
+  height: 168px;
+  background-color: #FFFFFF;
+  list-style: none;
+}
+.navbar-brand {
+  float: none;
+  font-family: 'Poiret One';
+  font-size: 58px;
+  padding-top: 25px;
+  img {
+    margin: 0 auto;
+    text-align: center;
+    margin: 40px auto;
+  }
+}
 .taxCol{
     width: 20.5%;
 }
@@ -30,7 +46,12 @@
     margin: 8em 0em;
   }
   .ui.inverted.segment, .ui.primary.inverted.segment{
-    background-image: url('https://shevlin.co/assets/api/pics/bambooForest.png');
+    background-size:100% 100%;
+    background-color: white;
+    background-image: url('https://shevlin.co/assets/api/pics/byShevlinNatureBanner001.png');
+    height: 400px;
+    margin-top: -60px;
+    margin-bottom: -30px;
   }
   .masthead h1.ui.header {
     margin-top: 2em;
@@ -46,6 +67,6 @@
       font-size: 2em; 
     }
     .ui.inverted.segment{
-      margin-top: 90px;
+      height: 200px;
     }
   }
