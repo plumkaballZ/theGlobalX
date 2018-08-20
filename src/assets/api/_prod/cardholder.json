@@ -1,15 +1,15 @@
     {
       "id": 1,
-      "name": "The Global X cardholder By Shevlin",
-      "description": "Vores absolut første produkt. Kortholderne er lavet af 100% vegetabilsk garvet læder. Læderet laver over tid sin egen unikke patina, alt afhængig af hvordan den bruges. Kortholderne er dobbeltsidet og kan holde 8-10 kort samt sedler.",
-      "description_GB": "This was the very first product we ever designed. The cardholder is made from 100% vegetable tanned leather. The leather creates its own unique patina over time from every day use. The cardholder can hold between 8-10 cards and notes.",
-      "price": "449,95",
-      "price_GB": "61,00",
-      "display_price": "449,95 DKK",
+      "name": "Card Holder By Shevlin",
+      "description": "Flot vegetabilsk garvet kortholder. Håndsyet for de flotteste resultater og for den bedste holdbarhed.",
+      "description_GB": "Beautiful vegetable tanned card holder. Hand-sewn for the finest results and for the best durability.",
+      "price": "249,95",
+      "price_GB": "34,00",
+      "display_price": "249,95 DKK",
       "available_on": "2012-10-17T03:43:57Z",
       "slug": "prod_01",
-      "meta_description": "Hver og én er lavet i hånden, hvortil vi har benyttet YKK lynlåse på begge modeller for at sikre den absolut højeste kvalitet.",
-      "meta_description_GB": "Every single one has been crafted by hand to insure the best possible quality of each peace.",
+      "meta_description": "Den er dobbeltsiddet med plads til op til 8 kort. Samtidig har du mulighed for at have dine sedler og kvitteringer med på farten.",
+      "meta_description_GB": "It is double-sided with enough space for up to 8 cards. At the same time you have the opportunity to have your notes and receipts with you on the go.",
       "meta_keywords": null,
       "shipping_category_id": 1,
       "taxon_ids": [
@@ -53,38 +53,8 @@
             "alt": null,
             "viewable_type": "Spree::Variant",
             "viewable_id": 1,
-            "small_url": "assets/api/_prod/theglobalx/21.jpg",
-            "large_url": "assets/api/_prod/theglobalx/21.jpg"
-          },
-          {
-            "id": 2,
-            "position": 2,
-            "attachment_content_type": "image/jpg",
-            "attachment_file_name": "ror_tote.jpeg",
-            "type": "Spree::Image",
-            "attachment_updated_at": null,
-            "attachment_width": 360,
-            "attachment_height": 360,
-            "alt": null,
-            "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-              "small_url": "assets/api/_prod/theglobalx/22.jpg",
-            	"large_url": "assets/api/_prod/theglobalx/22.jpg"
-          },
-          {
-            "id": 3,
-            "position": 3,
-            "attachment_content_type": "image/jpg",
-            "attachment_file_name": "ror_tote.jpeg",
-            "type": "Spree::Image",
-            "attachment_updated_at": null,
-            "attachment_width": 360,
-            "attachment_height": 360,
-            "alt": null,
-            "viewable_type": "Spree::Variant",
-            "viewable_id": 1,
-           	"small_url": "assets/api/_prod/theglobalx/23.jpg",
-            	"large_url": "assets/api/_prod/theglobalx/23.jpg"
+            "small_url": "assets/api/_prod/cardholder/1.jpeg",
+            "large_url": "assets/api/_prod/cardholder/1.jpeg"
           }
         ],
         "display_price": "$15.99",
@@ -182,51 +152,6 @@
                      }
                   ],
                   "images":[  
-                    {  
-                      "id":24,
-                      "position":1,
-                      "attachment_content_type":"image/jpeg",
-                      "attachment_file_name":"ror_baseball.jpeg",
-                      "type":"Spree::Image",
-                      "attachment_updated_at":"2018-05-04T12:35:35.201Z",
-                      "attachment_width":360,
-                      "attachment_height":360,
-                      "alt":null,
-                      "viewable_type":"Spree::Variant",
-                      "viewable_id":3,
-                      "small_url": "assets/api/_prod/theglobalx/21.jpg",
-                      "large_url": "assets/api/_prod/theglobalx/21.jpg"
-                   },
-                   {  
-                      "id":25,
-                      "position":2,
-                      "attachment_content_type":"image/jpeg",
-                      "attachment_file_name":"ror_baseball_back.jpeg",
-                      "type":"Spree::Image",
-                      "attachment_updated_at":"2018-05-04T12:35:36.041Z",
-                      "attachment_width":360,
-                      "attachment_height":360,
-                      "alt":null,
-                      "viewable_type":"Spree::Variant",
-                      "viewable_id":3,
-                      "small_url": "assets/api/_prod/theglobalx/22.jpg",
-                  "large_url": "assets/api/_prod/theglobalx/22.jpg"
-                   },
-                   {
-                      "id": 3,
-                      "position": 3,
-                      "attachment_content_type": "image/jpg",
-                      "attachment_file_name": "ror_tote.jpeg",
-                      "type": "Spree::Image",
-                      "attachment_updated_at": null,
-                      "attachment_width": 360,
-                      "attachment_height": 360,
-                      "alt": null,
-                      "viewable_type": "Spree::Variant",
-                      "viewable_id": 1,
-                           "small_url": "assets/api/_prod/theglobalx/23.jpg",
-                            "large_url": "assets/api/_prod/theglobalx/23.jpg"
-                    }
                   ],
                   "display_price":"$19.99",
                   "options_text":"Size: S, Color: Red",
@@ -237,18 +162,6 @@
                }
       ],
       "option_types": [
-        {  
-               "id":1,
-               "name":"Color",
-               "presentation":"Color",
-               "position":1
-            },
-            {  
-               "id":2,
-               "name":"tshirt-color",
-               "presentation":"Color",
-               "position":2
-            }
       ],
       "product_properties": [
         {
@@ -281,12 +194,12 @@
       "has_variants": true,
       "liArray":[
     {"li": "100% vegetabilsk garvet læder"},
-    {"li": "Slidstærk"},
-    {"li": "Skaber sit eget unikke design over tid"}
+    {"li": "Simpel"},
+    {"li": "Unisex"}
   ],
   "liArray_GB":[
     {"li": "100% vegetable tanned leather"},
-    {"li": "Very durable"},
-    {"li": "Developes unique patina over time"}
+    {"li": "Simple"},
+    {"li": "Unisex"}
   ]
     }

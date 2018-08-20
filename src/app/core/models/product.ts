@@ -1,9 +1,3 @@
-/*
- * Product model
- * Detailed info http://guides.spreecommerce.org/developer/products.html
- * Public API's http://guides.spreecommerce.org/api/products.html
- */
-
 import { OptionType } from './option_type';
 import { Classification } from './classification';
 import { ProductProperty } from './product_property';
@@ -41,6 +35,4 @@ export class Product {
   set bar(theBar:boolean) {
       this._bar = theBar;
   }
-
-
 }

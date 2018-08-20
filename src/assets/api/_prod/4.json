@@ -46,8 +46,8 @@
                   "alt":null,
                   "viewable_type":"Spree::Variant",
                   "viewable_id":3,
-                  "small_url": "/assets/api/_prod/xsocks/1.jpg",
-                  "large_url": "/assets/api/_prod/xsocks/1.jpg"
+                  "small_url": "assets/api/_prod/xsocks/1.jpg",
+                  "large_url": "assets/api/_prod/xsocks/1.jpg"
                },
                {  
                   "id":25,
@@ -61,8 +61,8 @@
                   "alt":null,
                   "viewable_type":"Spree::Variant",
                   "viewable_id":3,
-                  "small_url": "/assets/api/_prod/xsocks/small.png",
-            	"large_url": "/assets/api/_prod/xsocks/2.jpg"
+                  "small_url": "assets/api/_prod/xsocks/small.png",
+            	"large_url": "assets/api/_prod/xsocks/2.jpg"
                }
             ],
             "display_price":"$19.99",
@@ -104,8 +104,8 @@
                         "alt": null,
                         "viewable_type": "Spree::Variant",
                         "viewable_id": 1,
-                        "small_url": "/assets/api/_prod/theglobalx/11.jpg",
-                        "large_url": "/assets/api/_prod/theglobalx/11.jpg"
+                        "small_url": "assets/api/_prod/theglobalx/11.jpg",
+                        "large_url": "assets/api/_prod/theglobalx/11.jpg"
                       },
                       {
                         "id": 2,
@@ -119,8 +119,8 @@
                         "alt": null,
                         "viewable_type": "Spree::Variant",
                         "viewable_id": 1,
-                          "small_url": "/assets/api/_prod/theglobalx/12.jpg",
-                              "large_url": "/assets/api/_prod/theglobalx/12.jpg"
+                          "small_url": "assets/api/_prod/theglobalx/12.jpg",
+                              "large_url": "assets/api/_prod/theglobalx/12.jpg"
                       }
                ],
                "display_price":"$19.99",
@@ -161,8 +161,8 @@
                       "alt":null,
                       "viewable_type":"Spree::Variant",
                       "viewable_id":3,
-                      "small_url": "/assets/api/_prod/theglobalx/21.jpg",
-                      "large_url": "/assets/api/_prod/theglobalx/21.jpg"
+                      "small_url": "assets/api/_prod/theglobalx/21.jpg",
+                      "large_url": "assets/api/_prod/theglobalx/21.jpg"
                    },
                    {  
                       "id":25,
@@ -176,8 +176,8 @@
                       "alt":null,
                       "viewable_type":"Spree::Variant",
                       "viewable_id":3,
-                      "small_url": "/assets/api/_prod/theglobalx/22.jpg",
-                  "large_url": "/assets/api/_prod/theglobalx/22.jpg"
+                      "small_url": "assets/api/_prod/theglobalx/22.jpg",
+                  "large_url": "assets/api/_prod/theglobalx/22.jpg"
                    },
                    {
                       "id": 3,
@@ -191,8 +191,8 @@
                       "alt": null,
                       "viewable_type": "Spree::Variant",
                       "viewable_id": 1,
-                           "small_url": "/assets/api/_prod/theglobalx/23.jpg",
-                            "large_url": "/assets/api/_prod/theglobalx/23.jpg"
+                           "small_url": "assets/api/_prod/theglobalx/23.jpg",
+                            "large_url": "assets/api/_prod/theglobalx/23.jpg"
                     }
                   ],
                   "display_price":"$19.99",

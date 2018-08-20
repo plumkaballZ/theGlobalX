@@ -20,7 +20,7 @@ export class ProductService {
   }
   
   getProduct(id: string): Observable<any> {
-    return this.http.get('/assets/api/_prod/' + id.toString() +'.json')
+    return this.http.get('assets/api/_prod/' + id.toString() +'.json')
     .map(res =>
       {
         var prod = res.json();
@@ -37,10 +37,10 @@ export class ProductService {
       });
   }
   getTaxonomies(): any {
-    return this.http.get(`/assets/api/_prod/taxonomies.json`).map(res => res.json());
+    return this.http.get(`assets/api/_prod/taxonomies.json`).map(res => res.json());
   }
   getProducts(): any {
-    return this.http.get(`/assets/api/_prod/prodList.json`).map(
+    return this.http.get(`assets/api/_prod/prodList.json`).map(
       res => {   
         var podList = res.json();
 

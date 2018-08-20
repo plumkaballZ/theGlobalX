@@ -29,7 +29,6 @@ export class FactComp implements OnInit {
     "li3" : "Den lokale lov skal overholdes",
     "li4" : "Sundt arbejdsmiljø og faciliteter for de ansatte",
     "li5" : "Bygningssikkerhed og certificeringer",
-    "li6" : "Brandslukkere, nødprocedure og øvelser",
     "li7" : "Håndtering, handsker og masker ved kemikalier",
     "li8" : "Sikkerhed om maskiner",
     "li9" : "Arbejdstid og lønninger skal overholde gældende lov",

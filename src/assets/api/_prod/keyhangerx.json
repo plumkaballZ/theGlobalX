@@ -45,8 +45,8 @@
         "alt": null,
         "viewable_type": "Spree::Variant",
         "viewable_id": 1,
-        "small_url": "/assets/api/_prod/keyhangerx/1.jpg",
-        "large_url": "/assets/api/_prod/keyhangerx/1.jpg"
+        "small_url": "assets/api/_prod/keyhangerx/1.jpg",
+        "large_url": "assets/api/_prod/keyhangerx/1.jpg"
       },
       {
         "id": 2,
@@ -60,8 +60,8 @@
         "alt": null,
         "viewable_type": "Spree::Variant",
         "viewable_id": 1,
-          "small_url": "/assets/api/_prod/keyhangerx/2.jpg",
-          "large_url": "/assets/api/_prod/keyhangerx/2.jpg"
+          "small_url": "assets/api/_prod/keyhangerx/2.jpg",
+          "large_url": "assets/api/_prod/keyhangerx/2.jpg"
       }
     ],
     "display_price": "$15.99",

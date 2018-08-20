@@ -3,10 +3,12 @@
   <div class="row">
     <div class="container">
       
-            <a class="navbar-brand" routerLink="/">
+            <!-- <a class="navbar-brand" routerLink="/">
               Shevlin
-            </a>
-        
+            </a> -->
+
+            <a class="navbar-brand" routerLink="/"><img src="assets/shevlin_logo.png" alt=""></a>
+            
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
             </div>
