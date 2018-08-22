@@ -3,7 +3,7 @@
     <li class="cart" [routerLink]="['checkout','cart']">
         <a>
           <i class="fa" aria-hidden="true">
-              <img class="bagPic" src="assets/shopping-bag.png">
+              <img class="iconPics" src="assets/shopping-bag.png">
           </i>
           <span class="badge badge-danger">{{totalCartItems}}</span></a>
       </li> 
@@ -12,7 +12,7 @@
     
     <a class="dropdown-toggle" dropdownToggle>
       <i class="fa" aria-hidden="true">
-          <img class="bagPic" src="assets/shopping-bag.png">
+          <img class="iconPics" src="assets/avatar.png">
       </i>
       <span class="caret"></span>
     </a>
@@ -32,7 +32,10 @@
   
   <li class="dropdown" dropdown *ngIf="isAuthenticated">
     <a class="dropdown-toggle" dropdownToggle>
-      <i class="fa fa-user" aria-hidden="true"></i>
+        <i class="fa" aria-hidden="true">
+            <img class="iconPics" src="assets/avatar.png">
+        </i>
+      <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
       <span class="caret"></span>
     </a>
 

@@ -3,6 +3,7 @@
   background-color: #FFFFFF;
   list-style: none;
 }
+
 .navbar-brand {
   float: none;
   font-family: 'Poiret One';
@@ -11,9 +12,19 @@
   img {
     margin: 0 auto;
     text-align: center;
-    margin: 40px auto;
+    margin: 50px auto;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    img {
+      width:  50%;
+    }
+  }
+}
+
+
 .taxCol{
     width: 20.5%;
 }
