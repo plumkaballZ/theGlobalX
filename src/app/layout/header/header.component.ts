@@ -32,16 +32,6 @@ export class HeaderComponent implements OnInit {
     "id": 1,
     "name": "Shop", 
     "link": ''
-    },
-    {
-    "id": 2,
-    "name": "Facts", 
-    "link": 'fact'
-    },
-    {
-    "id": 4,
-    "name": "Contact",
-    "link": 'contact'
     }
   ];
 
@@ -74,8 +64,8 @@ export class HeaderComponent implements OnInit {
     this.translate.get('header').subscribe((res: any) => {
       this.translateBot = res;
       this.taxonList[0].name = this.translateBot.home;
-      this.taxonList[1].name = this.translateBot.facts;
-      this.taxonList[2].name = this.translateBot.contact;
+      // this.taxonList[1].name = this.translateBot.facts;
+      // this.taxonList[2].name = this.translateBot.contact;
     });
   }
 

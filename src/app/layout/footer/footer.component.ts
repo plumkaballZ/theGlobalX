@@ -12,7 +12,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./footer.component.scss', './rez_Master.scss']
 })
 export class FooterComponent implements OnInit {
-
+  
   editorDisabled: boolean = true;
   currKey: string;
 

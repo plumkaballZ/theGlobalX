@@ -1,6 +1,9 @@
 <footer class="footer-distributed">
     
     <div class="footer-left">
+
+      
+
         <h3>
             Shevlin
             <span> 
@@ -13,13 +16,25 @@
             <span class="txt-color-white ng-binding">
                 CVR nr. 38 95 98 24 | 
 
-                <a class="linkz" (click)="goToLink('terms')">
-                    <inline-translator [page]="'footer'" [key]="'conditions'" [elementType]="'text'"></inline-translator>
-                </a>
-                |
-                <a class="linkz" (click)="goToLink('cookiePolicy')">
-                        <inline-translator [page]="'footer'" [key]="'cookiePolicy'" [elementType]="'text'"></inline-translator>
+
+                <a class="linkz" (click)="goToLink('fact')">
+                        <inline-translator [page]="'header'" [key]="'facts'" [elementType]="'text'"></inline-translator>
                     </a>
+             
+                |
+                <a class="linkz" (click)="goToLink('contact')">
+                        <inline-translator [page]="'header'" [key]="'contact'" [elementType]="'text'"></inline-translator>
+                    </a>
+              
+                   |
+                   <a class="linkz" (click)="goToLink('terms')">
+                        <inline-translator [page]="'footer'" [key]="'conditions'" [elementType]="'text'"></inline-translator>
+                    </a>
+                    |
+                    <a class="linkz" (click)="goToLink('contact')">
+                            <inline-translator [page]="'footer'" [key]="'cookiePolicy'" [elementType]="'text'"></inline-translator>
+                        </a>
+                  
 
             </span>
         </div>
