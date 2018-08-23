@@ -1,4 +1,5 @@
 .checkout-steps {
+	    width: 89%;
 			.step {
 				display: inline-block;
 				padding: 0px;
@@ -46,20 +47,23 @@
 			padding-bottom: 5px;
 		}
 
+		
 		.navbar {
 			height: 78px;
 			background-color: white;
 			list-style: none;
 		}
 		.navbar-brand {
+			margin-bottom: -20px;
 			img {
 			  width: 50%;
 			}
 		}
+
 		@media screen and (max-width: 768px) {
 			.navbar-brand {
 				img {
-				  width: 40%;
+				  width:35%;
 				}
 			}
 			
