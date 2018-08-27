@@ -1,3 +1,28 @@
+img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 131.5px;
+  height: 68px;
+  margin-top: -34px; 
+  margin-left: -65px;
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 92.04px;
+    height: 47.59px;
+    margin-top: -25px;
+    margin-left: -90px;
+  }
+}
+
+
+#wrapper td {
+  vertical-align: middle;
+  text-align: center;
+}
+ 
  .icon-bar{
    height: 1px;
  }
@@ -8,10 +33,10 @@
  .navbar-brand {
    font-family: 'Poiret One';
    font-size: 58px;
-   padding-top: 25px;
-   padding: 0px 0px !important;
+   padding-top: 20px;
+   float: right;
    img {
-     width: 100%;
+     width: 40%;
    }
  }
  .nav navbar-nav {
@@ -31,9 +56,10 @@
       margin-left: 10px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .az_001 {
-      // padding-right: 30px;
+      margin-top: 17px;
+      margin-left: 13px;
     }
   }
 
@@ -49,22 +75,17 @@
     margin-top: 26px;
     float: left;
   }
-
-  @media screen and (min-width: 768px)
-  {
-    .navbar-fixed-top, .navbar-fixed-bottom {
-   
-    }
-  }
-  
-  
+    
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
    border-color: transparent; 
   }
-  
+  .padTop{
+    margin-bottom:  10px;
+  }
   @media screen and (min-width: 768px) {
     .padTop{
       padding-top: 15px;
+      margin-bottom:  10px;
   }
 }
 
@@ -84,21 +105,10 @@
     .az_001{
       min-height: 30px;
       font-size: 14px;
-      margin-left: -4px;
+      margin-left: 18px;
     }
   }
-  
   .flagSelect {
     padding-right: 24px;
-  }
-
-  #navz {
-    margin: 10px -15px;
-  }
-
-  @media screen and (max-width: 768px) {
-    #navz {
-      margin: 20px 5px;
-    }
   }
  

@@ -9,7 +9,8 @@ import { Observable } from 'rxjs/Observable';
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { Product } from '../core/models/product';
 import {TranslateService} from '@ngx-translate/core';
-declare var jquery:any;
+
+declare var jQuery:any;
 declare var $ :any;
 
 @Component({
@@ -55,6 +56,5 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() { 
   }
-
 
 }

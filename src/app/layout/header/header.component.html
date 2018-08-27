@@ -1,29 +1,17 @@
 <nav style="border-color:transparent" class="navbar navbar-default navbar-fixed-top">
-    
-  <div class="row">
-    <div class="container">
-      
-            <!-- <a class="navbar-brand" routerLink="/">
-              Shevlin
-            </a>  -->
+  
+    <table id="wrapper">
+        <tr>
+          <td><img class="stickyLogo" src="assets/shevlin_logo.png" alt="" /></td>
+        </tr>
+      </table>
 
-            <!-- <a class="navbar-brand" routerLink="/"><img src="assets/shevlin_logo.png" alt=""></a> -->
-            
+  <div class="row">
+    <div class="container">   
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
             </div>
-<!--             
-            <div class="navbar-header">
-              <button type="button"class="navbar-toggle" data-toggle="collapse" (click)="toggleState()"
-                aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div> -->
-      
-       
+            
             <div class="navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
 
@@ -34,13 +22,9 @@
                         </a>
                       </li>
                   </ul>
-                      <!-- <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp> -->
-                    
               </div>
-              
             </div>
 
-          
 
           </div>
   </div>

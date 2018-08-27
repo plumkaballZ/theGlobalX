@@ -10,7 +10,8 @@ import { Observable } from 'rxjs/Observable';
 import { AuthService } from '../../core/services/auth.service';
 import { AuthActions } from '../../auth/actions/auth.actions';
 import {TranslateService} from '@ngx-translate/core';
-declare var jquery:any;
+
+declare var jQuery:any;
 declare var $ :any;
 
 @Component({
@@ -56,7 +57,7 @@ export class HeaderComponent implements OnInit {
   }
 }
   ngOnInit() {
-    
+    this.initJs();
     this.store.dispatch(this.authActions.authorize());
     this.isAuthenticated = this.store.select(getAuthStatus);
     this.totalCartItems = this.store.select(getTotalCartItems);
@@ -64,8 +65,6 @@ export class HeaderComponent implements OnInit {
     this.translate.get('header').subscribe((res: any) => {
       this.translateBot = res;
       this.taxonList[0].name = this.translateBot.home;
-      // this.taxonList[1].name = this.translateBot.facts;
-      // this.taxonList[2].name = this.translateBot.contact;
     });
   }
 
@@ -79,5 +78,19 @@ export class HeaderComponent implements OnInit {
   toggleState() { // click handler
     let bool = this.isIn;
     this.isIn = bool === false ? true : false; 
+}
+
+initJs(){
+  jQuery(document).ready(function() { 
+    $('.stickyLogo').hide();
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 130) {
+        $('.stickyLogo').show();
+      }
+      else {
+        $('.stickyLogo').hide();
+      }
+    });
+  });
 }
 }
