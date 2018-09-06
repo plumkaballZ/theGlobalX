@@ -150,7 +150,8 @@ export class CheckoutService {
       return this.store.dispatch(this.actions.fetchCurrentOrderSuccess(order, 0));
     });
   }
-  
+
+
   getOrder(orderNumber) {
     return this.http.get(
       `spree/api/v1/orders/${orderNumber}.json`
@@ -207,6 +208,7 @@ export class CheckoutService {
 
   addLineItem(lineItem: any) {
 
+    console.log('addLineItem');
 
     const user = JSON.parse(localStorage.getItem('user'));
 

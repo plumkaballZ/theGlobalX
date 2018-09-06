@@ -1,7 +1,10 @@
-<div class="row-base" style="display: -webkit-flex">
+
+<div class="prodListContainer" style="display: -webkit-flex">
     <section>
-      <ul class="results-base">
+      <ul class="prodListUl">
+        
         <p *ngIf="products.length === 0">No Products found for this category</p>
+
         <li *ngFor="let product of products | filter : selectedTaxonIds;" class="product-base" [style.margin]="getMargin()" itemscope
           itemtype="https://schema.org/Product">
           <div class="product-thumbShim"></div>
@@ -41,4 +44,5 @@
         </li>
       </ul>
     </section>
+
   </div>

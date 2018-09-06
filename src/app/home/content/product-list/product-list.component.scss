@@ -1,3 +1,6 @@
+.prodName{
+  font-size: 11px;
+}
 ul {
   margin-left: -36px;
   li {
@@ -41,11 +44,9 @@ ul {
           height: 100%;
           padding: 0 5px;
           .product-brand, .product-product {
-            
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: 13px;
             color: #282c3f;
             text-transform: capitalize;
             margin-top: 10px;

@@ -10,7 +10,6 @@ export const initialState: CheckoutState = new CheckoutStateRecord() as Checkout
 
 export const checkoutReducer: ActionReducer<CheckoutState> =
   (state: CheckoutState = initialState, { type, payload}: Action): CheckoutState => {
-
     let _lineItems, _lineItemEntities, _lineItemIds,
         _lineItem, _lineItemEntity, _lineItemId,
         _totalCartItems = 0, _totalCartValue,
@@ -47,13 +46,16 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         }) as CheckoutState;
 
       case CheckoutActions.ADD_TO_CART_SUCCESS:
-
+      
       _lineItem = payload.lineItem;
       _lineItemId = _lineItem.id;
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
+          console.log(state);
+          console.log('return');
           return state;
         }
+        console.log('add');
         
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + (parseFloat(_lineItem.total) * _lineItem.quantity);

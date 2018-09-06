@@ -38,15 +38,12 @@ export class ProductListComponent implements OnInit {
   }
 
   addToCart(product: Product) {
-
- 
     if(product.master.option_values != null) {
       if(product.master.option_values.length > 0) {
-
         if(product.master.option_values[0].option_type_name == 'Color') {
           product.color = product.master.option_values[0].name;
         }
-
+        
         if(product.master.option_values[0].option_type_name == 'Size') {
           product.size = product.master.option_values[0].name;
         }
@@ -58,7 +55,6 @@ export class ProductListComponent implements OnInit {
     product.total_on_hand = 1;
     
     this.store.dispatch(this.checkoutActions.addToCart(product));
-    
 
     var _line = new LineItem();
     _line.variant_id = product.id;
