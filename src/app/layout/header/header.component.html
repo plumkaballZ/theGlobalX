@@ -7,11 +7,33 @@
       </table>
 
   <div class="row">
-    <div class="container">   
+    <div class="container">
+
+        
+
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
             </div>
             
+            <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
+                <ul id="profDown" style="display: -webkit-inline-box;" class="nav navbar-nav navbar-right">
+    
+                   
+                  <li class="dropdown" dropdown>
+                    <a class="dropdown-toggle" dropdownToggle>
+                        <i class="fa" aria-hidden="true">
+                            <img class="iconPics" src="assets/translation.png">
+                        </i>
+                      <span class="caret"></span>
+                    </a>
+                
+                    <ul class="dropdown-menu" *dropdownMenu>
+                        <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+
             <div class="navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
 
