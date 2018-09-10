@@ -8,17 +8,14 @@
 
   <div class="row">
     <div class="container">
-
-        
-
+      
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
             </div>
             
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
                 <ul id="profDown" style="display: -webkit-inline-box;" class="nav navbar-nav navbar-right">
-    
-                   
+
                   <li class="dropdown" dropdown>
                     <a class="dropdown-toggle" dropdownToggle>
                         <i class="fa" aria-hidden="true">
@@ -26,9 +23,11 @@
                         </i>
                       <span class="caret"></span>
                     </a>
-                
+
                     <ul class="dropdown-menu" *dropdownMenu>
+                        <li role="separator" class="divider"></li>
                         <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+                        <li role="separator" class="divider"></li>
                     </ul>
                   </li>
                 </ul>

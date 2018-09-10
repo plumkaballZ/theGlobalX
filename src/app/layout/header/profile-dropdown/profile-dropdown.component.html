@@ -18,6 +18,7 @@
     </a>
     
     <ul class="dropdown-menu" *dropdownMenu>
+        <li role="separator" class="divider"></li>
       <li><a [routerLink]="['/auth']">
         {{pageTranslator.ourFriend}}
       </a>
@@ -27,7 +28,6 @@
         {{pageTranslator.login}}
       </a></li>
     </ul>
-    
   </li>
   
   <li class="dropdown" dropdown *ngIf="isAuthenticated">
@@ -40,6 +40,7 @@
     </a>
 
     <ul class="dropdown-menu" *dropdownMenu>
+        <li role="separator" class="divider"></li>
       <li><a routerLink="/user">
         {{pageTranslator.myProfile}}
       </a></li>
