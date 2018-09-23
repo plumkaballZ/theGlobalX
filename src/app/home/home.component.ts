@@ -10,6 +10,8 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { Product } from '../core/models/product';
 import {TranslateService} from '@ngx-translate/core';
 
+import { PakkeLabelsService } from '../core/services/pakkelabels.service'
+
 declare var jQuery:any;
 declare var $ :any;
 
@@ -26,7 +28,12 @@ export class HomeComponent implements OnInit {
   selectedTaxonIds$: Observable<number[]>;
   pageTranslator: any;
   
-  constructor(private store: Store<AppState>, private actions: ProductActions, private translate: TranslateService) {
+  constructor(private store: Store<AppState>, private actions: ProductActions, private translate: TranslateService, private pakkelabels:PakkeLabelsService) {
+      
+    // this.pakkelabels.login().subscribe(data => {
+
+    // });
+
     this.store.dispatch(this.actions.getAllProducts());
     
     this.store.dispatch(this.actions.getAllTaxonomies());

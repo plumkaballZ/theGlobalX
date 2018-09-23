@@ -270,7 +270,8 @@ export class CheckoutService {
     if(this.currentOrder.line_items.length == 0){
     }
 
-    return this.http.post_Web('api/xOrder/UpdateOrder', JSON.stringify(
+    return this.http.post_Web('api/xOrder/UpdateOrder', 
+    JSON.stringify(
       {
         "Order" : (params != "" ? params : this.currentOrder), 
         "glxUser" : data, 

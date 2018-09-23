@@ -75,13 +75,16 @@ export class HttpService extends Http {
         this.onFinally();
       });
   }
+
+
   post(url: string, body: any, options?: RequestOptionsArgs): Observable<any> {
-    
+
     this.requestInterceptor();
 
-    var _url = this.getFullUrl(url);
+    var _url = url;
+    var _options = this.requestOptions(options);
 
-    return super.post(_url, body, this.requestOptions(options))
+    return super.post(_url, body, _options)
       .catch(this.onCatch.bind(this))
       .do((res: Response) => {
         this.onSubscribeSuccess(res);
@@ -121,17 +124,19 @@ export class HttpService extends Http {
   }
 
   private requestOptions(options?: RequestOptionsArgs): RequestOptionsArgs {
+
     if (options == null) {
       options = new RequestOptions();
     }
+
     if (options.headers == null) {
       const user = localStorage.getItem('user') != "undefined" ? JSON.parse(localStorage.getItem('user')) : null;
-      
       options.headers = new Headers({
         'Content-Type': 'application/json',
-        'X-Spree-Token': user && user.spree_api_key
+        'glbxToken': user && user.spree_api_key
       });
     }
+
     return options;
   }
   private getFullUrl(url: string): string {

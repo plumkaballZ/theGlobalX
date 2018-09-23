@@ -1,6 +1,9 @@
 import { CheckoutEffects } from './../checkout/effects/checkout.effects';
 import { CheckoutActions } from './../checkout/actions/checkout.actions';
 import { CheckoutService } from './services/checkout.service';
+import  { PakkeLabelsService } from './services/pakkelabels.service'
+
+
 import { NgModule } from '@angular/core';
 import { HttpModule, XHRBackend, RequestOptions, Http } from '@angular/http';
 // Components
@@ -58,6 +61,7 @@ export function httpInterceptor(
       deps: [ XHRBackend, RequestOptions]
     },
     CheckoutService,
+    PakkeLabelsService,
     ProductService,
     AuthActions,
     CheckoutActions,

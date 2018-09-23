@@ -14,6 +14,7 @@ import { CheckoutActions } from './../../checkout/actions/checkout.actions';
 import {TranslateService} from '@ngx-translate/core';
 import { DeliveryAddressComponent } from './delivery-address/delivery-address.component'; 
 import { getAuthStatus } from './../../auth/reducers/selectors';
+import { PakkeLabelsService } from '../../core/services/pakkelabels.service'
 
 @Component({
   selector: 'app-address',
@@ -54,12 +55,16 @@ export class AddressComponent implements OnInit, OnDestroy {
     private checkoutActions: CheckoutActions,
     private router: Router,
     private route: ActivatedRoute,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private pakkelabels:PakkeLabelsService
   ) {
-    this.showAdrs$ = true;
+    this.pakkelabels.login().subscribe(data => {
 
-      this.orderNumber$ = this.store.select(getOrderNumber);
-      this.shipAddress$ = this.store.select(getShipAddress);
+    });
+
+    this.showAdrs$ = true;
+    this.orderNumber$ = this.store.select(getOrderNumber);
+    this.shipAddress$ = this.store.select(getShipAddress);
 
       this.stateSub$ = this.store.select(getOrderState).subscribe(state => this.orderState = state);
 
@@ -71,10 +76,12 @@ export class AddressComponent implements OnInit, OnDestroy {
           (params: any) => {
             this.userService.getAddrs(JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
+                  console.log(response);
                   if(response.length > 0) {
                     this.showAdrs$ = true;
                     this.hasAddrs = true;
                     this.child.selectAddr('', response[0]);
+                    this.GetFreightRates(response[0]);
                   }
                   else {
                     this.showAdrs$ = false;
@@ -118,6 +125,12 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   ngAfterViewInit() {
+  }
+
+
+  GetFreightRates(item : Address){
+    console.log(item);
+    console.log('GetFreightRates');
   }
 
   ngOnInit() {
