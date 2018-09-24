@@ -31,7 +31,15 @@ export class PakkeLabelsService {
     });
   }
 
-    doLogin(){
+  GetFreightRates(){
+    var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
+
+    return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: pakToken.token, country: 'DK'}})
+      .map((res: Response) =>  {
+        return res.json();
+      });
+  }
+    doLogin() {
       var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
 
       console.log(pakToken);

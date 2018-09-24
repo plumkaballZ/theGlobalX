@@ -58,10 +58,6 @@ export class AddressComponent implements OnInit, OnDestroy {
     private translate: TranslateService,
     private pakkelabels:PakkeLabelsService
   ) {
-    this.pakkelabels.login().subscribe(data => {
-
-    });
-
     this.showAdrs$ = true;
     this.orderNumber$ = this.store.select(getOrderNumber);
     this.shipAddress$ = this.store.select(getShipAddress);
@@ -128,9 +124,31 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
 
-  GetFreightRates(item : Address){
-    console.log(item);
-    console.log('GetFreightRates');
+  GetFreightRates(item : Address) {
+
+    this.pakkelabels.GetFreightRates().subscribe(data => {
+    
+
+      for (var key in data.DK) {
+
+        if (!data.DK.hasOwnProperty(key)) continue;
+    
+        var obj = data.DK[key];
+        
+        var arrayOption = {
+          "prop1":obj.name,
+          "prop2":obj.rates[0].price + ' DKK',
+          "prop3" : "1-3 dage",
+          "prop4" : obj.rates[0].price,
+        }
+
+        if(obj.name != 'Uspecificeret transportør' && obj.name != 'DHL Express')
+        {
+          this.delOptions.push(arrayOption);
+        }
+    }
+
+    });
   }
 
   ngOnInit() {
