@@ -34,7 +34,7 @@ export class PakkeLabelsService {
   GetFreightRates(){
     var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
 
-    return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: pakToken.token, country: 'DK'}})
+    return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: 'token', country: 'DK'}})
       .map((res: Response) =>  {
         return res.json();
       });
