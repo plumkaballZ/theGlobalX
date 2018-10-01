@@ -16,12 +16,16 @@ import { DeliveryAddressComponent } from './delivery-address/delivery-address.co
 import { getAuthStatus } from './../../auth/reducers/selectors';
 import { PakkeLabelsService } from '../../core/services/pakkelabels.service'
 
+declare var $ :any;
+
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
   styleUrls: ['./address.component.scss']
 })
 export class AddressComponent implements OnInit, OnDestroy {
+
+  ipCountry: string;
 
   stateSub$: Subscription;
   orderState: string;
@@ -46,6 +50,10 @@ export class AddressComponent implements OnInit, OnDestroy {
   delOptions: any[];
   selectedDel : any;
 
+
+
+
+
   @ViewChild(DeliveryAddressComponent) child:DeliveryAddressComponent;
 
   constructor(
@@ -58,6 +66,9 @@ export class AddressComponent implements OnInit, OnDestroy {
     private translate: TranslateService,
     private pakkelabels:PakkeLabelsService
   ) {
+    
+   
+
     this.showAdrs$ = true;
     this.orderNumber$ = this.store.select(getOrderNumber);
     this.shipAddress$ = this.store.select(getShipAddress);
@@ -72,7 +83,6 @@ export class AddressComponent implements OnInit, OnDestroy {
           (params: any) => {
             this.userService.getAddrs(JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
-                  console.log(response);
                   if(response.length > 0) {
                     this.showAdrs$ = true;
                     this.hasAddrs = true;
@@ -83,6 +93,7 @@ export class AddressComponent implements OnInit, OnDestroy {
                     this.showAdrs$ = false;
                     this.hasAddrs = false;
                   }
+
                   this.addrs$ = response
                 } 
               );
@@ -91,64 +102,80 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   initDel() {
-
-    this.delOptions = [{
-      "prop1":"GLS PakkeShop afhentning",
-      "prop2":"40 DKK",
-      "prop3" : "1-3 dage",
-      "prop4" : 40
-    }, {
-      "prop1":"GLS Pakkelevering ", 
-      "prop2":"50 DKK",
-      "prop3" : "1-2 dage",
-      "prop4" : 50
+        this.delOptions = [{
+      "prop1":"empty",
+      "prop2":"empty",
+      "prop3" : "empty",
+      "prop4" : 0
     }];
-
-    this.delOptions[0].prop1 = this.pageTrans.prop1;
-    this.delOptions[0].prop2 = this.pageTrans.prop2;
-    this.delOptions[0].prop3 = this.pageTrans.prop3;
-    this.delOptions[0].prop4 = this.pageTrans.prop4;
-
-    this.delOptions[1].prop1 = this.pageTrans.prop5;
-    this.delOptions[1].prop2 = this.pageTrans.prop6;
-    this.delOptions[1].prop3 = this.pageTrans.prop7;
-    this.delOptions[1].prop4 = this.pageTrans.prop8;
-  
 
     this.selectedDel = this.delOptions[0];
     if(this.checkoutService.currentOrder != null)
     this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
 
+
+
   ngAfterViewInit() {
   }
 
 
   GetFreightRates(item : Address) {
-
-    this.pakkelabels.GetFreightRates().subscribe(data => {
     
+    this.delOptions = [];
 
-      for (var key in data.DK) {
 
-        if (!data.DK.hasOwnProperty(key)) continue;
-    
-        var obj = data.DK[key];
+    this.pakkelabels.getCurrentIpLocation().subscribe(data => {
+
+      var country = 'DK'
+
+      if(data != null) {
+        country = data.country;
+      }
+
+      this.pakkelabels.GetFreightRates(country).subscribe(data => {  
         
-        var arrayOption = {
-          "prop1":obj.name,
-          "prop2":obj.rates[0].price + ' DKK',
-          "prop3" : "1-3 dage",
-          "prop4" : obj.rates[0].price,
-        }
+         for (var key in data.DK) {
+           if (!data.DK.hasOwnProperty(key)) continue;
+           var obj = data.DK[key];
 
-        if(obj.name != 'Uspecificeret transportør' && obj.name != 'DHL Express')
-        {
-          this.delOptions.push(arrayOption);
-        }
-    }
+           if(this.checkIfDeliveryOptionCanBeAdded(obj)) {
+                    for (var i = 0; i <  obj.products.length; i++) {
+
+                      var price = obj.rates[0].price;
+                      var rate =  obj.rates.filter(x => x.specific_shipping_product == obj.products[i].id)[0];
+
+                      if(rate != null)
+                        price = rate.price;
+
+                      this.delOptions.push(this.createDeliveryOption(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
+                    }
+                  }
+              }
+          
+              this.selectedDel = this.delOptions[0];
+              if(this.checkoutService.currentOrder != null)
+              this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
+            
+            });
+      
 
     });
+  }
+
+  
+
+  private checkIfDeliveryOptionCanBeAdded(obj: any)  {
+    return obj.name != 'Uspecificeret transportør' && obj.name != 'DHL Express' && obj.name != 'PostNord';
+  }
+
+  createDeliveryOption(name: string, dispalyPrice: string, deliverySpeed: string, price: number) {
+    return {
+      "prop1":name,
+      "prop2":dispalyPrice + ' DKK',
+      "prop3" : deliverySpeed,
+      "prop4" : price,
+    }
   }
 
   ngOnInit() {

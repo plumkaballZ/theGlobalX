@@ -17,6 +17,15 @@ export class PakkeLabelsService {
       
   }
 
+  getCurrentIpLocation(): Observable<any> {
+    return this.http.get_full('http://ipinfo.io')
+    .map(response => response.json())
+    .catch(error => {
+      console.log(error);
+      return Observable.throw(error.json());
+    });
+}
+
   login() { 
 
     if(this.doLogin()){
@@ -30,14 +39,16 @@ export class PakkeLabelsService {
     return this.http.get_Web('api/xPakkelabels', {params:{ token : "o" }}).map(res => {
     });
   }
-
-  GetFreightRates(){
+  
+  GetFreightRates(country: string){
+    
     var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
 
-    return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: 'token', country: 'DK'}})
+    return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: 'token', country: country}})
       .map((res: Response) =>  {
         return res.json();
       });
+
   }
     doLogin() {
       var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
