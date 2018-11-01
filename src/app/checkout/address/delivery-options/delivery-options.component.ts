@@ -49,6 +49,7 @@ export class DeliveryOptionsComponent implements OnInit {
 
   ngOnInit() {
     this.translate.get('del').subscribe((res: any) => {
+      console.log(res);
       this.pageTrans = res;
       this.delSpeed = res.delSpeed;
       this.stdDel = res.stdDel;

@@ -66,9 +66,6 @@ export class AddressComponent implements OnInit, OnDestroy {
     private translate: TranslateService,
     private pakkelabels:PakkeLabelsService
   ) {
-    
-   
-
     this.showAdrs$ = true;
     this.orderNumber$ = this.store.select(getOrderNumber);
     this.shipAddress$ = this.store.select(getShipAddress);
@@ -77,7 +74,7 @@ export class AddressComponent implements OnInit, OnDestroy {
 
       this.store.select(getAuthStatus).subscribe((auth) => {
          this.isAuthenticated = auth;
-      });   
+      });
 
         this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
@@ -100,7 +97,7 @@ export class AddressComponent implements OnInit, OnDestroy {
           }
         );      
   }
-
+  
   initDel() {
         this.delOptions = [{
       "prop1":"empty",
@@ -113,9 +110,7 @@ export class AddressComponent implements OnInit, OnDestroy {
     if(this.checkoutService.currentOrder != null)
     this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
-
-
-
+  
   ngAfterViewInit() {
   }
 
@@ -127,46 +122,50 @@ export class AddressComponent implements OnInit, OnDestroy {
 
     this.pakkelabels.getCurrentIpLocation().subscribe(data => {
 
-      var country = 'DK'
+      var country = 'SE'
 
       if(data != null) {
-        country = data.country;
-      }
+         country = data.country;
+        }
 
-      this.pakkelabels.GetFreightRates(country).subscribe(data => {  
-        
-         for (var key in data.DK) {
-           if (!data.DK.hasOwnProperty(key)) continue;
-           var obj = data.DK[key];
+      this.pakkelabels.GetFreightRates(country).subscribe(data => {
+        var data2;
 
-           if(this.checkIfDeliveryOptionCanBeAdded(obj)) {
-                    for (var i = 0; i <  obj.products.length; i++) {
+        for(var countryKey in data)
+          data2 = data[countryKey];
 
-                      var price = obj.rates[0].price;
-                      var rate =  obj.rates.filter(x => x.specific_shipping_product == obj.products[i].id)[0];
-
-                      if(rate != null)
-                        price = rate.price;
-
-                      this.delOptions.push(this.createDeliveryOption(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
-                    }
-                  }
-              }
+        for(var key in data2){
+          var obj = data2[key];
           
-              this.selectedDel = this.delOptions[0];
-              if(this.checkoutService.currentOrder != null)
-              this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
-            
-            });
+          if(this.checkIfDeliveryOptionCanBeAdded(obj)) {
+
+            for (var i = 0; i <  obj.products.length; i++) {
+               
+              var price = obj.rates[0].price;
+              var rate =  obj.rates.filter(x => x.specific_shipping_product == obj.products[i].id)[0];
+
+              if(rate != null) price = rate.price;
+
+              if (obj.products[i].name != 'Return Drop Off' && obj.products[i].name != 'GLS ShopReturnService'){
+                this.delOptions.push(this.createDeliveryOption(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
+              }
+            }
+          }
+        }
+
+        this.selectedDel = this.delOptions[0];
+        if(this.checkoutService.currentOrder != null)
+        this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
+      });
       
 
     });
   }
 
-  
-
   private checkIfDeliveryOptionCanBeAdded(obj: any)  {
-    return obj.name != 'Uspecificeret transportør' && obj.name != 'DHL Express' && obj.name != 'PostNord';
+    console.log(obj);
+    var price = obj.rates[0].price;
+    return obj.code != 'unspecified' && price != 99999;
   }
 
   createDeliveryOption(name: string, dispalyPrice: string, deliverySpeed: string, price: number) {

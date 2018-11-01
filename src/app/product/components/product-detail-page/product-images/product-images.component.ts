@@ -2,9 +2,6 @@ import { Image } from './../../../../core/models/image';
 import { environment } from './../../../../../environments/environment';
 import { Product } from './../../../../core/models/product';
 import { Component, OnInit, Input } from '@angular/core';
-import * as PhotoSwipe from "photoswipe"; 
-import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
-
 declare var jQuery:any;
 declare var $ :any;
 
@@ -58,7 +55,7 @@ export class ProductImagesComponent implements OnInit {
     };
     
     // Initializes and opens PhotoSwipe
-    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
+  //   var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+  //   gallery.init();
   }
 }

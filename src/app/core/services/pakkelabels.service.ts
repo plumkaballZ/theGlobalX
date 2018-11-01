@@ -18,7 +18,7 @@ export class PakkeLabelsService {
   }
 
   getCurrentIpLocation(): Observable<any> {
-    return this.http.get_full('http://ipinfo.io')
+    return this.http.get_full('https://ipinfo.io')
     .map(response => response.json())
     .catch(error => {
       console.log(error);
@@ -40,8 +40,8 @@ export class PakkeLabelsService {
     });
   }
   
-  GetFreightRates(country: string){
-    
+  GetFreightRates(country: string) {
+
     var pakToken:any = JSON.parse(localStorage.getItem('pakToken'));
 
     return this.http.get_Web('api/xPakkelabels/GetFreightRates', {params: {token: 'token', country: country}})
