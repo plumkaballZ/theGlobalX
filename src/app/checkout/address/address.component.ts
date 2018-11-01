@@ -100,9 +100,9 @@ export class AddressComponent implements OnInit, OnDestroy {
   
   initDel() {
         this.delOptions = [{
-      "prop1":"empty",
-      "prop2":"empty",
-      "prop3" : "empty",
+      "prop1":"nothing found",
+      "prop2":"nothing found",
+      "prop3" : "nothing found",
       "prop4" : 0
     }];
 
@@ -110,25 +110,26 @@ export class AddressComponent implements OnInit, OnDestroy {
     if(this.checkoutService.currentOrder != null)
     this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
-  
+
   ngAfterViewInit() {
   }
 
 
   GetFreightRates(item : Address) {
     
-    this.delOptions = [];
+   
 
 
     this.pakkelabels.getCurrentIpLocation().subscribe(data => {
 
-      var country = 'SE'
+      var country = 'DK'
 
       if(data != null) {
          country = data.country;
         }
-
+        
       this.pakkelabels.GetFreightRates(country).subscribe(data => {
+        this.delOptions = [];
         var data2;
 
         for(var countryKey in data)
