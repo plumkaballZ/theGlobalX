@@ -18,10 +18,10 @@ export class AddressService {
 
   initAddressForm() {
     return this.fb.group({
-      'firstname': [''],
-      'lastname': [''],
-      'address1': [''],
-      'address2': [''],
+      'first_name': [''],
+      'last_name': [''],
+      'address_1': [''],
+      'address_2': [''],
       'city': [''],
       'phone': [''],
       'zipcode': [''],

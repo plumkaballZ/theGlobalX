@@ -10,7 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-address',
-  templateUrl: './add-address.component.html',
+  templateUrl: './addAddress.html',
   styleUrls: ['./add-address.component.scss']
 })
 export class AddAddressComponent implements OnInit, OnDestroy {

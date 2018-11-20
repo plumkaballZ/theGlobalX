@@ -16,6 +16,9 @@ import { DeliveryAddressComponent } from './delivery-address/delivery-address.co
 import { getAuthStatus } from './../../auth/reducers/selectors';
 import { PakkeLabelsService } from '../../core/services/pakkelabels.service'
 
+//custom logics wrapper
+import {AddressLogics} from './address.Logics';
+
 declare var $ :any;
 
 @Component({
@@ -24,6 +27,8 @@ declare var $ :any;
   styleUrls: ['./address.component.scss']
 })
 export class AddressComponent implements OnInit, OnDestroy {
+
+  private _addressLogics: AddressLogics
 
   ipCountry: string;
 
@@ -46,12 +51,8 @@ export class AddressComponent implements OnInit, OnDestroy {
   breadcrumbs$: string[] = ['OrderOverview', 'OderDetails'];
   homeLink$: string = '/checkout/address';
 
-
   delOptions: any[];
   selectedDel : any;
-
-
-
 
 
   @ViewChild(DeliveryAddressComponent) child:DeliveryAddressComponent;
@@ -66,20 +67,22 @@ export class AddressComponent implements OnInit, OnDestroy {
     private translate: TranslateService,
     private pakkelabels:PakkeLabelsService
   ) {
+
+    this._addressLogics = new AddressLogics();
     this.showAdrs$ = true;
     this.orderNumber$ = this.store.select(getOrderNumber);
     this.shipAddress$ = this.store.select(getShipAddress);
-
-      this.stateSub$ = this.store.select(getOrderState).subscribe(state => this.orderState = state);
+    this.stateSub$ = this.store.select(getOrderState).subscribe(state => this.orderState = state);
 
       this.store.select(getAuthStatus).subscribe((auth) => {
          this.isAuthenticated = auth;
       });
-
-        this.actionsSubscription = this.route.params.subscribe(
+      
+      this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
             this.userService.getAddrs(JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
                 response => {
+                  
                   if(response.length > 0) {
                     this.showAdrs$ = true;
                     this.hasAddrs = true;
@@ -97,85 +100,37 @@ export class AddressComponent implements OnInit, OnDestroy {
           }
         );      
   }
-  
-  initDel() {
-        this.delOptions = [{
-      "prop1":"nothing found",
-      "prop2":"nothing found",
-      "prop3" : "nothing found",
-      "prop4" : 0
-    }];
 
+  initDeliveryOptons() {
+    this.delOptions = ([this._addressLogics.CreateNewDeliveryOptions("N/A", "N/A", "N/A", 0)]);
     this.selectedDel = this.delOptions[0];
-    if(this.checkoutService.currentOrder != null)
-    this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
+    if(this.checkoutService.currentOrder != null) this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
 
   ngAfterViewInit() {
+
   }
 
 
   GetFreightRates(item : Address) {
-    
-   
 
+    this.pakkelabels.getCurrentIpLocation().subscribe(data => {  
+      var country = 'US'
 
-    this.pakkelabels.getCurrentIpLocation().subscribe(data => {
-
-      var country = 'DK'
-
-      if(data != null) {
-         country = data.country;
-        }
+      if(data != null) { country = data.country;}
         
       this.pakkelabels.GetFreightRates(country).subscribe(data => {
-        this.delOptions = [];
-        var data2;
-
-        for(var countryKey in data)
-          data2 = data[countryKey];
-
-        for(var key in data2){
-          var obj = data2[key];
-          
-          if(this.checkIfDeliveryOptionCanBeAdded(obj)) {
-
-            for (var i = 0; i <  obj.products.length; i++) {
-               
-              var price = obj.rates[0].price;
-              var rate =  obj.rates.filter(x => x.specific_shipping_product == obj.products[i].id)[0];
-
-              if(rate != null) price = rate.price;
-
-              if (obj.products[i].name != 'Return Drop Off' && obj.products[i].name != 'GLS ShopReturnService'){
-                this.delOptions.push(this.createDeliveryOption(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
-              }
-            }
-          }
-        }
-
+        
+        this.delOptions = this._addressLogics.ProcessAndGetDeliveryOptions(data);
         this.selectedDel = this.delOptions[0];
+
         if(this.checkoutService.currentOrder != null)
         this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
+
       });
       
 
     });
-  }
-
-  private checkIfDeliveryOptionCanBeAdded(obj: any)  {
-    console.log(obj);
-    var price = obj.rates[0].price;
-    return obj.code != 'unspecified' && price != 99999;
-  }
-
-  createDeliveryOption(name: string, dispalyPrice: string, deliverySpeed: string, price: number) {
-    return {
-      "prop1":name,
-      "prop2":dispalyPrice + ' DKK',
-      "prop3" : deliverySpeed,
-      "prop4" : price,
-    }
   }
 
   ngOnInit() {
@@ -185,7 +140,7 @@ export class AddressComponent implements OnInit, OnDestroy {
        this.breadcrumbs$[1] = this.pageTrans.createAddr;
     });
 
-    this.initDel();
+    this.initDeliveryOptons();
   }
 
   checkoutToPayment() {
