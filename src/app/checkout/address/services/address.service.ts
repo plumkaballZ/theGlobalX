@@ -17,16 +17,19 @@ export class AddressService {
     private fb: FormBuilder) {}
 
   initAddressForm() {
-    return this.fb.group({
-      'first_name': [''],
-      'last_name': [''],
-      'address_1': [''],
-      'address_2': [''],
-      'city': [''],
-      'phone': [''],
-      'zipcode': [''],
-      'state_id': [''],
-      'country_id': ['']
+    const user = JSON.parse(localStorage.getItem('user'));
+    
+        return this.fb.group({
+          'first_name': ['', Validators.required],
+          'last_name': ['', Validators.required],
+          'address_1': ['', Validators.required],
+          'address_2': ['', Validators.required],
+          'city': ['', Validators.required],
+          'phone': ['', Validators.required],
+          'zipcode': ['', Validators.required],
+          'state_id': [{value: '', disabled: true}],
+          'country_id': ['', Validators.required],
+          'email': [(user != null ? user.email : ''), Validators.required]
     });
   }
   initEmailForm() {

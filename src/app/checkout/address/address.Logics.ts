@@ -1,15 +1,41 @@
 
 import { SharedLogics } from './../../shared/shared.Logics';
 import { StringModule } from './../../shared/shared.Logics';
+import { Address } from '../../core/models/address';
 
 export class AddressLogics extends SharedLogics {
 
     private overiddenCurrency : string;
 
+    private _addressFormMissingInfo: string;
+
     constructor() {
         super();
     }
 
+    public GetAddressMissingInfo(): string{ 
+        return this._addressFormMissingInfo;
+    }
+
+    public CheckIfAddressFormIsValid(addr: any): boolean {
+        
+
+        if(StringModule.isNullOrEmpty(addr.address_1)) {
+            this._addressFormMissingInfo = "Address is missing";
+            return false;
+        }
+        if(StringModule.isNullOrEmpty(addr.zipcode)) {
+            this._addressFormMissingInfo = "Zipcode is missing";
+            return false;
+        }
+        
+        if(StringModule.isNullOrEmpty(addr.country_id)) {
+            this._addressFormMissingInfo = "Please select a country";
+            return false;
+        }
+        
+        return true;
+    }
 
     public ProcessAndGetDeliveryOptions(data: any) : any[]{
         

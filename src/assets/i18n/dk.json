@@ -200,7 +200,10 @@
     "address" : "Addresse",
     "mobile" : "Mobil",
     "create" : "Opret",
-    "mandatory" : "Dette felt er påkrævet"
+    "cancel" : "Annullere",
+    "mandatory" : "Dette felt er påkrævet",
+    "country": "Land",
+    "state": "Stat"
   },
   "payment" : {
     "choosePaymentMode" : "Vælg betalingsmetode",

@@ -199,7 +199,10 @@
     "address" : "Address",
     "mobile" : "Mobile",
     "create" : "Create",
-    "mandatory" : "This is a mandatory field"
+    "cancel" : "Cancel",
+    "mandatory" : "This is a mandatory field",
+    "country": "Country",
+    "state": "State"
   },
   "payment" : {
     "choosePaymentMode" : "Choose Payment Mode",

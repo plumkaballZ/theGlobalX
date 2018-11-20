@@ -43,6 +43,8 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { CustomTranslateLoader } from './_custom/CustomTranslateLoader'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -78,6 +80,13 @@ export function createTranslateLoader(http: HttpClient) {
     LayoutModule,
     CoreModule,
     SharedModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1500,
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+      progressAnimation: 'increasing'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

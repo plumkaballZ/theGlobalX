@@ -16,6 +16,13 @@ export class SharedLogics {
 
 export module StringModule {
     export function isNullOrEmpty(s: string): boolean {
-        return !s;
+
+        console.log(s);
+        
+        if(s == null) return true;
+        if(s == "") return true;
+
+        return false;
     }
+
 }
