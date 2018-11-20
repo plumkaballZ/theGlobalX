@@ -16,6 +16,7 @@ export class Address {
   company: string;
   alternative_phone: string;
   country_id: string;
+  countryId: string;
   state_id: string;
   state_name: string;
   state_text: string;

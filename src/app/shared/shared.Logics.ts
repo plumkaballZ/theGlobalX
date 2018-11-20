@@ -11,14 +11,16 @@ export class SharedLogics {
         
         return "DKK"
     }
+
+    public StringIsNullOrEmpty(s: string) : boolean{
+        return StringModule.isNullOrEmpty(s);
+    }
     
 }
 
 export module StringModule {
     export function isNullOrEmpty(s: string): boolean {
-
-        console.log(s);
-        
+                
         if(s == null) return true;
         if(s == "") return true;
 

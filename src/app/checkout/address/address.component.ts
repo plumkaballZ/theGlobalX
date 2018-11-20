@@ -115,12 +115,13 @@ export class AddressComponent implements OnInit, OnDestroy {
   GetFreightRates(item : Address) {
 
     this.pakkelabels.getCurrentIpLocation().subscribe(data => {  
-      var country = 'US'
+      var country = 'DKK'
 
       if(data != null) { country = data.country;}
-        
+      if(!this._addressLogics.StringIsNullOrEmpty(item.countryId)) {country = item.countryId};
+      
       this.pakkelabels.GetFreightRates(country).subscribe(data => {
-        
+
         this.delOptions = this._addressLogics.ProcessAndGetDeliveryOptions(data);
         this.selectedDel = this.delOptions[0];
 
@@ -197,8 +198,15 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   c02(message:any) {
-    this.selectedDel = message;
-    this.checkoutService.currentOrder.ship_total = message.prop4;
+
+    if(this._addressLogics.ItemIsAddress(message)){
+      this.GetFreightRates(message);
+    }
+    else
+    {
+      this.selectedDel = message;
+      this.checkoutService.currentOrder.ship_total = message.prop4;
+    }
   }
 
   AddNewAddr(){

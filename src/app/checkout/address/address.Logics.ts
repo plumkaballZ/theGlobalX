@@ -13,6 +13,11 @@ export class AddressLogics extends SharedLogics {
         super();
     }
 
+
+    public ItemIsAddress(item: any) : boolean {
+        return (<Address>item).address1 !== undefined;
+    }
+
     public GetAddressMissingInfo(): string{ 
         return this._addressFormMissingInfo;
     }
@@ -20,7 +25,7 @@ export class AddressLogics extends SharedLogics {
     public CheckIfAddressFormIsValid(addr: any): boolean {
         
 
-        if(StringModule.isNullOrEmpty(addr.address_1)) {
+        if(StringModule.isNullOrEmpty(addr.address1)) {
             this._addressFormMissingInfo = "Address is missing";
             return false;
         }
@@ -38,9 +43,10 @@ export class AddressLogics extends SharedLogics {
     }
 
     public ProcessAndGetDeliveryOptions(data: any) : any[]{
-        
+
         var deliveryOptinsResult: any[] = [];
         var sortedData;
+        var foundRates : boolean = false;
 
         for(var countryKey in data) sortedData = data[countryKey];
 
@@ -57,11 +63,17 @@ export class AddressLogics extends SharedLogics {
                     if(rate != null) price = rate.price;
                     
                     if(this.CheckIfProductIsValid(obj.products[i])){
+                        foundRates = true;
                         deliveryOptinsResult.push(this.CreateNewDeliveryOptions(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
                     }
               }
             }
           }
+
+          if(foundRates == false) {
+            deliveryOptinsResult.push(this.CreateNewDeliveryOptions('N/A', 'N/A', 'N/A', 0))
+          }
+
           return deliveryOptinsResult;
     }
 

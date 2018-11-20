@@ -20,10 +20,10 @@ export class AddressService {
     const user = JSON.parse(localStorage.getItem('user'));
     
         return this.fb.group({
-          'first_name': ['', Validators.required],
-          'last_name': ['', Validators.required],
-          'address_1': ['', Validators.required],
-          'address_2': ['', Validators.required],
+          'firstName': ['', Validators.required],
+          'lastName': ['', Validators.required],
+          'address1': ['', Validators.required],
+          'address2': ['', Validators.required],
           'city': ['', Validators.required],
           'phone': ['', Validators.required],
           'zipcode': ['', Validators.required],

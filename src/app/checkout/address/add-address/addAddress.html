@@ -26,8 +26,8 @@
           <label> {{pageTrans.firstName}}
             <span class="required">*</span>
           </label>
-          <input type="text" class="form-control" formControlName="first_name">
-          <div *ngIf="addressForm.get('first_name').hasError && addressForm.get('first_name').touched">
+          <input type="text" class="form-control" formControlName="firstName">
+          <div *ngIf="addressForm.get('firstName').hasError && addressForm.get('firstName').touched">
             <!-- <p class="value-err text-danger show">Please enter first name!</p> -->
           </div>
         </div>
@@ -36,8 +36,8 @@
           <label> {{pageTrans.lastName}}
             <span class="required">*</span>
           </label>
-          <input type="text" class="form-control" formControlName="last_name">
-          <div *ngIf="addressForm.get('last_name').hasError && addressForm.get('last_name').touched">
+          <input type="text" class="form-control" formControlName="lastName">
+          <div *ngIf="addressForm.get('lastName').hasError && addressForm.get('lastName').touched">
             <!-- <p class="value-err text-danger show">Please enter last name!</p> -->
           </div>
         </div>
@@ -69,8 +69,8 @@
       <label>{{pageTrans.address}} 
         <span class="required">*</span>
       </label>
-      <textarea type="text" class="form-control" formControlName="address_1"></textarea>
-      <div *ngIf="addressForm.get('address_1').hasError && addressForm.get('address_1').touched">
+      <textarea type="text" class="form-control" formControlName="address1"></textarea>
+      <div *ngIf="addressForm.get('address1').hasError && addressForm.get('address1').touched">
         <!-- <p class="value-err text-danger show">Please enter address(minimum 10 characters long)!</p> -->
       </div>
     </div>

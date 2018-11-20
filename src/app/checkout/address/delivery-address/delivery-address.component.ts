@@ -40,6 +40,7 @@ export class DeliveryAddressComponent implements OnInit {
     const order = JSON.parse(localStorage.getItem('order'));
     order.ship_address = item;
     this._store.dispatch(this._actions.updateOrderSuccess(order));
+    this.notify.emit(item);
   }
 
   public selectDelOption(event, item : any) {
