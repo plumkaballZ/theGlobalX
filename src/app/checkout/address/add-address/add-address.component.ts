@@ -23,7 +23,10 @@ export class AddAddressComponent implements OnInit, OnDestroy {
   @Output() notify: EventEmitter<any> = new EventEmitter<any>();
 
   pageTrans: any;
-
+  
+  country_id: string;
+  state_id: string;
+  
   addressForm: FormGroup;
   emailForm: FormGroup;
   isAuthenticated: boolean;

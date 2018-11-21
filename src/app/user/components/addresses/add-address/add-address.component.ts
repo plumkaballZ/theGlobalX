@@ -15,6 +15,8 @@ export class AddAddressComponent implements OnInit, OnDestroy {
 
   @Output() notify: EventEmitter<string> = new EventEmitter<string>();
 
+
+
   addressForm: FormGroup;
   emailForm: FormGroup;
   isAuthenticated: boolean;
