@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID  } from '@angular/core';
 import { Router } from '@angular/router';
-
 import {UserService } from './../../user/services/user.service';
 import {InlineEditorComponent} from 'ng2-inline-editor';
-
 import {TranslateService} from '@ngx-translate/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-footer',
@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit {
   about002: string;
   pageTrans : any;
   
-  constructor(private userService: UserService, private translate: TranslateService, private router: Router) { 
+  constructor(private userService: UserService, private translate: TranslateService, private router: Router, @Inject(PLATFORM_ID) private platformId: any) { 
     this.loadTxt();
   }
 
@@ -57,6 +57,12 @@ export class FooterComponent implements OnInit {
   }
   goToLink(str) {
     this.router.navigateByUrl(str);
+  }
+
+  scollTop() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 
 
