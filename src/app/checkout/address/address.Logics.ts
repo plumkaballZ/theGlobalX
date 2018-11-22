@@ -55,6 +55,8 @@ export class AddressLogics extends SharedLogics {
 
             if(this.CheckIfDeliveryOptionsIsValid(obj)) {
                 
+                console.log(obj);
+                
                 for (var i = 0; i <  obj.products.length; i++) {
                     
                     var price = obj.rates[0].price;

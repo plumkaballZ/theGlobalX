@@ -21,7 +21,7 @@ import { HomeComponent } from './home.component';
 // Breadcrumb components
 import { BreadcrumbComponent } from './breadcrumb/components/breadcrumb/breadcrumb.component';
 
-
+import { BannerComponent } from './banner/banner.comp';
 
 // Sidebar components
 import { TaxonsComponent } from './sidebar/taxons/taxons.component';
@@ -49,6 +49,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
     ProductListComponent,
     ProductListItemComponent,
     ContentComponent,
+    BannerComponent,
     // pipes
     FilterPipe,
   ],

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import 'hammerjs';
 
 // Pipes
 import { KeysPipe } from './pipes/keys.pipe';
@@ -17,6 +18,7 @@ import {InlineEditorModule} from 'ng2-inline-editor';
 import { flagSelectComp } from './components/flagSelect/flagSelect.comp'
 import { breadCrumbzComp } from './../comps/breadCrumbz/breadCrumbzComp'
 import { RouterModule } from '@angular/router';
+import { NguCarouselModule } from '@ngu/carousel';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     // pipes
     KeysPipe,
-    HumanizePipe
+    HumanizePipe,
+    NguCarouselModule
   ],
   imports: [
     FormsModule,
