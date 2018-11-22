@@ -45,7 +45,11 @@ export class PaymentModesListComponent implements OnInit {
         this.selectedMode = this.paymentService.setCODAsSelectedMode(this.paymentModes);
       });
   }
-  makePayment() {    
+
+  makePayment() {
+    
+    console.log('makePayment');
+
     var tmpAddr;
     
     this.store.select(getShipAddress).subscribe((addr) => {

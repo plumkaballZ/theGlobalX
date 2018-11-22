@@ -17,7 +17,7 @@ import { getAuthStatus } from './../../auth/reducers/selectors';
 import { PakkeLabelsService } from '../../core/services/pakkelabels.service'
 
 //custom logics wrapper
-import {AddressLogics} from './address.Logics';
+import { AddressLogics } from './address.Logics';
 
 declare var $ :any;
 
@@ -81,13 +81,11 @@ export class AddressComponent implements OnInit, OnDestroy {
       this.actionsSubscription = this.route.params.subscribe(
           (params: any) => {
             this.userService.getAddrs(JSON.parse(localStorage.getItem('user')) == null ? localStorage.getItem('userUid') : JSON.parse(localStorage.getItem('user')).email).subscribe(
-                response => {
-                  
+              response => {
                   if(response.length > 0) {
                     this.showAdrs$ = true;
                     this.hasAddrs = true;
                     this.child.selectAddr('', response[0]);
-                    this.GetFreightRates(response[0]);
                   }
                   else {
                     this.showAdrs$ = false;
@@ -198,17 +196,15 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   c02(message:any) {
-
     if(this._addressLogics.ItemIsAddress(message)){
       this.GetFreightRates(message);
     }
-    else
-    {
+    else {
       this.selectedDel = message;
       this.checkoutService.currentOrder.ship_total = message.prop4;
     }
   }
-
+  
   AddNewAddr(){
     this.showAdrs$ = false;
   }
