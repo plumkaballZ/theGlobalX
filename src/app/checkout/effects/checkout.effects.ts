@@ -29,6 +29,7 @@ export class CheckoutEffects {
       return this.checkoutService.updateOrder(action.payload);
     })
     .map((data: any) => {
+      console.log('updateOrderSuccess');
       return this.actions.updateOrderSuccess(data);
     });
 

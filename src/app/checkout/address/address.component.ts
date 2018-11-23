@@ -100,7 +100,7 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   initDeliveryOptons() {
-    this.delOptions = ([this._addressLogics.CreateNewDeliveryOptions("N/A", "N/A", "N/A", 0)]);
+    this.delOptions = ([this._addressLogics.CreateNewDeliveryOptions("N/A", "N/A", "N/A", 0, "", "")]);
     this.selectedDel = this.delOptions[0];
     if(this.checkoutService.currentOrder != null) this.checkoutService.currentOrder.ship_total = this.delOptions[0].prop4;
   }
@@ -196,11 +196,14 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   c02(message:any) {
+
     if(this._addressLogics.ItemIsAddress(message)){
       this.GetFreightRates(message);
     }
     else {
       this.selectedDel = message;
+      this.checkoutService.currentOrder.deliveryCode = message.deliveryCode;
+      this.checkoutService.currentOrder.shippingId = message.shippingId;
       this.checkoutService.currentOrder.ship_total = message.prop4;
     }
   }

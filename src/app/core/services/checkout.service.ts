@@ -208,8 +208,6 @@ export class CheckoutService {
 
   addLineItem(lineItem: any) {
 
-    console.log('addLineItem');
-
     const user = JSON.parse(localStorage.getItem('user'));
 
     var data ={
@@ -256,8 +254,7 @@ export class CheckoutService {
   postTxt(){
   }
   
-  updateOrder(params) {
-
+  updateOrder(params) {   
     const user = JSON.parse(localStorage.getItem('user'));
     
     var data ={
@@ -280,7 +277,7 @@ export class CheckoutService {
     }))
       .map((res: Response) =>  {
         const order = res.json();
-        return this.store.dispatch(this.actions.updateOrderSuccess(order));
+        // return this.store.dispatch(this.actions.updateOrderSuccess(order));
       });
   }
   

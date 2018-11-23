@@ -41,7 +41,8 @@ export class Order {
   public line_items: LineItem[];
   payments: [Payment];
 
-  _delOption : any;
+  deliveryCode :string;
+  shippingId: string;
 
   /**
    *

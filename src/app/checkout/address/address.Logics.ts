@@ -66,14 +66,14 @@ export class AddressLogics extends SharedLogics {
                     
                     if(this.CheckIfProductIsValid(obj.products[i])){
                         foundRates = true;
-                        deliveryOptinsResult.push(this.CreateNewDeliveryOptions(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price));
+                        deliveryOptinsResult.push(this.CreateNewDeliveryOptions(obj.name + ' ' + obj.products[i].name, price, '1-3 days', price, obj.code, obj.products[i].id));
                     }
               }
             }
           }
 
           if(foundRates == false) {
-            deliveryOptinsResult.push(this.CreateNewDeliveryOptions('N/A', 'N/A', 'N/A', 0))
+            deliveryOptinsResult.push(this.CreateNewDeliveryOptions('N/A', 'N/A', 'N/A', 0, "", ""))
           }
 
           return deliveryOptinsResult;
@@ -89,7 +89,7 @@ export class AddressLogics extends SharedLogics {
         return !StringModule.isNullOrEmpty(this.overiddenCurrency);
     }
     public CreateNewDeliveryOptions(name: string, displayPrice: string, 
-        deliverySpeed: string, price: number): any{
+        deliverySpeed: string, price: number, deliveryCode: string, shippingId: string): any{
             
             var currencyToUse = (this.CurrentCurrencyIsOverridden()) ? this.overiddenCurrency : this.GetCurrentCurrency();
 
@@ -97,7 +97,9 @@ export class AddressLogics extends SharedLogics {
             "prop1": name,
             "prop2": displayPrice + " " + currencyToUse,
             "prop3" : deliverySpeed,
-            "prop4" : price
+            "prop4" : price,
+            "deliveryCode" : deliveryCode,
+            "shippingId" : shippingId
             };
     }
 
@@ -114,6 +116,5 @@ export class AddressLogics extends SharedLogics {
 
         return true;
     }
-
 }
 

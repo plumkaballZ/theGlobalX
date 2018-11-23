@@ -37,11 +37,9 @@ export class PayPalComp implements OnInit {
       var totalValue = this.totalCartValue;
       var currency = this.tranz.currency;
       var eventEmitter = this.payOnDelivery;
-
-      // eventEmitter.emit(true);
       
-        this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
-          paypal.Button.render({
+      this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
+        paypal.Button.render({
             env: 'production',
             funding: {
               allowed: [ 
@@ -81,7 +79,7 @@ export class PayPalComp implements OnInit {
         onCancel: function(data, actions) {
         }
       }, '#paypalBtn');
-    })
+    });
   }
 
   private loadExternalScript(scriptUrl: string) {

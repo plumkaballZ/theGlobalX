@@ -49,7 +49,6 @@ export class DeliveryOptionsComponent implements OnInit {
 
   ngOnInit() {
     this.translate.get('del').subscribe((res: any) => {
-      console.log(res);
       this.pageTrans = res;
       this.delSpeed = res.delSpeed;
       this.stdDel = res.stdDel;
@@ -61,7 +60,6 @@ export class DeliveryOptionsComponent implements OnInit {
       this.del002 = res.del002;
       this.totalPay = res.totalPay;
     });
-    // this.setOrder();
   }
 
   private setOrder() {

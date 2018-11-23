@@ -21,7 +21,8 @@ export class Address {
   state_name: string;
   state_text: string;
   uid: string;
-
+  email: string;
+  
   public v_selected : boolean;
 
   public getFullName(){

@@ -93,6 +93,7 @@ export class OrderDetailComponent implements OnInit, OnDestroy {
     this.order.shipment_state = "1";
     this.order.special_instructions = 'updateShipment';
     this._store.dispatch(this._actions.updateOrder(this.order));
+    
     this.router.navigate(['/user', 'orders']);
   }
 

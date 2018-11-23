@@ -51,12 +51,9 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       _lineItemId = _lineItem.id;
         // return the same state if the item is already included.
         if (state.lineItemIds.includes(_lineItemId)) {
-          console.log(state);
-          console.log('return');
           return state;
         }
-        console.log('add');
-        
+
         _totalCartItems = state.totalCartItems + _lineItem.quantity;
         _totalCartValue = state.totalCartValue + (parseFloat(_lineItem.total) * _lineItem.quantity);
  
@@ -78,12 +75,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
       _lineItemId = _lineItem.id;
       const index = state.lineItemIds.indexOf(_lineItemId);
       
-
-      console.log('removeLineItem');
-      console.log(payload);
-      console.log(index);
-
-
       if (index >= 0) {   
           _lineItemIds = state.lineItemIds.splice(index, 1);
           _lineItemEntities = state.lineItemEntities.delete(_lineItemId);
