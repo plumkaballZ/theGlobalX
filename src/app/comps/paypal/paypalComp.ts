@@ -37,7 +37,7 @@ export class PayPalComp implements OnInit {
       var totalValue = this.totalCartValue;
       var currency = this.tranz.currency;
       var eventEmitter = this.payOnDelivery;
-      
+
       this.loadExternalScript("https://www.paypalobjects.com/api/checkout.js").then(() => {
         paypal.Button.render({
             env: 'production',

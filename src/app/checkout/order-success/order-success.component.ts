@@ -32,7 +32,6 @@ export class OrderSuccessComponent implements OnInit {
     private checkoutService : CheckoutService,
     private translate: TranslateService
   ) {    
-
     this.store.select(getAuthStatus).subscribe((auth) => {
       this.isAuthenticated = auth;
     });
@@ -44,6 +43,7 @@ export class OrderSuccessComponent implements OnInit {
       this.route.navigate(['/']);
     }
     if(this.checkoutService.currentOrder.payment_state == '0'){
+
       this.orderDetails = this.checkoutService.currentOrder;
       // this.checkoutService.createEmptyOrder().subscribe();
     }
