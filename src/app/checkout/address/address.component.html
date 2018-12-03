@@ -10,9 +10,26 @@
 									<inline-translator [page]="'addrs'" [key]="'selectAddr'" [elementType]="'text'"></inline-translator>
 								</span>
 							</div>
-							<button (click)="AddNewAddr()" class="addAddrBtn">
+
+
+							<div class="border-right-0" *ngIf="!isUserSelectedAddress">
+								<div class="add-address reviewlink pl-1" *ngIf="!isEditButtonPressed">
+										<span class="add-label" (click)="AddNewAddr()">+ <inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator></span>
+									<!-- <div class="col-md-6">
+										<span class="add-label" (click)="AddNewAddr()">+ <inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator></span>
+									</div>
+									<div class="col-md-6">
+										<span class="add-label" (click)="AddNewAddr()">- Delete Selected Address</span>
+									</div> -->
+		
+									
+								</div>
+							</div>
+
+							<!-- <button (click)="AddNewAddr()" class="addAddrBtn">
 								<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
-								</button>
+							</button> -->
+
 							<app-delivery-address #delAddrz [addrs]="addrs$" [delOptions]="delOptions" [selectedDel]="selectedDel" (notify)='c02($event)'></app-delivery-address>
 						</div>
 				</div>		

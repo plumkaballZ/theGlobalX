@@ -24,6 +24,8 @@ export class DeliveryAddressComponent implements OnInit {
   private _store: Store<AppState>;
   private _actions: CheckoutActions;
 
+  isRemoveButtonPressed: boolean;
+
   constructor(store: Store<AppState>, actions: CheckoutActions, private translate: TranslateService) {  
     this._store = store;
     this._actions = actions;
@@ -36,15 +38,24 @@ export class DeliveryAddressComponent implements OnInit {
   }
 
   public selectAddr(event, item : Address) {
-    this.selectedAddress = item;
-    const order = JSON.parse(localStorage.getItem('order'));
-    order.ship_address = item;
-    this._store.dispatch(this._actions.updateOrderSuccess(order));
-    this.notify.emit(item);
+    
+    if(this.isRemoveButtonPressed) {
+      this.isRemoveButtonPressed = false;
+    }
+    else {
+      this.selectedAddress = item;
+      const order = JSON.parse(localStorage.getItem('order'));
+      order.ship_address = item;
+      this._store.dispatch(this._actions.updateOrderSuccess(order));
+      this.notify.emit(item);
+      }
+  }
+
+  public removeAddr(event, item : Address){
+    this.isRemoveButtonPressed = true;
   }
 
   public selectDelOption(event, item : any) {
     this.notify.emit(item);
   }
-
 }

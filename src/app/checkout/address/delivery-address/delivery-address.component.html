@@ -1,7 +1,24 @@
 <div class="items">
 
   <div (click)="selectAddr($event, address)" *ngFor="let address of addrs" class="address-row">
-            <div class="name">{{address.firstname}} {{address.lastname}}</div>
+    
+    <div class="name"><strong>{{address.firstname}} {{address.lastname}}</strong></div>
+    <div class="address">
+        <div class="address-content">
+          <div class="address-field">{{address.address1}}</div>
+          <div class="address-field">{{address.address2}}</div>
+          <span class="address-field">{{address.city}} - {{address.zipcode}}</span>
+          <!-- <div class="address-field">{{address?.state?.name}}</div>
+          <div class="address-field">{{address.country.name}}</div> -->
+          <div class="address-field">
+            <span class="mob-lbl">Mobile: </span>
+            <span class="mob-no">{{address.phone}}</span>
+          </div>
+        </div>
+      </div>
+      <br>
+
+    <!-- <div class="name">{{address.firstname}} {{address.lastname}}</div>
             <div class="address">
               <div class="address-content">
                 <div class="address-field">{{address.address1}}</div>
@@ -15,14 +32,17 @@
                 </div>
 
               </div>
-            </div>
+            </div> -->
           
-            
+
             <button *ngIf="selectedAddress==address" class="select"></button>
-            <!--<div class="remove-edit">
-              <span class="remove">Remove</span>
-              <span class="edit">Edit</span>
-            </div>-->
+
+            <div class="remove-edit">
+                <span class="remove"><strong (click)="removeAddr('remove', address)" >Remove</strong></span>
+            </div> 
+
+          
+
           </div>
 </div>
 
