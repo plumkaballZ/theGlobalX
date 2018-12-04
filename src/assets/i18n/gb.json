@@ -188,7 +188,8 @@
     "color" : "Color"
   },
   "deliveryAddress" : {
-    "mobile" : "Mobile"
+    "mobile" : "Mobile",
+    "remove" : "Remove"
   },
   "addAddress" : {
     "email" : "Email",

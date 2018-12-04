@@ -189,7 +189,8 @@
   },
   "deliveryAddress" : {
     "mobile" : "Mobil",
-    "zipcode" : "Postnummer"
+    "zipcode" : "Postnummer",
+    "remove" : "Fjern"
   },
   "addAddress" : {
     "email" : "Email",
