@@ -82,5 +82,15 @@ export class AddressService {
       });
   }
 
+  deleteAddress(params){
+    return this.http.post_Web('api/xAddress/Delete', JSON.stringify
+    ({
+      "ship_address_attributes": params
+    }))
+      .map((res: Response) =>  {
+        const order = res.json();
+        return order;
+      });
+  }
 
 }

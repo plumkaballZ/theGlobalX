@@ -207,6 +207,10 @@ export class AddressComponent implements OnInit, OnDestroy {
       this.checkoutService.currentOrder.ship_total = message.prop4;
     }
   }
+  c03(message:any) {
+    console.log('c03');
+    this.showAdrs$ = false;
+  }
   
   AddNewAddr(){
     this.showAdrs$ = false;

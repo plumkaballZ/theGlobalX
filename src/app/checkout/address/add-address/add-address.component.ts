@@ -78,8 +78,7 @@ export class AddAddressComponent implements OnInit, OnDestroy {
          var arr = [];
          arr.push(addr);
          this.notify.emit(arr);
-       }
-       );
+       });
  
   }
 

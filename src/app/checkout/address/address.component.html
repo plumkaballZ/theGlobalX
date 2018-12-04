@@ -30,7 +30,7 @@
 								<inline-translator [page]="'addrs'" [key]="'addNew'" [elementType]="'text'"></inline-translator>
 							</button> -->
 
-							<app-delivery-address #delAddrz [addrs]="addrs$" [delOptions]="delOptions" [selectedDel]="selectedDel" (notify)='c02($event)'></app-delivery-address>
+							<app-delivery-address #delAddrz [addrs]="addrs$" [delOptions]="delOptions" [selectedDel]="selectedDel" (notify)='c02($event)' (notify2)='c03($event)'></app-delivery-address>
 						</div>
 				</div>		
 
