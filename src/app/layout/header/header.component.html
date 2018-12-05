@@ -14,24 +14,37 @@
             </div>
             
             <div class="cartZ" style="float:right; padding-top: 10px; display: block !important;">
-                <ul id="profDown" style="display: -webkit-inline-box;" class="nav navbar-nav navbar-right">
 
-                  <li class="dropdown" dropdown>
-                    <a class="dropdown-toggle" dropdownToggle>
-                        <i class="fa" aria-hidden="true">
-                            <img class="iconPics" src="assets/translation.png">
-                        </i>
-                      <span class="caret"></span>
-                    </a>
-
-                    <ul class="dropdown-menu" *dropdownMenu>
-                        <li role="separator" class="divider"></li>
-                        <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
-                        <li role="separator" class="divider"></li>
+                <ul id="profDown" style="display: -webkit-inline-box;" class="nav navbar-nav navbar-right">      
+                        <li class="cart" [routerLink]="['checkout','cart']">
+                            <a>
+                              <i class="fa" aria-hidden="true"></i><span class="badge badge-danger"></span>
+                            </a>
+                          </li> 
+                      <li class="dropdown" dropdown *ngIf="isAuthenticated">
+                        <a class="dropdown-toggle" dropdownToggle>
+                            <i class="fa" aria-hidden="true">
+                                <img class="iconPics" src="assets/translation.png">
+                            </i>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" *dropdownMenu>
+                            <li role="separator" class="divider"></li>
+                          <li>
+                            <a routerLink="/user"></a>
+                            <flagSelectComp class="flagSelect" [FlagsArray]="['dk', 'gb']"></flagSelectComp>
+                          </li>
+                          <li role="separator" class="divider"></li> 
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                </ul>
+                
+
             </div>
+
+
+            
+
 
             <div class="navbar-collapse padTop" [ngClass]="{ 'in': isIn }">
               <div class="bla1">
