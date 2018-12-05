@@ -46,6 +46,8 @@ import { CustomTranslateLoader } from './_custom/CustomTranslateLoader'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
+import { GoogleAnalyticsService } from "./core/services/googleAnalytics.Service";
+
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -88,7 +90,9 @@ export function createTranslateLoader(http: HttpClient) {
       progressAnimation: 'increasing'
     })
   ],
-  providers: [],
+  providers: [ GoogleAnalyticsService ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(protected _googleAnalyticsService: GoogleAnalyticsService){ }
+ }
